@@ -2,10 +2,14 @@ fof-polls:
   admin:
     settings:
       allow_option_image: Dozvoli da URL slike bude priložen uz svaki odgovor/opciju ankete
+      max_options: Maksimalan broj opcija po anketi
+      options_color_blend: Tekst miješanja boja u opcijama ankete
+      options_color_blend_help: Koristite ovo za korištenje miješanja boja kako biste opcije ankete učinili čitljivijima. Onemogućite ako ova značajka uzrokuje probleme s izgledom vašeg foruma, smanjujući čitljivost.
     permissions:
       view_results_without_voting: Pregled rezultata ankete bez učešća (glasanja)
       start: Započni anketu
       self_edit: Dozvoli korisnicima da uređuju ankete koje su započeli
+      self_post_edit: Uređivanje *svih* anketa na vlastitim postovima (zahtijeva dozvolu za uređivanje posta)
       vote: Učestvuj u anketi
       change_vote: Promijeni glas(ove)
       moderate: Uređuj i izbriši ankete
@@ -15,10 +19,16 @@ fof-polls:
     no_permission: Nije Vam dozvoljeno učešće u anketi
     poll_ended: Ova anketa je završena.
     public_poll: Pregled učesnika ankete
+    max_votes_allowed: "Anketa dopušta glasanje/odgovore za {max, plural, one {# opciju} other {# opcije}}."
 
+    poll:
+      cannot_change_vote: Ne možete promijeniti svoj glas/odgovor nakon glasanja/učešća u anketi.
+      submit_button: Pošalji odgovor
+      
     composer_discussion:
       add_poll: Dodaj anketu
       edit_poll: => fof-polls.forum.moderation.edit
+      no_permission_alert: Nemate dopuštenje za pokretanje ankete.
 
     modal:
       add_title: Dodaj anketu
@@ -33,10 +43,16 @@ fof-polls:
       image_option_placeholder: URL slike (opcionalno)
       options_label: Odgovori
       public_poll_label: Dozvoli korisnicima pregled učesnika ankete
+      allow_multiple_votes_label: Omogućite izbor/glasanje za više opcija
+      max_votes_label: Maksimalan broj glasova/odgovora po korisniku
+      max_votes_help: Postavite na 0 kako biste korisnicima omogućili izbor/glasanje za sve opcije.
+      hide_votes_label: Sakrij odgovore/glasove dok anketa ne završi
+      allow_change_vote_label: Dopusti korisnicima da promijene svoj izbor/glas
       question_placeholder: Pitanje
       submit: Započni anketu
 
     moderation:
+      add: Dodaj anketu
       delete: Izbriši anketu
       delete_confirm: Sigurni ste da želite izbrisati ovu anketu?
       edit: Uredi anketu
