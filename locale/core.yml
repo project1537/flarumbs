@@ -52,6 +52,17 @@ core:
       welcome_banner_heading: Pozdravna poruka
       welcome_banner_text: Konfigurirajte tekst koji se prikazuje na baneru na stranici Sve rasprave. Koristite ovo da poželite dobrodošlicu gostima na svom forumu.
 
+    # These translations are used in the Create User modal.
+    create_user:
+      email_placeholder: => core.ref.email
+      email_confirmed_label: Zahtijevaj od korisnika potvrdu ovog emaila
+      password_placeholder: => core.ref.password
+      submit_and_create_another_button: Kreiraj i dodaj još jedan
+      submit_button: Kreiraj korisnika
+      title: Kreiraj novog korisnika
+      use_random_password: Generiraj nasumičnu šifru
+      username_placeholder: => core.ref.username
+    
     # These translations are used in the Dashboard page.
     dashboard:
       clear_cache_button: Očisti cache memoriju
@@ -115,6 +126,12 @@ core:
       description: "Konfiguriraj upravitelja, postavke i adrese koje će forum koristiti za slanje email poruka."
       driver_heading: Izaberi upravitelj
       driver_label: Upravitelj
+      format:
+        multipart_option: Višedijelni (preporučeno)
+        plain_option: Običan tekst
+        html_option: HTML
+      format_heading: Format odlazne e-pošte
+      format_help: "Odaberite format u kojem će se slati odlazne e-poruke. Preporučena opcija je <code>multipart</code>, jer će to omogućiti klijentu e-pošte vašeg korisnika da prikaže najprikladniji format."
       from_label: Pošiljalac
       mail_encryption_label: Enkripcija
       mail_host_label: Host
@@ -194,6 +211,7 @@ core:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
+      allow_hide_own_posts_label: Dozvoli brisanje vlastitih objava
       allow_post_editing_label: Dozvoli uređivanje objava
       allow_renaming_label: Dozvoli uređivanje naziva diskusije
       create_access_token_label: Kreirajte pristupni token
@@ -228,6 +246,7 @@ core:
     # These translations are used in the dropdown menus on the Permissions page.
     permissions_controls:
       allow_indefinitely_button: Neograničeno
+      allow_never_button: => core.ref.never
       allow_some_minutes_button: "{count, plural, one {nakon # minute} other {nakon # minuta}}"
       allow_ten_minutes_button: 10 minuta
       allow_until_reply_button: Do sljedećeg odgovora
@@ -239,6 +258,7 @@ core:
     # These translations are used generically in setting fields.
     settings:
       saved_message: Vaše izmjene su spremljene.
+      select_dropdown_custom_label: Prilagođeno
       submit_button: => core.ref.save_changes
 
     # These translations are used in image upload buttons.
@@ -248,6 +268,7 @@ core:
 
     # These translations are used for the users list on the admin dashboard.
     users:
+      create_user_button: Novi korisnik
       description: Numerisana lista svih registrovanih korisnika vašeg foruma.
 
       grid:
@@ -605,6 +626,7 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      circular_dependencies_message: "Otkrivene kružne ovisnosti: {extensions}. Prekidanje. Onemogućite jedno od proširenja i pokušajte ponovno."
       dependent_extensions_message: "Prije onemogućavanja proširenja {extension} potrebno je onemogućiti ova proširenja: {extensions}"
       extension_initialiation_failed_message: "{extension} proširenje nije pokrenuto, za više informacija provjerite konzolu internet preglednika."
       generic_message: "Došlo je do greške! Ponovo učitajte stranicu i pokušajte ponovo."
@@ -711,19 +733,50 @@ core:
       submit_button: => core.ref.save_changes
       title: => core.ref.reset_your_password
 
+  # Translations in this namespace are displayed by the email unsubscribe interface.
+    unsubscribe_email:
+      title: Potvrda o odjavi pretplate
+      return_to_forum: Povratak na {forumTitle}
+      confirm_button: Potvrdi
+      immediate_helptext: Vaša pretplata će biti odmah odjavljena nakon što potvrdite.
+      confirm_message: "Zatražili ste otkazivanje pretplate na \"{type}\" obavijesti e-poštom od {forumTitle}."
+      success_message: "Uspješno ste otkazali pretplatu na \"{type}\" obavijesti s {forumTitle}. Ako ih želite ponovno primati, molimo [ažurirajte svoje postavke]({settingsLink})."
+      invalid_message: "Ova veza za otkazivanje pretplate nije važeća ili je već korištena. Za sve promjene u vašim obavijestima e-poštom od {forumTitle} molimo [provjerite svoje postavke]({settingsLink})."
+
   # Translations in this namespace are used in messages output by the API.
   api:
     invalid_username_message: "Korisničko ime može sadržavati samo slova i brojeve."
+    invalid_filter_type:
+      must_be_numeric_message: "Filter {filter} mora biti numerički."
+      must_not_be_array_message: "Filter {filter} ne smije biti niz."
+      must_not_be_multidimensional_array_message: "Filter {filter} ne smije biti višedimenzionalni niz."
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
+    greeting: "Poštovani {displayName},"
+    signoff: "Administracija {forumTitle} foruma"
+
+    # These translations are used by the "informational" email template.
+    informational:
+      default_title: "Informacija"
+      footer: "Ova e-poruka poslana je na {userEmail} kao informativna usluga povezana s vašim korisničkim računom na [{forumTitle}]({forumUrl})."
+      footer_plain: "Ova e-poruka poslana je na {userEmail} kao informativna usluga povezana s vašim računom na {forumTitle}."
+
+    # These translations are used by the "notification" email template.
+    notification:
+        default_title: "Obavijest"
+        footer:
+          main_text: "Ova e-poruka poslana je na {email} jer ste pretplaćeni na \"{type}\" obavijesti na [{forumTitle}]({forumUrl})."
+          main_text_plain: "Ova e-poruka poslana je na {email} jer ste pretplaćeni na \"{type}\" obavijesti na {forumTitle}."
+          unsubscribe_text: "Ako ne želite više primati ovu vrstu obavijesti, [otkažite pretplatu ovdje]({unsubscribeLink})."
+          unsubscribe_text_plain: "Ako ne želite više primati ovu vrstu obavijesti, pretplatu otkažite ovdje: {unsubscribeLink}"
+          settings_text: "Upravljajte svojim postavkama obavijesti [ovdje]({settingsLink})."
+          settings_text_plain: "Ovdje upravljajte postavkama obavijesti: {settingsLink}"
 
     # These translations are used in emails sent when users register new accounts.
     activate_account:
       subject: Aktivirajte Vaš korisnički račun
       body: |
-        Poštovani/a {username}!
-
         Neko (a nadamo se da ste to bili Vi!) je upravo registrovan na {forum} sa Vašom email adresom.
 
         Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i korisnički račun će biti aktiviran:
@@ -735,8 +788,6 @@ core:
     confirm_email:
       subject: Potvrdite novu email adresu
       body: |
-        Poštovani/a {username}!
-
         Neko (a nadamo se da ste to bili Vi!) je upravo promijenio email pomoću kojeg je registrovan na {forum} i upisao email adresu na koju Vam šaljemo ovu poruku.
 
         Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i Vaša nova email adresa će uspješno biti potvrđena:
@@ -748,8 +799,6 @@ core:
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
-        Poštovani/a {username}!
-
         Neko (a nadamo se da ste to bili Vi!) je upravo podnio zahtjev za promjenu šifre korisničkog računa na {forum}.
 
         Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i Vaša nova šifra će uspješno biti potvrđena:
@@ -761,8 +810,6 @@ core:
     send_test:
       subject: Flarum Email Test
       body: |
-        Poštovani/na {username}!
-
         Ovo je test email potvrde da email konfiguracija foruma radi kako treba.
 
         Ukoliko ste Vi poslali ovu email poruku, to znači da je konfiguracija uspješna.
@@ -801,6 +848,7 @@ core:
     log_in: PRIJAVA
     log_out: ODJAVA
     mark_all_as_read: Označi sve kao pročitano
+    never: Nikad
     new_token: Novi token
     next_page: Sljedeća stranica
     notifications: Obavještenja
