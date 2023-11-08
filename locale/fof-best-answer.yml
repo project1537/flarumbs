@@ -13,8 +13,12 @@ fof-best-answer:
       allow_select_own_post_help: Dozvoli pokretaču diskusije da izaberu jedno od vlasitih objava u diskusiji kao najbolji odgovor
       enable_all_tags_button: Omogući da se najbolji odgovor izabere u svim oznakama
       enable_all_tags_reminder_button: Omogući podsjetnike za izbor najboljeg odgovora u svim oznakama
+      show_max_lines_label: Maksimalni broj redaka za prikaz u pregledu objave
+      show_max_lines_help: Postavite na 0 za onemogućavanje. Ako je objava duža od konfiguriranog broja redaka, bit će skraćena u pretpregledu objave s efektom izbljeđivanja.
       select_best_answer_reminder_days: Frekventnost podsjetnika
       select_best_answer_reminder_days_help: Pošalji podsjetnik pokretaču diskusije nakon određenog broja dana da izabere najbolju objavu/najbolji odgovor, 0 = isključi podsjetnike.
+      select_best_answer_tags_label: Oznake za diskusije s najboljim odgovorima
+      select_best_answer_tags_help: Odaberite koje ćete oznake, ako ih ima, dodati raspravama kada je postavljen najbolji odgovor. Dopuštene su samo sekundarne oznake. Ove će oznake biti uklonjene ako se ukloni najbolji odgovor.
       schedule_on_one_server: Koristi 'onOneServer()' direktivu za raspored zadataka (zahtijeva Redis/Memcache)
       schedule_on_one_server_help: Zahtijeva Redis/Memcache
       schedule_stop_overnight: Onemogući zakazane podsjetnike da budu aktivirani u određeno vrijeme
@@ -91,3 +95,9 @@ fof-best-answer:
         Spomenutu diskusiju možete pogledati na: {discussion_url}, i tu svakako možete izabrati odgovarajuću objavu kao najbolji odgovor u njoj.
 
         Hvala Vam!
+
+fof-user-directory:
+  lib:
+    sort:
+      most_best_answers: S najviše najboljih odgovora
+      least_best_answers: S najmanje najboljih odgovora
