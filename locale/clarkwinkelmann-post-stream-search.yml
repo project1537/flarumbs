@@ -3,6 +3,8 @@ clarkwinkelmann-post-stream-search:
         settings:
             dropdownAccess: Pristup putem padajućeg menija u diskusiji
             dropdownAccessHelp: Ako je onemogućeno, traka sa alatkama će biti dostupna samo preko prečice na tastaturi ili bilo koje druge omogućene prečice u nastavku.
+            sideNavAccess: Pristup putem bočne navigacije diskusije
+            sideNavAccessHelp: Isto kao prethodna postavka, ali gumb će biti dodan kao zaseban unos na bočnoj traci umjesto padajućeg izbornika.
             authorQuickFilter: Brzi filter autora objava
             authorQuickFilterHelp: Prečica će biti dodata  padajućem meniju svake objave za filtriranje prema tom korisniku.
             originalPosterBadge: Prikaži interaktivnu oznaku za originalnog autora
