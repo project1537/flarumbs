@@ -1,22 +1,26 @@
 acpl-lscache:
   admin:
+    cache_enabled_label: "Omogući LSCache"
+    cache_enabled_help: "Provjerite <a>stranicu s informacijama</a> o tome kako testirati predmemoriju. NAPOMENA: Kada onemogućite predmemoriju, svi predmemorirani unosi za ovu stranicu bit će izbrisani."
+    
     public_cache_ttl_label: 'Zadane postavke TTL-a javne predmemorije '
     public_cache_ttl_help: 'Odredite koliko dugo su, u sekundama, javno dostupne stranice spremljene u predmemoriji. Zadana vrijednost je 300 sekundi'
 
     clearing_cache_listener_label: 'Očisti LSCache istovremeno sa čišćenjem predmemorije foruma'
     
-    admin_cache_label: 'Cache admin panel'
-    admin_cache_ttl_label: 'Default admin cache TTL'
-    admin_cache_ttl_help: 'Zadana vrijednost je 300 sekundi.'
-    
     serve_stale_label: 'Serve Stale'
-    serve_stale_help: 'If ON, the stale copy of a cached page will be shown to visitors until a new cache copy is available. Reduces the server load for following visits. If OFF, the page will be dynamically generated while visitors wait. By design, this option may serve stale content. Do not enable this option, if that is not OK with you.'
+    serve_stale_help: 'Ako je UKLJUČENO, ustajala kopija predmemorirane stranice prikazivat će se posjetiteljima dok ne bude dostupna nova predmemorirana kopija. Smanjuje opterećenje poslužitelja za sljedeće posjete. Ako je ISKLJUČENO, stranica će se dinamički generirati dok posjetitelji čekaju. Prema dizajnu, ova opcija može posluživati zastarjeli sadržaj. Nemojte uključivati ovu opciju, ako vam to ne odgovara.'
 
     purge_on_discussion_update_label: 'Očisti URL ili oznake kada je diskusija ili objava ažurirana'
     purge_on_discussion_update_help: 'Precizirajte jedan URL ili oznaku po liniji. URL bi trebao počinjati sa <code>/</code>, npr. <code>/rankings</code> a oznaka sa <code>tag=</code>, npr. <code>tag=rankings</code>. This extension tags every route and for example if you have a lot of routes that you would like to purge, it is better to add a rule in .htaccess with a regular expression that will tag the routes and here in the settings enter only this tag. This method will be much faster. <a>Learn more</a>. By default, the cache for the homepage is purged, as well as the cache for the updated discussions'
 
-    cache_exclude_label: 'Do not cache paths'
-    cache_exclude_help: 'Paths containing these strings will not be cached. For example, for <code>/mypath/mypage?aa=bb</code>, <code>mypage?aa=</code> can be used here. To match the beginning, add <code>^</code> to the beginning of the item. To do an exact match, add <code>$</code> to the end of the URL. One per line.'
+    cache_exclude_label: 'Isključi putanje iz predmemoriranja'
+    cache_exclude_help: 'Putovi koji sadrže te nizove neće biti pohranjeni u predmemoriju. Na primjer, za <code>/mypath/mypage?aa=bb</code>, ovdje se može koristiti <code>mypage?aa=</code>. Za podudaranje s početkom, dodajte <code>^</code> na početak stavke. Za točno podudaranje dodajte <code>$</code> na kraj URL-a. Jedan po redu.'
 
+    drop_qs_label: "Ispustite nizove upita"
+    drop_qs_help: |
+     Koristite ovu značajku za ispuštanje određenih nizova upita, kao što su <code>fbclid</code> ili <code>utm*</code>, prilikom spremanja u predmemoriju. To sprječava suvišno predmemoriranje stranica s "bezvrijednim" nizovima upita kao što su UTM kodovi, koji se koriste za praćenje, ali ne utječu na sadržaj stranice. Za to je potreban LSWS v5.2.3 ili noviji. Navedite nizove upita koje treba ispustiti, jedan po retku. <a>Saznajte više o ispuštanju nizova upita</a>.<br></br>
+       ⚠️ Ova postavka će izmijeniti .htaccess datoteku.
+      
     purge_all: 'Očisti sve iz LSCache'
     purge_all_success: 'Obaviješten LiteSpeed Web Server da očisti sve LSCache unose'
