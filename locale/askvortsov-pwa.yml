@@ -28,6 +28,8 @@ askvortsov-pwa:
       other:
         heading: Ostalo
         force_portrait_text: Prinudno omogući portretnu orijentaciju?
+        push_notif_preference_default_to_email_label: Zadane postavke za slanje na e-poštu?
+        push_notif_preference_default_to_email_text: Ako je tačno, korisnici će prema zadanim postavkama imati omogućene push obavijesti za sve vrste obavijesti gdje su obavijesti putem e-pošte omogućene prema zadanim postavkama. Ako je netačno, korisnicima će push obavijesti biti onemogućene prema zadanim postavkama.
         user_max_subscriptions_label: Maksimalno push pretplata po korisniku
         user_max_subscriptions_text: Koliko push pretplata bi svaki korisnik trebao moći imati istovremeno? Kada korisnik primi push obavještenje, svaka pretplata će rezultirati API pozivom. Svaka pretplata obično odgovara pretraživaču koji je korisnik koristio.
       heading: Konfiguracija progresivne web aplikacije
