@@ -1,0 +1,79 @@
+ianm-twofactor:
+  admin:
+    edit_group:
+      2fa_label: Zahtjevaj 2FA
+      2fa_help: Zahtijevati od članova ove grupe da omoguće dvofaktorsku provjeru autentičnosti (2FA) za svoj račun.
+      admin_2fa_help: "{adminName} članovi moraju uvijek imati omogućen 2FA."
+    permissions:
+      see_two_factor_status_label: Može vidjeti 2FA drugih korisnika
+      manage_others_label: Može upravljati 2FA za druge korisnike
+    settings:
+      groups:
+        title: 2FA obavezne grupe
+        help: Zahtijevati od članova ovih grupa da omoguće dvofaktorsku autentifikaciju (2FA) za svoj račun. Korisnik u potrebnoj grupi ne može onemogućiti 2FA.
+      forum_logo_qr: Ugradite logotip foruma u QR kod
+      forum_logo_qr_help: Ugradite logo foruma na QR kod prikazan prilikom omogućavanja 2FA. Ovo može pomoći korisnicima da prepoznaju tačan QR kod za skeniranje.
+      forum_logo_qr_width: Širina QR koda logotipa foruma
+      forum_logo_qr_width_help: Širina logotipa foruma ugrađenog u QR kod prikazan prilikom omogućavanja 2FA. Maksimalno 200.
+      logo_qr: Logo na QR kodu
+      logo_qr_help: Ako je logotip učitan, on će biti ugrađen u QR kod. Ostavite prazno za korištenje logotipa foruma.
+
+  forum:
+    user_2fa.alert_message: Morate omogućiti 2FA da biste nastavili pristupati svom računu.
+    security:
+      two_factor_heading: 2FA
+      two_factor_help: Autentikacija s dva faktora (2FA) pruža dodatni sloj sigurnosti vašem računu. Nakon što je omogućeno, osim vaše šifre, od vas će se tražiti da unesete token iz svoje aplikacije za provjeru autentičnosti prilikom prijave ili izvođenja određenih drugih radnji. To osigurava da vaš račun ostaje siguran, čak i ako je vaša šifra ugrožena, jer bi napadači također trebali kod (koji se mijenja svakih 30 sekundi) za pristup vašem računu.
+      two_factor_apps: "Aplikacije kao što su {google}, {authy}, {microsoft} i druge dostupne su besplatno."
+      two_factor_enabled: 2FA je omogućen na ovom računu.
+      two_factor_disabled: 2FA je onemogućen na ovom računu.
+      two_factor_title: "Status:"
+      enable_2fa_button: Omogući 2FA
+      disable_2fa_button: Onemogući 2FA
+      enable_2fa_modal_text: Skenirajte donji QR kod pomoću svoje aplikacije za provjeru autentičnosti, zatim unesite priloženi token kako biste omogućili provjeru autentičnosti u dva faktora.
+      qr_code_alt: QR kod za autentifikaciju u dva faktora
+      enter_token: Unesite token
+      verify_button: Potvrdi
+      loading_qr: Učitavanje QR koda...
+      backup_codes: Vaši pričuvni kodovi
+      backup_codes_instruction: Spremite ove kodove na sigurno mjesto. Mogu se koristiti za pristup vašem računu ako izgubite svoju primarnu metodu provjere autentičnosti. Neće se ponovno prikazati.
+      saved_backup_codes_button: Sačuvao/la sam ove kodove
+      backup_codes_remaining: "Preostali pričuvni kodovi:"
+      two_factor_enabled_confirmation: Autentifikacija u dva faktora uspješno je omogućena za vaš račun.
+      ok_button: Ok
+      confirm_disable_2fa_title: Potvrdite onemogućavanje dvofaktorske provjere autentičnosti
+      confirm_disable_2fa_text: Jeste li sigurni da želite onemogućiti dvofaktorsku autentifikaciju?
+      cannot_disable: Trenutna konfiguracija nalaže da ne možete onemogućiti dvofaktorsku provjeru autentičnosti.
+      cannot_disable_tooltip: Nije moguće onemogućiti 2FA
+      cancel_button: Otkaži
+      qr_tab: Skeniraj QR kod
+      manual_tab: Ručno postavljanje
+      scan_qr_instruction: Skenirajte gornji QR kod pomoću svoje aplikacije za provjeru autentičnosti, a zatim unesite priloženi token kako biste omogućili provjeru autentičnosti u dva faktora.
+      manual_entry_instruction: Unesite navedeni kod u svoju aplikaciju za autentifikaciju, zatim unesite generirani token da biste omogućili dvofaktorsku autentifikaciju.
+    log_in:
+      two_factor_placeholder: "2FA token, npr. 123456"
+      two_factor_required_message: "Za nastavak je potreban važeći 2FA token."
+  email:
+    subject:
+      status_changed: Dvofaktorska autentifikacija {type} za vaš račun
+    body:
+      status_changed: |
+        Poštovani/na {recipient_display_name},
+
+        Dvofaktorska autentifikacija je {type} za vaš korisnički račun na {forum_url}.
+
+        Ako ste pokrenuli ovu radnju, nisu potrebni nikakvi daljnji koraci. Ako niste odobrili ovu promjenu, odmah kontaktirajte administratore ili moderatore foruma.
+    status_type:
+      enabled: omogućena
+      disabled: onemogućena
+  views:
+    reset_password:
+      two_factor_token_label: 2FA token
+    two_factor_token:
+      submit_button: Pošalji token
+
+blomstra-gdpr:
+  lib:
+    data:
+      twofactordata:
+        export_description: Izvozi 2FA status i šifrirane pričuvne kodove.
+        delete_description: Briše sve podatke koji se odnose na 2FA.
