@@ -15,6 +15,10 @@ fof-discussion-language:
     index_language:
       any: Svi jezici
 
+    sub_controls:
+      subscription_language_label: Jezik diskusije
+      subscription_language_help: Kada ovdje odaberete jezik, bit ćete obaviješteni samo o novim aktivnostima na tom jeziku.
+   
   admin:
     settings:
       native_label: Koristite nazive jezika na maternjem jeziku
