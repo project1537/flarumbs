@@ -1,3 +1,11 @@
+blomstra-gdpr:
+  lib:
+    data:
+      uploads:
+        export_description: Sve datoteke koje je učitao/priložio korisnik.
+        anonymize_description: Uklanja korisničku referencu iz učitanih/priloženih datoteka. Same datoteke ostaju dostupne korisnicima koji ih mogu vidjeti prije anonimizacije.
+        delete_description: Briše sve datoteke koje je učitao/priložio korisnik.
+
 fof-upload:
   admin:
     pane:
@@ -164,13 +172,21 @@ fof-upload:
 
     text_preview:
       expand: Proširi pregled
-      collapse: Smanji regled
+      collapse: Smanji pregled
       error: |
         Greška prilikom pregleda datoteke. Moguće da je datoteka izbrisana ili je njen ID neispravan.
       no_snippet_preview: "<pregledi će se pojaviti ovdje nakon objavljivanja>"
       no_snippet: "<nisu dostupni pregledi>"
   api:
     upload_errors:
-      forbidden_type: Prilaganje datoteka ovog tipa nije dozvoljeno.
+      forbidden_type: Prilaganje i učitavanje datoteka ovog tipa nije dozvoljeno.
       unsupported_type: 'Nije podržaj ovaj MIME tip datoteke: {mime}.'
       could_not_detect_mime: MIME tip ove datoteke nije prepoznat, molimo Vas okušajte ponovo.
+      max_upload_file_size_ini: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz php.ini.
+      max_upload_file_size_form: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz obrasca.
+      partial_upload: Djelomično učitavanje.
+      no_file_uploaded: Nije učitana nijedna datoteka.
+      no_upload_tmp_folder: Nema tmp mape za učitavanje datoteka..
+      cannot_write_to_disk: Ne može pisati na disk.
+      upload_blocked_by_php_extension: Proširenje php blokiralo je prijenos.
+      no_files_made_it_to_upload: Molimo učitajte datoteke ne veće od {max} kb.
