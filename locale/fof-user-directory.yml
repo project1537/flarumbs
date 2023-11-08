@@ -28,6 +28,7 @@ fof-user-directory:
             default-sort: Defaultno sortiranje
             use-small-cards: Koristi male kartice za prikaz korisnika
             disable-global-search-source: Ne dodaji korisnički direktoriji u općeniti pretraživač foruma
+            link-group-mentions: Poveži spominjanje grupe u objavama sa korisničkim direktorijem
 
     lib:
         sort:
