@@ -1,6 +1,7 @@
 blomstra-turnstile:
   admin:
     settings:
+      help_text: Generirajte Turnstile ključeve na svom Cloudflare računu <a>ovdje</a>.
       site_key: Ključ stranice
       secret_key: Tajni ključ
       signup: => core.forum.sign_up.title
