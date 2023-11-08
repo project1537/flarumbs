@@ -1,0 +1,59 @@
+{
+    "name": "project1537/flarumbs",
+    "type": "flarum-extension",
+    "description": "Bosnian Language Pack for Flarum Core and Multiple Extensions",
+    "keywords": ["locale"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/project1537/flarumbs/issues",
+        "source": "https://github.com/project1537/flarumbs",
+        "forum": "https://discuss.flarum.org/",
+        "docs": "https://flarum.org/docs/"
+    },
+    "homepage": "https://medresa.net.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://medresa.net/"
+        }
+    ],
+    "authors": [
+        {
+            "name": "medresa.net",
+            "email": "medresanet@gmail.com",
+            "homepage": "https://medresa.net"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.8"
+    },
+    "suggest": {
+		"https://github.com/project1537/flarumbs": "Bosnian Language Pack for Flarum Core and Multiple Extensions"
+	},
+	"support": {
+    "issues": "https://github.com/project1537/flarumbs/issues",
+    "source": "https://github.com/project1537/flarumbs"
+	},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "authors": [{
+			"name": "flarumbs",
+			"role": "Translator"
+		}],
+        "flarum-extension": {
+            "title": "Bosnian Language Pack for Flarum Core and Multiple Extensions",
+            "icon": {
+                "image": "flag.svg",
+                "backgroundColor": "#ffffff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-locale": {
+            "code": "bs",
+            "title": "Bosanski"
+        }
+    }
+}
