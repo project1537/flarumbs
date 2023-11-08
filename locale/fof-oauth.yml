@@ -6,6 +6,14 @@ fof-oauth:
 
     settings:
       only_icons_label: Prikaži samo ikon(ic)e za prijavu (alternativni prikaz)
+      update_email_from_provider_label: Ažurirajte adresu e-pošte od davatelja usluga
+      update_email_from_provider_help: Ako je omogućeno, adresa e-pošte korisnika bit će ažurirana kako bi odgovarala onoj koju pruža OAuth pružatelj pri svakoj prijavi na forum. Ne pružaju svi davatelji ažuriranu e-poštu, u kojem slučaju ova postavka neće imati učinka na te davatelje usluga.
+      fullscreen_popup_label: Koristite skočni prozor preko cijelog zaslona za OAuth
+      fullscreen_popup_help: Kada je omogućeno, OAuth prijava otvorit će se u skočnom prozoru preko cijelog zaslona. Ako je ovo omogućeno, postavke širine i visine bit će zanemarene.
+      popup_width_label: Širina OAuth skočnog prozora 
+      popup_width_help: Postavite širinu OAuth skočnog prozora. Ova će postavka biti zanemarena ako je omogućena opcija "Koristi skočni prozor preko cijelog zaslona za OAuth".
+      popup_height_label: Visina OAuth skočnog prozora 
+      popup_height_help: Postavite visinu OAuth skočnog prozora. Ova će postavka biti zanemarena ako je omogućena opcija "Koristi skočni prozor preko cijelog zaslona za OAuth".
 
       providers:
         callback_url_text: Ukoliko je potrebno, postavite povratni URL ka {url}.
