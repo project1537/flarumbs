@@ -76,6 +76,7 @@ fof-byobu:
     admin:
         permission:
             create_private_discussions_with_users: Može započeti privatne diskusije sa korisnicima/članovima Foruma
+            add_more_than_two_user_recipients: Dodajte više od dva učesnika privatne diskusije
             create_private_discussions_with_groups: Može započeti privatne diskusije sa grupama
             create_private_discussions_with_blocking_users: Može započeti privatne diskusije sa korisnicima koji su ih blokirali
             edit_user_recipients: Može urediti učesnike privatnih diskusija
@@ -90,7 +91,9 @@ fof-byobu:
             post-event-icon: Byobu dešavanja u objavama
             delete_on_last_recipient_left: Izbriši privatnu diskusiju kada zadnji korisnik napusti istu
             delete_on_last_recipient_left_help: Ako je omogućeno, privatna diskusija će biti trajno izbrisana iz baze podataka kada je zadnji korisnik napusti. U suprotnom, privatna diskusija će biti prividno izbrisana i skrivena.
-
+            hide_from_all_discussions_page: Sakrij PD-ove sa stranice "Sve diskusije".
+            hide_from_all_discussions_page_help: Privatne rasprave bit će dostupne samo sa stranice "Privatne diskusije" ili korisničkog profila
+            
     email:
         subject:
             private_discussion_created: "[Privatna diskusija] {display_name} je započeo/la novu privatnu diskusiju sa Vama"
