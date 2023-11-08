@@ -18,6 +18,8 @@ fof-follow-tags:
       lurking_tag_tooltip: Vrebam
 
     sub_controls:
+      header: "Obavještenja o {tagName}"
+      subscription_label: "Odaberite nivo prijave za obavještenja o {tagName}"
       follow_button: => fof-follow-tags.ref.follow
       following_button: => fof-follow-tags.ref.following
       following_text: Obavijesti me o svim novim diskusijama.
@@ -31,6 +33,7 @@ fof-follow-tags:
       not_following_text: "Obavijesti me kad me @spomenu."
       notify_alert_tooltip: Primi obavještenje na forumu o novoj diskusiji ili objavi/komentaru
       notify_email_tooltip: Primi email poruku o novoj diskusiji ili objavi/komentaru
+      submit_button: Potvrdi prijavu za obavještenja
 
     notifications:
       new_discussion_text: "{username} je započeo/la novu diskusiju"
@@ -101,3 +104,10 @@ fof-follow-tags:
     filtering_options:
       none: Diskusije koje pratim
       tags: Oznake koje pratim
+
+blomstra-gdpr:
+  lib:
+    data:
+      tagsubscription:
+        export_description: Izvoz pojedinosti o nivo prijave za obavještenja o oznaci, ako postoji.
+        anonymize_description: Uklanja pretplatu korisnika za obavještenja o oznaci.
