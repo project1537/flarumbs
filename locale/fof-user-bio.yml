@@ -6,6 +6,9 @@ fof-user-bio:
             editAny: Uređivanje bilo čije biografije
         setting:
             bioLimit: Ograničavanje dužine biografije korisnika
+            maxLines: Maksimalan broj redaka za prikaz odjednom
+            allowFormatting: Dopusti formatiranje u biografiji
+            allowFormatting_help: Po dizajnu, ovo oblikovanje je odvojeno od post oblikovanja. Ako su proširenja BBCode i/ili Markdown omogućena, bit će dostupna za formatiranje biografije. Slike ili ugradnje nisu dopuštene. Proširenja koja dodaju Flarum formater moraju *eksplicitno* dodati podršku za bio formatter.
 
     forum:
         userbioPlaceholder: Ovdje možete napisati nešto o sebi. Još uvijek niste? :)
