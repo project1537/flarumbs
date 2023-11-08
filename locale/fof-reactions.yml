@@ -8,6 +8,7 @@ fof-reactions:
     reacting-own-post: Ne možete reagirati na vlastite objave
     modal:
         title: Reakcije
+        anonymous_count: "{count, plural, one {# anonimni korisnik} other {# anonimna korisnika}}"
     mod_item: Vidi reakcije
     react_button_label: Reaguj
 
@@ -34,18 +35,20 @@ fof-reactions:
       settings:
         react_own_posts_help: Kada je ova opcija omogućena, (registrovani) korisnici mogu reagirati na vlastite objave na forumu. Ukoliko želite onemogućiti korisnicima da reagiraju na vlastite objave, ne koristite ovu opciju.
         react_own_posts_label: Korisnici mogu reagirati na vlastite objave
+        allow-anonymous: Dopusti anonimne (gost) reakcije
+        allow-anonymous-help: Ako je omogućeno, gosti i anonimni korisnici moći će reagirati na objave. Imajte na umu da anonimne reakcije neće biti povezane s korisničkim profilom i bit će prikazane na popisu reakcija.
         save_settings: Spremi postavke
         integrations:
           legend: Integracije
-          warning: The same reaction <strong>cannot</strong> be converted to a like <strong>and</strong> an upvote
+          warning: Ista reakcija <strong>ne može</strong> se pretvoriti u lajk <strong>i</strong> glas za
           gamification:
             legend: Gamification
-            upvoteLabel: Convert reactions to upvotes
-            upvoteHelptext: Input the identifier of the reaction you would like to automatically convert into an upvote
-            downvoteLabel: Convert reactions to downvotes
-            downvoteHelptext: Input the identifier of the reaction you would like to automatically convert into an downvote
+            upvoteLabel: Pretvorite reakcije u glasove za
+            upvoteHelptext: Unesite identifikator reakcije koju želite automatski pretvoriti u glas za
+            downvoteLabel: Pretvorite reakcije u negativne glasove
+            downvoteHelptext: Unesite identifikator reakcije koju želite automatski pretvoriti u glas protiv
 
           likes:
-            legend: Likes
-            Label: Convert reactions to likes
-            Helptext: Input the identifier of the reaction you would like to automatically convert into an likes
+            legend: Sviđanja
+            Label: Pretvorite reakcije u sviđanja
+            Helptext: Unesite identifikator reakcije koju želite automatski pretvoriti u sviđanja
