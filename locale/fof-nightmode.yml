@@ -1,0 +1,46 @@
+fof-nightmode:
+    ref:
+        auto: Automatska (na temelju opcija preglednika ili uređaja)
+        light: Svijetla (dnevna) tema
+        dark: Tamna (noćna) tema
+
+    admin:
+        settings:
+            modal:
+                always_show_theme_toggle_on_header: Uvijek prikaži dugmić za izbor tema u zaglavlju foruma
+                default_theme: Tema foruma
+                default_theme_helper: (pred)određena tema je automatski postavljena novim korisnicima, gostima i onima koji nisu precizirali izbor u postavkama.
+                theme_auto: => fof-nightmode.ref.auto
+                theme_light: => fof-nightmode.ref.light
+                theme_dark: => fof-nightmode.ref.dark
+    forum:
+        day: => fof-nightmode.ref.light
+        night: => fof-nightmode.ref.dark
+
+        header:
+            nightmode_button: Izbor teme
+
+        user:
+            settings:
+                heading: Tema
+                description: Izaberite željenu temu koju ćete koristiti na forumu.
+                description2: Izabrana tema će biti vezana za Vaš korisnički račun i primjenjivat će se na svim Vašim uređajima, osima u slučaju da izaberete opciju prilagođavanja uređajima.
+                device_specific_setting_checkbox: Izbor teme prema postavkama uređaja (PC, tablet, mobitel...)
+                device_specific_setting_checkbox_tooltip: Izbor teme će biti spremljen posebno za svaki od Vaših uređaja.
+                auto_unsupported: Vaš internet preglednik ne podržava automatski izbor tamne (noćne) teme.
+                options:
+                    auto: => fof-nightmode.ref.auto
+                    day: => fof-nightmode.ref.light
+                    night: => fof-nightmode.ref.dark
+                option_descriptions:
+                    auto: Tema foruma (dnevna ili noćna) bit će automatski odabrana shodno postavkama i opcijama Vašeg internet preglednika ili uređaja. Npr., ako je "tamni način" odabran na Vašem Andorid ili iOS uređaju, forum će slijediti Vaš izbor.
+                    day: Klasično iskustvo korištenja foruma na koje ste navikli. Jednostavno i provjereno.
+                    night: Noćna, tamna tema. Štedi bateriju, vid i prilagođava se ambijenut noći. Isprobajte je!
+
+fof-default-user-preferences:
+    admin:
+        settings:
+            fofNightMode: "FoF Nightmode: Color theme to use by default"
+            fofNightMode-help: "0 - automatic, 1 - light mode, 2 - dark mode"
+            fofNightMode_perDevice: "FoF Nightmode: Use per device settings"
+            fofNightMode_perDevice-help: Use per device preferences for nightmode settings

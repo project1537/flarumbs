@@ -1,0 +1,108 @@
+the-turk-diff:
+    forum:
+        revisions:                    "{revisionCount, plural, one {{revisionCount} revizija} other {{revisionCount} revizija}}"
+        emptyText:                    Bez revizija
+        editedText:                   => core.forum.post.edited_text
+        deletedText:                  (deleted)
+
+        tooltips:
+          # Revision List Tooltips
+          mostRecent:                 najnovije
+          originalContent:            => the-turk-diff.ref.originalContent
+          revisionWithNumber:         => the-turk-diff.ref.revisionWithNumber
+          ## Renderer Switcher Tooltips
+          sideBySide:                 Jedno do drugog
+          inline:                     Paralelno
+          combined:                   Kombinovano
+          preview:                    => core.forum.composer.preview_tooltip
+
+        # Buttons
+        optionsButton:                Opcije
+        deleteButton:                 => core.forum.post_controls.delete_button
+        rollbackButton:               "Vrati na reviziju broj {number}"
+        rollbackToOriginalButton:     Vrati original
+        revertChangesButton:          Poništi izmjene
+
+        # Confirmation Messages
+        confirmRollback:              Sigurni ste da želite izmijeniti sadržaj Vaše trenutne (verzije) objave?
+        confirmDelete:                Sigurni ste da želite izbrisati historiju/verzije uređivanja ovog sadržaja?
+
+        # Error Messages
+        rollbackErrorMessage:         Neuspješno vraćanje prethodnih verzija.
+        deleteErrorMessage:           Neuspješno brisanje Deletion of edit's contents failed.
+
+        # Informative Messages
+        rollbackSuccessMessage:       Vaše izmjene su uspješno poništene.
+        deleteSuccessMessage:         Sadržaj izmjena je izbrisan.
+        editedInfo:                   => core.forum.post.edited_tooltip
+        deletedInfo:                  "{username} je izbrisao/la je sadržaj {ago}"
+        createdInfo:                  "{username} kreirao/la {ago}"
+        revisionInfo:                 "Uređivano {revisionCount, plural, one {{revisionCount} put} other {{revisionCount} puta}}, najnovija verzija je na vrhu"
+        noDiff:                       Nema razulika između ova dva sadržaja.
+
+        differences:
+           # one of the following will be used in place of {old} or {new} in ‘sentence’ key
+          originalContent:            => the-turk-diff.ref.originalContent
+          currentContent:             => the-turk-diff.ref.currentContent
+          revisionWithNumber:         => the-turk-diff.ref.revisionWithNumber
+          # ---
+          sentence:                   "Pregledate razlike između {old} i {new}"
+
+        previewMode:
+          # one of the following will be used in place of {content} in ‘sentence’ key
+          originalContent:            => the-turk-diff.ref.originalContent
+          currentContent:             => the-turk-diff.ref.currentContent
+          revisionWithNumber:         => the-turk-diff.ref.revisionWithNumber
+          # ---
+          sentence:                   "Upravo pregledate {content}"
+    admin:
+        settings:
+            title:                    Diff postavke
+
+            ####################
+            # General Settings #
+            ####################
+
+            # Informative Messages
+            onlyUnsigned:             Dozvoljeni su samo <strong>cijeli brojevi</strong>!
+            usePoint:                 koristite <strong>.</strong> kao decimalni razdjelnik za promjenjive vrijednosti.
+
+            # Switch Components
+            separateBlock:            Prikaži rastavljač (separator) između različitih dijelova revizije sadržaja u HTML renderima
+            mainPostOnly:             Spremi samo glavne revizije objava
+            textFormatting:           Omogući formatiranje teksta za preglede
+
+            # Select Component
+            detailLevel:              Nivo detalja
+            noneLevel:                Bez nivoa
+            lineLevel:                Nivo linija
+            wordLevel:                Nivo riječi
+            charLevel:                Nivo karaktera
+
+            # Text Type Inputs
+            neighborLines:            Paralelne linije
+            neighborLinesHelp:        Preciziraj broj paralelnih linija koje želite prikazati.
+            # ---
+            mergeThreshold:           Prag spajanja za kombinirani prikazivač
+            mergeThresholdHelp:       Ovo određuje da li će tip zamjenskog bloka biti spojen ili ne, zavisno od proporcija promjene sadržaja koji može biti između 0 i 1.
+
+            ##################################
+            # Database Optimisation Settings #
+            ##################################
+
+            dbOptimisation:           Optimizacija baze podataka
+            archiveOlds:              Arhiviraj star(ij)e verzije
+            archiveOldsInfo:          Ako je <strong>x ≥ A</strong>, prve <strong>y=mx+b</strong> revizije objave bit će spremljene spojeno i kompresovano. U ovom slučaju, <strong>x</strong> se odnosi na broj revizija objava. Promjenjive vrijednosti za <strong>y</strong> bit će zaokružene na najmanju vrijednost narednog cijelog broja.
+            useCrons:                 Koristi redoviti upravitelj pozadinskih procesa (cron) za arhiviranje stari(ji)h revizija
+            useCronsHelp:             Neophodno je da na Vašem serveru dodate upis za upravitelja pozadinskih procesa (cron) kako bi ova opcija radila kako je i predviđeno. Pokretat će se sedmično, nedjeljom u 02:00 AM sati. Ukoliko, pak, isključite ovu opciju i omogućite prethodnu, sve revizije objava bit će skenirane radi arhiviranja kada dođe do revizije (po)vezane objave.
+            archiveInfo:              Imajte na umu da možete isključiti (onemogućiti) obje verzije i manualno pokrenuti komandu <code>php flarum diff:archive</code> za arhiviranje stari(ji)h verzija/revizija.
+        permissions:
+            viewEditHistory:          Pregled historije uređivanja objava
+            deleteEditHistory:        Brisanje historije uređivanja objava drugih korisnika
+            selfDeleteEditHistory:    Brisanje historije uređivanja vlastitih objava
+            rollbackEditHistory:      Vraćanje historije uređivanja vlastitih objava drugih korisnika
+            selfRollbackEditHistory:  Vraćanje historije uređivanja vlastitih objava
+    ref:
+        originalContent:              originalnog sadržaja
+        currentContent:               trenutne verzije
+        revisionWithNumber:           "revizija br. {number}"

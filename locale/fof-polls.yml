@@ -1,0 +1,49 @@
+fof-polls:
+  admin:
+    settings:
+      allow_option_image: Dozvoli da URL slike bude priložen uz svaki odgovor/opciju ankete
+    permissions:
+      view_results_without_voting: Pregled rezultata ankete bez učešća (glasanja)
+      start: Započni anketu
+      self_edit: Dozvoli korisnicima da uređuju ankete koje su započeli
+      vote: Učestvuj u anketi
+      change_vote: Promijeni glas(ove)
+      moderate: Uređuj i izbriši ankete
+
+  forum:
+    days_remaining: Anketa se završava {time}.
+    no_permission: Nije Vam dozvoljeno učešće u anketi
+    poll_ended: Ova anketa je završena.
+    public_poll: Pregled učesnika ankete
+
+    composer_discussion:
+      add_poll: Dodaj anketu
+      edit_poll: => fof-polls.forum.moderation.edit
+
+    modal:
+      add_title: Dodaj anketu
+      add_option_label: Dodaj odgovor
+      date_placeholder: Anketa traje do (neobavezno)
+      edit_title: Uredi anketu
+      include_question: Anketa treba sadržavati pitanje
+      max: Anketa može sadržavati maksimalno 10 odgovora/opcija
+      min: Anketa treba sadržavati minimalno 2 odgovora/opcije
+      no_voters: Još uvijek bez odgovora
+      option_placeholder: Odgovor
+      image_option_placeholder: URL slike (opcionalno)
+      options_label: Odgovori
+      public_poll_label: Dozvoli korisnicima pregled učesnika ankete
+      question_placeholder: Pitanje
+      submit: Započni anketu
+
+    moderation:
+      delete: Izbriši anketu
+      delete_confirm: Sigurni ste da želite izbrisati ovu anketu?
+      edit: Uredi anketu
+
+    tooltip:
+      badge: Anketa
+      votes: "{count, plural, one {# odgovor} other {# odgovora}}"
+
+    votes_modal:
+      title: Učesnici

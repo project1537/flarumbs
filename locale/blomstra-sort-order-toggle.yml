@@ -1,0 +1,5 @@
+blomstra-sort-order-toggle:
+  forum:
+    sort-toggle:
+      desc-label: Sortiraj silazno (pritisnite za prebacivanje)
+      asc-label: Sortiraj uzlazno (pritisnite za prebacivanje)

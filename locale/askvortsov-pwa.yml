@@ -1,0 +1,81 @@
+askvortsov-pwa:
+  admin:
+    nav:
+      pwa_button: Progresivna web aplikacija
+      pwa_text: Podesite Flarum kao progresivnu web aplikaciju koju je moguće instalirati na mobilne uređaje.
+    pwa:
+      about:
+        description_label: Opis
+        description_text: Opis možete urediti pod "Osnove" ("Basics") unutar administratorske upravljačke ploče.
+        long_name_label: Puni naziv
+        long_name_text: Naziv web progresivne aplikacije koji će biti prikazan korisnicima.
+        heading: O aplikaciji
+        short_name_label: Skraćeni naziv
+        short_name_text: (Kratki) naziv web progresivne aplikacije koji će biti prikazan korisnicima ukoliko prvobitni naziv bude predug.
+      colors:
+        heading: Boje
+        background_color_label: Boja pozadine
+        background_color_text: Ovo se koristi kao boja rezervisanog mjesta za početni zaslon koji se prikazuje dok se vaš PWA učitava. Ne koristi se kada je aplikacija stvarno učitana.
+        theme_color_label: Boja teme
+        theme_color_text: Ovu boju ponekad koriste uređaji kada prikazuju vašu aplikaciju, na primjer u Android prebacivaču zadataka, kao boju koja okružuje web lokaciju.
+      maintenance:
+        heading: Održavanje
+        debug_label: Mod za rješavanje problema?
+        debug_text:: Ovo će evidentirati informacije u dnevnik aktivnosti na lokaciji `storage/logs`.
+        reset_vapid_text: Ovo će regenerisati VAPID ključeve i izbrisati sve postojeće pretplate koristeći trenutne VAPID ključeve.
+        reset_vapid_confirm: Poništavanje VAPID ključeva uklonit će sve pretplate koje koriste postojeće ključeve, tako da korisnici neće primati nikakve obavijesti do sljedećeg puta kada posjete vašu stranicu. Ovo treba učiniti samo kada prvi put postavljate push obavijesti ili ako push obavijesti uopće ne rade, a postoji upozorenje o nedostajućim VAPID ključevima iznad.
+        reset_vapid_success: Uspješno resetiranje VAPID ključeva. {count} pretplata je poništeno. Ponovo učitajte stranicu da vidite ažurirani izvještaj o provjeri statusa.
+      other:
+        heading: Ostalo
+        force_portrait_text: Prinudno omogući portretnu orijentaciju?
+        user_max_subscriptions_label: Maksimalno push pretplata po korisniku
+        user_max_subscriptions_text: Koliko push pretplata bi svaki korisnik trebao moći imati istovremeno? Kada korisnik primi push obavještenje, svaka pretplata će rezultirati API pozivom. Svaka pretplata obično odgovara pretraživaču koji je korisnik koristio.
+      heading: Konfiguracija progresivne web aplikacije
+      text: Podesite Vaš Flarum da bude pokrenut i korišten kao progresivna web aplikacija! Imajte na umu da ovo neće postaviti vašu stranicu direktno u trgovinu aplikacijama. Umjesto toga, posjetioci i korisnici imat će opciju 'Add to Homescreen' za Vašu web stranicu. 
+      status_check_heading: Provjera statusa
+      logo_heading: Logotip i ikon(ic)e
+      logo_text: |
+        Morate prenijeti barem jedan logotip da bi vaša progresivna web aplikacija mogla biti instalirana. Imajte na umu da svi logotipi moraju biti kvadratni; ako nisu, bit će im promijenjena veličina i eventualno rastegnuti.
+
+        U nastavku su dostupne brojne opcije veličine logotipa. Preporučujemo da pokušate učitati logotip sa što više veličina jer to podržava više uređaja.
+
+        Imajte na umu da možete prenijeti 1 veliki logotip za manje logotipe. Na primjer, možete prenijeti logotip veličine 1000 x 1000 piksela u SVE unose datoteka u nastavku. Međutim, ako pokušate prenijeti logotip veličine 50 x 50 piksela za onaj gdje je predvviđen 512 x 512, bit će jako rastegnut.
+
+      logo_size_text: Priloži logotip čija veličina će biti promijenjena u {size} puta {size} piksela.
+      submit_button: Spremi postavke
+      refreshed_message: PWA konfiguracija uspješno ažurirana.
+    status:
+      config_no_https: U vašoj config.php datoteci URL ne koristi HTTPS. HTTPS je potreban da bi progresivna web aplikacija radila.
+      possible_https_disabled: Moguće je da Vaša web stranica ne koristi HTTPS. Brisanje cache (privremene) memorije (administratorska upravljačka ploča => dugmić alati) moglo bi biti od pomoći. Ako ste na taj način riješili problem, ignorišite napomenu o HTTPS i imajte na umu da je HTTPS jedan od preduvjeta da progresivna web aplikacija uopće radi.
+      no_logo: Neophodno je da proložite barem jedan logotip čija veličina mora biti najmanje 196px.
+      no_name: Neophodno je da upišete puni naziv aplikacije.
+      no_vapid_keys: Nisu pronađeni VAPID ključevi. Ovo je potrebno za slanje push obavijesti. U nastavku možete resetirati VAPID ključeve.
+      key_gen_failed: "neuspješno generisanje ključeva koji su potrebni za push obavještenja. Kompletan opis greške je: {error}"
+      suggest_gmp: GMP PHP proširenje nije omogućeno na vašem serveru. Ovo proširenje ponekad i nije nužno, ali može značajno poboljšati performanse, te je stoga i preporučeno da je omogućite. Moguće je da neki hosting servisi i provajderi ne podržavaju ovo proširenje.
+      success: Nisu uočeni potencijalni problemi ili prepreke!
+  forum:
+    alerts:
+      optin: Omogućili ste push obavještenja, ali još uvijek niste uredili postavke za ovaj uređaj.
+      optin_button: Postavke
+    discussion_controls:
+      share_button: Dijeli
+    post_controls:
+      share_button: Dijeli
+      share_api:
+        title: "{username} objavljuje u diskusiji o temi {title}'"
+    user_controls:
+      share_button: Dijeli
+    settings:
+      push_header: PWA
+      pwa_notifications:
+        access_default: Zbog restrikcija web preglednika morate najprije dozvoliti primanje push obavještenja na ovom uređaju.
+        access_default_button: Dozvoli
+        access_denied: Za primanje push obavještenja na ovom uređaju morate urediti postavke web preglednika.
+        access_denied_button: Saznaj kako
+        no_browser_support: Ovaj web preglednik ne podržava push obavještenja za progresivne web aplikacije.
+        no_browser_support_button: Opširnije
+
+  views:
+    offline:
+      header: Provjerite internet vezu!
+      text: Za korištenje ove progresivne web aplikacije (PWA) potrebna je aktivna internet veza. Provjerite Vašu internet vezu i/ili osvježite stranicu.

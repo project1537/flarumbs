@@ -1,0 +1,140 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Privatna diskusija
+        
+        buttons:
+            add_recipients: Učesnici diskusije
+            submit: OK
+            edit_recipients: Uredi učesnike
+            send_pd: "Pošalji korisniku/ci {username} poruku"
+            cancel: Odustani
+            make_public: Učini ovu diskusiju javno dostupnom
+            remove_from_discussion: Napusti ovu privatnu diskusiju
+            
+        composer_private_discussion:
+            submit_button: Započni privatnu diskusiju
+            title_placeholder: Naslov privatne diskusije
+        
+        confirm:
+            make_public: Sigurni ste da želite ukloniti učesnike diskusije i time učiniti diskusiju vidljivom svim korisnicima koji imaju pristup oznaci pod kojom je diskusija objavljena?
+                    
+        labels:
+            recipients: "{count, plural, one {{count} učesnik/ca} other {{count} učesnika/ca}}"
+                    
+        nav:
+            start_button: Nova diskusija
+            nav_item: "Privatne diskusije"
+        
+        input:
+            search_recipients: Pretraži učesnike/članove Foruma privatne diskusije upisujući prva tri slova korisničkog imena...
+        
+        search:
+            headings:
+                groups: Dozvole grupe
+        
+        modal:
+            titles:
+                update_recipients: Ažuriraj učesnike privatne diskusije o temi {title}
+                add_recipients: Dodaj učesnike privatne diskusije
+            
+            labels:
+                selected_users: Odabrani/ne korisnici/ce
+                search_field: Traži korisnika/cu
+            
+            help:
+                add_recipients: Ova privatna diskusija će biti vidljiva samo korisnicima/članovima Foruma koje ovdje izaberete. Potrebno je da izaberete najmanje 1 učesnika privatne diskusije (pored Vas samih).
+                update_recipients: Ova privatna diskusija će biti vidljiva samo učesnicima/korisnicima Foruma koje Vi ovdje izaberete.
+                selected_users: Kliknite na ime učesnika/ce za njihovo uklanjanje iz privatne diskusije.
+                click_user_to_remove_tooltip: Klikni da ukloniš
+      
+        post:
+            recipients_modified:
+                added_and_removed: "{username} je dodao/la učesnike/ce {added} i uklonio/la je {removed}."
+                added: "{username} je u privatnu diskusiju dodao/la učesnika/cu {added}."
+                made_public: "{username} je uklonio/la sve učesnike/ce i učinio/la je ovu diskusiju javno dostupnom"
+                removed: "{username} je uklonio/la iz privatne diskusije korisnika/cu {removed}."
+                removed_self: "{username} je napustio/la privatnu diskusiju."
+        
+        user:
+            settings:
+                block_pd: Blokriraj privatne diskusije
+            byobu_link: Privatne diskusije
+            dropdown_label: Privatne diskusije
+
+        notifications:
+            pd_label: Neko me je uključio u privatnu diskusiju
+            pd_reply_label: Neko je objavio sadržaj/komentar u privatnoj diskusiji u kojoj učestvujem
+            pd_reply_text: "{username} je objavio/la sadržaj/komentar u privatnoj diskusiji u kojoj učestvujete"
+            pd_text: "{username} je započeo/la novu privatnu diskusiju sa Vama"
+            pd_user_left_label: Kada neko napusti privatnu diskusiju u kojoj i ja učestvujem
+            pd_user_left_text: "{username} je napustio/la privatnu diskusiju"
+            pd_added_text: "{username} vas je dodao/la u privatnu diskusiju"
+            pd_added_label: "Neko me je uključio u postojeću privatnu diskusiju"
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Može započeti privatne diskusije sa korisnicima/članovima Foruma
+            create_private_discussions_with_groups: Može započeti privatne diskusije sa grupama
+            create_private_discussions_with_blocking_users: Može započeti privatne diskusije sa korisnicima koji su ih blokirali
+            edit_user_recipients: Može urediti učesnike privatnih diskusija
+            edit_group_recipients: Može urediti grupe učesnika u privatnim diskusijama
+            make_private_into_public: Može transformisati privatnu diskusiju u javnu diskusiju
+            view_private_discussions-when-flagged: Može pregledati privatne diskusije drugih korisnika/članova Foruma ako su ih drugi označili kao neprikladne ili sumnjivog sadržaja
+
+        settings:
+            badge-icon: Byobu bedž diskusije
+            enable-make-public-option: Omogući "make public" opciju
+            enable-make-public-option-help: Dodaj mogućnost za one koji imaju dozvolu da uklone sve učesnike da dodaju novu oznaku i učine diskusiju javno dostupnom (prema postavkama vidljivosti i dostupnosti određene oznake).
+            post-event-icon: Byobu dešavanja u objavama
+            delete_on_last_recipient_left: Izbriši privatnu diskusiju kada zadnji korisnik napusti istu
+            delete_on_last_recipient_left_help: Ako je omogućeno, privatna diskusija će biti trajno izbrisana iz baze podataka kada je zadnji korisnik napusti. U suprotnom, privatna diskusija će biti prividno izbrisana i skrivena.
+
+    email:
+        subject:
+            private_discussion_created: "[Privatna diskusija] {display_name} je započeo/la novu privatnu diskusiju sa Vama"
+            private_discussion_replied: "[Privatna diskusija] {display_name} je upisao/la objavu u privatnoj diskusiji"
+            recipient_removed: "[Privatna diskusija] {display_name} je napustio/la diskusiju"
+            private_discussion_added: "[Privatna diskusija] {display_name} Vas je dodao/la u privatnu diskusiju"
+        
+        body:
+            private_discussion_created: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je započeo/la novu privatnu diskusiju s Vama o temi {discussion_title}.
+
+                Ovu novu privatnu diskusiju možete pogledati na:
+                {discussion_url}
+
+                Za pristup privatnoj diskusiji na gornjem linku potrebna je prijava na Forumu.
+            
+            private_discussion_replied: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je upisao/la objavu u privatnoj diskusiji s Vama o temi {discussion_title}.
+
+                Spomenutu privatnu diskusiju možete pogledati na:
+                {post_url}
+
+                Za pristup privatnoj diskusiji na gornjem linku potrebna je prijava na Forumu.
+            
+            recipient_removed: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je napustio/la privatnu diskusiju o temi {discussion_title}. Navedeni korisnik Foruma više nema pristup sadržajima diskusije koju je napustio/la.
+
+                Spomenutu privatnu diskusiju možete pogledati na:
+                {discussion_url}
+
+                Za pristup privatnoj diskusiji na gornjem linku potrebna je prijava na Forumu.
+            
+            private_discussion_added: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} Vas je dodao/la u postojeću privatnu diskusiju o temi {discussion_title}.
+
+                Spomenutu privatnu diskusiju možete pogledati na:
+                {discussion_url}
+
+                Za pristup privatnoj diskusiji na gornjem linku potrebna je prijava na Forumu.

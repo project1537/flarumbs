@@ -1,0 +1,35 @@
+fof-filter:
+    forum:
+        flagger_name: Automatski moderator
+        flag_message: Blokirani nizovi
+    admin:
+        title: Filter
+        bad_words_help: Unesite tekst ili riječi za filtriranje, jednu po redu. Ako sadržaj objave korisnika sadrži niz koji želite filtrirati, bit će označen za odobrenje. Otporan na 133t.
+        help2: Interval u minutama u kojem će objave istog korisnika u istoj diskusiji biti automatski spojene.
+        email_help: Tekst (sadržaj) označene e-pošte. Prihvata html ili jednostavni, neformatirani tekst.
+        filter_label: Nizovi za filtriranje
+        countLabel: Tolerancija cenzure
+        cooldownLabel: Spoji objave nakon određenog perioda
+        auto_merge_title: Automatsko spajanje
+        input:
+            placeholder: Nizovi koje treba filtrirati
+            filter_title: Nizovi koje treba filtrirati
+            email_label: Email postavke
+            switch: 
+              email: Pošaljite e-poštu korisniku kada je objava filtrirana
+              merge: Automatsko spajanje dupli(rani)h objava
+            email_subject: Predmet
+            email_body: Tekst (sadržah) email poruke
+        nav:
+            text: Filter
+            desc: Filtriranje objava po riječi
+        permission:
+            bypass_filter_label: Može zaobići filter(e) riječi
+        email:
+            default_subject: Vezano za vašu nedavnu objavu
+            default_text: |
+                Hvala što objavljujete na forumu i učestvujete u diskusijama! Nažalost, vaša objava je uklonjen jer je sadržavala nešto što ne želimo vidjeti na našim forumima.
+                
+                Ako smatrate da je ovo bila greška, imate sreće, svaki uklonjeni post pregledavaju naši moderatori. Ako otkriju da je ovo uklonjeno greškom, vratit će ga.                
+                
+                Hvala vam na razumijevanju.

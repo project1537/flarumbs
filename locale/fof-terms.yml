@@ -1,0 +1,76 @@
+fof-terms:
+    admin:
+        settings:
+            title: Postavke uslova/politika
+
+            field:
+                signup-legal-text: Dodatni tekst na formi za registraciju korisnika
+                hide-updated-at: Ne prikazuj datum ažuriranja uslova/politika kada je dostupno ažuriranje
+                date-format: Format datuma
+                date-format-help: Možete koristiti bilo koji ispravan <a>Moment.js</a> format. Za predefinisane postavke ostavite prazno polje.
+
+        titles:
+            policies: Politike
+
+        buttons:
+            new-policy: Nova politka
+            edit-policy: Uredi politiku
+            add-policy: Dodaj politiku
+            save-policy: Sačuvaj politiku
+            delete-policy: Izbrši politiku
+            set-to-now: Postavi na trenutno vrijeme i datum
+
+        messages:
+            delete-policy-confirmation: >
+                This will permanently delete the policy {name} and the associated accept dates from the database.
+                Please make sure you made a backup of those dates if you need them for legal reasons.
+                Are you sure you want to delete this policy ?
+
+        policies:
+            name: Naziv
+            name-help: This name will be shown beside the checkbox and as the title of the update modal.
+            url: Url
+            url-help: URL stranice/diskusije gdje je moguće pročitati Opće uslove korištenja, Pravila Foruma i/ili Politiku privatnosti i zaštite korisničkih podataka. Otvaraju se u novoj kartici prilikom posjete linka.
+            update-message: Ažuriraj poruku
+            update-message-help: A message to show to existing users who have not yet accepted the latest terms.
+            terms-updated-at: Ažurirano
+            terms-updated-at-placeholder: YYYY-MM-DD (hh:mm:ss)
+            terms-updated-at-help: >
+                The date of the last terms update.
+                Setting this value will require all users who accepted prior to that date to accept again.
+                Must be in the past (otherwise users would never be able to accept after the date and get past the modal).
+            export-url: Izvezi url
+            export-url-help: >
+                Any user with permission "Export all policies data" can access those urls to download the list of users who accepted this policy.
+                You can find more details about the available options on the <a>extension wiki</a>.
+
+        permissions:
+            see-user-policies-state: Pregledaj stanje prihvatanja Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
+            postpone-policies-accept: Može odgoditi prihvatanje ažuriranih Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
+            export-policies: Izvezi sve korisnike i podatke o prihvatanju Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
+
+    forum:
+        signup:
+            i-accept: Prihvatam <a>{policy}</a>
+            must-accept: Morate pročitati i prihvatiti {policy} prije prijave na forum i učešća u diskusijama.
+
+        accept-modal:
+            title: Ažuriranje uslova i pravila
+            updated-at: Opći uslovi korištenja, Pravila Foruma i/ili Politika privatnosti i zaštite korisničkih podataka su ažurirani {date}
+            updated-recently: Opći uslovi korištenja, Politika privatnosti i zaštite korisničkih podataka i/ili Pravila Foruma od Vaše posljednje posjete Forumu
+            i-accept: Prihvatam <a>{policy}</a>
+            accept: Potvrdi
+            close: Sada možete zatvoriti ovaj prozor
+
+        state-modal:
+            title: Stanje prihvatanja Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka za korisnika/cu {username}
+            accepted-at: Prihvaćeno {date}
+            not-accepted: Nije prihvaćeno
+
+        update-alert:
+            must-accept-message: Administracija foruma je privremeno blokirala pristup Vašem korisničkom računu dok ne provjerite i pročitate ažurirane uslove korištenja i/ili Pravila Foruma.
+            can-accept-message: Ažurirali smo Pravila foruma i/ili Politiku privatnosti i zaštite korisničkih podataka. Molimo Vas da ih pročitate i prihvatite.
+            review: OPŠIRNIJE...
+
+        user_controls:
+            state_button: Saglasnosti

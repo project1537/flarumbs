@@ -1,0 +1,12 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: Pregled biografije
+            editOwn: Uređivanje vlastite biografije
+            editAny: Uređivanje bilo čije biografije
+        setting:
+            bioLimit: Ograničavanje dužine biografije korisnika
+
+    forum:
+        userbioPlaceholder: Ovdje možete napisati nešto o sebi. Još uvijek niste? :)
+        userbioPlaceholderOtherUser: Napiši biografiju za korisnika/cu {username}

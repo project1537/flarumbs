@@ -1,0 +1,115 @@
+core:
+  forum:
+    index_sort:
+      hot_button: U trendu
+      votes_button: Sa najviše glasova
+
+fof-gamification:
+  forum:
+    votes: Glasovi
+    vote_title: Prikaži ko je glasao
+    nav:
+      name: Reputacija
+    ranking:
+      rank: Mjesto
+      name: Korisnik/ca
+      amount: Glasovi
+    notification:
+      upvote: "{username} je glasao/la ZA Vašu objavu"
+      downvote: "{username} je glasao/la PROTIV Vaše objave"
+      prefrences:
+        vote: Kada neko glasa za ili protiv moje objave
+    user:
+      card:
+        points: "{count, plural, one { {count} glas} other {{count} glasova}}"
+      rank: "{rank}"
+      votes_link: Glasovi
+    modal:
+      downvotes_label: 'Glasali PROTIV:'
+      title: Glasači
+      upvotes_label: 'Glasali ZA:'
+    mod_item: Vidi ko je glasao
+    voters:
+      none: Nema glasača
+      label: Glasači
+      label_none: Niko nije glasao za objavu
+    post:
+      upvote_button: Glasaj ZA
+      downvote_button: Glasaj PROTIV
+
+  admin:
+    permissions:
+      vote_label: Može glasati ZA ili PROTIV objava
+      see_votes_label: Može vidjeti glasove ZA ili PROTIV objave
+      see_voters_label: Može (pre)gledati glasače
+      see_ranking_page: Može vidjeti stranicu sa reputacijom korisnika
+      upvote_notifications: Primi obavještenja kada neko glasa ZA objavu
+      downvote_notifications: Primi obavještenja kada neko glasa PROTIV objave
+    page:
+      rankings:
+        blocked:
+          placeholder: Korisnik1, Korisnik2, Korisnik3
+          title: Korisnici/ koje ignorišem
+          help: Ovi korisnici NEĆE biti prikazani na stranici sa reputacijom korisnika. Korisnička imena trebaju biti razdvojena zarezom poslije kojeg slijedi slobodan prostor (razmak bez ikakvih znakova/simbola).
+        title: Stranica reputacije korisnika
+        enable: Omogući prilagođene fotografije
+        custom_image_1: Fotografija za 1. mjesto
+        custom_image_2: Fotografija za 2. mjesto
+        custom_image_3: Fotografija za 3. mjesto
+      alt_votes:
+        icon_name: Naziv ikon(ic)e alternativnog prikaza
+      votes:
+        points_title: Naziv polja za prikaz bodova (uz biografiju korisnika/ce)
+        points_placeholder: "Bodovi: "
+        color_holder: '#ffffff'
+        auto_upvote: Automatski glasaj ZA nove objave
+        rate_limit: Postavi vremensko ograničenje za glasanje (10 sekundi)
+        discussion_page: Prikaži ukupan broj glasova za originalnu objavu u listi diskusija
+        alternate_layout: Koristi alternativni prikaz za prikaz glasova
+        alternate_post_layout: Koristi alternativni prikaz glasanja
+        title: Glasovi
+        vote_color: Boja
+        icon_name: Ikonica glasa ZA ili PROTIV
+        icon_help: "Unesite naziv bilo koje Font-Awesome ikonice koja ima sufikse -up i -down. Primjer: arrow, thumbs, chevron"
+        upvotes_only: Dozvoli glasanje samo ZA
+        first_post_only: Dozvoli glasanje ZA/PROTIV samo u prvoj objavi u diskusiji
+        allow_self_votes: Korisnici mogu glasati ZA/PROTIV vlastitih objava
+      save_settings: Spremi postavke
+      convert:
+        button: Konvertuj sviđanja u glasove ZA
+        help: Convert your previous likes from flarum-ext-likes into upvotes, as well as calculate the hotness for all current discussions.
+        converting: Sviđanja objava se upravo konvertuju u glasove ZA. Nakon par trenutaka osvježite (refresh) stranicu da vidite da li je proces završen (ovo može potrajati, zavisno od broja sviđanja objava).
+        converted: "Uspješno konvertovano {number} sviđanja"
+      ranks:
+        title: Reputacija
+        ranks: Prilagođena reputacija
+        number_title: Koliko bedževa reputacije biti prikazano?
+        help:
+          color: '#ffffff'
+          help: "Unesite potrebni broj glasova ZA, naziv (bedža) reputacije i hex kod boje"
+          points: Bodovi
+          name: Naziv
+      groups:
+        title: Automatski dodijeljene grupe
+        help: >
+          The selected groups will be automatically added or removed as needed when the number of points of a user changes.
+          If you made changes to the configuration, you should run the <code>php flarum fof:gamification:assign-groups</code> command to update existing users.
+          If you wish to delete a rule and remove all users from the group, set both minimum and maximum values to an empty string, save the settings and run the command line command.
+          Finally you can delete the rule entirely from the settings.
+        column:
+          group: Grupa
+          minPoints: Minimum glasova
+          maxPoints: Maksiimum glasova
+        add: Dodaj novo pravilo
+        delete: Izbriši pravilo
+
+  email:
+    body:
+      postVoted: |
+        Poštovani/na {recipient_display_name},
+
+        {actor_display_name} upravo je dao/la glas Vašoj objavi u diskusiji o temi {discussion_title}.
+
+        Za pregled spomenute diskusije posjetite ovaj link: {discussion_url}
+    subject:
+      postVoted: Glas Vašoj objavi dao/la je korisnik/ca {display_name}    

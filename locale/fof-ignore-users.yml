@@ -1,0 +1,30 @@
+fof-ignore-users:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      can_not_be_ignored_label: Ne može biti ignoriran
+
+
+  # Translations in this namespace are used by the forum interface.
+  forum:
+
+    profile_link: Korisnici koje ignoriram
+    profile_page:
+      no_ignored: Čini se da nikoga ne ignoriraš.
+
+    # These strings are used in the User Controls menu.
+    user_controls:
+      ignore_button: Ignoriši korisnika
+      ignore_confirmation: Sigurni ste da želite ignorirati ovog korisnika?
+      unignore_button: Prestani ignorirati korisnika
+      unignore_confirmation: Sigurni ste da želite prestati ignorirati ovog korisnika?
+
+    badge:
+      user_label: Korisnik kojeg ignoriram
+      discussion_label: Diskusiju započeo korisnik kojeg ignoriram
+

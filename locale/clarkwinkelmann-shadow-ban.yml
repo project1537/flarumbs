@@ -1,0 +1,27 @@
+clarkwinkelmann-shadow-ban:
+    admin:
+        setting:
+            hideUsers: Sakrij profile korisnika kojima je diskretno zabranjena aktivnost na forumu
+        permission:
+            ban: Može diskretno zabraniti aktivnosti korisnika na forumu
+            hide: Može diskretno sakriti diskusije i objave korisnika
+    forum:
+        discussionControl:
+            hide: Diskretno sakrij diskusiju
+            restore: Diskretno (po)vrati diskusiju
+        postControl:
+            hide: Diskretno sakrij objavu
+            restore: Diskretno (po)vrati objavu
+        userControl:
+            ban: Diskretno zabrani aktivnosti
+        banUser:
+            title: "Suspenduj korisnika/cu {username}"
+            until: do datuma (UTC)
+            quick: Brze akcije
+            quickChoiceReset: Ukini zabranu
+            quickChoiceDays: "{count, plural, one {# dan} other {# dana}}"
+            submit: Spremi
+        badge:
+            user: Korisniku/ci diskretno zabranjene aktivnosti na forumu
+            discussion: Ova diskusija je diskretno s(a)krivena
+            post: Ova objava je diskretno s(a)krivena

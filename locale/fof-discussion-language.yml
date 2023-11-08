@@ -1,0 +1,39 @@
+fof-discussion-language:
+  forum:
+    change_language:
+      edit_title: Uredi jezik diskusije {title}
+      title: Uređivanje jezika diskusije
+
+      submit_button: => core.ref.save_changes
+
+    composer_discussion:
+      choose_language_link: Jezik
+
+    discussion_controls:
+      change_language_button: Uredi jezik diskusije
+
+    index_language:
+      any: Svi jezici
+
+  admin:
+    settings:
+      native_label: Koristite nazive jezika na maternjem jeziku
+      show_flag_label: Prikaži zastav(ic)e države uz naziv jezika
+      composer_default_label: Unaprijed odaberite trenutni jezik u sastavljaču diskusija
+      locale_sort_label: Koristi otkriveni jezik za zadani filter rasprave
+      show_any_lang_opt_label: Prikažite opciju "Svi jezici"
+      tags_page_discussion_locale_label: Na stranici Oznake prikaži samo rasprave s trenutne lokacije korisnika
+
+      errors:
+        missing_assets: Nismo mogli učitati sredstva potrebna za ovo proširenje. Pokušajte pokrenuti komandu <code>php flarum assets:publish</code> i provjeriti da li će to riješiti ovaj problem.
+
+      config:
+        language_label: Jezik
+        country_label: Država (za prikazivanje zastave)
+
+    permissions:
+      allow_change_language_label: Dozvoli uređivanje jezika diskusije
+
+  api:
+    discussion:
+      validation_error: Molimo Vas da izaberete jezik diskusije.

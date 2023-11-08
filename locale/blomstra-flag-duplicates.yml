@@ -1,0 +1,23 @@
+flarum-flags:
+  forum:
+    flag_post:
+      reason_duplicate_label: Duplikat
+
+blomstra-flag-duplicates:
+  admin:
+    settings:
+      event_post_help: Kreirajte objavu događaja u diskusiji gdje je podignuta zastav(ic)a "duplikat". Ovo može informisati korisnike da je diskusija potencijalno duplikat druge, bez da im se omogući pristup zastav(ic)ama koje su podignute.
+      event_post_label: Objava događaja
+  forum:
+    flags:
+      duplicate_discussion: Duplicirana diskusija
+      reason_duplicate_label: Duplicirana diskusija
+      reason_duplicate_text: Ova diskusija je duplikat druge.
+
+      reason_discussion_deleted: "[izbrisana diskusija]"
+
+      deselect_discussion_a11y_label: Poništi odabir diskusije
+
+    post_stream:
+      flagged_duplicate_text: "{username} je označio/la ovu diskusiju kao potencijalni duplikat diskusije o temi {duplicate}. Moderator foruma će uskoro provjeriti i istražiti ovu prijavu."
+      deleted_discussion: "[izbrisana diskusija]"

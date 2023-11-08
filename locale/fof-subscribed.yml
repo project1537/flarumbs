@@ -1,0 +1,80 @@
+fof-subscribed:
+    forum:
+        settings:
+            defaults_label: Postavi "{setting}" zadate vrijednosti
+            forced_label: Omogući sve "{setting}" za sve korisnike
+            notify_discussion_created_label: Neko je započeo novu temu/diskusiju
+            notify_post_created_label: Neko je upisao novu objavu ili odgovor
+            notify_post_unapproved_label: Nova objava očekuje odobrenje/moderaciju
+            notify_user_created_label: Neko se registrovao
+            notify_post_flagged_label: Neko je prijavio neprimjerenu objavu
+        notifications:
+            discussion_created_text: "Korisnik {username} je započeo/la novu diskusiju"
+            post_created_text: "{username} je napisao/la novu objavu"
+            post_unapproved_text: "{username} je napisao/la novu objavu koja očekuje odobrenje/moderaciju"
+            user_created_text: "Korisnik {username} je upravo registrovan/a"
+            post_flagged_text: "{username} je prijavio/la neprimjerenu objavu"
+    admin:        
+        permission:
+            subscribe_to_discussion_created: Omogućeno primanje obavještenja o novim temama/diskusijama
+            subscribe_to_post_created: Omogućeno primanje obavještenja o novim objavama ili odgovorima 
+            subscribe_to_post_unapproved: Omogućeno primanje obavještenja o novim neodobrenim objavama
+            subscribe_to_user_created: Omogućeno primanje obavještenja o novim korisnicima
+            subscribe_to_post_flagged: Omogućeno primanje obavještenja o novim prijavljenim i označenim objavama
+    email:
+        subject:
+            newDiscussion: "[Pretplata | Nova diskusija] {title}"
+            newUser: "[Pretplata | Novi korisnik] {username}"
+            postUnapproved: "[Pretplata | Neodobrena objava] {username} je upisao/la novu objavu u diskusiji o temi {title}"
+            postCreated: "[Pretplata | Nova objava] {username} je upisao/la novu objavu u diskusiji o temi {title}"
+            postFlagged: "[Pretplata | Nova prijava neprimjerene objave] {username} je prijavio/la neprimjerenu objavu u diskusiji o temi {title}"
+        body:
+            newDiscussion: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je započeo/la novu diskusiju o temi: {discussion_title}
+
+                Za pregled ove nove diskusije posjetite link:
+                {discussion_url}
+
+                ---
+
+                {post_content}
+            newUser: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je upravo registrovan/na na {forum_url}.
+
+                Za pregled profila ovog novog korisnika posjetite link:
+                {user_url}
+            postUnapproved: |
+                Poštovani/na {recipient_display_name},
+
+                {actor_display_name} je upisao/la novu objavu koja nije automatski objavljena i odobrena u diskusiji o temi {discussion_title}
+
+                Za pregled ove nove neodobrene objave posjetite link:
+                {post_url}
+
+                ---
+
+                {post_content}
+
+            postCreated: |
+                Poštovani/na {recipient_display_name},
+                
+                {actor_display_name} je upravo upisao/la novu objavu u diskusiji o temi {discussion_title}
+                
+                Za pregled ove nove objave posjetite link:
+                {post_url}
+                
+                ---
+                
+                {post_content}
+            
+            postFlagged: |
+                Poštovani/na {recipient_display_name},
+                
+                {actor_display_name} je označio/la neprimjerenu objavu u diskusiji o temi {discussion_title}
+                
+                Za pregled ove objave posjetite link:
+                {post_url}

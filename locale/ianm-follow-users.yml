@@ -1,0 +1,126 @@
+ianm-follow-users:
+  admin:
+    permissions:
+      be_followed_label: Dozvoli praćenje korisnika/članova foruma
+    settings:
+      button-on-profile-label: Prikaži dugmić za praćenje direktno na zaglavlju profila korisnika
+      stats-on-profile-label: Prikaži pratitelje i broj praćenja na korisničkom profilu
+
+  forum:
+    followed: Prati
+    followers: Pratioci
+    profile_link: => ianm-follow-users.lib.following_link
+
+    profile_page:
+      no_following: Trenutno ne pratite korisnike na ovom forumu.
+
+    user_controls:
+      follow_button: => ianm-follow-users.lib.follow
+      unfollow_button: => ianm-follow-users.lib.change_follow_type
+
+    settings:
+      notify_new_follower_label: Neko me je počeo pratiti
+      notify_new_unfollower_label: Neko me je prestao pratiti
+      notify_new_discussion_label: Neko koga pratim započeo/la je novu diskusiju
+      notify_new_post_label: Neko koga pratim upisao/la je objavu u postojećoj diskusiji
+      block_follow: Onemogući korisnicima/članovima foruma da me prate
+
+    index:
+      follow_tag_button: => ianm-follow-users.lib.follow
+      unfollow_tag_button: => ianm-follow-users.lib.change_follow_type
+
+    notifications:
+      new_discussion_text: "{username} je započeo/la novu diskusiju"
+      new_post_text: "{username} je upisao/la objavu u diskusiji"
+      new_follower_text: "{username} Vas je počeo/la pratiti"
+      new_unfollower_text: "{username} Vas je prestao/la pratiti"
+
+    badge:
+      label:
+        follow: Pratim diskusije
+        lurk: Pratim sve
+
+    filter:
+      following: Pratim korisnika/cu
+
+    modals:
+      select_follow_level:
+        title: "Odaberi nivo praćenja korisnika/ce {username}"
+        description: "Odaberite kako želite pratiti korisnika/cu <em>{username}</em>."
+
+        follow_levels_heading: "Nivoi praćenja"
+        follow_select_label: "Tip praćenja"
+
+        no_user_attr_provided_err: "Uh oh, something went wrong while opening this modal."
+        no_user_attr_provided_err_debug: "No `user` attribute was passed to the SelectFollowUserLevel modal when created. Modal cannot be rendered."
+
+        save_btn: "Spremi"
+        cancel_btn: "Odbaci"
+
+  email:
+    new_discussion_by_user_subject: "[Pratim korisnika] {title}"
+    new_follower_subject: "[Pratim korisnika] Imate novog pratioca!"
+    new_post_subject: "[Pratim korisnika] Nova objava u diskusiji o temi {title}"
+    new_discussion_by_user_body: |
+      Poštovani/na {recipient_display_name},
+
+      {user_display_name} je započeo/la novu diskusiju o temi: {discussion_title}
+
+      Za pregled nove diskusije posjetite link:
+
+      {discussion_url}
+
+      ---
+
+      {post_content}
+
+    new_follower_body: |
+      Poštovani/na {recipient_display_name},
+
+      {follower_display_name} Vas je počeo/la pratiti. Ovaj korisnik bit će obaviješten kad započnete novu diskusiju.
+
+      Za pregled profila spomenutog korisnika posjetite link:
+
+      {profile_url}
+
+    new_post_body: |
+      Poštovani/na {recipient_display_name},
+
+      {user_display_name} je upisao/la novu objavu u diskusiji o temi: {discussion_title}
+
+      Za pregled ove nove aktivnosti posjetite link:
+
+      {post_url}
+
+      ---
+
+      {post_content}
+
+      ---
+
+      Ukoliko ste u toku novih objava i odgovora u spomenutoj diskusiji, nećemo vam slati nova email obavještenja o istoj.
+
+  lib:
+    following_link: Korisnici koje pratim
+
+    follow: Prati
+    change_follow_type: Promijeni tip praćenja
+
+    follow_levels:
+      unfollow:
+        name: Ne prati
+
+        description: |
+          Ne obavještavaj me o aktivnostima korisnka/ce <em>{username}</em>.
+
+      follow:
+        name: Prati diskusije
+
+        description: |
+          Obavijesti me kad korisnik/ca <em>{username}</em> započne novu diskusiju.
+
+      lurk:
+        name: Prati sve
+
+        description: |
+          Obavijesti me kad korisnik/ca <em>{username}</em> započne novu diskusiju ili upiše novu objavu u bilo kojoj diskusiji.

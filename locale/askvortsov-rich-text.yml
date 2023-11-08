@@ -1,0 +1,41 @@
+askvortsov-rich-text:
+  admin:
+    settings:
+      toggle_on_editor: Prikaži napredni uređivač teksta u polju za unos teksta/sadržaja?
+  lib:
+    composer:
+      toggle_button: Omogući napredni uređivač teksta
+      insert_button: Umetni
+      insert_image:
+        src_placeholder: Link
+        title_placeholder: Naslov
+      insert_link:
+        text_placeholder: Tekst
+        href_placeholder: URL
+        title_placeholder: Naslov (vidljiv prilikom nanosa kursorom)
+        remove_button: Ukloni
+      additional_items_tooltip: Dodatne kontrole
+      bold_tooltip: Podebljaj tekst <{modifierKey}-b>
+      code_tooltip: Kod <{modifierKey}-`>
+      code_block_tooltip: Umetni liniju koda
+      header_tooltip: Promijeni u naslov {level} <shift-{modifierKey}-{level}>
+      horizontal_rule_tooltip: Horizontalna linija
+      image_tooltip: Dodaj fotografiju
+      italic_tooltip: Nakrivi tekst <{modifierKey}-i>
+      link_tooltip: Dodaj link
+      ordered_list_tooltip: Numerisana lista <shift-{modifierKey}-9>
+      paragraph_tooltip: Prebaci u paragraf <shift-{modifierKey}-0>
+      quote_tooltip: Citiraj <{modifierKey}-q>
+      spoiler_block_tooltip: Blok spojlera/padajući meni
+      spoiler_inline_tooltip: Spojler <{modifierKey}-;>
+      strike_tooltip: Precrtaj tekst <alt-shift-5>
+      sub_tooltip: Spušten tekst <{modifierKey}-,>
+      sup_tooltip: Podignut tekst <{modifierKey}-.>
+      text_type_tooltip: Izaberi tip teksta
+      unordered_list_tooltip: Nenumerisana lista <shift-{modifierKey}-8>
+
+  forum:
+    settings:
+      composer_heading: Uređivač teksta
+      use_rich_text_editor_label: Koristi napredni uređivač teksta?
+      rich_text_compact_paragraphs_label: Ne razdvajaj paragrafe novom linijom.

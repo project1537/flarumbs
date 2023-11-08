@@ -1,0 +1,71 @@
+flarum-suspend:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      suspend_users_label: Suspenduj korisnike
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are used in the suspension notifications
+    notifications:
+      user_suspended_text: "{username} suspendiran na period od {timeReadable}"
+      user_suspended_indefinite_text: Suspendirani ste na neodređeno vrijeme
+      user_unsuspended_text: "{username} je ukinuo/la vašu suspenziju"
+
+    # These translations are used for the suspension reason informational modal to the suspended user.
+    suspension_info:
+      dismiss_button: Otkaži
+      indefinite: Ovo je suspenzija na
+      limited: "Ova suspenzija je na snazi do {date}"
+      title: Ovaj korisnički račun je suspendiran
+
+    # These translations are used in the Suspend User modal dialog (admin function).
+    suspend_user:
+      display_message: Poruka koja će biti prikazana korisniku/ci
+      indefinitely_label: Suspendovan/a na neodređeno vrijeme
+      limited_time_days_text: " dana"
+      limited_time_label: Suspendovan/a na određeno vrijeme...
+      not_suspended_label: Nesuspendovan/a
+      placeholder_optional: Opcionalno
+      reason: Razlog suspenzije
+      status_heading: Status suspenzije
+      submit_button: => core.ref.save_changes
+      title: "Suspenduj korisnika/cu {username}"
+
+    # These translations are displayed as tooltips for user badges.
+    user_badge:
+      suspended_tooltip: Suspendovan/a
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      suspend_button: Suspenduj
+
+  # Translations in this namespace are used by suspension email notifications
+  email:
+    no_reason_given: Nije naveden razlog suspenzije.
+    suspended:
+      subject: Suspenzija korisničkog računa
+      body: |
+        Poštovani/na {recipient_display_name},
+
+        Vaš korisnički račun je suspendovan zbog navedenih razloga:
+
+        ---
+        {suspension_message}
+        ---
+
+    unsuspended:
+      subject: Ukinuta je suspenzija Vašeg korisničkog računa
+      body: |
+        Poštovani/na {recipient_display_name},
+
+        Ukinuta je suspenzija Vašeg korisničkog računa. Možete se vratiti na forum klikom na navedeni link:
+
+        {forum_url}

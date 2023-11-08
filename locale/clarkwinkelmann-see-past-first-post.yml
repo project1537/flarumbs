@@ -1,0 +1,12 @@
+clarkwinkelmann-see-past-first-post:
+    forum:
+        cant-see: Nemate dozvolu pregledati objave
+        login-to-see: Prijavite se za pregled objava u diskusiji
+
+    admin:
+        permissions:
+            see-past-first-post: Pregled objava diskusije
+        settings:
+            hide-comment-count: Sakrij broj komentara sa liste diskusija
+            hide-last-post: Sakrij korisničko ime i datum sa liste diskusija
+            hide-first-post: Sakrij i prvu objavu

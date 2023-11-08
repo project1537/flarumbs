@@ -1,0 +1,23 @@
+fof-socialprofile:
+  admin:
+    permissions:
+      view: Pregled profila na društvenim mrežama
+      editOwn: Uređivanje vlastitog profila na društvenim mrežama
+      editAny: Uređivanje bilo čijeg profila na društvenim mrežama
+    
+    settings:
+      allow_external_favicons_label: "Dozvoli ikone vanjskih web stranica (koristi DuckDuckGo's favicon API)"
+      
+  forum:
+    edit:
+      edit: Uredi dugmad profila na društvenim mrežama
+      add: Dodaj dugmad profila na društvenim mrežama
+      headtitle: Uredi dugmad
+      title: Naziv
+      url: URL
+      submit: Spremi
+      delete: Izbriši
+      deletetitle: Izbriši dugme
+      save_disabled_fetching_favicons: Jedna ili više ikona se preuzimaju. Molimo pričekajte.
+      favicon: Favicon
+      grey_favicon: Sivi Favicon

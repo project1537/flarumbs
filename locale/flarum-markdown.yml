@@ -1,0 +1,14 @@
+flarum-markdown:
+  lib:
+    composer:
+      bold_tooltip: Podebljaj tekst
+      code_tooltip: Unesi kod
+      header_tooltip: Dodaj naslov
+      image_tooltip: Dodaj sliku
+      italic_tooltip: Dodaj ukrivljeni tekst
+      link_tooltip: Dodaj poveznicu (link)
+      ordered_list_tooltip: Dodaj numerisanu listu
+      quote_tooltip: Upiši citat
+      spoiler_tooltip: Unesi spojler
+      strikethrough_tooltip: Dodaj precrtani tekst
+      unordered_list_tooltip: Dodaj listu

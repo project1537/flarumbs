@@ -1,0 +1,43 @@
+fof-links:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These strings are used in the Edit Link modal dialog.
+    edit_link:
+      delete_link_button: Izbriši link
+      delete_link_confirmation: "Sigurni ste da želite izbrisati ovaj link?"
+      everyone-label: Svi
+      guests-label: Gosti
+      internal_link: "Da li je ovo interni link?"
+      members-label: Registrovani korisnici
+      open_newtab: "Otvori link u novoj kartici"
+      submit_button: => core.ref.save_changes
+      title: => fof-links.ref.create_link
+      title_label: => fof-links.ref.title
+      title_placeholder: => fof-links.ref.title
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      url_description: Ostavite prazno za prikazivanje oznake.
+      url_label: => fof-links.ref.url
+      url_placeholder: => fof-links.ref.url
+      visibility: Vidljivost linka
+
+    # These strings are used in the Links page.
+    links:
+      create_button: => fof-links.ref.create_link
+      links: => fof-links.ref.links
+      
+    settings:
+      show_icons_only_on_tablet: Ikon(ic)e prikaži samo na tabletu
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    create_link: Kreiraj link
+    links: Linkovi
+    title: Naslov
+    url: URL

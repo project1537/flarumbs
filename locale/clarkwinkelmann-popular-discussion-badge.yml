@@ -1,0 +1,40 @@
+clarkwinkelmann-popular-discussion-badge:
+    forum:
+        badge_label: Popularno
+
+    admin:
+        settings:
+            mode: Model funkcioniranja
+            mode_help: >
+                Frontend mode - efikasno rješenje koje ne koristi bazu podataka.
+                Scheduler mode - zahtijeva postavke redovitog upravitelja pozadinskih procesa (cron) i omogućava vremenske okvire u uvjetima.
+            mode_options:
+                frontend: Frontend model
+                scheduler: Scheduler (CRON) model
+            scheduler_frequency: Frekvencija zakazanog modela
+            scheduler_frequency_help: >
+                Koliko često će biti ažuriran status popularnih diskusija u Scheduler (CRON) modelu.
+                (U Frontend modelu, ovaj status je uvijek odmah ažuriran)
+            scheduler_frequency_options:
+                everyFiveMinutes: Svakih 5 minuta
+                everyTenMinutes: Svakih 10 minuta
+                everyFifteenMinutes: Svakih 15 minuta
+                everyThirtyMinutes: Svakih 30 minuta
+                hourly: Jednom u sat vremena
+            conditions: Uvjeti za bedž popularnih diskusija
+            conditions_help: >
+                Objave u ovom slučaju predstavljaju broj objava uključujući i prvu objavu u diskusiji.
+                Broj pregleda je preuzet iz nekog od FLarum proširenja.
+                Datu vremenski okvir bit će korišten da se (pre)broji broj objava ili pregleda u posljednjih X sati.
+                Za preglede vremenskog okvira podržano je samo MichaelBelgium Views proširenje (ekstenzija).
+                Ostavite polje za vremenski okvir prazno ili upišite 0 sati da bi se (u)brojile sve objave i/ili svi pregledi diskusije općenito (bez posebnog vremenskog okvira).
+            add: Dodaj drugi uvjet
+            comments: Objave
+            comments_placeholder: "0"
+            views: Pregledi
+            views_placeholder: "0"
+            within: unutar
+            within_placeholder: svih
+            hours: sat(i)
+            and: i
+            or: ili

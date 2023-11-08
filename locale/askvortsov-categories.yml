@@ -1,0 +1,42 @@
+askvortsov-categories:
+  admin:
+    basics:
+      categories_label: Kategorije
+    labels:
+      keep_tags_nav: U meniju bočne trake zadrži link ka stranici sa oznakama?
+      child_bare_icon: Prikaži osnovne iko(nice) za potkategorije?
+      compact_mobile_mode: Kompaktni mobilni prikaz
+      full_page_desktop: Prikaz preko čitavog ektrana na stolnim računarima?
+      parent_remove_icon: Sakrij ikon(ic)e za oznake najvišeg nivoa?
+      parent_remove_description: Sakrij opise za oznake najvišeg nivoa?
+      parent_remove_stats: Sakrij statistiku za oznake najvišeg nivoa?
+      parent_remove_last_discussion: Sakrij najnovije diskusije za oznake najvišeg nivoa?
+      small_forum_optimized: Optimiziraj za male forume?
+    help:
+      child_bare_icon: Da li će ikon(ic) u potkategorijama biti prikazane bez kružne pozadine?
+      full_page_desktop: Da li će navigacijski meni bočne trake biti transformiran u red(ak) (kao na uobičajenoj stranici oznaka)? Ovo će, isto tako, sakriti dodatke (widgets) sa navigacijske trake na stranici kategorija.
+      small_forum_optimized:  Ovo će pružiti preciznije podatke o broju diskusija i objava, ali će dramatično usporiti srednje i velike forume.
+    headings:
+      nav: Navigacija
+      layout: Izgled
+      parent_display: Prikaz glavnih kategorija
+      child_display: Prikaz potkategorija
+      performance: Performanse
+    title: Postavke kategorija
+
+  forum:
+    all_categories:
+      meta_description_text: Sve kategorije
+      meta_title_text: => askvortsov-categories.ref.categories
+    header:
+      back_to_categories_tooltip: Nazad na kategorije
+    index:
+      categories_link: => askvortsov-categories.ref.categories
+    stat-widgets:
+      discussion_label: Diskusije
+      post_label: Objave
+    last_discussion_widget:
+      no_discussions: Nema diskusija (još uvijek!)
+
+  ref:
+    categories: Kategorije

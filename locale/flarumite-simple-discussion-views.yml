@@ -1,0 +1,19 @@
+core:
+  forum:
+    index_sort:
+      popular_button: Popularno
+      unpopular_button: Nepopularno
+
+flarumite-simple-discussion-views:
+  forum:
+    modal_resetviews:
+      title: Ponovno postavljanje broja pregleda diskusije
+      submit: Spremi
+      label: Postavi broj pregleda
+    discussion_controls:
+      resetviews_button: Postavi broj pregleda
+  admin:
+      permissions:
+          reset_views_label: Postavi broj pregleda
+      settings:
+        ignore_crawlers: Ignoriši posjete/preglede botova i programa koji pregled(av)ju web stranice radi indeksa podataka

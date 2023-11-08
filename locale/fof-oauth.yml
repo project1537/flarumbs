@@ -1,0 +1,116 @@
+fof-oauth:
+  admin:
+    # This is used by extensions which extend fof/oauth to add additional providers
+    configure_button_label: Configure with FoF OAuth
+    settings_accessibility_label: "{name} postavke"
+
+    settings:
+      only_icons_label: Prikaži samo ikon(ic)e za prijavu (alternativni prikaz)
+
+      providers:
+        callback_url_text: Ukoliko je potrebno, postavite povratni URL ka {url}.
+
+        discord:
+          description: Kreiraj aplikaciju na {link}. Dodaj URL za redirekciju u OAuth2 kartici.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        facebook:
+          description: Kreiraj aplikaciju na {link}.
+
+          app_id_label: => fof-oauth.ref.settings.app_id
+          app_secret_label: => fof-oauth.ref.settings.app_secret
+
+        github:
+          description: Kreiraj OAuth aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        gitlab:
+          description: Kreiraj aplikaciju na {link}. Aplikaciji je potrebno dodijeliti <code>read_user</code> opseg/obim.
+
+          client_id_label: => fof-oauth.ref.settings.app_id
+          client_secret_label: => fof-oauth.ref.settings.app_secret
+          domain_label: GitLab domena
+
+        twitter:
+          description: Kreiraj aplikaciju na {link}. Neophodno je da postavite i URL ka Vašim uvjetima korištenja usluga i URL ka politici privatnosti koju primjenjujete. Imajte na umu da dodate i zahtjev za korištenje email adrese.
+
+          api_key_label: API ključ
+          api_secret_label: API tajna
+
+        google:
+          description: Kreiraj aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        linkedin:
+          description: Kreiraj aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+  forum:
+    log_in:
+      with_button: Prijava uz {provider}
+
+      # Modify these if your provider requires specific wording.
+      # You may use {provider} in the translation.
+      with_discord_button: '=> fof-oauth.forum.log_in.with_button'
+      with_facebook_button: '=> fof-oauth.forum.log_in.with_button'
+      with_github_button: '=> fof-oauth.forum.log_in.with_button'
+      with_gitlab_button: '=> fof-oauth.forum.log_in.with_button'
+      with_google_button: '=> fof-oauth.forum.log_in.with_button'
+      with_linkedin_button: '=> fof-oauth.forum.log_in.with_button'
+      with_twitter_button: '=> fof-oauth.forum.log_in.with_button'
+      
+    user:
+      settings:
+        linked-account:
+          label: Povezani računi
+          last-used-label: Posljednji put korišten
+          link-created-label: (Po)vez(nic)a kreirana
+          orphaned-account: Ranije ste se registrirali/prijavili koristeći ovaj provajder. U međuvremenu je na ovom Forumu onemogućena registracija/prijava ovom metodom/pomoću ovog provajdera.
+          help: Ovi povezani korisnički računi omogućavaju Vam prijavu na forum koristeći druge provajdere (Google, Twitter, Facebook...).
+          identifier-label: "{provider} ID"
+          unlink-confirm: Sigurni ste da želite ukloniti (po)vez(nic) sa {provider}? Nećete moći prijaviti se na ovaj Forum ukoliko ponovo ne izvršite autentifikaciju.
+    # Modify these if you need to change how the provider name
+    # appears in the log in button.
+    providers:
+      discord: '=> fof-oauth.lib.providers.discord'
+      facebook: '=> fof-oauth.lib.providers.facebook'
+      github: '=> fof-oauth.lib.providers.github'
+      gitlab: '=> fof-oauth.lib.providers.gitlab'
+      google: '=> fof-oauth.lib.providers.google'
+      linkedin: '=> fof-oauth.lib.providers.linkedin'
+      twitter: '=> fof-oauth.lib.providers.twitter'
+
+    signup:
+      username_help: Molimo Vas izaberite korisničko ime
+      
+    unlink: Ukloni (po)vez(nic)u
+
+    error:
+      bad_verification_code: Pogrešan ili istekao verifikacijski token. Molimo pokušajte ponovo.
+      invalid_state: Došlo je do greške. Molimo pokušajte ponovo.
+
+  lib:
+    providers:
+      discord: Discord
+      facebook: Facebook
+      github: GitHub
+      gitlab: GitLab
+      twitter: Twitter
+      google: Google
+      linkedin: LinkedIn
+
+  ref:
+    settings:
+      app_id: App ID
+      app_secret: App Secret
+
+      client_id: Client ID
+      client_secret: Client Secret

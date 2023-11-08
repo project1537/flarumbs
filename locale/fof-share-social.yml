@@ -1,0 +1,29 @@
+fof-share-social:
+  admin:
+    settings:
+      canonical-urls: Koristi kanonski URL za dijeljenje sadržaja
+      plain-copy: Prikaži običnu kopiju URL-a
+  forum:
+    discussion:
+      share_button: Dijeli
+
+    modal:
+      title: Dijeli ovaj sadržaj
+      copy_button: Kopiraj
+
+  lib:
+    networks:
+      facebook: Facebook
+      twitter: Twitter
+      linkedin: LinkedIn
+      reddit: Reddit
+      whatsapp: WhatsApp
+      telegram: Telegram
+
+      vkontakte: VKontakte
+      odnoklassniki: Odnoklassniki
+      my_mail: My World
+      qq: QQ
+      qzone: QZone
+      
+      native: Nativno dijeljenje

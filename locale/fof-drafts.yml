@@ -1,0 +1,53 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Kreiraj nacrte
+      schedule: Zakaži objavu nacrta
+    settings:
+      title: Nacrti
+      enable_scheduled_drafts: Omogući zakazivanje nacrta
+      schedule_on_one_server: Use 'onOneServer()' directive for the task scheduler (requires Redis/Memcache)
+      schedule_log_output: Append scheduler output to log storage
+  console:
+    scheduled_drafts_disabled: Zakazivanje objave nacrta trenutno je onemogućeno u postavkama.
+  ref:
+    schedule_draft: Zakaži objavu nacrta
+  forum:
+    composer:
+      title: Spremi nacrt
+      saving: Spremam...
+      saved: Spremljeno!
+      exit_alert: Odbaci izmjene nacrta?
+      discard_empty_draft_alert: Odbaci prazni nacrt?
+    dropdown:
+      empty_text: Nemate spremljenih nacrta
+      title: Nacrti
+      delete_all_button: Izbriši sve nacrte
+      delete_button: Izbriši nacrt
+      schedule_button: => fof-drafts.ref.schedule_draft
+      scheduled_icon_tooltip: Nacrt zakazan za {datetime}
+      # String passed to dayjs.format() to generate the tooltip date-time
+      scheduled_icon_tooltip_formatter: L [at] LT
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Sigurni ste da želite izbrisati Vaš nacrt?
+      delete_all_alert: Sigurni ste da želite izbrisati sve Vaše nacrte?
+    schedule_draft_modal:
+      title: => fof-drafts.ref.schedule_draft
+      text: Zakažite nacrt koji će se automatski objaviti u preciziranom vremenu!
+      scheduled_text: Zakazano za objavljivanje u {datetime}.
+      scheduled_error: "Nije moguće objaviti nacrt. Greška: {error}."
+      unschedule_button: Otkaži
+      unschedule_warning: Sigurni ste da želite otkazati ovaj nacrt?
+      reschedule_button: Ponovo zakaži objavu
+      schedule_button: Zakaži
+      schedule_time_preview: Ovaj nacrt bit će automatski objavljen <b>{datetime}</b>.
+      # String passed to dayjs.format() to generate the preview
+      schedule_time_preview_formatter: LLLL
+      schedule_time_preview_invalid: Pogrešan format datuma i/ili vremena
+    user:
+      settings:
+        drafts_heading: Nacrti
+        draft_autosave_enable: Omogući automatsko spremanje nacrta?
+        draft_autosave_interval_label: Interval automatskog spremanja nacrta (sekunde)
+        draft_autosave_interval_button: Ažuriraj interval
+        draft_autosave_interval_invalid: Interval mora biti veći od 4.

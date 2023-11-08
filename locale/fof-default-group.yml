@@ -1,0 +1,4 @@
+fof-default-group:
+  admin:
+    settings:
+      info: Ispod možete odabrati grupu ili grupe koje ćete dodijeliti registrovanom korisniku nakon što im bude aktiviran korisnički račun.

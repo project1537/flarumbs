@@ -1,0 +1,69 @@
+askvortsov-moderator-warnings:
+  admin:
+    permissions:
+      manage_warnings: Kreiraj i ukloni opomene moderatora
+      view_warnings: Pregled opomena moderatora
+      delete_warnings: Trajno ukloni opomene moderatora
+  emails:
+    post_warned:
+      subject: "{warner_display_name} opomenuo/la Vas je sa {strikes} opomena u diskusiji o temi {discussion_title}"
+      body: |
+        Poštovani/na {warnee_display_name}!
+
+        {warner_display_name} opomenuo/la Vas je sa {strikes} opomena u diskusiji o temi {discussion_title}
+
+        Kao razlog opomene navedeno je ovo:
+
+        ---
+
+        {public_comment}
+    user_warned:
+      subject: "{warner_display_name} opomenuo/la Vas je sa {strikes} opomena"
+      body: |
+        Poštovani/na {warnee_display_name}!
+
+        {warner_display_name} opomenuo/la Vas je sa {strikes} opomena
+
+        Kao razlog opomene navedeno je ovo:
+
+        ---
+
+        {public_comment}
+  forum:
+    notifications:
+      warning_text: '{strikes, plural, one {Opomenuti ste sa # opomenom od moderatora/ice {mod_username}} other {Opomenuti ste sa # opomena od moderatora/ice {mod_username}}}'
+      warning_no_strikes_text: Opomenuo/la vas je moderator/ica {mod_username} (nisu dodijeljene opomene)
+    post:
+      warning: '{strikes, plural, one {Opomenut/a sa # opomenom od moderatora/ice {mod_username}} other {Opomenut/a sa # opomena od moderatora/ice {mod_username}}}'
+      warning_no_strikes: Opomenut/a bez dodjeljivanja opomene i drugih bilješki {mod_username}
+    post_controls:
+      warning_button: Opomeni korisnika
+    user:
+      warnings: Opomene moderatora
+    settings:
+      warning_notification_label: Moderator Foruma me je opomenuo
+    validation:
+      public_comment_required: Potrebno je da upišete (javni) komentar.
+      invalid_strike_count: Broj (javnih) opomena mora biti između 0 i 5.
+    warning_controls:
+      delete_button: Ukloni
+      restore_button: Vrati
+      delete_forever_button: Trajno izbriši
+    warning_list:
+      add_button: Nova opomena
+      no_warnings: Odlično! Nemate opomena moderatora Foruma.
+      warnings: "{strikes, plural, one {Opomene moderatora: # opomena} other {Opomene moderatora: # opomene/a}}"
+      warnings_no_strikes: "Opomene moderatora: Bez dodijeljenih opomena (ovaj put!)"
+    warning_list_item:
+      list_item_heading: '{strikes, plural, one {<strong>#</strong> opomena, {time}} other {<strong>#</strong> opomene/a, {time}}}'
+      list_item_heading_hidden: '{strikes, plural, one {<strong>#</strong> opomena, {time} <strong>(uklonjena)</strong>} other {<strong>#</strong> opomene/a, {time} <strong>(uklonjene/o)</strong>}}'
+      public_comment: Komentari vidljivi korisniku
+      private_comment: Komentari vidljivi moderatorima
+      linked_post: (Po)vezana objava
+    warning_modal:
+      confirmation_message: Vaša opomena je sačuvana. Za pregled iste trebate osvježiti stranicu.
+      heading: Opomeni <strong>{username}</strong>
+      strikes_heading: Koliko opomena dodijeliti korisniku?
+      public_comment_heading: Zbog čega <strong>{username}</strong> prima ovu opomenu? Ovi komentari će biti vidljivi korisniku kojem dodjeljujete opomenu i drugim moderatorima Foruma.
+      private_comment_heading: Zbog čega <strong>{username}</strong> prima ovu opomenu? Ovi komentari će biti vidljivi SAMO moderatorima Foruma.
+      submit_button: Spremi opomenu

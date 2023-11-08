@@ -1,0 +1,20 @@
+clarkwinkelmann-post-bookmarks:
+    forum:
+        button:
+            add: Markiraj objavu
+            remove: Ukloni iz markiranih objava
+        alert:
+            added: Objava je markirana!
+            removed: Objava je uklonjena iz markiranih objava!
+            show-bookmarks: Idi na markirane objave
+        badge: Markirana objava
+        page:
+            link: Markirane objave
+            title: Markirane objave
+    admin:
+        settings:
+            buttonPosition: Pozicija dugmića
+            buttonPositionHeader: Iznad objave (zaglavlje)
+            buttonPositionActions: Ispod objave (brze akcije)
+            buttonPositionMenu: U meniju objave (3 tačke)
+            headerBadge: Prikaži oznaku markiranih objava iznad markirane objave

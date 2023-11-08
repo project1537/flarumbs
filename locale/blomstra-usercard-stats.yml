@@ -1,0 +1,5 @@
+blomstra-usercard-stats:
+  forum:
+    user:
+      discussion-count: "{count, plural, one { {count} diskusija} other {{count} diskusija}}"
+      post-count: "{count, plural, one { {count} objava} other {{count} objava}}"

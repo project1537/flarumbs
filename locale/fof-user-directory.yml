@@ -1,0 +1,43 @@
+fof-user-directory:
+    forum:
+        header:
+            back_to_user_directory_tooltip: Povratak na korisnički direktoriji
+
+        search:
+            users_heading: 'Traži sve članove/korisnike "{query}"'
+            field:
+                placeholder: Traži korisnike
+            kinds:
+                group: Grupa
+                text: Slobodan tekst
+        page:
+            nav: Korisnici
+            refresh_tooltip: => core.forum.index.refresh_tooltip
+            load_more_button: => core.ref.load_more
+            empty_text: Nismo pronašli korisnike na temelju Vaših kriterija pretraživanja.
+            filter_button: Filter grupa
+            usercard:
+                discussion-count: "{count, plural, one { {count} diskusija} other {{count} diskusija}}"
+                post-count: "{count, plural, one { {count} objava} other {{count} objava}}"
+
+    admin:
+        permissions:
+            view_user_directory: Pregled korisničkog direktorija
+        settings:
+            link: Dodaj link na početnoj stranici za korisnike kako bi mogli pregledati direktoriji
+            default-sort: Defaultno sortiranje
+            use-small-cards: Koristi male kartice za prikaz korisnika
+            disable-global-search-source: Ne dodaji korisnički direktoriji u općeniti pretraživač foruma
+
+    lib:
+        sort:
+            not_specified: Koristi zadane postavke foruma
+            default: Zadano
+            username_az: Korisničko ime (a-z)
+            username_za: Korisničko ime (z-a)
+            newest: Najnoviji
+            oldest: Najstariji
+            most_posts: Najviše objava
+            least_posts: Najmanje objava
+            most_discussions: Najviše diskusija
+            least_discussions: Najmanje diskusija

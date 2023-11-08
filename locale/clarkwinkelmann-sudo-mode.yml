@@ -1,0 +1,16 @@
+clarkwinkelmann-sudo-mode:
+    admin:
+        settings:
+            duration: Koliko dugo će 'sudo' način biti aktiv(ir)an (sekundi)
+    lib:
+        sudo:
+            title: Potvrda pristupa
+            message: >
+                Potvrdite šifru za aktiviranje 'sudo' načina.
+                Nakon par sati bit će potrebno da se ponovo prijavite i potvrdite pristup.
+            password: Šifra
+            submit: Potvrdi
+    api:
+        errors:
+            cookieOnly: DOstupno samo uz kolačiće (Cookies)
+            incorrectPassword: Pogrešna šifra

@@ -1,0 +1,18 @@
+flarum-ext-welcomebox:
+  forum:
+    wback: Dobro došli,
+    npost: => core.ref.posts
+    discussion: => core.ref.discussions
+    welcomeguest: Dobro došli
+    notregistered: Nemate korisnički račun?
+    goToProfile: Moj profil
+    SettingsLink: Postavke
+    tooltipProfile: Moj profil
+    tooltipMentions: Spominjanja i citiranja
+    tooltipDisclist: Moje diskusije
+    lastSeen: Online aktivnost
+  admin:
+    enablepostbox: Omogući ovo proširenje za goste
+    img: Url fotografije (prikaz avatara za goste)
+    img-help: ovdje unesite URL fotografije za goste
+    UseWidget: Koristi widget verziju

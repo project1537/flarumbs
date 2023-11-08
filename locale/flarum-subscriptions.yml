@@ -1,0 +1,78 @@
+flarum-subscriptions:
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      following_tooltip: => flarum-subscriptions.ref.following
+      ignoring_tooltip: => flarum-subscriptions.ref.ignoring
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      unfollow_button: Prestani pratiti
+      unignore_button: Prestani ignorirati
+
+    # These translations are used on the page that displays all subscriptions.
+    following:
+      meta_title_text: => flarum-subscriptions.ref.following
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      following_link: => flarum-subscriptions.ref.following
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      new_post_text: "{username} je objavio/la"
+
+    # These translations are used in the Settings page.
+    settings:
+      follow_after_reply_label: Automatski prati diskusije u kojima učestvujem
+      notify_for_all_posts_label: Obavijesti me o svakoj novoj objavi umjesto samo o posljednjoj u diskusiji
+      notify_new_post_label: Neko je objavio/la u diskusiju koju pratim
+
+    # These translations are used in the subscription menu displayed to the right of the post stream.
+    sub_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      following_button: => flarum-subscriptions.ref.following
+      following_text: Obavještenja o svim odgovorima.
+      ignoring_button: => flarum-subscriptions.ref.ignoring
+      ignoring_text: Nikad me ne obavještavaj. Sakrij sa liste diskusija.
+      not_following_button: Ne pratim
+      not_following_text: "Obavijesti me samo kad sam @spomenut/a."
+      notify_alert_tooltip: Primi obavještenja na Forumu o novim objavama
+      notify_email_tooltip: Primi email poruku o novim objavama
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+    # These translations are used in emails sent when a post is made in a subscribed discussion
+    new_post:
+      subject: "[Nova objava] {title}"
+      body: |
+        Poštovani/na {recipient_display_name}!
+
+        {poster_display_name} upisao/la je novu objavu u diskusiji koju pratite: {title}.
+
+        Za pregled ove nove aktivnosti kliknite na link ispod:
+        {url}
+
+        ---
+
+        {content}
+
+        ---
+
+        Sve dok ste u toku diskusije i redovno pratite objave u njoj nećete primati nova obavještenja o istoj.
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    follow: Prati
+    following: Pratim
+    ignoring: Ignorišem

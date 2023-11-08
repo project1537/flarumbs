@@ -1,0 +1,14 @@
+blomstra-turnstile:
+  admin:
+    settings:
+      site_key: Ključ stranice
+      secret_key: Tajni ključ
+      signup: => core.forum.sign_up.title
+      signin: => core.forum.log_in.title
+      forgot: => core.forum.forgot_password.title
+
+  forum:
+    not_loaded_error: Neuspješno učitavanje Cloudflare Turnstile. Molimo osvježite stranicu i provjerite dodatke za blokiranje reklama.
+
+validation:
+  turnstile: "Nismo mogli verificirati da li ste robot ili ne (preventivne mjere zaštite). Molimo osvježite stranicu i pokušajte ponovo."

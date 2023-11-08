@@ -1,0 +1,6 @@
+datlechin-flarum-scroll-buttons:
+  admin:
+    scroll_to_top_label: Gore
+    scroll_to_top_help: Prikaži dugmić za povratak na vrh stranice
+    scroll_to_bottom_label: Dolje
+    scroll_to_bottom_help: Prikaži dugmić za spuštanje na dno stranice

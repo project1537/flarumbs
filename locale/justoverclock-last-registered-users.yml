@@ -1,0 +1,7 @@
+justoverclock-last-registered-users:
+  admin:
+    showUsers: Broj posljednjih registrovanih korisnika za prikazati
+    showUsers-help: Upišite broj korisnika koji će biti prikazani
+  forum:
+    widget-title: Novi članovi
+    welcomeTexts: "Želimo dobrodošlicu novim članovima:"

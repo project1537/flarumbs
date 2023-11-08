@@ -1,0 +1,6 @@
+blomstra-welcome-login:
+  admin:
+    settings:
+      welcome-only-mobile:
+        help: Prema zadanim postavkama, dodatna dugmad za prijavu se prikazuju svima (ako nisu prijavljeni). Omogućite ovo da se na mobilnom uređaju prikazuju samo dodatna dugmad za registraciju i prijavu.
+        label: Prikaži samo na mobilnom uređaju

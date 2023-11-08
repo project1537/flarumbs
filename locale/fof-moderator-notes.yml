@@ -1,0 +1,26 @@
+fof-moderator-notes:
+  admin:
+    permissions:
+      createnotes: Kreiraj bilješku moderatora
+      viewnotes: Pregledaj bilješke moderatora
+      deletenotes: Izbriši bilješke moderatora
+  forum:
+    no_content_given: Prazna bilješka nije dozvoljena.
+    moderatorNotes:
+      created_text: "{username} je napisao/la ovu bilješku na dan {date}"
+      add_button: Nova bilješka
+      create-heading: Kreiraj novu bilješku moderatora
+      dismiss_button: Završeno
+      input_heading: Upišite bilješke za korisnika/cu <strong>{username}</strong>, (markdown je podržan)
+      noNotes: Čini se da ovdje još uvijek nema bilješki.
+      submit_button: Spremi bilješku
+      delete: Izbriši
+      confirm: Sigurni ste da želite izbrisati ovu bilješku?
+
+    user:
+      notes: Bilješke moderatora
+
+  api:
+    auto_note: "_I switched to this user:_ reason"
+    auto_note_actor: "_Switched to_ @username: reason"
+    no_reason_provided: Razlog nije naveden

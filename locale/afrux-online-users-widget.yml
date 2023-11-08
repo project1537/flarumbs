@@ -1,0 +1,9 @@
+afrux-online-users-widget:
+  admin:
+    settings:
+      max_users: Maksimalan broj korisnika za prikazati
+
+  forum:
+    widget:
+      title: Online korisnici
+      empty: Trenutno nema prijavljenih.

@@ -1,0 +1,11 @@
+fof-default-user-preferences:
+  admin:
+    settings:
+      followAfterReply: Prati nakon odgovora
+      followAfterReply-help: Kada je ova opcija omogućena, novi korisnici će automatski pratiti diskusije u kojima su učestvovali/upisali objavu.
+      postMentioned: Email kada je citirana/spomenuta objava korisnika/ce
+      postMentioned-help: Kada je ova opcija omogućena, novi korisnici će automatski biti prijavljeni da dobijaju email obavještenja kada je neka od njihovih objava citirana/spomenuta.
+      userMentioned: Email kada je korisnik spomenut
+      userMentioned-help: Kada je ova opcija omogućena, novi korisnici će automatski biti prijavljeni da dobijaju email obavještenja kada budu @spomenuti.
+      groupMentioned: Email kada je spomenuta grupa kojoj pripada korisnik
+      groupMentioned-help: Kada je ova opcija omogućena, novi korisnici će automatski biti prijavljeni da dobijaju email obavještenja kada je spomenuta grupa kojoj pripadaju.

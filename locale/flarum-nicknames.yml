@@ -1,0 +1,29 @@
+flarum-nicknames:
+  admin:
+    permissions:
+      edit_own_nickname_label: Uredite nadimak
+    settings:
+      max_label: Maksimalna dužina nadimka
+      min_label: Minimalna dužina nadimka
+      random_username_label: Nasumična korisnička imena
+      random_username_help: Omogućavanje ove opcije sakrit će `username` polje/unos prilikom registracije i koristit će se nasumično generisan broj umjesto toga. Također, polje `nickname` bit će obavezno. Ovo će imati efekta samo ako je opcija "Allow setting nicknames on registration" (dozvoli podešavanje korisničkog imena prilikom registracije) omogućena.
+      regex_label: Regularni izraz za validaciju
+      set_on_registration_label: Dozvoli podešavanje korisničkog imena prilikom registracije
+      unique_label: Zahtijevaj jedinstvene nadimke?
+    wrong_driver: Morate izabrati "nickname" (korisničko ime) za upravitelja na stranici <a><strong>Osnove</strong></a> da bi ovo proširenje bilo omogućeno.
+  api:
+    invalid_nickname_message: Ovaj nadimak nije prikladan za ovaj forum. Kontaktirajte administratore ili moderatore foruma.
+  forum:
+    change_nickname:
+      submit_button: => core.ref.save_changes
+      title:  => flarum-nicknames.ref.change_nickname
+    edit_user:
+      nicknames_heading: => flarum-nicknames.ref.change_nickname
+      nicknames_text: => flarum-nicknames.ref.nickname
+    settings:
+      change_nickname_button: => flarum-nicknames.ref.change_nickname
+    sign_up:
+      nickname_placeholder: => flarum-nicknames.ref.nickname
+  ref:
+    change_nickname: Promijeni nadimak
+    nickname: Nadimak

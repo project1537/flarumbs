@@ -1,0 +1,15 @@
+clarkwinkelmann-discussion-bookmarks:
+    forum:
+        dropdownButton:
+            add: Markiraj diskusiju
+            remove: Ukloni iz markiranih diskusija
+        independentButton:
+            add: Markiraj
+            remove: Markirano
+        badge: Markirano
+        page:
+            link: Markirane diskusije
+            title: Markirane diskusije
+    admin:
+        settings:
+            independentButton: Prikaži kontrolu oznaka u bočnoj traci za diskusiju umjesto u padajućem izborniku

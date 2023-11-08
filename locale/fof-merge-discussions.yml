@@ -1,0 +1,59 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: Spoji diskusije
+      
+      ordering_heading: Redoslijed spajanja
+      ordering_date_label: Spoji objave po datumu kreiranja
+      ordering_date_help: Objave u diskusiji su preuređene po datumu kreiranja
+      ordering_suffix_label: Dodaj spojene objave na kraj diskusije
+      ordering_suffix_help: Objave koje su spojene u preostalu diskusiju prikazat će se na kraju diskusije
+
+      type_heading: Način spajanja
+      type_target_label: Spoji sa ovom diskusijom
+      type_target_help_text: Spoji diskusiju ili više njih o temi <b>{title}</b>.
+
+      type_from_label: Spoji ovu diskusiju sa drugom diskusijom
+      type_from_help_text: Izaberite diskusiju s kojom ćete spojiti diskusiju o temi <b>{title}</b>.
+
+      load_preview_button: Pregled
+      submit_button: => fof-merge-discussions.ref.merge
+
+    notification:
+      discussion_merged: Vaša diskusija o temi <b>{oldTitle}</b> spojena je sa ovom diskusijom od strane korisnika/ce {username}.
+      preferences:
+        discussion_merged: Neko je spojio moju diskusiju sa drugom diskusijom
+        
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: "{count, plural, one {Spojena <b>#</b> objava iz diskusije o temi {titles}.} other {Spojene <b>#</b> objave iz diskusije o temi {titles}.}}"
+
+  admin:
+    permissions:
+      merge_discussions_label: Spoji diskusije
+    settings:
+      search_result_help: Koliko diskusija će biti prikazano u `Spoji diskusije` modulu. Predodređena vrijednost je 4
+      search_result_label: Ograničenje pretraživanja diskusija za spajanje
+      
+  api:
+    error:
+      merging_failed: Neuspješno spajanje diskusija.
+      updating_failed: Neuspješno ažuriranje detalja o diskusiji.
+      deleting_failed: Neuspješno brisanje praznih diskusija.
+      fixing_posts_number_failed: Neuspješno ispravljanje broja objava.
+      fixing_posts_number_meta_failed: Neuspješno ispravljanje broja objava.
+
+  ref:
+    merge: Spoji
+  
+  email:
+    merged:
+      body: |
+        Poštovani/na {recipient_display_name},
+       
+        Vaša diskusija o temi {merged_discussion_title}, spojena je sa diskusijom o temi {discussion_title} od strane korisnika/ce {actor_display_name}.
+        
+        Diskusiji možete pristupiti na linku: {discussion_url} .
+      subject: Vaša diskusija o temi "{merged_discussion_title}" je spojena

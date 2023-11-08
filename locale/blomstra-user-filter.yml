@@ -1,0 +1,18 @@
+blomstra-user-filter:
+  admin:
+    settings:
+      intro: Korisnicima bez dozvole/korisničke privilegije <code>pretraživanja registrovanih korisnika/članova foruma</code> neće biti vidljiv okvir za pretragu. Ukoliko želite da okvir za pretragu bude vidlji, potrebno je da <code>svim registrovanim korisnicima</code> omogućite pretraživanje.
+      min_length: Najmanji broj karaktera za početak pretraživanja
+      result_count: Maksimalan broj rezultata pretraživanja u padajućem meniju
+
+  forum:
+    index_page:
+      filter_user:
+        accessible_label: Korisnici
+        all: Svi
+        label: "Filter korisnika: {text}"
+        search_label: Pretraživanje diskusija i objava korisnika...
+        no_results: Bez rezultata
+        start_typing: Upišite korisničko ime...
+        keep_typing: Nastavite upisivati...
+        remove_filter: Ukloni filter korisnika

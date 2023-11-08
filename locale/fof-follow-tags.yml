@@ -1,0 +1,103 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: Neko je započeo diskusiju sa oznakom koju pratim
+      notify_new_post_label: Neko je upisao objavo/komentar sa oznakom koju pratim
+      notify_new_discussion_tag_label: Neko je promijenio oznaku diskusije u oznaku koju pratim
+
+    index:
+      follow_tag_button: Prati
+      unfollow_tag_button: Prestani pratiti
+
+      following:
+        following_none_label: => fof-follow-tags.ref.filtering_options.none
+        following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
+    badge:
+      following_tag_tooltip: Pratim
+      lurking_tag_tooltip: Vrebam
+
+    sub_controls:
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: Obavijesti me o svim novim diskusijama.
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: Sakrij diskusije sa stranice svih diskusija.
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: Nikad me ne obavještavaj.
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: Obavijesti me o svim novim diskusijama i objavama.
+      not_following_button: Ne prati
+      not_following_text: "Obavijesti me kad me @spomenu."
+      notify_alert_tooltip: Primi obavještenje na forumu o novoj diskusiji ili objavi/komentaru
+      notify_email_tooltip: Primi email poruku o novoj diskusiji ili objavi/komentaru
+
+    notifications:
+      new_discussion_text: "{username} je započeo/la novu diskusiju"
+      new_post_text: "{username} je upisao/la novu objavu"
+      new_discussion_tag_text: "{username} je promijenio/la oznaku"
+
+
+    user:
+      settings:
+        heading: Prati oznake
+
+        filter_label: Šta prikazati na stranici "Pratim"
+
+  admin:
+    settings:
+      following_page_default_label: Default Following Page Filtering
+
+      following_none_label: => fof-follow-tags.ref.filtering_options.none
+      following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
+
+  email:
+    subject:
+        newDiscussionInTag: "[Tag | Nova diskusija] {title}"
+        newPostInTag: "[Tag | Nova objava] {title}"
+        newDiscussionTag: "[Tag | Stara oznaka] {title}"
+    body:
+        newDiscussionInTag: |
+            Poštovani/na {recipient_display_name},
+
+            {actor_display_name} je započeo/la novu diskusiju pod oznakom koju pratite: {discussion_title}
+
+            Za pregled nove diskusije posjetite link:
+            {discussion_url}
+
+            ---
+
+            {post_content}
+        newPostInTag: |
+            Poštovani/na {recipient_display_name},
+
+            {actor_display_name} je napisao/la novu objavu u diskusiji pod oznakom koju pratite: {discussion_title}
+
+            Za pregled nove aktivnosti i objave diskusije posjetite link:
+            {post_url}
+
+            ---
+
+            {post_content}
+
+            ---
+
+            Ukoliko ste u toku novih objava i odgovora u spomenutoj diskusiji, nećemo vam slati nova email obavještenja o njoj.
+        newDiscussionTag: |
+            Poštovani/na {recipient_display_name},
+
+            {actor_display_name} je upravo promijenio/la oznaku u diskusiji koju je pokrenuo/la {author_display_name} u oznaku koju pratite {discussion_title}
+
+            Za pregled nove diskusije posjetite link:
+            {discussion_url}
+  ref:
+    follow: Pratim
+    following: Pratim
+    hiding: Sakrivam
+    ignoring: Ignorišem
+    lurking: Vrebam
+
+    filtering_options:
+      none: Diskusije koje pratim
+      tags: Oznake koje pratim

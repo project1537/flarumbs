@@ -1,0 +1,31 @@
+clarkwinkelmann-post-stream-search:
+    admin:
+        settings:
+            dropdownAccess: Pristup putem padajućeg menija u diskusiji
+            dropdownAccessHelp: Ako je onemogućeno, traka sa alatkama će biti dostupna samo preko prečice na tastaturi ili bilo koje druge omogućene prečice u nastavku.
+            authorQuickFilter: Brzi filter autora objava
+            authorQuickFilterHelp: Prečica će biti dodata  padajućem meniju svake objave za filtriranje prema tom korisniku.
+            originalPosterBadge: Prikaži interaktivnu oznaku za originalnog autora
+            originalPosterBadgeHelp: Oznaka će biti dodana pored objava originalnog autora. Klikom na oznaku automatski će se filtrirati objave tog korisnika.
+    forum:
+        stream:
+            noResults: U ovoj diskusiji nisu pronađene objave koje odgovaraju uvjetima pretraživanja
+            unmatchedGap: '{count, plural, one {Jedna objava koja ne odgovara uvjetima pretraživanja je sakrivena} other {{count}  objava koje ne odgovaraju uvjetima pretraživanja su sakrivene}}'
+            otherAuthorsGap: '{count, plural, one {Jedna objava drugog autora je sakrivena} other {{count} objava drugog autora su saktivene}}'
+        toolbar:
+            searchPlaceholder: Pronađi u diskusiji...
+            authorPlaceholder: Filtriraj po autoru...
+            summary: '{matching} od {total} rezultat(a) pretraživanja'
+            pin: Uvijek otvori traku s alatima filtera u diskusijama
+            close: Ukloni filtere i zatvori traku sa alatkama
+            clear: Ukloni filtere
+        discussionControls:
+            searchInDiscussion: Pretraži diskusiju
+        postControls:
+            authorFilter: Prikaži objave samo ovog autora
+        post:
+            opBadge: Autor diskusije
+            opBadgeTooltip: Klikni za prikaz objava/odgovora samo ovog korisnika
+        cannotGoToPost:
+            message: Nije moguće prikazati objavu
+            action: Pokušaj uklanjanjem filtera

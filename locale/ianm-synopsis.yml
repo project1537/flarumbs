@@ -1,0 +1,24 @@
+ianm-synopsis:
+  admin:
+    settings:
+      disable-when-searching:
+        label: Onemogući izvadak prilikom pretraživanja
+        help: Kada je omogućeno, zadani najrelevantniji izvadak posta koristit će se umjesto sinopsisa
+      excerpt-label:
+        label: Dužina izdvojenog dijela diskusije (broj karaktera)
+        help: Koliko karaktera će biti prikazano iz objave u diskusiji
+      rich-excerpts:
+        label: Prikaži izvadak koristeći potpuno formatirani sadržaj
+        help: Kada je ova opcija omogućena, slike, ugrađeni sadržaji i drugi netekstualni elementi mogu biti uključeni u izvadak
+      excerpt-type:
+        label: Koja objava treba biti prikazana kao izvadak?
+        help: Odaberite da li će prva ili posljednja objava u diskusiju biti prikazana u izvadku
+      first-label: Prva objava
+      last-label: Posljednja objava
+      tags-enabled: Imate omogućeno <code>flarum/tags</code> proširenje. These settings will become default, unless per individual tags have their own setting.
+  forum:
+    user:
+      settings:
+        summaries-heading: Izvadak
+        show-summaries: Prikaži izvadak (iz) svake diskusije u listi diskusija (desktop i/ili tablet)
+        show-summaries-mobile: Prikaži izvadak (iz) svake diskusije u listi diskusija (mobilni uređaj)

@@ -1,0 +1,24 @@
+clarkwinkelmann-author-change:
+    forum:
+        controls:
+            edit: Uredi autora i datum
+        modal:
+            title-post: Uredi autora i datum objave
+            title-discussion: Uredi autora i datum diskusije
+            user: Autor
+            created_at: Datum kreiranja
+            edited_at: Uredi vrijeme
+            sync-with-discussion: Sihronizuj sa diskusijom
+            sync-with-post: Sihronizuj sa prvom objavom u diskusiji
+            sync-impossible: Nije moguće pronaći prvu objavu. Pokušajte doći do prve objave u diskusiji.
+            submit: Spremi
+            cancel: Otkaži
+        search:
+            placeholder: Pretraži korisnike
+            type-more: Upišite najmanje tri karaktera za pretraživanje baze
+            no-results: Nema rezultata pretraživanja
+
+    admin:
+        permissions:
+            edit-user: Može ažurirati autora diskusije i objave
+            edit-date: Može ažurirati datum kreiranja diskusije i objave
