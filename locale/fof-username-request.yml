@@ -86,3 +86,22 @@ fof-username-request:
     nickname_change_requests: Zahtjevi za izmjenu nadimka
     username_change_request: Zahtjev za izmjenu korisničkog imena
     username_change_requests: Zahtjevi za izmjenu korisničkog imena
+
+  email:
+    body:
+      noReasonProvided: 'Nije naveden razlog'
+      approved: |
+        Poštovani/na {recipient_display_name},
+
+        Vaš zahtjev za promjenu korisničkog imena u "{new_username}" odobrio je {actor_display_name}.
+
+        Sada se možete prijaviti sa svojim novim korisničkim imenom: {login_url}
+      rejected: |
+        Poštovani/na {recipient_display_name},
+        
+        Vaš zahtjev za promjenu korisničkog imena iz "{old_username}" u "{requested_username}" odbio je {actor_display_name}.
+
+        Razlog: {reason}
+    subject:
+      approved: "{display_name} je odobrio zahtjev promjenu vašeg korisničkog imena u {requested_username}"
+      rejected: "{display_name} je odbacio zahtjev promjenu vašeg korisničkog imena u {requested_username}"
