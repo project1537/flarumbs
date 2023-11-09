@@ -51,22 +51,22 @@ blomstra-gdpr:
     lib:
         data:
             avatar:
-                delete_description: Deletes the user's avatar from the filesystem.
-                export_description: Retrieves the user's avatar from the filesystem and includes it in the export.
+                delete_description: Briše korisnikov avatar iz sistema datoteka.
+                export_description: Dohvaća korisnički avatar iz sistema datoteka i uključuje ga u izvoz.
             discussions:
-                export_description: Exports all discussions the user has started. Data restricted to title and creation date.
+                export_description: Izvozi sve diskusije koje je korisnik započeo. Podaci ograničeni na naslov i datum izrade.
             forum:
-                export_description: Exports the forum title, url, username, email and the current date.
-            no_action: No action taken.
+                export_description: Izvozi naslov foruma, url, korisničko ime, e-poštu i trenutni datum.
+            no_action: Nisu poduzete razdnje.
             posts:
-                anonymize_description: Removes the IP address from all posts the user has made.
-                delete_description: Deletes all posts the user has made.
-                export_description: Exports all posts the user has made. Data restricted to content, creation date, IP address and discussion ID.
+                anonymize_description: Uklanja IP adresu iz svih objava korisnika.
+                delete_description: Briše sve objave korisnika.
+                export_description: Izvozi sve objave korisnika. Podaci ograničeni na sadržaj, datum stvaranja, IP adresu i ID diskusije.
             tokens:
-                delete_description: Deletes all tokens the user has created.
-                export_description: Exports all tokens the user has created. Data restricted to creation date and token type.
+                delete_description: Briše sve tokene koje je korisnik kreirao.
+                export_description: Izvozi sve tokene koje je korisnik stvorio. Podaci ograničeni na datum kreiranja i vrstu tokena.
             user:
-                anonymize_description: Sets all columns on the user table to null. Non-nullable columns are set to their default values or special values. Password is changed, preferences set to default and all groups are removed.
+                anonymize_description: Postavlja sve stupce u tablici korisnika na null. Stupci koji ne mogu biti null postavljeni su na svoje zadane vrijednosti ili posebne vrijednosti. Lozinka se mijenja, postavke postavljaju na zadane i sve grupe se uklanjaju.
                 delete_description: Briše korisnika iz baze podataka.
                 export_description: Izvoz podataka iz korisničke tablice. Svi stupci osim id-a, šifre.
         request_data:
