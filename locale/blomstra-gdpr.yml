@@ -33,15 +33,15 @@ blomstra-gdpr:
             allow_deletion: Dopusti brisanje zahtjeva za brisanjem
             allow_deletion_help: Mnogo strožija opcija. U ovom načinu rada, sve objave/komentari će biti izbrisani, a korisnik će biti uklonjen iz baze podataka. Koristite s oprezom.
             default_anonymous_username: Zadano korisničko ime za anonimizirane korisnike
-            default_anonymous_username_help: When a user is anonymized, their username will be replaced with this value, plus the ID of the anonymization request, for example <code>Anonymous123</code>.
-            default_erasure: Default action for erasure requests
-            default_erasure_help: What should the default action be for erasure requests?
+            default_anonymous_username_help: Kada je korisnik anonimiziran, njegovo korisničko ime bit će zamijenjeno ovom vrijednošću, plus ID zahtjeva za anonimiziranjem, na primjer <code>Anonymous123</code>.
+            default_erasure: Zadana radnja za zahtjeve za brisanjem
+            default_erasure_help: Koja bi trebala biti zadana radnja za zahtjeve za brisanje?
             default_erasure_options:
-                anonymization: Anonymization
-                deletion: Deletion
+                anonymization: Anonimizacija
+                deletion: Brisanje
             gdpr_page:
-                title: Data Integration and actions
-                help_text: Before deciding on which actions to use on your forum, it is vital to understand which data is integrated, and how it is handled for both anonymization and deletion. Vist the GDPR overview to understand how data is handled, and which optional extensions have registered their data to be handled by this extension.
+                title: Integracija podataka i radnje
+                help_text: Prije nego što odlučite koje radnje koristiti na svom forumu, važno je razumjeti koji su podaci integrirani i kako se njima rukuje za anonimizaciju i brisanje. Pogledajte pregled GDPR-a da biste razumjeli kako se postupa s podacima i koja su opcijska proširenja registrirala svoje podatke za rukovanje ovim proširenjem.
         userlist:
             columns:
                 gdpr_actions:
@@ -67,74 +67,73 @@ blomstra-gdpr:
                 export_description: Exports all tokens the user has created. Data restricted to creation date and token type.
             user:
                 anonymize_description: Sets all columns on the user table to null. Non-nullable columns are set to their default values or special values. Password is changed, preferences set to default and all groups are removed.
-                delete_description: Deletes the user from the database.
-                export_description: Exports data from the user table. All columns except id, password.
+                delete_description: Briše korisnika iz baze podataka.
+                export_description: Izvoz podataka iz korisničke tablice. Svi stupci osim id-a, šifre.
         request_data:
-            title: Request data for {username}
+            title: Zahtjevaj podatke za {username}
             text: >
-                A zip archive will be prepared for you. Once it's ready, you'll receive a notification with a download link. The link will remain active for one day.
-            request_button: Request archive
+                Za vas će biti pripremljena zip arhiva. Kada bude spreman, primit ćete obavijest s vezom za preuzimanje. Veza će ostati aktivna jedan dan.
+            request_button: Zahtjevaj arhivu
 
     email:
         confirm_erasure:
-            subject: Confirm your account erasure request
+            subject: Potvrdite zahtjev za brisanje računa
             body: |
-                Hey {display_name}!
+                Poštovani/na {display_name}!
 
-                Someone (hopefully you) just requested to erase the account `{display_name}`.
+                Netko (nadamo se vi) je upravo zatražio brisanje računa `{display_name}`.
 
-                To confirm this action, please follow the following link, after which your request will be processed by our team.
-
+                Kako biste potvrdili ovu radnju, molimo slijedite sljedeću poveznicu, nakon čega će naš tim obraditi vaš zahtjev.
                 {erasure_confirm_url}
 
         erasure_completed:
             deletion:
-                subject: Account deletion completed
+                subject: Brisanje računa je dovršeno
                 body: |
-                    Hey {display_name}!
+                    Poštovani/na {display_name}!
 
-                    This is an automatic, final notification that your account has been deleted.
+                    Ovo je automatska, konačna obavijest da je vaš račun izbrisan.
             anonymization:
-                subject: Account anonymization completed
+                subject: Anonimizacija računa dovršena
                 body: |
-                    Hey {display_name}!
+                    Poštovani/na {display_name}!
 
-                    This is an automatic, final notification that your account has been anonymized.
+                    Ovo je automatska, konačna obavijest da je vaš račun anonimiziran.
 
         erasure_cancelled:
-            subject: Account erasure request cancelled
+            subject: Zahtjev za brisanje računa je otkazan
             body: |
-                Hey {display_name}!
+                Poštovani/na {display_name}!
 
-                This is an automatic notification that your request to cancel account deletion has been processed.
+                Ovo je automatska obavijest da je vaš zahtjev za otkazivanjem brisanja računa obrađen.
 
-                Your account will no longer be deleted.
+                Vaš račun neće biti izbrisan.
 
         export_available:
-            subject: Data export available
+            subject: Dostupan je izvoz podataka
             body: |
-                Hey {display_name}!
+                Poštovani/na {display_name}!
 
-                You requested an export of the account data for {username}. This export has successfully been generated and is now available:
+                Zatražili ste izvoz podataka računa za {username}. Ovaj izvoz je uspješno generiran i sada je dostupan:
 
                 {url}
 
-                This export will remain available until {destroys_at}.
+                Ovaj izvoz ostat će dostupan do {destroys_at}.
 
     forum:
         delete_user:
-            title: Erase {username}'s account
+            title: Izbriši račun korisnika {username}
             text: |
-                Are you sure you want to erase {username}'s account?
+                Jeste li sigurni da želite obrisati račun korisnika {username}?
 
-                This action is irreversible.
-            modal_delete_button: Erase using default action
-            delete_button: Erase
+                Ova radnja je nepovratna.
+            modal_delete_button: Izbriši koristeći zadanu radnju
+            delete_button: Izbriši
         erasure_requests:
-            empty_text: No pending account erasure requests
-            item_text: "{name} requested account erasure"
-            tooltip: Account Erasure Requests
-            title: Account Erasure Requests
+            empty_text: Nema zahtjeva za brisanje računa na čekanju
+            item_text: "{name} zahtjeva brisanje računa"
+            tooltip: Zahtjevi za brisanje računa
+            title: Zahtjevi za brisanje računa
 
         erasure_request_confirmed: Potvrdili ste zahtjev za brisanje računa. Mjere će se poduzeti u roku od 30 dana, u skladu s GDPR-om.
         settings:
@@ -142,8 +141,8 @@ blomstra-gdpr:
                 heading: Lični podaci
             export_data_button: Izvoz podataka
             export_data_help: "Zahtjev za izvoz podataka pružit će vam kopiju svih informacija povezanih s vašim računom koju možete preuzeti. To uključuje objave, komentare i pojedinosti o profilu."
-            request_erasure_button: Erase Account
-            request_erasure_help: "Requesting erasure will permanently delete your account and all associated data. This action is irreversible. Before proceeding, ensure you have saved any content you wish to keep."
+            request_erasure_button: Izbriši račun
+            request_erasure_help: "Podnošenje zahtjeva za brisanje trajno će izbrisati vaš račun i sve povezane podatke. Ova radnja je nepovratna. Prije nastavka provjerite jeste li spremili sav sadržaj koji želite zadržati."
         
 
         process_erasure:
