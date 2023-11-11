@@ -19,7 +19,7 @@ fof-filter:
               email: Pošaljite e-poštu korisniku kada je objava filtrirana
               merge: Automatsko spajanje dupli(rani)h objava
             email_subject: Predmet
-            email_body: Tekst (sadržah) email poruke
+            email_body: Tekst (sadržaj) email poruke
         nav:
             text: Filter
             desc: Filtriranje objava po riječi
