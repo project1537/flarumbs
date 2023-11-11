@@ -69,7 +69,7 @@ fof-best-answer:
       best-answer-count: "{count, plural, one { {count} najbolji odgovor} other {{count} najboljih odgovora}}"
   email:
     subject:
-      awarded: Vaša objava je izabrana kao najbolji odgovor u diskusiji od stane korisnika/ce {display_name}
+      awarded: Vaša objava je izabrana kao najbolji odgovor u diskusiji od strane korisnika/ce {display_name}
       ba-set: Najbolji odgovor odabrao/la je {display_name}
       select: Da li ste došli do željenih informacija i odgovora u ovoj diskusiji?
     body:
