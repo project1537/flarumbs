@@ -3,9 +3,9 @@
 
 ![Bosnia and Herzegovina](https://user-images.githubusercontent.com/79749042/120553747-27fb8480-c3f9-11eb-98b0-ddaa6b26cfac.png)
 
-<b>LATEST VERSION:</b> 1.1
+<b>LATEST VERSION:</b> 1.2
 
-<b>RELEASE DATE:</b> 2023-11-9
+<b>RELEASE DATE:</b> 2023-11-11
 
 <b>SOFTWARE COMPATIBILITY:</b> FLARUM ^1.8
 
