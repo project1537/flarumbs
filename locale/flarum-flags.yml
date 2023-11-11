@@ -46,9 +46,9 @@ flarum-flags:
 
     # These translations are used by the frame displayed around flagged posts.
     post:
-      dismiss_flag_button: Ukloni oznaku "Neprimjerena objava"
+      dismiss_flag_button: Ukloni oznaku neprimjerene objave
       flagged_by_text: "Kao neprimjerenu objavu označio korisnik {username}"
-      flagged_by_with_reason_text: "Kao neprimjerenu objavu označio korisnik {username}, a razlog je {reason}"
+      flagged_by_with_reason_text: "Kao neprimjerenu objavu označio korisnik {username} a razlog je {reason}"
 
     # These translations are used by the post control buttons.
     post_controls:
