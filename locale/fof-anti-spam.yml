@@ -1,0 +1,69 @@
+fof-anti-spam:
+  admin:
+    permissions:
+      spamblock_users_label:Označi korisnika kao spamera
+    settings:
+      default-actions:
+        delete_user_label: Izbriši korisnika
+        delete_user_help: Ovo će trajno izbrisati korisnika. Kada je onemogućeno, korisnik će umjesto toga biti suspendiran.
+        delete_discussions_label: Briši diskusije
+        delete_discussions_help: Ovo će trajno izbrisati sve diskusije koje je započeo ovaj korisnik. Kada je onemogućeno, diskusije će se umjesto toga neprimjetno izbrisati.
+        delete_posts_label: Briši objave
+        delete_posts_help: Ovo će trajno izbrisati sve objave ovog korisnika. Kada je onemogućeno, objave  će se umjesto toga neprimjetno brisati.
+        heading: Zadane radnje moderiranja
+        introduction: |
+          Kada je korisnik označen kao pošiljatelj neželjene pošte, moderatori mogu birati između različitih radnji kako se nositi s određenim slučajem upotrebe. Ove postavke omogućuju vam da unaprijed postavite radnje koje ćete inače poduzimati, kako biste ubrzali proces, ali također dopuštaju varijacije prema potrebi.
+        move_discussions_to_tags_label: Premjesti diskusije u oznaku(e)
+        move_discussions_to_tags_help: Ovo će premjestiti sve diskusije  koje je započeo ovaj korisnik pod oznaku(e) koju ste naveli. Poništite odabir oznaka kako biste rasprave ostavili u izvornim oznakama. Nema učinka ako je uključena opcija 'Brisanje rasprava'.
+
+      stopforumspam:
+        heading: StopForumSpam
+        introduction: |
+          Provjerava registracije novih korisnika u bazi podataka <a>StopForumSpam</a>. Ako se dosegnu pragovi <code>pouzdanosti</code> ili <code>učestalosti</code>, korisniku je onemogućeno dovršavanje registracije na vašem forumu.
+
+          SSO registracija putem <code>fof/oauth</code> i <code>fof/passport</code> također je podržana. Ostali SSO pružatelji usluga trebali bi raditi, ali nisu testirani.
+
+        username_label: Spam provjera korisničkog imena
+        ip_label: Spam provjera IP adrese
+        email_label: Spam provjera email adrese
+
+        frequency_label: Prag (granična vrijednost)
+        frequency_help: | 
+          Broj izvješća o neželjenoj pošti između svih omogućenih provjera koje će aktivirati filtar za neželjenu poštu.
+          Npr.: Ako e-mail ima 1 pogodak, a ip ima 2 pogotka, bit će ukupno 3 pogotka. Ako je prag postavljen na 3 ili manje, spriječit ćemo registraciju.
+
+        api_key_label: API ključ
+        api_key_text: Imate mogućnost prijaviti pošiljatelje neželjene pošte na StopForumSpam kako bi šira forumska zajednica ostala bez neželjene pošte.
+        api_key_instructions_text: <register>Prijavite se za StopForumSpam</register>. Tada ćete morati <key>nabaviti API ključ</key>.
+
+        regional_endpoint_label: Geografski pristup
+        regional_endpoint_help: Prema zadanim postavkama usmjerit ćemo traženje na najbliži regionalni poslužitelj kako bismo pružili najbrži odgovor. Ako želite ograničiti promet na određenu regiju, kao što je usklađenost s propisima kompanije ili zemlje o privatnosti, tada možete prisilno uspostaviti vezu s određenom regijom.
+      
+        region_closest_label: Najbliži
+        region_europe_label: Evropa
+        region_us_label: Sjedinjene Američke Države
+
+        confidence_label: Pouzdanost
+        confidence_help: Rezultat pouzdanosti je relativno dobar pokazatelj da bi polje koje se testira rezultiralo neželjenom aktivnošću. Postavite svoj nivo pouzdanosti kao postotak. Ako je polje jednako ili iznad ove brojke, registracija će biti blokirana, bez obzira na test 'učestalosti' iznad.
+
+        email_hash_label: Upotrijebite raspršenu adresu e-pošte
+        email_hash_help: Proslijedite MD5 hash adrese e-pošte ako ne želite proslijediti samu adresu e-pošte. Ova metoda zaobilazi sve crne popise, normalizaciju i provjere zaobilaženja zamagljivanja.
+  forum:
+    message:
+      spam: Vaši podaci su označeni kao spam.
+    spammer_modal:
+      hard_delete_discussions_label: Izbriši diskusije
+      hard_delete_discussions_help: Ovo će trajno izbrisati sve diskusije koje je započeo ovaj korisnik. Kada je onemogućeno, diskusije će umjesto toga biti skrivene.
+      hard_delete_posts_label: Izbriši objave
+      hard_delete_posts_help: Ovo će trajno izbrisati sve objave (komentare, odgovore itd.) koje je objavio ovaj korisnik. Kada je onemogućeno, objave će umjesto toga biti skrivene.
+      hard_delete_user_label: Izbriši korisnika
+      hard_delete_user_help: Ovo će trajno izbrisati korisnika. Kada je onemogućeno, korisnik će umjesto toga biti suspendiran.
+      intro: Prilikom označavanja korisnika kao spamera, bit će poduzeto nekoliko radnji, što ovisi o proširenjima dostupnim na vašem forumu.
+      move_discussions_tag_label: Premjesti rasprave u oznaku karantene
+      move_discussions_tag_help: Ovo će premjestiti sve diskusije koje je započeo ovaj korisnik na oznaku koju ste naveli u postavkama foruma. Kada je onemogućeno, diskusije će ostati pod svojim trenutnim oznakama.
+      process_button: Započni proces
+      title: "Označi korisnika/cu {username} kao spamera"
+      report_to_sfs_label: Pošalji prijavu StopForumSpamu
+      report_to_sfs_help: Ovo će StopForumSpamu prijaviti osnovne podatke o korisniku (korisničko ime, e-mail, IP adresa). To će spriječiti korisnika da se registrira na drugim forumima koji koriste uslugu StopForumSpam.
+    user_controls:
+      spammer_button: Spamer
