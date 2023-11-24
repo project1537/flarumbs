@@ -1,0 +1,26 @@
+datlechin-simple-tour-guide:
+  admin:
+    settings:
+      show_progress_label: Prikaži napredak
+      show_progress_help: Ovo će prikazati trenutni korak i ukupni broj koraka na vrhu skočnog prozora.
+      allow_close_label: Dopusti zatvaranje prozor(čić)a
+      allow_close_help: Dopusti korisnicima da zatvore skočni prozor klikom na pozadinu.
+
+    edit_modal:
+      edit_step: Uredi {title}
+      create_step: Kreiraj novi korak
+      delete_step: Izbriši korak
+      delete_step_confirmation: Jeste li sigurni da želite izbrisati ovaj korak?
+
+    title: Title
+    title_placeholder: Naslov koraka.
+    description: Opis
+    description_placeholder: Opis koraka.
+    target: Target
+    target_placeholder: "Ciljani element koraka (npr. #element-id)."
+
+  forum:
+      progress_text: "{current} od {total}"
+      next_btn_text: Naprijed
+      prev_btn_text: Nazad
+      done_btn_text: Kraj
