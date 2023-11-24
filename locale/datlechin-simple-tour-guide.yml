@@ -12,11 +12,11 @@ datlechin-simple-tour-guide:
       delete_step: Izbriši korak
       delete_step_confirmation: Jeste li sigurni da želite izbrisati ovaj korak?
 
-    title: Title
-    title_placeholder: Naslov koraka.
+    title: Naslov
+    title_placeholder: Naslov koraka
     description: Opis
-    description_placeholder: Opis koraka.
-    target: Target
+    description_placeholder: Opis koraka
+    target: Ciljani element
     target_placeholder: "Ciljani element koraka (npr. #element-id)."
 
   forum:
