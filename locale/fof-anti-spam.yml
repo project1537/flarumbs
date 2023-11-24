@@ -48,6 +48,9 @@ fof-anti-spam:
 
         email_hash_label: Upotrijebite raspršenu adresu e-pošte
         email_hash_help: Proslijedite MD5 hash adrese e-pošte ako ne želite proslijediti samu adresu e-pošte. Ova metoda zaobilazi sve crne popise, normalizaciju i provjere zaobilaženja zamagljivanja.
+
+        sfs_lookup_label: Traži registracije
+        sfs_lookup_help: Ako je omogućeno, provjerit ćemo bazu podataka StopForumSpam kada se novi korisnik registruje na vašem forumu. Ako je korisnik pronađen (korisničko ime, IP adresa, e-pošta) i ta podatkovna tačka je omogućena zajedno sa SFS nivoom pouzdanosti koja je dosegla vaš definirani nivo, bit će spriječen da dovrši svoju registraciju.
   forum:
     message:
       spam: Vaši podaci su označeni kao spam.
