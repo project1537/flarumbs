@@ -5,14 +5,13 @@ fof-best-answer:
       best_answer_not_own_discussion: Odaberite najbolji odgovor (diskusije drugih)
     settings:
       label:
+        tags: Oznake najboljeg odgovora
         general: Općenito
         reminders: Podsjetnici
         advanced: Napredno
         reminders_notice: For reminders to function correctly, you must have set up the Flarum scheduler correctly.
       allow_select_own_post: Dozvoli korisnicima da za najbolji odgovor odaberu vlastite objave
       allow_select_own_post_help: Dozvoli pokretaču diskusije da izaberu jedno od vlasitih objava u diskusiji kao najbolji odgovor
-      enable_all_tags_button: Omogući da se najbolji odgovor izabere u svim oznakama
-      enable_all_tags_reminder_button: Omogući podsjetnike za izbor najboljeg odgovora u svim oznakama
       show_max_lines_label: Maksimalni broj redaka za prikaz u pregledu objave
       show_max_lines_help: Postavite na 0 za onemogućavanje. Ako je objava duža od konfiguriranog broja redaka, bit će skraćena u pretpregledu objave s efektom izbljeđivanja.
       select_best_answer_reminder_days: Frekventnost podsjetnika
@@ -29,11 +28,15 @@ fof-best-answer:
       use_alt_ui: Alternativni prikaz
       use_alt_ui_help: Kontrole izbora najboljeg odgovora u podnožju
       documentation: Dokumentacija
-      introduction: |
-        Enable which tags are to support Best Answers in <code><a>flarum/tags</a></code>, and optionally which tag(s) should support reminders. When a tag is Best Answer enabled, assign permissions to each user group that may set answers (own discussion, any discussion). Permissions may be assigned globally (for any Best Answer anabled tag), or on a per tag basis.
+      enabled_tags_label: Omogućene oznake
+      enabled_tags_help: Odaberite oznake za koje ćete omogućiti najbolje odgovore, ako ih ima. Ove oznake postat će oblikovane oznake "Q&A" i imat će mogućnost postavljanja najboljih odgovora.
+      remind_tags_label: Podsjetnici za oznake
+      remind_tags_help: Odaberite za koje oznake, ako ih ima, želite slati podsjetnike. Podsjetnici će se slati samo za diskusije s ovim oznakama.
+      tags_info: |
+        Kada je omogućena oznaka Najbolji odgovor, dodijelite dopuštenja svakoj grupi korisnika koja može postaviti odgovore (vlastita diskusija, bilo koja diskusija). Dopuštenja se mogu dodijeliti globalno (za bilo koju omogućenu oznaku Najbolji odgovor) ili po oznaci.
     edit_tag:
-      qna_label: Omogući izbor najboljeg odgovora u ovoj oznaci
-      reminders: Postavi podsjetnike za izbor najboljeg odgovora u diskusijama pod ovom oznakom
+      qna_label: Omogućite postavljanje najboljih odgovora za ovu oznaku
+      reminders: Pošaljite podsjetnike za postavljanje najboljeg odgovora za diskusije pod ovom oznakom
   forum:
     answered_badge: Odgovoreno
     this_best_answer: Odaberi najbolji odgovor
