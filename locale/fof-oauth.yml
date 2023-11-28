@@ -5,10 +5,10 @@ fof-oauth:
     settings_accessibility_label: "{name} postavke"
 
     settings:
-        advanced:
-          heading: Napredno
-          log-oauth-errors-label: Dnevnik OAuth greški
-          log-oauth-errors-help: Ako je omogućeno, pogreške OAutha bit će zabilježene u dnevniku foruma. To može pomoći u otklanjanju pogrešaka s OAuthom, ali može sadržavati i osjetljive informacije.
+      advanced:
+        heading: Napredno
+        log-oauth-errors-label: Dnevnik OAuth greški
+        log-oauth-errors-help: Ako je omogućeno, pogreške OAutha bit će zabilježene u dnevniku foruma. To može pomoći u otklanjanju pogrešaka s OAuthom, ali može sadržavati i osjetljive informacije.
       only_icons_label: Prikaži samo ikon(ic)e za prijavu (alternativni prikaz)
       update_email_from_provider_label: Ažurirajte adresu e-pošte od davatelja usluga
       update_email_from_provider_help: Ako je omogućeno, adresa e-pošte korisnika bit će ažurirana kako bi odgovarala onoj koju pruža OAuth pružatelj pri svakoj prijavi na forum. Ne pružaju svi davatelji ažuriranu e-poštu, u kojem slučaju ova postavka neće imati učinka na te davatelje usluga.
