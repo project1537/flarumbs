@@ -27,6 +27,7 @@ blomstra-gdpr:
         permissions:
             process_erasure: Može obraditi zahtjev za brisanjem podataka
             process_export_for_others: Može zatražiti i primiti izvoz podataka za druge korisnike
+            see_anonymized_user_badges: Može vidjeti anonimizirane korisničke značke
         settings:
             allow_anonymization: Dopusti anonimizaciju zahtjeva za brisanjem
             allow_anonymization_help: Zadana opcija i preporučena za većinu zajednica. U ovom načinu rada postovi/komentari bit će sačuvani koliko god je to moguće prema GDPR-u, ali se uklanjaju svi podaci koji mogu identificirati korisnika.
@@ -84,6 +85,7 @@ blomstra-gdpr:
                 Netko (nadamo se vi) je upravo zatražio brisanje računa `{display_name}`.
 
                 Kako biste potvrdili ovu radnju, molimo slijedite sljedeću poveznicu, nakon čega će naš tim obraditi vaš zahtjev.
+                
                 {erasure_confirm_url}
 
         erasure_completed:
@@ -121,6 +123,8 @@ blomstra-gdpr:
                 Ovaj izvoz ostat će dostupan do {destroys_at}.
 
     forum:
+        badges:
+            anonymized_user: Anonimizirani korisnik
         delete_user:
             title: Izbriši račun korisnika {username}
             text: |
