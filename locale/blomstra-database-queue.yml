@@ -1,0 +1,14 @@
+blomstra-database-queue:
+  admin:
+    stats:
+      auto_refresh: Automatsko osvježavanje
+      heading: Pregled aktivnosti na čekanju
+      refresh: Osvježi
+      data:
+        queue-name: Naziv aktivnosti na čekanju
+        pending-jobs: Aktivnosti na čekanju
+        failed-jobs: Neuspješne aktivnosti
+        status:
+          label: Status
+          running: Aktivnosti u toku
+          inactive: Neaktivno
