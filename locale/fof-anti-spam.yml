@@ -3,6 +3,7 @@ fof-anti-spam:
     permissions:
       spamblock_users_label:Označi korisnika kao spamera
     settings:
+      button: Postavke
       default-actions:
         delete_user_label: Izbriši korisnika
         delete_user_help: Ovo će trajno izbrisati korisnika. Kada je onemogućeno, korisnik će umjesto toga biti suspendiran.
@@ -51,9 +52,25 @@ fof-anti-spam:
 
         sfs_lookup_label: Traži registracije
         sfs_lookup_help: Ako je omogućeno, provjerit ćemo bazu podataka StopForumSpam kada se novi korisnik registruje na vašem forumu. Ako je korisnik pronađen (korisničko ime, IP adresa, e-pošta) i ta podatkovna tačka je omogućena zajedno sa SFS nivoom pouzdanosti koja je dosegla vaš definirani nivo, bit će spriječen da dovrši svoju registraciju.
+    blocked_registrations:
+      button: Blokirane registracije
+      title: Blokirane registracije
+      no-records: Nisu pronađene blokirane registracije.
+      help: |
+        Ova stranica prikazuje sve registracije koje je blokirao servis StopForumSpam. Možete vidjeti detalje svake registracije, a ako želite, možete izbrisati zapis iz baze.
+      attempted-at: Pokušaj evidentiran
+      ip: IP adresa
+      email: Email adresa
+      username: Korisničko ime
+      login-provider: Davatelj prijave
+      login-provider-data: Podaci o davatelju prijave
+      sfs-data: StopForumSpam podaci
+      delete_entry: Izbriši unos
+  
   forum:
     message:
-      spam: Vaši podaci su označeni kao spam.
+      stopforumspam:
+        blocked: Pojedinosti o vašoj registraciji pronađene su u bazi podataka za sprječavanje spama, stoga je vaša registracija blokirana.
     spammer_modal:
       hard_delete_discussions_label: Izbriši diskusije
       hard_delete_discussions_help: Ovo će trajno izbrisati sve diskusije koje je započeo ovaj korisnik. Kada je onemogućeno, diskusije će umjesto toga biti skrivene.
