@@ -58,6 +58,7 @@ fof-oauth:
 
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
+          hosted_domain_label: Hostirana domena (G Suite/Google Apps for Business, neobavezno)
 
         linkedin:
           description: Kreiraj aplikaciju na {link}.
