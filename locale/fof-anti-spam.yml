@@ -52,6 +52,9 @@ fof-anti-spam:
 
         sfs_lookup_label: Traži registracije
         sfs_lookup_help: Ako je omogućeno, provjerit ćemo bazu podataka StopForumSpam kada se novi korisnik registruje na vašem forumu. Ako je korisnik pronađen (korisničko ime, IP adresa, e-pošta) i ta podatkovna tačka je omogućena zajedno sa SFS nivoom pouzdanosti koja je dosegla vaš definirani nivo, bit će spriječen da dovrši svoju registraciju.
+    
+        report_blocked_registrations_label: Prijavite blokirane registracije
+        report_blocked_registrations_help: Kada je registracija blokirana značajkom traženja registracija, prijavit ćemo pokušaj natrag StopForumSpamu, tako da se aktivnost pošiljatelja neželjene pošte može bolje potvrditi. Zahtijeva postavljanje StopForumSpam API ključa (pogledajte dolje).
     blocked_registrations:
       button: Blokirane registracije
       title: Blokirane registracije
