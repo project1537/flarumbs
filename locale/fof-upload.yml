@@ -8,6 +8,17 @@ blomstra-gdpr:
 
 fof-upload:
   admin:
+    nav:
+      shared-uploads-button: Dijeljeni prijenosi
+    shared-uploads:
+      description: Učitajte datoteke koje mogu koristiti svi korisnici vašeg foruma.
+      introduction: |
+        Zajednički prijenosi su datoteke koje mogu koristiti svi korisnici vašeg foruma. Nisu priloženi nijednoj objavi, ali se mogu umetnuti u objave pomoću upravitelja medija.
+
+        <strong>Upozorenje:</strong> dijeljeni prijenosi nisu zaštićeni nikakvim dopuštenjima. Svatko s URL-om može ih vidjeti.
+      no-files: Još nije učitana nijedna dijeljena datoteka.
+      title: Dijeljeni prijenosi
+      upload-new-button: Učitaj novu datoteku
     pane:
       title: Prilaganje datoteka
       description: Postavke prilaganja datoteka i servisa za pohranjivanje
@@ -94,6 +105,8 @@ fof-upload:
       upload_label: Prilaganje datoteka
       view_user_uploads_label: Pregled priloženih datoteka korisnika
       delete_uploads_of_others_label: Brisanje priloženih datoteka korisnika
+      upload_shared_label: Prijenos dijeljenih datoteka
+      access_shared_label: Pristup dijeljenim datotekama u upravitelji datoteka
     templates:
       file: Default file download template
       file_description: |
@@ -142,10 +155,47 @@ fof-upload:
     buttons:
       attach: Priloži
       upload: Priloži datoteku
+      upload_shared: Dijeljeno
       user_uploads: Datoteke korisnika
       cancel: Odustani
       media: Moje datoteke
+      shared_media: Dijeljeni mediji
 
+    states:
+      error: Greška
+      loading: Prijenos
+      unauthorized: Nije vam dopušteno preuzimanje datoteka
+
+    validation:
+      max_size: "Učitavanja veća od {max} kb nisu prihvaćena."
+
+    text_preview:
+      expand: Proširi pregled
+      collapse: Zatvori pregled
+      error: |
+        Pogreška pri pregledu datoteke. Možda je izbrisana ili je navedeni ID datoteke nevažeći.
+      no_snippet_preview: "<pregled će se pojaviti ovdje nakon objave>"
+      no_snippet: "<nema dostupnog isječka pregleda>"
+  api:
+    upload_errors:
+      forbidden_type: Prijenos datoteka ove vrste nije dopušten.
+      unsupported_type: "Adapter za prijenos ne podržava navedeni mime tip: {mime}."
+      could_not_detect_mime: Nije moguće otkriti MIME vrstu ove datoteke, pokušajte ponovno.
+      max_upload_file_size_ini: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz php.ini.
+      max_upload_file_size_form: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz obrasca.
+      partial_upload: Djelomično učitavanje.
+      no_file_uploaded: Nije učitana nijedna datoteka.
+      no_upload_tmp_folder: Nema tmp mape za učitavanje datoteka.
+      cannot_write_to_disk: Nije moguće pisati na disk.
+      upload_blocked_by_php_extension: PHP proširenje  blokiralo je prijenos.
+      no_files_made_it_to_upload: Molimo učitajte datoteke ne veće od {max} kb.
+  lib:
+    upload-shared-file-modal:
+      title: Nova dijeljena datoteka
+      dropzone: Povucite i ispustite datoteke ovdje ili kliknite za pregledavanje
+      hide-from-media-gallery: Sakrij iz korisničke medijske galerije
+      upload: Učitaj
+      
     file_list:
       loading: Pripremam datoteke...
       empty: Nemate priloženih datoteka.
@@ -155,38 +205,26 @@ fof-upload:
       select_file_a11y_label: Odaberi datoteku "{fileName}"
       confirm_selection_btn: "{fileCount, plural, =0 {Nema odabranih datoteka} one {Odaberite datoteku} other {Odaberite datoteke}}"
       load_more_files_btn: Prikaži više datoteka
+      delete_file_a11y_label: Izbriši datoteku "{fileName}"
+      delete_confirmation: Jeste li sigurni da želite izbrisati "{fileName}"?
+      
       hide_file:
-        btn_a11y_label: Sakrij "{fileName}" iz upravitelja datotekama
-        hide_confirmation: Sigurni ste da želite sakriti "{fileName}"? Skrivanje datoteke samo će je ukloniti iz Vašeg upravitelja datotekama i neće imati nikakvog efekta na postojeće objave.
-        hide_success: Datoteka je skrivena
-        hide_fail: Neuspješno skrivanje datoteke pod nazivom "{fileName}"
-        loading: Sakrivam datoteku...
-
-    states:
-      error: Greška
-      loading: Prilažem...
-      unauthorized: Nemate dopuštenje za preuzimanje datoteka.
-
-    validation:
-      max_size: "Prilaganje datoteka iznad {max} kb nije dozvoljeno."
-
-    text_preview:
-      expand: Proširi pregled
-      collapse: Smanji pregled
-      error: |
-        Greška prilikom pregleda datoteke. Moguće da je datoteka izbrisana ili je njen ID neispravan.
-      no_snippet_preview: "<pregledi će se pojaviti ovdje nakon objavljivanja>"
-      no_snippet: "<nisu dostupni pregledi>"
-  api:
-    upload_errors:
-      forbidden_type: Prilaganje i učitavanje datoteka ovog tipa nije dozvoljeno.
-      unsupported_type: 'Nije podržaj ovaj MIME tip datoteke: {mime}.'
-      could_not_detect_mime: MIME tip ove datoteke nije prepoznat, molimo Vas okušajte ponovo.
-      max_upload_file_size_ini: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz php.ini.
-      max_upload_file_size_form: Dosegnuto ograničenje maksimalne veličine datoteke za prijenos iz obrasca.
-      partial_upload: Djelomično učitavanje.
-      no_file_uploaded: Nije učitana nijedna datoteka.
-      no_upload_tmp_folder: Nema tmp mape za učitavanje datoteka..
-      cannot_write_to_disk: Ne može pisati na disk.
-      upload_blocked_by_php_extension: Proširenje php blokiralo je prijenos.
-      no_files_made_it_to_upload: Molimo učitajte datoteke ne veće od {max} kb.
+        btn_a11y_label_hide: Sakrij "{fileName}" od upravitelja medija
+        btn_a11y_label_show: Prikaži "{fileName}" u upravitelju medija
+        hide_confirmation: Jeste li sigurni da želite sakriti "{fileName}"? Skrivanje datoteke samo će je ukloniti iz vašeg upravitelja medija i neće utjecati na postojeće objave.
+        hide_success: Datoteka skrivena
+        show_confirmation: Jeste li sigurni da želite prikazati "{fileName}"? Prikaz datoteke učinit će je vidljivom u vašem upravitelju medija.
+        show_success: Prikazana datoteka
+        hide_fail: Nije moguće sakriti datoteku "{fileName}"
+        show_fail: Nije moguće prikazati datoteku "{fileName}"
+        loading: Skrivanje datoteke...
+      hide_shared_file:
+        btn_a11y_label_hide: Učini "{fileName}" privatnim (bez javnog URL-a)
+        btn_a11y_label_show: Učini "{fileName}" javnim (s javnim URL-om)
+        hide_confirmation: Jeste li sigurni da želite "{fileName}" učiniti privatnim? Ako datoteku učinite privatnom, uklonit ćete njen javni URL, ali to neće utjecati na postojeće postove. Također više neće biti vidljiv neovlaštenim korisnicima u upravitelju medija.
+        hide_success: Datoteka je postala privatna
+        show_confirmation: Jeste li sigurni da želite "{fileName}" učiniti javnom? Ako datoteku učinite javnom, ona će biti dostupna svima s javnim URL-om i svatko je može dijeliti pomoću upravitelja medija.
+        show_success: Datoteka je postala javna
+        hide_fail: Nije moguće učiniti datoteku "{fileName}" privatnom
+        show_fail: Nije moguće učiniti datoteku "{fileName}" javnom
+        loading: Postavljanje datoteke kao privatne...
