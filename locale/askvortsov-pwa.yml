@@ -25,6 +25,12 @@ askvortsov-pwa:
         reset_vapid_text: Ovo će regenerisati VAPID ključeve i izbrisati sve postojeće pretplate koristeći trenutne VAPID ključeve.
         reset_vapid_confirm: Poništavanje VAPID ključeva uklonit će sve pretplate koje koriste postojeće ključeve, tako da korisnici neće primati nikakve obavijesti do sljedećeg puta kada posjete vašu stranicu. Ovo treba učiniti samo kada prvi put postavljate push obavijesti ili ako push obavijesti uopće ne rade, a postoji upozorenje o nedostajućim VAPID ključevima iznad.
         reset_vapid_success: Uspješno resetiranje VAPID ključeva. {count} pretplata je poništeno. Ponovo učitajte stranicu da vidite ažurirani izvještaj o provjeri statusa.
+      firebase_config:
+        heading: Firebase
+        help_text: Da biste dodali podršku za push obavještenja prilikom objavljivanja vaše aplikacije u Apple App Store-u, trebate koristiti Firebase za dodavanje push obavijesti vašoj aplikaciji. Molimo generirajte svoju Firebase Service Config i otpremite je ovdje.
+        see_documentation_here: Pogledajte dokumentaciju ovdje
+        upload_successful: Vaša firebase konfiguracija je uspješno otpremljena
+        upload_file: Prilaganje/slanje datoteka
       other:
         heading: Ostalo
         force_portrait_text: Prinudno omogući portretnu orijentaciju?
