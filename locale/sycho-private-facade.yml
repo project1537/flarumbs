@@ -1,0 +1,23 @@
+sycho-private-facade:
+  admin:
+    settings:
+      force_redirect: Prisilno preusmjeravanje gostiju na sučelje za prijavu/registraciju
+      header_layout:
+        options:
+          show_header: Prikaži zaglavlje
+          show_only_logo: Prikaži samo logotip
+          hide_secondary_items: Sakrij sekundarne stavke (veze za pretraživanje, prijavu i prijavu)
+        title: Izgled zaglavlja
+      illustration_path: Slika ilustracije
+      primary_color_bg: Koristite primarnu boju pozadine
+      route_exclusions: Rute koje treba isključiti iz preusmjeravanja na stranicu za prijavu/prijavu.
+      url_exclusions: URL-ovi za isključivanje iz preusmjeravanja na stranicu za prijavu/prijavu.
+      screen_banner_description: Poruka na zaslonu
+      screen_banner_heading: Banner zaslona
+      screen_banner_title: Naslov zaslona
+      use_welcome_hero_text: Koristite tekstualni natpis dobrodošlice
+
+  forum:
+    log_in_label: => core.ref.log_in
+    or_label: or
+    sign_up_label: => core.ref.sign_up
