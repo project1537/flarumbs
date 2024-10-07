@@ -805,7 +805,7 @@ core:
     all_discussions: Sve diskusije
     change_email: Promijeni email adresu
     change_password: Promijeni šifru
-    color: Boja                                 # Referenced by flarum-tags.yml
+    color: Boja # Referenced by flarum-tags.yml
     confirm_password: Potvrdi šifru
     confirm_email: Potvrdi email adresu
     confirmation_email_sent: "Poslali smo potvrdnu poruku na email adresu {email}. Ukoliko uskoro ne primite email poruku, provjerite JUNK ili SPAM folder."
@@ -815,7 +815,7 @@ core:
     custom_header_title: Uredi prilagođeno zaglavlje
     delete: Izbriši
     delete_forever: Izbriši zauvijek
-    discussions: Diskusije                     # Referenced by flarum-statistics.yml
+    discussions: Diskusije # Referenced by flarum-statistics.yml
     edit: Uredi
     edit_user: Uredi korisnika
     email: Email
@@ -832,27 +832,27 @@ core:
     new_token: Novi token
     next_page: Sljedeća stranica
     notifications: Obavještenja
-    okay: OK                                     # Referenced by flarum-tags.yml
+    okay: OK # Referenced by flarum-tags.yml
     password: Šifra
-    posts: Objave                                 # Referenced by flarum-statistics.yml
+    posts: Objave # Referenced by flarum-statistics.yml
     previous_page: Prethodna stranica
     remove: Ukloni
     rename: Preimenuj
-    reply: Odgovori                                 # Referenced by flarum-mentions.yml
+    reply: Odgovori # Referenced by flarum-mentions.yml
     reset_your_password: Reset šifre
     restore: Vrati
     save_changes: Spasi izmjene
-    search_users: Pretraži korisnike                # Referenced by flarum-suspend.yml, flarum-tags.yml
+    search_users: Pretraži korisnike # Referenced by flarum-suspend.yml, flarum-tags.yml
     security: Sigurnost
     settings: Postavke
     sign_up: REGISTRACIJA
-    some_others: "{count, plural, one {# drugi} other {# drugih}}"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count, plural, one {# drugi} other {# drugih}}" # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Započni diskusiju
     username: Korisničko ime
-    users: Korisnici                                 # Referenced by flarum-statistics.yml
+    users: Korisnici # Referenced by flarum-statistics.yml
     view: Pregled
     write_a_reply: Nova objava...
-    you: Vi                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: Vi # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.
