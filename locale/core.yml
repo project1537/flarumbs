@@ -126,12 +126,6 @@ core:
       description: "Konfiguriraj upravitelja, postavke i adrese koje će forum koristiti za slanje email poruka."
       driver_heading: Izaberi upravitelj
       driver_label: Upravitelj
-      format:
-        multipart_option: Višedijelni (preporučeno)
-        plain_option: Običan tekst
-        html_option: HTML
-      format_heading: Format odlazne e-pošte
-      format_help: "Odaberite format u kojem će se slati odlazne e-poruke. Preporučena opcija je <code>multipart</code>, jer će to omogućiti klijentu e-pošte vašeg korisnika da prikaže najprikladniji format."
       from_label: Pošiljalac
       mail_encryption_label: Enkripcija
       mail_host_label: Host
@@ -258,7 +252,6 @@ core:
     # These translations are used generically in setting fields.
     settings:
       saved_message: Vaše izmjene su spremljene.
-      select_dropdown_custom_label: Prilagođeno
       submit_button: => core.ref.save_changes
 
     # These translations are used in image upload buttons.
@@ -278,7 +271,6 @@ core:
 
           edit_user:
             button: => core.ref.edit
-            title: => core.ref.edit_user
             tooltip: Uredi korisnika/cu {username}
 
           email:
@@ -293,11 +285,14 @@ core:
           join_time:
             title: Pridružio/la se
 
+          user_actions:
+            title: Aktivnosti
+
           user_id:
             title: ID
 
           username:
-            profile_link_tooltip: Posjeti {username} prof
+            profile_link_tooltip: Posjeti {username} profil
             title: => core.ref.username
 
         invalid_column_content: Greška
@@ -390,10 +385,10 @@ core:
     forgot_password:
       dismiss_button: => core.ref.okay
       email_placeholder: => core.ref.email
-      email_sent_message: Poslali smo Vam email poruku koja sadrži link (vezu) za ponovno postavljanje Vaše šifre. Ukoliko niste primili email, molimo da provjerite SPAM ili JUNK folder jer neke email poruke završe u njima.
+      email_sent_message: Poslali smo Vam email poruku koja sadrži link/vezu za ponovno postavljanje šifre. Ukoliko niste primili email, molimo da provjerite SPAM ili JUNK folder jer neke email poruke završe u njima.
       not_found_message: U našoj bazi ne postoji korisnik sa email adresom koju ste upisali.
-      submit_button: Ponovno postavljanje šifre.
-      text: Upišite email adresu, a mi ćemo Vam poslati link (vezu) za ponovno postavljanje Vaše šifre.
+      submit_button: Ponovno postavljanje šifre
+      text: Upišite email adresu, a mi ćemo Vam poslati link/vezu za ponovno postavljanje šifre.
       title: Zaboravljena šifra
 
     # These translations are used in the header and session dropdown menu.
@@ -660,6 +655,12 @@ core:
       kilo_text: K
       mega_text: M
 
+    # These translations are used for formatting dates using dayjs.
+    datetime_formats:
+      humanTimeShort: D MMM
+      humanTimeLong: ll
+      scrubber: MMMM YYYY
+
     # These translations are used to punctuate a series of items.
     series:
       glue_text: ", "
@@ -689,7 +690,7 @@ core:
     # Translations in this namespace are displayed by the Confirm Email interface.
     confirm_email:
       submit_button: => core.ref.confirm_email
-      text: Kliknite na dugmić ispod za potvrđivanje email adrese koja je povezana sa ovim korisnički račun.
+      text: Kliknite na dugmić ispod za potvrđivanje email adrese koja je povezana sa ovim korisnički računom.
       title: => core.ref.confirm_email
 
     # Translations in this namespace are displayed by the basic HTML content loader.
@@ -733,16 +734,6 @@ core:
       submit_button: => core.ref.save_changes
       title: => core.ref.reset_your_password
 
-  # Translations in this namespace are displayed by the email unsubscribe interface.
-    unsubscribe_email:
-      title: Potvrda o odjavi pretplate
-      return_to_forum: Povratak na {forumTitle}
-      confirm_button: Potvrdi
-      immediate_helptext: Vaša pretplata će biti odmah odjavljena nakon što potvrdite.
-      confirm_message: "Zatražili ste otkazivanje pretplate na \"{type}\" obavijesti e-poštom od {forumTitle}."
-      success_message: "Uspješno ste otkazali pretplatu na \"{type}\" obavijesti s {forumTitle}. Ako ih želite ponovno primati, molimo [ažurirajte svoje postavke]({settingsLink})."
-      invalid_message: "Ova veza za otkazivanje pretplate nije važeća ili je već korištena. Za sve promjene u vašim obavijestima e-poštom od {forumTitle} molimo [provjerite svoje postavke]({settingsLink})."
-
   # Translations in this namespace are used in messages output by the API.
   api:
     invalid_username_message: "Korisničko ime može sadržavati samo slova i brojeve."
@@ -753,68 +744,57 @@ core:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
-    greeting: "Poštovani {displayName},"
-    signoff: "Administracija {forumTitle} foruma"
-
-    # These translations are used by the "informational" email template.
-    informational:
-      default_title: "Informacija"
-      footer: "Ova e-poruka poslana je na {userEmail} kao informativna usluga povezana s vašim korisničkim računom na [{forumTitle}]({forumUrl})."
-      footer_plain: "Ova e-poruka poslana je na {userEmail} kao informativna usluga povezana s vašim računom na {forumTitle}."
-
-    # These translations are used by the "notification" email template.
-    notification:
-        default_title: "Obavijest"
-        footer:
-          main_text: "Ova e-poruka poslana je na {email} jer ste pretplaćeni na \"{type}\" obavijesti na [{forumTitle}]({forumUrl})."
-          main_text_plain: "Ova e-poruka poslana je na {email} jer ste pretplaćeni na \"{type}\" obavijesti na {forumTitle}."
-          unsubscribe_text: "Ako ne želite više primati ovu vrstu obavijesti, [otkažite pretplatu ovdje]({unsubscribeLink})."
-          unsubscribe_text_plain: "Ako ne želite više primati ovu vrstu obavijesti, pretplatu otkažite ovdje: {unsubscribeLink}"
-          settings_text: "Upravljajte svojim postavkama obavijesti [ovdje]({settingsLink})."
-          settings_text_plain: "Ovdje upravljajte postavkama obavijesti: {settingsLink}"
 
     # These translations are used in emails sent when users register new accounts.
     activate_account:
-      subject: Aktivirajte Vaš korisnički račun
+      subject: Aktivirajte svoj novi korisnički račun
       body: |
-        Neko (a nadamo se da ste to bili Vi!) je upravo registrovan na {forum} sa Vašom email adresom.
+        Poštovani/na {username}!
 
-        Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i korisnički račun će biti aktiviran:
+        Neko (nadajmo se da ste vi!) se prijavio na {forum} sa ovom adresom e-pošte.
+
+        Ako ste to bili vi, jednostavno kliknite na sljedeći link i vaš račun će biti aktiviran:
         {url}
 
-        Ukoliko Vi niste izvršili registraciju, molimo da ignorišete ovu poruku.
+        Ako se niste prijavili, zanemarite ovu e-poštu.
 
     # These translations are used in emails sent when users change their email address.
     confirm_email:
-      subject: Potvrdite novu email adresu
+      subject: Potvrdite svoju novu adresu e-pošte
       body: |
-        Neko (a nadamo se da ste to bili Vi!) je upravo promijenio email pomoću kojeg je registrovan na {forum} i upisao email adresu na koju Vam šaljemo ovu poruku.
+        Poštovani/na {username}!
+        
+        Neko (nadajmo se da ste vi!) je promijenio svoju adresu e-pošte na {forum} u ovu.
 
-        Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i Vaša nova email adresa će uspješno biti potvrđena:
+        Ako ste to bili vi, jednostavno kliknite na sljedeći link i vaša e-pošta će biti potvrđena:
         {url}
 
-        Ukoliko Vi niste izvršili pomjenu email adrese, molimo da ignorišete ovu poruku.
+        Ako to niste bili vi, zanemarite ovu e-poštu.
 
     # These translations are used in emails sent when users ask to reset their passwords.
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
-        Neko (a nadamo se da ste to bili Vi!) je upravo podnio zahtjev za promjenu šifre korisničkog računa na {forum}.
+        Poštovani/na {username}!
+        
+        Neko (nadamo se vi!) je podnio zahtjev za zaboravljenu šifru za vaš račun na {forum}.
 
-        Ukoliko ste to bili Vi, jednostavno kliknite na link (vezu) ispod i Vaša nova šifra će uspješno biti potvrđena:
+        Ako ste to bili vi, kliknite na sljedeću vezu da poništite svoju šifru:
         {url}
 
-        Ukoliko Vi niste izvršili pomjenu šifre, molimo da ignorišete ovu poruku.
+        Ako ne želite promijeniti svoju šifru, samo zanemarite ovu e-poštu i ništa se neće dogoditi.
 
     # These translations are used when testing mailing configuration
     send_test:
       subject: Flarum Email Test
       body: |
-        Ovo je test email potvrde da email konfiguracija foruma radi kako treba.
+        Poštovani/na {username}!
+        
+        Ovo je probna e-poruka koja potvrđuje da vaša Flarum konfiguracija e-pošte radi ispravno.
 
-        Ukoliko ste Vi poslali ovu email poruku, to znači da je konfiguracija uspješna.
+        Ako ste to bili vi, ova e-poruka znači da vaša konfiguracija radi!
 
-        Ukoliko niste Vi poslali ovu poruku, jednostavno je ignorišit i izbrišite.
+        Ako to niste bili vi, zanemarite ovu e-poštu.
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
