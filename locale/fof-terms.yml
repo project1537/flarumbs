@@ -36,14 +36,16 @@ fof-terms:
             terms-updated-at: Ažurirano
             terms-updated-at-placeholder: YYYY-MM-DD (hh:mm:ss)
             terms-updated-at-help: >
-                The date of the last terms update.
-                Setting this value will require all users who accepted prior to that date to accept again.
-                Must be in the past (otherwise users would never be able to accept after the date and get past the modal).
+                Datum posljednjeg ažuriranja uslova.
+                Postavljanje ove vrijednosti će zahtijevati da svi korisnici koji su prihvatili prije tog datuma ponovo prihvate.
+                Mora biti u prošlosti (inače korisnici nikada ne bi mogli prihvatiti nakon datuma i preći preko modalnog).
             export-url: Izvezi url
             export-url-help: >
-                Any user with permission "Export all policies data" can access those urls to download the list of users who accepted this policy.
-                You can find more details about the available options on the <a>extension wiki</a>.
-
+                Svaki korisnik s dozvolom "Izvezi sve podatke o politikama" može pristupiti tim URL-ovima da preuzme listu korisnika koji su prihvatili ovu politiku.
+                Više detalja o dostupnim opcijama možete pronaći na <a>extension wiki</a>.
+            optional: Opciona politika
+            optional-help: Kada je omogućeno, korisnici mogu koristiti forum i komunicirati s njim bez prihvatanja ove politike.
+            
         permissions:
             see-user-policies-state: Pregledaj stanje prihvatanja Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
             postpone-policies-accept: Može odgoditi prihvatanje ažuriranih Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
@@ -69,7 +71,7 @@ fof-terms:
 
         update-alert:
             must-accept-message: Administracija foruma je privremeno blokirala pristup Vašem korisničkom računu dok ne provjerite i pročitate ažurirane uslove korištenja i/ili Pravila Foruma.
-            can-accept-message: Ažurirali smo Pravila foruma i/ili Politiku privatnosti i zaštite korisničkih podataka. Molimo Vas da ih pročitate i prihvatite.
+            can-accept-message: Ažurirali smo Pravila foruma i/ili Politiku privatnosti i zaštite korisničkih podataka.
             review: OPŠIRNIJE...
 
         user_controls:
