@@ -79,7 +79,7 @@ fof-best-answer:
       best-answer-count: "{count, plural, one { {count} najbolji odgovor} other {{count} najboljih odgovora}}"
     search:
       discussions_solutions_heading: "Diskusije sa najboljim odgovorima"
-      all_discussions_solutions_button: "Pretraži sve diskusije sa najboljim odgovorima koristeći \"{query}\""
+      all_discussions_solutions_button: "Pretraži sve diskusije sa najboljim odgovorima koje sadrže ključne riječi/pojmove: \"{query}\""
     discussion:
       jump_to_best_answer_button: Pogledajte najbolji odgovor
   email:
