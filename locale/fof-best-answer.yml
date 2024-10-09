@@ -8,6 +8,7 @@ fof-best-answer:
         tags: Oznake najboljeg odgovora
         general: Općenito
         reminders: Podsjetnici
+        search: Pretraživanje
         advanced: Napredno
         reminders_notice: For reminders to function correctly, you must have set up the Flarum scheduler correctly.
       allow_select_own_post: Dozvoli korisnicima da za najbolji odgovor odaberu vlastite objave
@@ -34,6 +35,12 @@ fof-best-answer:
       remind_tags_help: Odaberite za koje oznake, ako ih ima, želite slati podsjetnike. Podsjetnici će se slati samo za diskusije s ovim oznakama.
       tags_info: |
         Kada je omogućena oznaka Najbolji odgovor, dodijelite dopuštenja svakoj grupi korisnika koja može postaviti odgovore (vlastita diskusija, bilo koja diskusija). Dopuštenja se mogu dodijeliti globalno (za bilo koju omogućenu oznaku Najbolji odgovor) ili po oznaci.
+      solution_search: Pretraživanje najboljih odgovora
+      solution_search_help: Omogućite pretraživanje diskusija s najboljim odgovorom
+      display_tags: Prikaži oznake u rezultatima pretrage
+      display_tags_help: Prikažite oznake u rezultatima pretrage za diskusije sa najboljim odgovorima
+      discussion_sidebar_jump_button: Prikaži dugme za prelazak na najbolji odgovor na bočnoj traci za diskusiju
+      discussion_sidebar_jump_button_help: Dodaje dugme na bočnu traku za diskusiju koja prelazi na najbolji odgovor u nizu postova.
     edit_tag:
       qna_label: Omogućite postavljanje najboljih odgovora za ovu oznaku
       reminders: Pošaljite podsjetnike za postavljanje najboljeg odgovora za diskusije pod ovom oznakom
@@ -70,6 +77,11 @@ fof-best-answer:
       titlePlaceholder: Naslov diskusije
     user:
       best-answer-count: "{count, plural, one { {count} najbolji odgovor} other {{count} najboljih odgovora}}"
+    search:
+      discussions_solutions_heading: "Diskusije sa najboljim odgovorima"
+      all_discussions_solutions_button: "Pretraži sve diskusije sa najboljim odgovorima koristeći \"{query}\""
+    discussion:
+      jump_to_best_answer_button: Pogledajte najbolji odgovor
   email:
     subject:
       awarded: Vaša objava je izabrana kao najbolji odgovor u diskusiji od strane korisnika/ce {display_name}
