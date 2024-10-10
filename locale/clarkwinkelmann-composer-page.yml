@@ -1,0 +1,19 @@
+clarkwinkelmann-composer-page:
+    admin:
+        settings:
+            onlyInTags: Samo u sljedećim oznakama (opcionalno)
+            onlyInTagsHelp: >
+                Lista oznaka razdvojena zarezima.
+                Ostavite prazno da uvijek koristite stranicu, čak i prije nego što se izabere bilo koja oznaka.
+            forPrivateDiscussions: Koristite za privatne diskusije
+            forPrivateDiscussionsHelp: Integriše Byobu Discussion Composer u stranicu
+    forum:
+        nav:
+            cancel: Zatvori uređivač teksta
+            continue: Nastavi diskusiju
+        page:
+            title: Započni diskusiju
+            heading: Započni diskusiju
+        page-private:
+            title: Započni diskusiju
+            heading: Započni diskusiju
