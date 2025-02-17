@@ -30,7 +30,7 @@ fof-terms:
             name: Naziv
             name-help: Ovaj naziv će se prikazati pored potvrdnog okvira i kao naslov modala ažuriranja.
             url: Url
-            url-help: URL stranice/diskusije gdje je moguće pročitati Opće uslove korištenja, Pravila Foruma i/ili Politiku privatnosti i zaštite korisničkih podataka. Otvaraju se u novoj kartici prilikom posjete linka.
+            url-help: URL stranice/diskusije gdje je moguće pročitati Opće uslove korištenja, Pravila i/ili Politiku privatnosti i zaštite korisničkih podataka. Otvaraju se u novoj kartici prilikom posjete linka.
             update-message: Ažuriraj poruku
             update-message-help: Poruka za prikaz postojećim korisnicima koji još nisu prihvatili najnovije uvjete.
             terms-updated-at: Ažurirano
@@ -44,40 +44,45 @@ fof-terms:
                 Svaki korisnik s dozvolom "Izvezi sve podatke o politikama" može pristupiti tim URL-ovima da preuzme listu korisnika koji su prihvatili ovu politiku.
                 Više detalja o dostupnim opcijama možete pronaći na <a>extension wiki</a>.
             optional: Opciona politika
-            optional-help: Kada je omogućeno, korisnici mogu koristiti forum i komunicirati s njim bez prihvatanja ove politike.
+            optional-help: Kada je omogućeno, korisnici mogu koristiti edukativnu platformu i komunicirati s njim bez prihvatanja ove politike.
             
         permissions:
-            see-user-policies-state: Pregledaj stanje prihvatanja Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
-            postpone-policies-accept: Može odgoditi prihvatanje ažuriranih Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
-            export-policies: Izvezi sve korisnike i podatke o prihvatanju Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka
+            see-user-policies-state: Pregledaj stanje prihvatanja Općih uslova korištenja, Pravila i/ili Politike privatnosti i zaštite korisničkih podataka
+            postpone-policies-accept: Može odgoditi prihvatanje ažuriranih Općih uslova korištenja, Pravila i/ili Politike privatnosti i zaštite korisničkih podataka
+            export-policies: Izvezi sve korisnike i podatke o prihvatanju Općih uslova korištenja, Pravila i/ili Politike privatnosti i zaštite korisničkih podataka
 
     forum:
         signup:
             i-accept: Prihvatam <a>{policy}</a>
-            must-accept: Morate pročitati i prihvatiti {policy} prije prijave na forum i učešća u diskusijama.
+            must-accept: Morate pročitati i prihvatiti {policy} prije prijave na edukativnu platformu i učešća u diskusijama.
 
         accept-modal:
             title: Ažuriranje uslova i pravila
-            updated-at: Opći uslovi korištenja, Pravila Foruma i/ili Politika privatnosti i zaštite korisničkih podataka su ažurirani {date}
+            updated-at: Opći uslovi korištenja, Pravila i/ili Politika privatnosti i zaštite korisničkih podataka su ažurirani {date}
             updated-recently: Opći uslovi korištenja, Politika privatnosti i zaštite korisničkih podataka i/ili Pravila Foruma od Vaše posljednje posjete Forumu
             i-accept: Prihvatam <a>{policy}</a>
             accept: Potvrdi
             close: Sada možete zatvoriti ovaj prozor
 
         state-modal:
-            title: Stanje prihvatanja Općih uslova korištenja, Pravila Foruma i/ili Politike privatnosti i zaštite korisničkih podataka za korisnika/cu {username}
+            title: Stanje prihvatanja Općih uslova korištenja, Pravila i/ili Politike privatnosti i zaštite korisničkih podataka za korisnika/cu {username}
             accepted-at: Prihvaćeno {date}
             not-accepted: Nije prihvaćeno
 
         update-alert:
-            must-accept-message: Administracija foruma je privremeno blokirala pristup Vašem korisničkom računu dok ne provjerite i pročitate ažurirane uslove korištenja i/ili Pravila Foruma.
-            can-accept-message: Ažurirali smo Pravila foruma i/ili Politiku privatnosti i zaštite korisničkih podataka.
-            review: OPŠIRNIJE...
+            must-accept-message: Administracija edukativne platforme je privremeno blokirala pristup Vašem korisničkom računu dok ne provjerite i pročitate ažurirane uslove korištenja i/ili Pravila Foruma.
+            can-accept-message: Ažurirali smo Pravila i/ili Politiku privatnosti i zaštite korisničkih podataka.
+            can-accept-optional-message: Nedavno smo ažurirali uslove. Možete ih pregledati kada vam odgovara.
+            review: Opširnije...
+            close: Zatvori
 
+        user_settings:
+            optional_policies_label: Politike
+            
         user_controls:
             state_button: Saglasnosti
 
-blomstra-gdpr:
+flarum-gdpr:
     lib:
         data:
             userpolicydata:
