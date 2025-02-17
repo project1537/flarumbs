@@ -3,11 +3,11 @@
 
 ![Bosnia and Herzegovina](https://user-images.githubusercontent.com/79749042/120553747-27fb8480-c3f9-11eb-98b0-ddaa6b26cfac.png)
 
-<b>LATEST VERSION:</b> 1.5.1
+<b>LATEST VERSION:</b> 1.5.2
 
-<b>RELEASE DATE:</b> 2024-10-09
+<b>RELEASE DATE:</b> 17-02-2025
 
-<b>SOFTWARE COMPATIBILITY:</b> FLARUM ^1.8.6
+<b>SOFTWARE COMPATIBILITY:</b> FLARUM ^1.8.9
 
 <b>LICENSE:</b> MIT LICENSE
 
