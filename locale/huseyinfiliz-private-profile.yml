@@ -1,0 +1,8 @@
+huseyinfiliz-private-profile:
+  forum:
+    user:
+      settings:
+        private_profile_heading: "Privatni profil"
+        private_profile_description: "Učini moj profil privatnim"
+        private_profile_help: "Kada je omogućeno, vaš profil će biti dostupan samo vama i administratorima/moderatorima."
+    profile_is_private: "Ovaj profil je privatan."
