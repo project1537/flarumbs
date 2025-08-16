@@ -1,0 +1,17 @@
+blazite-turnstile:
+  admin:
+    settings:
+      help_text: Generirajte ključeve za Turnstile na svom Cloudflare računu <a>ovdje</a>.
+      site_key: Ključ stranice
+      secret_key: Tajni ključ
+      signup: => core.forum.sign_up.title
+      signin: => core.forum.log_in.title
+      forgot: => core.forum.forgot_password.title
+
+  forum:
+    not_loaded_error: Nije uspjelo učitavanje Cloudflare Turnstile-a. Osvježite stranicu i provjerite blokator oglasa.
+    validation_error: Molimo vas da završite Turnstile izazov.
+
+validation:
+  turnstile: Nismo mogli potvrditi da li ste robot ili ne. Molimo vas da osvježite stranicu i pokušate ponovo.
+  required: Molimo vas da završite Turnstile izazov.
