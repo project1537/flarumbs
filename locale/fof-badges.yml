@@ -1,0 +1,359 @@
+fof-badges:
+  admin:
+    # Navigacija i kartice
+    tabs:
+      badges: Značke
+      categories: Kategorije
+      recalculation: Ponovni izračun
+      settings: Postavke
+
+    # Postavke
+    settings:
+      display_title: Postavke prikaza
+      new_badge_highlight: Prikaži oznaku „NOVO" na nedavno osvojenim značkama
+      new_badge_highlight_help: Prikazuje oznaku „NOVO" na značkama osvojenim u posljednjih 7 dana.
+      primary_badge_display: Prikaz primarne značke
+      primary_badge_display_help: Kako se primarna značka korisnika prikazuje pored korisničkog imena.
+      primary_badge_hidden: Skriveno
+      primary_badge_icon: Samo ikonica
+      primary_badge_icon_name: Ikonica i naziv
+      show_badges_on_user_card: Prikaži značke na korisničkoj kartici
+      show_badges_on_user_card_help: Prikazuje omiljenu ili najrjeđu značku korisnika na korisničkim karticama i profilnim stranicama.
+      post_badge_display_limit: Ograničenje broja značaka ispod objave
+      post_badge_display_limit_help: Maksimalan broj značaka koje se prikazuju ispod objava. Postavi na 0 da isključiš prikaz.
+      save: Spremi postavke
+      saved: Postavke su uspješno spremljene.
+      save_error: Greška pri spremanju postavki.
+      integrations_title: Integracije proširenja
+      integrations_help: Metrike značaka koje ovise o drugim proširenjima. Instaliraj odgovarajuće proširenje da otključaš pripadajuće metrike.
+
+    # Dozvole
+    permissions:
+      moderate: Upravljanje značkama
+      give_manually: Ručno dodjeljivanje značaka
+      view_list: Pregled liste značaka
+      view_user_badges: Pregled korisničkih značaka
+
+    # Lista značaka
+    create_badge: Kreiraj značku
+    create_category: Kreiraj kategoriju
+    recalculate: Izračunaj ponovo
+    recalculate_confirm: Ovo će ponovo izračunati sve automatske značke za sve korisnike. Proces će se odvijati u pozadini. Nastaviti?
+    recalculate_success: "Ponovni izračun završen! Dodijeljeno: {awarded}, Opozvano: {revoked}, Obrađenih korisnika: {users}"
+    recalculate_error: Greška pri ponovnom izračunu značaka. Pokušaj ponovo.
+
+    # Napredak ponovnog izračuna
+    recalculation:
+      pending: Priprema ponovnog izračuna...
+      running: Izračunavanje značaka u toku...
+      completed: Ponovni izračun završen!
+      failed: Ponovni izračun nije uspio
+      cancelled: Ponovni izračun je otkazan
+      started: Ponovni izračun značaka je pokrenut. Proces se odvija u pozadini.
+      already_running: Ponovni izračun značaka je već u toku.
+      cancel: Otkaži
+      cancel_confirm: Jesi li siguran/a da želiš otkazati ponovni izračun? Napredak će biti izgubljen.
+      cancel_error: Greška pri otkazivanju ponovnog izračuna.
+      dismiss: Zatvori
+      progress: "{processed} / {total} provjera ({percentage}%)"
+      chunks: "Blokovi: {processed} / {total}"
+      stats: "Dodijeljeno: {awarded} | Opozvano: {revoked}"
+      auto_refresh_on: Automatsko osvježavanje je uključeno
+      auto_refresh_off: Automatsko osvježavanje
+
+    # Kartica ponovnog izračuna
+    recalculate_tab:
+      title: Pokretanje ponovnog izračuna
+      info: Ponovni izračun obrađuje korisnike u blokovima kako bi se izbjegli prekoračenje vremena u redu zadataka. Svaki blok izvršava se kao poseban zadatak u pozadini.
+      badge_label: Značka za ponovni izračun
+      badge_help: Odaberi konkretnu značku ili ponovo izračunaj sve automatske značke.
+      all_badges: Sve automatske značke
+      chunk_size_label: Veličina bloka
+      chunk_size_help: Broj korisnika koji se obrađuju po zadatku. Manji blokovi su pouzdaniji, ali cjelokupni proces traje duže.
+      default: zadano
+      no_revoke_label: Nemoj opozvati postojeće značke
+      no_revoke_help: Ako je omogućeno, korisnici koji više ne ispunjavaju uvjete zadržat će svoje značke.
+      reapply_actions_label: Ponovo primijeni radnje na postojeće nositelje značke
+      reapply_actions_help: Ako je omogućeno, radnje značke (poput dodavanja u grupu) bit će ponovo primijenjene na korisnike koji već imaju tu značku. Korisno kada su dodane nove radnje na postojeću značku.
+      total_users: Ukupno korisnika
+      estimated_chunks: Procijenjeni broj blokova
+      badges_to_check: Značke za provjeru
+      start: Pokreni ponovni izračun
+      no_automatic_badges: Nema postavljenih automatskih značaka. Prvo kreiraj značku s uvjetima dodjele.
+      jobs_title: Povijest zadataka
+      jobs_empty: Još nema zadataka ponovnog izračuna.
+      show_more: "Prikaži još {count}"
+      sync_counts_title: Uskladi brojeve značaka
+      sync_counts_info: Ponovo izračunava broj korisnika koji su zaslužili svaku značku na osnovu stvarnih zapisa. Koristi ovo ako su brojevi postali netačni nakon ponovnog izračuna.
+      sync_counts: Uskladi brojeve značaka
+      sync_counts_success: "Brojevi značaka usklađeni! Ispravljeno {corrected} od {total} značaka."
+      sync_counts_error: Greška pri usklađivanju brojeva značaka.
+
+    # Modal zadataka ponovnog izračuna
+    recalculation_jobs:
+      button: Zadaci
+      title: Zadaci ponovnog izračuna
+      empty: Nema pronađenih zadataka ponovnog izračuna.
+      stuck: Zapelo
+      users: "{processed} / {total} provjera"
+      results: "Dodijeljeno: {awarded} | Opozvano: {revoked}"
+      cancel: Otkaži
+      force_cancel: Prisilno otkaži
+      mark_failed: Označi kao neuspješno
+      cancelled: Zadatak je uspješno otkazan.
+      marked_failed: Zadatak je označen kao neuspješan.
+      cancel_error: Greška pri otkazivanju zadatka.
+      mark_failed_error: Greška pri označavanju zadatka kao neuspješnog.
+      status:
+        pending: Na čekanju
+        running: U toku
+        completed: Završeno
+        failed: Neuspješno
+        cancelled: Otkazano
+
+    # Zaglavlja tabele
+    headers:
+      order: Redoslijed
+      icon: Ikonica
+      name: Naziv
+      type: Vrsta
+      earned: Osvojeno
+      rarity: Rijetkost
+      status: Status
+      description: Opis
+      badges: Značke
+
+    no_badges: Još nema značaka. Kreiraj svoju prvu značku!
+    install_defaults: Instaliraj zadane značke
+    install_defaults_success: Zadane značke su uspješno instalirane!
+    install_defaults_error: Greška pri instaliranju zadanih značaka.
+    no_categories: Još nema kategorija. Kreiraj svoju prvu kategoriju!
+    uncategorized: Bez kategorije
+    automatic: Automatska
+    manual: Ručna
+    active: Aktivna
+    inactive: Neaktivna
+    enabled: Uključeno
+    disabled: Isključeno
+    earned_count: "Zaslužilo: {count}"
+    badge_count: "{count, plural, one {# značka} other {# značaka}}"
+    rarity: "Rijetkost: {percent}%"
+    edit: Uredi
+    delete: Obriši
+    assign: Dodijeli
+    move_up: Pomjeri gore
+    move_down: Pomjeri dolje
+    delete_badge_confirm: Jesi li siguran/a da želiš obrisati značku „{name}"? Ovo će je ukloniti i od svih korisnika koji su je osvojili.
+    delete_category_confirm: Jesi li siguran/a da želiš obrisati kategoriju „{name}"?
+    delete_category_confirm_with_badges: Jesi li siguran/a da želiš obrisati kategoriju „{name}"? {count, plural, one {# značka} other {# značaka}} ostat će bez kategorije.
+
+    # Modal za uređivanje značke
+    edit_badge: Uredi značku
+    badge_name: Naziv
+    badge_name_placeholder: npr. „Majstor 100 objava"
+    badge_slug: Slug
+    badge_slug_placeholder: npr. „majstor-100-objava"
+    badge_slug_help: Identifikator prilagođen za URL. Automatski se generira iz naziva ako se ostavi prazno.
+    badge_description: Opis
+    badge_description_placeholder: Opiši kako se zaslužuje ova značka...
+    badge_category: Kategorija
+    no_category: Bez kategorije
+    appearance: Izgled
+    preview: Pregled
+    icon_color: Boja ikonice
+    background_color: Boja pozadine
+    status: Status
+    is_active: Aktivna
+    is_active_help: Neaktivne značke se neće automatski dodjeljivati korisnicima.
+    is_visible: Vidljiva u listi značaka
+    is_visible_help: Skrivene značke neće se pojaviti u javnoj listi, ali ih korisnici i dalje mogu zaslužiti.
+    save: Spremi
+    cancel: Otkaži
+
+    # Validacija
+    validation:
+      tag_required: Moraš odabrati oznaku kada koristiš metriku „Objave u oznaci".
+
+    # Odabir ikonice
+    icon_picker:
+      expand: Prikaži odabir ikonice
+      collapse: Sakrij odabir ikonice
+      hint: Klikni na ikonicu da je odabereš, ili unesi naziv Font Awesome klase u polje iznad.
+
+    # Konfiguracija uvjeta dodjele
+    trigger_config: Automatski uvjet dodjele
+    trigger_config_help: Postavi uvjete za automatsku dodjelu značke. Ostavi prazno za značke koje se dodjeljuju isključivo ručno.
+    trigger_builder:
+      no_conditions_info: Nisu postavljeni uvjeti. Ovu značku mogu dodijeliti samo moderatori ručno.
+      add_condition: Dodaj uvjet
+      remove_condition: Ukloni uvjet
+      logic: Kada je više uvjeta
+      and: SVI moraju biti ispunjeni (I)
+      or: BAREM JEDAN mora biti ispunjen (ILI)
+      and_help: Korisnik mora ispuniti sve uvjete istovremeno da bi zaslužio značku.
+      or_help: Korisnik mora ispuniti barem jedan uvjet da bi zaslužio značku.
+      use_date_range: Ograniči na vremenski raspon
+      date_range_help: Uzima u obzir samo aktivnost unutar ovog vremenskog raspona. Korisno za značke vezane uz događaje.
+      date_start: Datum početka
+      date_end: Datum završetka
+      tag_filter: Filter oznake
+      tag_filter_help: Obavezno pri korištenju metrike „Objave u oznaci".
+      select_tag: Odaberi oznaku...
+      loading_tags: Učitavanje oznaka...
+
+    # Metrike
+    metrics:
+      post_count: Broj objava
+      discussion_count: Pokrenute rasprave
+      likes_received: Primljeni sviđanja
+      likes_given: Dato sviđanja
+      member_days: Dana kao član/ica
+      has_avatar: Ima avatar
+      has_bio: Ima biografiju
+      has_nickname: Ima nadimak
+      tag_posts: Objave u oznaci
+      edit_count: Uređenih objava
+      best_answers_received: Primljenih najboljih odgovora
+      files_uploaded: Otpremljenih fajlova
+      polls_created: Kreiranih anketa
+      polls_voted: Glasanja u anketama
+      private_discussions_created: Kreiranih privatnih rasprava
+      reactions_received: Primljenih reakcija
+      reactions_given: Datih reakcija
+      upvotes_received: Primljenih pozitivnih glasova
+      upvotes_given: Datih pozitivnih glasova
+      downvotes_received: Primljenih negativnih glasova
+      downvotes_given: Datih negativnih glasova
+
+    # Radnje
+    actions: Radnje pri osvajanju značke
+    send_notification: Pošalji obavijest korisniku
+    add_to_group: Dodaj korisnika u grupu
+    add_to_group_help: Automatski dodaje korisnika u ovu grupu kada zasluži značku.
+    no_group: Nemoj dodavati u grupu
+
+    # Modal kategorije
+    edit_category: Uredi kategoriju
+    category_name: Naziv
+    category_name_placeholder: npr. „Značke dostignuća"
+    category_slug: Slug
+    category_slug_placeholder: npr. „dostignuca"
+    category_slug_help: Identifikator kategorije prilagođen za URL.
+    category_description: Opis
+    category_description_placeholder: Opiši ovu kategoriju značaka...
+    category_enabled: Uključeno
+    category_enabled_help: Isključene kategorije i njihove značke neće se pojaviti u listi značaka.
+
+    # Ručna dodjela
+    assign_badge: "Dodjela: {badge}"
+    select_user: Odaberi korisnika
+    search_user_placeholder: Pretraži po korisničkom imenu ili imenu za prikaz...
+    no_users_found: Nema pronađenih korisnika
+    clear_selection: Poništi odabir
+    assign_reason: Razlog (neobavezno)
+    assign_reason_placeholder: Zašto se dodjeljuje ova značka?
+    assign_reason_help: Ovaj razlog bit će vidljiv na korisnikovoj znački.
+    badge_assigned: Značka „{badge}" je dodijeljena korisniku {username}!
+
+    # Kartice modala ručne dodjele
+    tab_assign: Dodjela
+    tab_holders: "Nositelji ({count})"
+    search_holders_placeholder: Pretraži nositelje...
+    no_holders_found: Nema pronađenih nositelja koji odgovaraju pretrazi.
+    no_holders: Još nitko nije zaslužio ovu značku.
+    granted_by_system: Sistem
+    revoke: Opozovi
+    revoke_confirm: Jesi li siguran/a da želiš opozvati značku „{badge}" od korisnika {username}?
+    badge_revoked: Značka „{badge}" je opozvana od korisnika {username}.
+    revoke_error: Greška pri opozivanju značke.
+    previous: Prethodna
+    next: Sljedeća
+    showing_holders: "Prikazano {from}–{to} od {total}"
+
+  forum:
+    # Navigacija
+    nav:
+      badges: Značke
+
+    # Stranica značaka
+    badges_title: Značke
+    badges_subtitle: Osvoji značke učestvovanjem u zajednici!
+    all_badges: Sve značke
+    toggle_category_dropdown: Prikaži/sakrij padajući izbornik kategorija
+    no_badges: Još nema dostupnih značaka.
+    other_badges: Ostale značke
+    earned_by: "{count, plural, one {# korisnik} other {# korisnika}}"
+    new_tag: NOVO
+    loading: Učitavanje...
+    my_badges: Moje značke
+    owned_badge: Posjeduješ ovu značku
+
+    # Modal značke
+    earned_users: Korisnici koji su zaslužili
+    no_users_earned: Još nitko nije zaslužio ovu značku. Budi prvi/a!
+    more_users_earned: I još korisnika...
+
+    # Korisnički profil
+    user:
+      badges_tab: Značke
+      badges_title: "Značke korisnika {username}"
+      badges_count: "{count, plural, one {# značka} other {# značaka}}"
+      no_badges: Ovaj korisnik još nije zaslužio nijednu značku.
+      earned_on: "Zasluženo {date}"
+      manually_awarded: Ručno dodijeljeno
+      recalculate: Ponovo izračunaj značke
+      recalculate_success: "Značke su ponovo izračunate! Dodijeljeno: {awarded}, Opozvano: {revoked}, Ponovo primijenjeno: {reapplied}"
+      recalculate_reapplied: "Radnje ponovo primijenjene za {reapplied} značaka"
+      recalculate_error: Greška pri ponovnom izračunu značaka. Pokušaj ponovo.
+      load_more: Učitaj više
+      view_all_badges: Pregledaj sve značke
+      badge_actions: Radnje sa značkom
+      set_favorite: Postavi kao omiljenu
+      remove_favorite: Ukloni iz omiljenih
+      show_badge: Prikaži na profilu
+      hide_badge: Sakrij s profila
+      favorite_badge: Omiljena značka
+      hidden_badge: Skriveno s profila
+      revoke_badge: Opozovi značku
+      revoke_confirm: Jesi li siguran/a da želiš opozvati značku „{badge}" od ovog korisnika?
+      badge_revoked: Značka „{badge}" je opozvana.
+      revoke_error: Greška pri opozivanju značke.
+
+      # Modal dodjele značke (forum profil)
+      assign_badge: Dodijeli značku
+      assign_badge_title: "Dodjela značke korisniku {username}"
+      no_badges_available: Nema dostupnih značaka.
+      select_badge: Odaberi značku...
+      select_badge_label: Odaberi značku
+      assign_reason: Razlog (neobavezno)
+      assign_reason_placeholder: Zašto se dodjeljuje ova značka?
+      assign_reason_help: Ovaj razlog bit će vidljiv na korisnikovoj znački.
+      assign_button: Dodijeli značku
+      cancel: Otkaži
+      badge_assigned: Značka „{badge}" je dodijeljena korisniku {username}!
+
+      # Modal ponovnog izračuna
+      recalculate_modal:
+        title: Ponovo izračunaj značke
+        badge_label: Značka za ponovni izračun
+        all_badges: Sve automatske značke
+        manual: ručno
+        no_revoke_label: Nemoj opozvati postojeće značke
+        no_revoke_help: Ako je omogućeno, korisnik će zadržati značke čak i ako više ne ispunjava uvjete.
+        reapply_actions_label: Ponovo primijeni radnje na postojeće značke
+        reapply_actions_help: Ponovo primijenjuje radnje značke (poput dodavanja u grupu) ako korisnik već ima tu značku.
+        submit: Izračunaj ponovo
+
+    # Obavijest
+    notification:
+      badge_earned: "Zaslužio/la si značku {badge}"
+      a_badge: jednu značku
+
+  # Zajednički prijevodi (učitavaju ih i admin i forum)
+  lib:
+    rarity_legendary: Legendarna
+    rarity_epic: Epska
+    rarity_rare: Rijetka
+    rarity_uncommon: Neobična
+    rarity_common: Uobičajena
+    rarity_explain: "{percent}% korisnika ima ovu značku"
