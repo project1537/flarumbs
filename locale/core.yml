@@ -1185,7 +1185,7 @@ core:
     settings: Postavke
     sign_up: Registracija
     some_others: "{count, plural, one {# drugi} other {# drugih}}" # Referenced by flarum-likes.yml, flarum-mentions.yml
-    start_a_discussion: Pokrenite diskusiju
+    start_a_discussion: Nova diskusija
     username: Korisničko ime
     username_or_email_placeholder: Korisničko ime ili e-mail
     users: Korisnici # Referenced by flarum-statistics.yml
