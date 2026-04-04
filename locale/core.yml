@@ -158,7 +158,7 @@ core:
       slug_driver_text: Odaberite upravljač koji će se koristiti za generiranje identifikatora ovog modela.
       title: Osnove
       welcome_banner_heading: Dobrodošlica
-      welcome_banner_text: Konfigurišite tekst koji se prikazuje u banneru na stranici svih rasprava. Koristite ovo za dobrodošlicu gostima vašeg foruma.
+      welcome_banner_text: Konfigurišite tekst koji se prikazuje u banneru na stranici svih diskusija. Koristite ovo za dobrodošlicu gostima vašeg foruma.
 
     # These translations are used in the Create User modal.
     create_user:
@@ -320,7 +320,7 @@ core:
       enable_to_see: Omogućite proširenje da biste vidjeli i promijenili postavke.
       enabled: Omogućeno
       info_links:
-        discuss: Rasprava
+        discuss: Diskusija
         documentation: Dokumentacija
         donate: Doniraj
         source: Izvorni kôd
@@ -367,7 +367,7 @@ core:
         analytics: Analitika
         authentication: Autentifikacija
         core: Osnovna konfiguracija
-        discussion: Rasprave
+        discussion: Diskusije
         feature: Funkcionalnosti
         formatting: Formatiranje
         infrastructure: Infrastruktura
@@ -392,8 +392,8 @@ core:
       allow_renaming_label: Dozvoli preimenovanje
       create_access_token_label: Kreiraj pristupni token
       create_heading: Kreiranje
-      delete_discussions_forever_label: Trajno briši rasprave
-      delete_discussions_label: Briši rasprave
+      delete_discussions_forever_label: Trajno briši diskusije
+      delete_discussions_label: Briši diskusije
       delete_posts_forever_label: Trajno briši objave
       delete_posts_label: Briši objave
       description: Konfigurišite ko može šta vidjeti i raditi.
@@ -410,13 +410,13 @@ core:
       read_heading: Čitanje
       remove_scope_label: Ukloni opseg {scope}
       remove_scope_confirmation: Jeste li sigurni da želite ukloniti opseg {scope}?
-      rename_discussions_label: Preimenuj rasprave
-      reply_to_discussions_label: Odgovori na rasprave
+      rename_discussions_label: Preimenuj diskusije
+      reply_to_discussions_label: Odgovori na diskusije
       search_users_label: => core.ref.search_users
       sign_up_label: Registracija
-      start_discussions_label: Pokretanje rasprava
+      start_discussions_label: Pokretanje diskusija
       title: Dozvole
-      view_forum_label: Pregledaj forum (rasprave i korisnike)
+      view_forum_label: Pregledaj forum (diskusije i korisnike)
       view_hidden_groups_label: Pregledaj skrivene oznake grupa
       view_last_seen_at_label: Uvijek prikaži kada je korisnik posljednji put viđen
       view_post_ips_label: Pregledaj IP adrese objava
@@ -519,10 +519,10 @@ core:
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
       body_placeholder: Napišite objavu...
-      discard_confirmation: "Niste objavili svoju raspravu. Želite li je odbaciti?"
-      submit_button: Objavi raspravu
+      discard_confirmation: "Niste objavili svoju diskusiju. Želite li je odbaciti?"
+      submit_button: Objavi diskusiju
       title: => core.ref.start_a_discussion
-      title_placeholder: Naslov rasprave
+      title_placeholder: Naslov diskusije
 
     # These translations are used by the composer when editing a post.
     composer_edit:
@@ -543,22 +543,22 @@ core:
     # These translations are used by the discussion control buttons.
     discussion_controls:
       cannot_reply_button: Nije moguće odgovoriti
-      cannot_reply_text: Nemate dozvolu za odgovaranje u ovoj raspravi.
+      cannot_reply_text: Nemate dozvolu za odgovaranje u ovoj diskusiji.
       delete_button: => core.ref.delete
-      delete_confirmation: "Jeste li sigurni da želite obrisati ovu raspravu?"
+      delete_confirmation: "Jeste li sigurni da želite obrisati ovu diskusiju?"
       delete_forever_button: => core.ref.delete_forever
       log_in_to_reply_button: Prijavite se za odgovaranje
       rename_button: => core.ref.rename
       reply_button: => core.ref.reply
       restore_button: => core.ref.restore
-      toggle_dropdown_accessible_label: Prikaži/sakrij padajući izbornik radnji rasprave
+      toggle_dropdown_accessible_label: Prikaži/sakrij padajući izbornik radnji diskusije
 
     # These translations are used in the discussion list.
     discussion_list:
-      empty_text: Čini se da ovdje nema rasprava.
+      empty_text: Čini se da ovdje nema diskusija.
       load_more_button: => core.ref.load_more
       replied_text: "{username} odgovorio/la {ago}"
-      skip_discussion_list_pane: Preskoči okno liste rasprava
+      skip_discussion_list_pane: Preskoči okno liste diskusija
       started_text: "{username} pokrenuo/la {ago}"
       total_replies_a11y_label: "{count, plural, one {# odgovor} other {# odgovora}}"
       unread_replies_a11y_label: "{count, plural, one {# nepročitan odgovor} other {# nepročitana odgovora}}. Označi {count, plural, one {odgovor} other {odgovore}} kao pročitano."
@@ -576,7 +576,7 @@ core:
     # These translations are used in the header and session dropdown menu.
     header:
       admin_button: Administracija
-      back_to_index_tooltip: Natrag na listu rasprava
+      back_to_index_tooltip: Natrag na listu diskusija
       locale_dropdown_accessible_label: Promijeni jezik foruma
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
@@ -590,8 +590,8 @@ core:
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       all_discussions_link: => core.ref.all_discussions
-      cannot_start_discussion_button: Nije moguće pokrenuti raspravu
-      mark_all_as_read_confirmation: "Jeste li sigurni da želite označiti sve rasprave kao pročitane?"
+      cannot_start_discussion_button: Nije moguće pokrenuti diskusiju
+      mark_all_as_read_confirmation: "Jeste li sigurni da želite označiti sve diskusije kao pročitane?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       meta_title_text: => core.ref.all_discussions
       refresh_tooltip: => core.ref.refresh
@@ -605,7 +605,7 @@ core:
       newest_button: => core.ref.newest
       oldest_button: => core.ref.oldest
       relevance_button: => core.ref.relevance
-      toggle_dropdown_accessible_label: Promijeni sortiranje liste rasprava
+      toggle_dropdown_accessible_label: Promijeni sortiranje liste diskusija
       top_button: Najpopularnije
 
     # These translations are used in the Log In modal dialog.
@@ -682,7 +682,7 @@ core:
     # These translations are used by the rename discussion modal.
     rename_discussion:
       submit_button: => core.ref.rename
-      title: Preimenuj raspravu
+      title: Preimenuj diskusiju
 
     # These translations are used in the Security page.
     security:
@@ -734,7 +734,7 @@ core:
       notifications_heading: => core.ref.notifications
       notify_by_email_heading: => core.ref.email
       notify_by_web_heading: Web
-      notify_discussion_renamed_label: Neko preimenuje raspravu koju sam pokrenuo/la
+      notify_discussion_renamed_label: Neko preimenuje diskusiju koju sam pokrenuo/la
       device_heading: Uređaj
       haptic_feedback_help: Dostupno samo na podržanim mobilnim uređajima
       haptic_feedback_label: Omogući haptičku povratnu informaciju
@@ -858,7 +858,7 @@ core:
       posts:
         discussion:
           key: discussion
-          hint: ID rasprave
+          hint: ID diskusije
       users:
         email:
           key: email
@@ -928,7 +928,7 @@ core:
     # These translations are used by search sources.
     search_source:
       discussions:
-        all_button: 'Pretraži sve rasprave za „{query}"'
+        all_button: 'Pretraži sve diskusije za „{query}"'
         heading: => core.ref.discussions
       posts:
         all_button: 'Pretraži sve objave za „{query}"'
@@ -1131,7 +1131,7 @@ core:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    all_discussions: Sve rasprave
+    all_discussions: Sve diskusije
     change_email: Promijeni e-mail adresu
     change_password: Promijeni lozinku
     color: Boja # Referenced by flarum-tags.yml
@@ -1146,7 +1146,7 @@ core:
     dark_mode_label: Tamni način rada
     delete: Obriši
     delete_forever: Trajno obriši
-    discussions: Rasprave # Referenced by flarum-statistics.yml
+    discussions: Diskusije # Referenced by flarum-statistics.yml
     edit: Uredi
     edit_user: Uredi korisnika
     email: E-mail
@@ -1186,7 +1186,7 @@ core:
     settings: Postavke
     sign_up: Registracija
     some_others: "{count, plural, one {# drugi} other {# drugih}}" # Referenced by flarum-likes.yml, flarum-mentions.yml
-    start_a_discussion: Pokrenite raspravu
+    start_a_discussion: Nova diskusija
     username: Korisničko ime
     username_or_email_placeholder: Korisničko ime ili e-mail
     users: Korisnici # Referenced by flarum-statistics.yml
