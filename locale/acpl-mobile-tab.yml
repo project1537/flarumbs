@@ -1,9 +1,0 @@
-acpl-mobile-tab:
-  forum:
-    home: 'Početna'
-    all_discussions: 'Diskusije'
-    tags: => flarum-tags.forum.index.tags_link
-    categories: => askvortsov-categories.forum.index.categories_link
-    notifications: => core.forum.notifications.title
-    log_in: => core.forum.header.log_in_link
-    profile: => core.forum.header.profile_button

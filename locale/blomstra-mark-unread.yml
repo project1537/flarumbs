@@ -1,8 +1,0 @@
-blomstra-mark-unread:
-  admin:
-    permissions:
-      mark-unread: Označi diskusiju kao nepročitanu
-
-  forum:
-    controls:
-      mark-unread: Označi kao nepročitano
