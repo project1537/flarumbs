@@ -1,0 +1,144 @@
+fof-anti-spam:
+  admin:
+    permissions:
+      spamblock_users_label: Označi korisnika kao spamera
+    settings:
+      button: Postavke
+      content-filter:
+        heading: Filter sadržaja
+        introduction: Automatski prepoznaj i označi spam sadržaj od novih korisnika. Sistem prati objave i rasprave korisnika koji su se nedavno registrirali te traži uobičajene pokazatelje spama poput telefonskih brojeva, e-mail adresa i sumnjivih URL-ova.
+        enabled_label: Omogući filtriranje sadržaja
+        enabled_help: Kada je omogućeno, objave i rasprave novih korisnika analiziraju se radi prepoznavanja spam sadržaja.
+
+        user_targeting_heading: Ciljanje korisnika
+        monitor_post_count_label: Prati korisnike do broja objava
+        monitor_post_count_help: Analiziraj sadržaj samo od korisnika koji su objavili manje od ovog broja poruka. Postavi na 0 da isključiš provjeru broja objava.
+        monitor_hours_old_label: Prati korisnike do starosti računa (sati)
+        monitor_hours_old_help: Analiziraj sadržaj samo od korisnika čiji je račun mlađi od ovog broja sati. Postavi na 0 da isključiš provjeru starosti računa.
+
+        detectors_heading: Metode prepoznavanja
+        detect_phones_label: Prepoznaj telefonske brojeve
+        detect_phones_help: Označi sadržaj koji sadrži telefonske brojeve u međunarodnom formatu.
+        detect_emails_label: Prepoznaj e-mail adrese
+        detect_emails_help: Označi sadržaj koji sadrži e-mail adrese.
+        detect_urls_label: Prepoznaj URL-ove
+        detect_urls_help: Označi sadržaj koji sadrži URL-ove koji nisu na listi dozvoljenih.
+
+        thresholds_heading: Pragovi spam ocjene
+        flag_threshold_label: Prag za prijavu (0–100)
+        flag_threshold_help: Sadržaj čija spam ocjena dostigne ili premaši ovu vrijednost bit će prijavljen moderatorima (zahtijeva proširenje flarum/flags).
+        spam_threshold_label: Prag za spam (0–100)
+        spam_threshold_help: Sadržaj čija spam ocjena dostigne ili premaši ovu vrijednost bit će automatski uklonjen iz objavljenih (zahtijeva proširenje flarum/approval).
+
+        actions_heading: Automatske radnje
+        auto_unapprove_label: Automatski ukloni spam sadržaj iz objavljenih
+        auto_unapprove_help: "Kada je omogućeno, sadržaj koji dostigne prag za spam bit će poslan u red čekanja na odobrenje (zahtijeva flarum/approval). Moderatori moraju odobriti sadržaj da bi postao vidljiv."
+        auto_flag_label: Automatski prijavi spam sadržaj
+        auto_flag_help: "Kada je omogućeno, sadržaj koji dostigne prag za prijavu bit će automatski prijavljen moderatorima na pregled (zahtijeva flarum/flags). Razlog prijave sadržavat će pojedinosti o tome zašto je sadržaj prepoznat kao spam."
+        system_user_id_label: ID sistemskog korisnika za prijave
+        system_user_id_help: "ID korisnika koji će biti naveden kao autor automatskih spam prijava. Trebao bi biti administratorski ili sistemski račun. Ako nije postavljeno, koristi se korisnik s ID-om 1."
+        no_action_extensions: "Instaliraj proširenja flarum/approval i/ili flarum/flags da bi omogućio automatske moderacijske radnje. Prepoznati spam bit će obrađen putem Flarumovog ugrađenog reda čekanja i sistema prijava."
+
+        allowlist_heading: Lista dozvoljenih domena
+        allowed_domains_label: Dozvoljene domene
+        allowed_domains_help: URL-ovi s ovih domena neće biti označeni kao spam. Unesi jednu domenu po redu. Domena tvog foruma automatski je dodana na listu.
+
+        blocked_words_heading: Blokirane riječi i fraze
+        blocked_words_label: Blokirane riječi ili fraze
+        blocked_words_help: Riječi ili fraze koje treba tretirati kao spam. Unesi jednu po redu. Provjera nije osjetljiva na velika/mala slova i podudaranje se vrši samo za cijele riječi. Na primjer, „viagra" će prepoznati „viagra", ali ne i „niagara".
+
+        advanced_patterns_heading: Napredni uzorci blokiranja
+        advanced_block_patterns_label: Napredni uzorci (regex)
+        advanced_block_patterns_help: Prilagođeni regex uzorci za napredne korisnike. Koristiti s oprezom — nevažeći uzorci bit će preskočeni. Format treba biti JSON niz objekata s ključevima „pattern" i neobaveznim „description".
+
+      default-actions:
+        delete_user_label: Obriši korisnika
+        delete_user_help: Korisnički račun bit će trajno obrisan. Kada je onemogućeno, korisnik će umjesto toga biti suspendiran.
+        delete_discussions_label: Obriši rasprave
+        delete_discussions_help: Sve rasprave koje je ovaj korisnik pokrenuo bit će trajno obrisane. Kada je onemogućeno, rasprave će umjesto toga biti skrivene.
+        delete_posts_label: Obriši objave
+        delete_posts_help: Sve objave koje je ovaj korisnik napravio bit će trajno obrisane. Kada je onemogućeno, objave će umjesto toga biti skrivene.
+        heading: Zadane moderacijske radnje
+        introduction: Kada se korisnik označi kao spamer, moderatori mogu odabrati jednu od više radnji ovisno o konkretnom slučaju. Ove postavke omogućuju unaprijed definiranje uobičajenih radnji radi bržeg procesa, uz mogućnost prilagodbe prema potrebi.
+        move_discussions_to_tags_label: Premjesti rasprave u oznaku/e
+        move_discussions_to_tags_help: Sve rasprave koje je ovaj korisnik pokrenuo bit će premještene u odabranu oznaku/e. Ako ne odabereš oznaku, rasprave ostaju u svojoj trenutnoj kategoriji. Nema učinka ako je uključena opcija „Obriši rasprave".
+
+      stopforumspam:
+        introduction: |
+          Provjera novih registracija u bazi podataka <a>StopForumSpam</a>. Ako se dostigne prag <code>pouzdanosti</code> ili <code>učestalosti</code>, korisniku će biti onemogućeno dovršavanje registracije na forumu.
+
+          Registracija putem SSO-a (<code>fof/oauth</code> i <code>fof/passport</code>) također je podržana. Ostali SSO pružatelji trebali bi raditi, ali nisu testirani.
+
+        username_label: Provjera korisničkog imena
+        ip_label: Provjera IP adrese
+        email_label: Provjera e-mail adrese
+
+        frequency_label: Prag
+        frequency_help: |
+          Ukupan broj spam prijava za sve omogućene provjere koji aktivira filter.
+          Primjer: Ako e-mail ima 1 pogodak, a IP adresa 2, ukupno je 3 pogotka. Ako je prag postavljen na 3 ili manje, registracija će biti blokirana.
+        api_key_label: API ključ
+        api_key_text: Imaš mogućnost prijavljivati spamere servisu StopForumSpam kako bi forum zajednica bila zaštićena od neželjenih sadržaja.
+        api_key_instructions_text: <register>Registriraj se na StopForumSpam</register>. Nakon toga trebaš <key>pribaviti API ključ</key>.
+
+        regional_endpoint_label: Geografski pristup
+        regional_endpoint_help: Prema zadanim postavkama, upiti se usmjeravaju na najbliži regionalni poslužitelj radi najbrže odaziva. Ako želiš ograničiti promet na određenu regiju, npr. radi usklađenosti s propisima o zaštiti podataka, možeš odabrati specifičnu regiju.
+
+        region_closest_label: Najbliži
+        region_europe_label: Europa
+        region_us_label: Sjedinjene Američke Države
+
+        confidence_label: Pouzdanost
+        confidence_help: Ocjena pouzdanosti dobar je pokazatelj da bi polje koje se provjerava moglo dovesti do neželjene aktivnosti. Postavi razinu pouzdanosti kao postotak. Ako je vrijednost polja jednaka ovoj vrijednosti ili veća, registracija će biti blokirana, bez obzira na gornji prag učestalosti.
+
+        email_hash_label: Koristi hashiranu e-mail adresu
+        email_hash_help: Prosljeđuje MD5 hash e-mail adrese umjesto same adrese. Ova metoda zaobilazi sve crne liste, normalizaciju i provjere zamagljivanja.
+
+        block_tor_exit_nodes_label: Blokiraj Tor izlazne čvorove
+        block_tor_exit_nodes_help: Kada je omogućeno, registracije s poznatih Tor izlaznih čvorova bit će automatski blokirane. Ovo može pomoći u sprečavanju anonimnih spam registracija, ali može blokirati i legitimne korisnike koji koriste Tor radi zaštite privatnosti.
+
+        sfs_lookup_label: Provjera pri registraciji
+        sfs_lookup_help: Ako je omogućeno, pri svakoj novoj registraciji provjeravat će se baza podataka StopForumSpam. Ako se korisnik pronađe (korisničko ime, IP adresa, e-mail) i odgovarajuća provjera je uključena te ocjena pouzdanosti dostigne postavljeni nivo, korisniku će biti onemogućeno dovršavanje registracije.
+
+        report_blocked_registrations_label: Prijavi blokirane registracije
+        report_blocked_registrations_help: Kada funkcija provjere pri registraciji blokira pokušaj, taj pokušaj se prijavljuje servisu StopForumSpam kako bi se aktivnost spamera bolje potvrdila. Zahtijeva postavljeni API ključ za StopForumSpam (vidi dolje).
+
+    blocked_registrations:
+      button: Blokirane registracije
+      title: Blokirane registracije
+      no-records: Nema zabilježenih blokiranih registracija.
+      help: |
+        Na ovoj stranici prikazane su sve registracije koje je blokirao servis StopForumSpam. Možeš pregledati pojedinosti svake registracije, a po potrebi i obrisati zapis iz baze podataka.
+      attempted-at: Pokušano u
+      ip: IP adresa
+      email: E-mail adresa
+      username: Korisničko ime
+      login-provider: Pružatelj prijave
+      login-provider-data: Podaci pružatelja prijave
+      sfs-data: Podaci StopForumSpam
+      delete_entry: Obriši zapis
+
+  forum:
+    post:
+      flagged_as_spam_text: "Automatsko prepoznavanje spama – ocjena {score}"
+
+    message:
+      stopforumspam:
+        blocked: Podaci tvoje registracije pronađeni su u bazi podataka za sprečavanje spama, zbog čega je registracija blokirana.
+
+    spammer_modal:
+      hard_delete_discussions_label: Obriši rasprave
+      hard_delete_discussions_help: Sve rasprave koje je ovaj korisnik pokrenuo bit će trajno obrisane. Kada je onemogućeno, rasprave će umjesto toga biti skrivene.
+      hard_delete_posts_label: Obriši objave
+      hard_delete_posts_help: Sve objave (komentari, odgovori i sl.) koje je ovaj korisnik napravio bit će trajno obrisane. Kada je onemogućeno, objave će umjesto toga biti skrivene.
+      hard_delete_user_label: Obriši korisnika
+      hard_delete_user_help: Korisnički račun bit će trajno obrisan. Kada je onemogućeno, korisnik će umjesto toga biti suspendiran.
+      intro: Kada se korisnik označi kao spamer, poduzet će se određene radnje ovisno o proširenjima dostupnim na forumu.
+      move_discussions_tag_label: Premjesti rasprave u karantenu
+      move_discussions_tag_help: Sve rasprave koje je ovaj korisnik pokrenuo bit će premještene u oznaku navedenu u postavkama foruma. Kada je onemogućeno, rasprave ostaju u svojoj trenutnoj kategoriji.
+      process_button: Izvrši
+      title: "Označi {username} kao spamera"
+      report_to_sfs_label: Prijavi servisu StopForumSpam
+      report_to_sfs_help: Osnovni podaci korisnika (korisničko ime, e-mail, IP adresa) bit će prijavljeni servisu StopForumSpam, čime se sprečava ovaj korisnik da se registrira i na drugim forumima koji koriste taj servis.
+    user_controls:
+      spammer_button: Spamer
