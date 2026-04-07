@@ -1,0 +1,80 @@
+fof-subscribed:
+    forum:
+        settings:
+            defaults_label: Postavi "{setting}" kao zadano uključeno
+            forced_label: Prisilno uključi "{setting}" za sve
+            notify_discussion_created_label: Neko pokrene raspravu
+            notify_post_created_label: Neko napiše novu objavu ili odgovor
+            notify_post_unapproved_label: Kreirana objava čeka odobrenje
+            notify_user_created_label: Neko se registruje
+            notify_post_flagged_label: Neko prijavi objavu
+        notifications:
+            discussion_created_text: "{username} je pokrenuo/la novu raspravu"
+            post_created_text: "{username} je napisao/la novu objavu"
+            post_unapproved_text: "{username} je kreirao/la objavu koja čeka odobrenje"
+            user_created_text: "{username} se upravo registrovao/la"
+            post_flagged_text: "{username} je prijavio/la objavu"
+    admin:
+        permission:
+            subscribe_to_discussion_created: Dozvola primanja obavijesti o novoj raspravi
+            subscribe_to_post_created: Dozvola primanja obavijesti o novoj objavi ili odgovoru
+            subscribe_to_post_unapproved: Dozvola primanja obavijesti o neodobrenoj objavi
+            subscribe_to_user_created: Dozvola primanja obavijesti o novom korisniku
+            subscribe_to_post_flagged: Dozvola primanja obavijesti o prijavi objave
+    email:
+        subject:
+            newDiscussion: "[Pretplata | Nova rasprava] {title}"
+            newUser: "[Pretplata | Novi korisnik] {username}"
+            postUnapproved: "[Pretplata | Čeka odobrenje] {username} je objavio/la u {title}"
+            postCreated: "[Pretplata | Nova objava] {username} je napisao/la novu objavu u {title}"
+            postFlagged: "[Pretplata | Nova prijava] {username} je prijavio/la objavu u {title}"
+        body:
+            newDiscussion: |
+                Selam {recipient_display_name},
+
+                {actor_display_name} je pokrenuo/la novu raspravu: {discussion_title}
+
+                Za pregled ove rasprave posjetite sljedeću vezu:
+                {discussion_url}
+
+                ---
+
+                {post_content}
+            newUser: |
+                Selam {recipient_display_name},
+
+                {actor_display_name} se upravo pridružio/la na {forum_url}.
+
+                Za pregled profila ovog korisnika posjetite sljedeću vezu:
+                {user_url}
+            postUnapproved: |
+                Selam {recipient_display_name},
+
+                {actor_display_name} je kreirao/la objavu koja nije automatski odobrena u raspravi {discussion_title}
+
+                Za pregled ove objave posjetite sljedeću vezu:
+                {post_url}
+
+                ---
+
+                {post_content}
+
+            postCreated: |
+                Selam {recipient_display_name},
+
+                {actor_display_name} je napisao/la novu objavu u raspravi {discussion_title}
+
+                Za pregled ove objave posjetite sljedeću vezu:
+                {post_url}
+
+                ---
+
+                {post_content}
+            
+            postFlagged: |
+                Selam {recipient_display_name},
+
+                {actor_display_name} je prijavio/la objavu u raspravi {discussion_title}
+
+                Za pregled ove objave posjetite sljedeću vezu:
+                {post_url}

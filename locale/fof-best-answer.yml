@@ -1,0 +1,113 @@
+fof-best-answer:
+  admin:
+    permissions:
+      best_answer: Odabir najboljeg odgovora (vlastita rasprava)
+      best_answer_not_own_discussion: Odabir najboljeg odgovora (tuđa rasprava)
+      allow_select_own_post: Odabir vlastite objave kao najboljeg odgovora
+    settings:
+      label:
+        tags: Oznake za najbolji odgovor
+        general: Opće
+        reminders: Podsjetnici
+        advanced: Napredno
+        reminders_notice: Da bi podsjetnici funkcionisali, Flarum planer zadataka mora biti ispravno podešen.
+      show_max_lines_label: Maksimalni broj redova u pregledu objave
+      show_max_lines_help: Postavite na 0 za isključivanje. Ako objava ima više redova od podešenog broja, bit će skraćena u pregledu s efektom postupnog nestajanja.
+      select_best_answer_reminder_days: Učestalost podsjetnika
+      select_best_answer_reminder_days_help: Šalje podsjetnik autoru rasprave da odabere najbolji odgovor nakon podešenog broja dana; 0 = podsjetnici isključeni.
+      select_best_answer_tags_label: Oznake za rasprave s najboljim odgovorom
+      select_best_answer_tags_help: Odaberite koje oznake, ako ih ima, dodati raspravama kada se postavi najbolji odgovor. Dozvoljene su samo sekundarne oznake. Ove oznake bit će uklonjene ako se najbolji odgovor ukloni.
+      schedule_on_one_server: Koristi direktivu 'onOneServer()' za planer zadataka
+      schedule_on_one_server_help: Zahtijeva Redis/Memcache
+      schedule_stop_overnight: Spriječi slanje obavijesti-podsjetnika u noćnim satima
+      schedule_stop_overnight_help: Od 21:00 do 08:00 po vremenu servera
+      schedule_log_output: Dodaj izlaz planera u log
+      show_filter_label: Prikaži padajući izbornik filtera najboljeg odgovora
+      show_filter_help: Za oznake s omogućenim najboljim odgovorom, prikazuje opciju filtera riješeno/neriješeno u listi rasprava
+      use_alt_ui: Alternativni izgled
+      use_alt_ui_help: Kontrole najboljeg odgovora u podnožju objave
+      documentation: Dokumentacija
+      enabled_tags_label: Omogućene oznake
+      enabled_tags_help: Odaberite za koje oznake, ako ih ima, omogućiti najbolji odgovor. Te oznake postaju oznake formata "P&O" i dobivaju mogućnost postavljanja najboljeg odgovora.
+      remind_tags_label: Oznake za podsjetnike
+      remind_tags_help: Odaberite za koje oznake, ako ih ima, slati podsjetnike. Podsjetnici će se slati samo za rasprave s ovim oznakama.
+      tags_info: |
+        Kada je za neku oznaku omogućen najbolji odgovor, dodijelite dozvole svakoj korisničkoj grupi koja može postavljati odgovore (vlastita rasprava, bilo koja rasprava). Dozvole se mogu dodijeliti globalno (za sve oznake s omogućenim najboljim odgovorom) ili pojedinačno po oznaci.
+      discussion_sidebar_jump_button: Prikaži dugme za skok na najbolji odgovor u bočnoj traci rasprave
+      discussion_sidebar_jump_button_help: Dodaje dugme u bočnu traku rasprave koje skače na najbolji odgovor u nizu objava.
+    edit_tag:
+      qna_label: Omogući postavljanje najboljeg odgovora u ovoj oznaci
+      reminders: Šalji podsjetnike za postavljanje najboljeg odgovora u raspravama ove oznake
+  forum:
+    answered_badge: Odgovoreno
+    this_best_answer: Odaberi kao najbolji odgovor
+    remove_best_answer: Ukloni kao najbolji odgovor
+    best_answer_button: Najbolji odgovor
+    best_answer_label: postavio/la <a>{username}</a> {time_set}
+    errors:
+      mismatch: "Odabrana objava ne postoji u ovoj raspravi."
+
+    notification:
+      best_answer_in_discussion: "{username} je postavio/la najbolji odgovor u ovoj raspravi"
+      content: Molimo odaberite najbolji odgovor ako je vaše pitanje dobilo odgovor
+      awarded: Vaša objava je označena kao najbolji odgovor od strane korisnika {username}
+
+      preferences:
+        awarded_best_answer: Neko označi moju objavu kao najbolji odgovor
+        best_answer_in_discussion: Postavi se najbolji odgovor u raspravi u kojoj sam učestvovao/la
+        select_best_answer: Automatski podsjetnik za odabir najboljeg odgovora u raspravi koju sam pokrenuo/la
+
+    index:
+      ask_question: Postavi pitanje
+      cannot_ask_question: Postavljanje pitanja nije moguće
+      solved_link: Riješene rasprave
+      unsolved_link: Neriješene rasprave
+    filter:
+      all_label: Sva pitanja
+      solved_label: Riješena pitanja
+      unsolved_label: Neriješena pitanja
+      accessible_label: Odabir riješeno/neriješeno
+    composer:
+      titlePlaceholder: Naslov pitanja
+    user:
+      best-answer-count: "{count, plural, one {{count} najbolji odgovor} few {{count} najbolja odgovora} other {{count} najboljih odgovora}}"
+    discussion:
+      jump_to_best_answer_button: Pogledaj najbolji odgovor
+  email:
+    subject:
+      awarded: Vaša objava je označena kao najbolji odgovor od strane {display_name}
+      ba-set: Korisnik {display_name} je postavio/la najbolji odgovor
+      select: Jeste li dobili odgovor na svoje pitanje?
+    body:
+      awarded: |
+        Selam {recipient_display_name},
+
+        Čestitamo! {actor_display_name} je označio/la vašu objavu kao najbolji odgovor u raspravi: {discussion_title}. Hvala što pomažete zajednici.
+
+        Pogledajte ovdje: {discussion_url}
+      ba-set: |
+        Selam {recipient_display_name},
+
+        {actor_display_name} je postavio/la najbolji odgovor u raspravi: {discussion_title}, u kojoj ste učestvovali.
+
+        Pogledajte ovdje: {discussion_url}
+      select: |
+        Selam {recipient_display_name},
+
+        Samo da provjerimo — do sada biste već trebali imati nekoliko odgovora na vaše pitanje: {discussion_title}. Nadamo se da vam je neki od njih pomogao pronaći rješenje.
+
+        Ako jeste, bilo bi od velike koristi za buduće članove da odaberete najbolji odgovor. To će pomoći osobama s istim problemom da lakše pronađu ono što traže, a ujedno je i lijepa zahvalnost članovima koji su vam pomogli.
+
+        Posjetite raspravu ovdje: {discussion_url} i odaberite najprikladniju objavu kao najbolji odgovor.
+
+        Hvala!
+  lib:
+    gambits:
+      solved-discussions:
+        key: rijeseno
+
+fof-user-directory:
+  lib:
+    sort:
+      most_best_answers: Najviše najboljih odgovora
+      least_best_answers: Najmanje najboljih odgovora

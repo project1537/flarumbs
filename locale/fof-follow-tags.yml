@@ -1,0 +1,120 @@
+fof-follow-tags:
+  forum:
+    settings:
+      notify_new_discussion_label: Neko pokrene diskusiju u oznaci koju pratim
+      notify_new_post_label: Neko objavi u oznaci koju pratim
+      notify_new_discussion_tag_label: Neko prebaci diskusiju u oznaku koju pratim
+
+    index:
+      follow_tag_button: Prati
+      unfollow_tag_button: Prestani pratiti
+
+      following:
+        following_none_label: => fof-follow-tags.ref.filtering_options.none
+        following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
+    badge:
+      following_tag_tooltip: Pratim
+      lurking_tag_tooltip: Tiho pratim
+
+    sub_controls:
+      header: "Pretplata za {tagName}"
+      subscription_label: "Odaberite nivo pretplate za {tagName}"
+      follow_button: => fof-follow-tags.ref.follow
+      following_button: => fof-follow-tags.ref.following
+      following_text: Primaj obavijesti o svim novim diskusijama.
+      hiding_button: => fof-follow-tags.ref.hiding
+      hiding_text: Sakrij diskusije sa stranice Sve diskusije.
+      ignoring_button: => fof-follow-tags.ref.ignoring
+      ignoring_text: Nikada ne primaj obavijesti.
+      lurking_button: => fof-follow-tags.ref.lurking
+      lurking_text: Primaj obavijesti o svim novim diskusijama i odgovorima.
+      not_following_button: Ne pratim
+      not_following_text: "Primaj obavijesti samo kada te neko @spomene."
+      notify_alert_tooltip: Primaj forumsku obavijest o novim diskusijama ili objavama
+      notify_email_tooltip: Primaj e-mail o novim diskusijama ili objavama
+      submit_button: Potvrdi pretplatu
+
+    hero:
+      title: => flarum-subscriptions.forum.index.following_link
+
+    notifications:
+      new_discussion_text: "{username} je pokrenuo/la"
+      new_post_text: "{username} je objavio/la"
+      new_discussion_tag_text: "{username} je promijenio/la oznaku"
+
+    user:
+      settings:
+        heading: Praćenje oznaka
+        filter_label: Šta prikazati po zadanim postavkama na stranici Pratim
+
+  admin:
+    settings:
+      following_page_default_label: Zadani filter stranice Pratim
+
+      following_none_label: => fof-follow-tags.ref.filtering_options.none
+      following_tags_label: => fof-follow-tags.ref.filtering_options.tags
+
+  email:
+    newDiscussionInTag:
+      subject: "[Oznaka | Nova diskusija] {title}"
+      plain:
+        body: |
+          {actor_display_name} je pokrenuo/la diskusiju u oznaci koju pratite: {discussion_title}
+
+          Za pregled nove diskusije posjetite sljedeću vezu:
+          {discussion_url}
+
+          ---
+
+          {content}
+      html:
+        body: |
+          {actor_display_name} je pokrenuo/la diskusiju u oznaci koju pratite: [{discussion_title}]({discussion_url})
+    newPostInTag:
+      subject: "[Oznaka | Nova objava] {title}"
+      plain:
+        body: |
+          {actor_display_name} je objavio/la u diskusiji u oznaci koju pratite: {discussion_title}
+
+          Za pregled nove aktivnosti posjetite sljedeću vezu:
+          {post_url}
+
+          ---
+
+          {content}
+      html:
+        body: |
+          {actor_display_name} je objavio/la u diskusiji u oznaci koju pratite: [{discussion_title}]({post_url})
+    newDiscussionTag:
+      subject: "[Oznaka | Promjena oznake] {title}"
+      plain:
+        body: |
+          {actor_display_name} je promijenio/la oznaku diskusije autora {author_display_name} u oznaku koju pratite: {discussion_title}
+
+          Za pregled diskusije posjetite sljedeću vezu:
+          {discussion_url}
+
+          ---
+
+          {content}
+      html:
+        body: |
+          {actor_display_name} je promijenio/la oznaku diskusije autora {author_display_name} u oznaku koju pratite: [{discussion_title}]({discussion_url})
+  ref:
+    follow: Prati
+    following: Pratim
+    hiding: Skriveno
+    ignoring: Ignoriram
+    lurking: Tiho pratim
+
+    filtering_options:
+      none: Praćene diskusije
+      tags: Praćene oznake
+
+flarum-gdpr:
+  lib:
+    data:
+      tagsubscription:
+        export_description: Izvozi detalje nivoa pretplate za oznaku, ako postoji.
+        anonymize_description: Uklanja pretplatu korisnika na oznaku.

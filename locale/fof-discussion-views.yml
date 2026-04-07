@@ -1,0 +1,24 @@
+core:
+  forum:
+    index_sort:
+      most_viewed_button: Najgledanije
+      least_viewed_button: Najmanje gledano
+
+fof-discussion-views:
+  forum:
+    modal_resetviews:
+      title: Resetuj broj pregleda diskusije
+      submit: Potvrdi
+      label: Postavi broj pregleda na
+      invalid: Unesite ispravan broj veći ili jednak 0
+    discussion_controls:
+      resetviews_button: Postavi broj pregleda
+  admin:
+    permissions:
+      reset_views_label: Postavljanje broja pregleda diskusije
+    settings:
+      ignore_crawlers: Ignoriši posjete crawlera
+  lib:
+    gambits:
+      popular:
+        key: popular

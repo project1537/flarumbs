@@ -1,0 +1,68 @@
+fof-drafts:
+  admin:
+    permissions:
+      start: Kreiranje nacrta
+      schedule: Zakazivanje nacrta
+    settings:
+      title: FoF Nacrti
+      enable_scheduled_drafts: Omogući zakazane nacrte
+      schedule_on_one_server: Koristi direktivu 'onOneServer()' za planer zadataka (zahtijeva Redis/Memcache)
+      schedule_log_output: Dodaj izlaz planera u log
+  console:
+    scheduled_drafts_disabled: Zakazani nacrti su trenutno onemogućeni u postavkama.
+    no_title_error: "Nacrt preskočen: naslov rasprave nedostaje."
+  ref:
+    schedule_draft: Zakaži nacrt
+  forum:
+    composer:
+      title: Sačuvaj nacrt
+      saving: Čuvanje...
+      saved: Sačuvano!
+      exit_alert: Odbaciti izmjene nacrta?
+      discard_empty_draft_alert: Odbaciti prazan nacrt?
+    dropdown:
+      empty_text: Niste sačuvali nijedan nacrt
+      title: Nacrti
+      delete_all_button: Obriši sve nacrte
+      delete_button: Obriši nacrt
+      schedule_button: => fof-drafts.ref.schedule_draft
+      scheduled_icon_tooltip: Zakazano za {datetime}
+      # String koji se prosljeđuje dayjs.format() za generisanje tooltip datuma i vremena
+      scheduled_icon_tooltip_formatter: L [u] LT
+      tooltip: => fof-drafts.forum.dropdown.title
+      alert: Jeste li sigurni da želite obrisati ovaj nacrt?
+      delete_all_alert: Jeste li sigurni da želite obrisati sve nacrte?
+    schedule_draft_modal:
+      title: => fof-drafts.ref.schedule_draft
+      text: Zakažite automatsko objavljivanje nacrta u kasnijem terminu!
+      scheduled_text: Trenutno zakazano objavljivanje {datetime}.
+      scheduled_error: "Nije moguće zakazati nacrt: {error}."
+      unschedule_button: Otkaži zakazivanje
+      unschedule_warning: Jeste li sigurni da želite otkazati zakazivanje ovog nacrta?
+      reschedule_button: Ponovo zakaži
+      schedule_button: Zakaži
+      schedule_time_preview: Ovaj nacrt će biti automatski objavljen <b>{datetime}</b>.
+      # String koji se prosljeđuje dayjs.format() za generisanje pregleda
+      schedule_time_preview_formatter: LLLL
+      schedule_time_preview_invalid: Nevažeći datum i/ili vrijeme
+      no_title_error: Naslov rasprave je obavezan prije zakazivanja.
+    user:
+      settings:
+        drafts_heading: Nacrti
+        draft_autosave_enable: Omogući automatsko čuvanje nacrta?
+        draft_autosave_interval_label: Interval automatskog čuvanja (sekunde)
+        draft_autosave_interval_button: Ažuriraj interval
+        draft_autosave_interval_invalid: Interval mora biti cijeli broj veći od 4.
+
+fof-default-user-preferences:
+  admin:
+    settings:
+      draftAutosaveEnable: Omogući automatsko čuvanje nacrta prema zadanim postavkama
+      draftAutosaveInterval: Zadani interval automatskog čuvanja (sekunde)
+
+flarum-gdpr:
+  lib:
+    data:
+      drafts:
+        export_description: "Svi nacrti koje je kreirao korisnik."
+        delete_description: "Brisanje svih nacrta koje je kreirao korisnik."

@@ -1,0 +1,49 @@
+fof-links:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These strings are used in the Edit Link modal dialog.
+    edit_link:
+      delete_link_button: Obriši vezu
+      delete_link_confirmation: "Jeste li sigurni da želite obrisati ovu vezu?"
+      internal_link: "Je li ovo interna veza?"
+      open_newtab: "Otvori vezu u novoj kartici"
+      submit_button: => core.ref.save_changes
+      title: => fof-links.ref.create_link
+      title_label: => fof-links.ref.title
+      title_placeholder: => fof-links.ref.title
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      icon_additional_text: Za ikone brendova koristite prefiks <code>fab fa-</code>.
+      url_description: Ostavite prazno za prikaz kao natpis.
+      url_label: => fof-links.ref.url
+      url_placeholder: => fof-links.ref.url
+      use_rel_me: Dodaj atribut <code>rel="me"</code> za potvrdu identiteta na drugim stranicama
+      visibility:
+        help: Veze su prema zadanim postavkama vidljive samo <code>{admin}</code> korisnicima. Prilagodite dozvole kako biste odredili ko može vidjeti ovu vezu.
+        help-disabled: Sačuvajte vezu prije promjene postavki vidljivosti.
+        label: Vidljivost veze
+        guest-only:
+          label: "Samo za {guest}?"
+          help: "Ovu vezu mogu vidjeti samo {guest}. Dozvola iznad treba biti postavljena na '{everyone}'."
+
+    # These strings are used in the Links page.
+    links:
+      create_button: => fof-links.ref.create_link
+      links: => fof-links.ref.links
+      preconfigured: Veze na ovom forumu su unaprijed konfigurisane i ne mogu se ovdje uređivati.
+
+    settings:
+      show_icons_only_on_tablet: Prikaži samo ikone na ekranima tableta
+
+  # Strings in this namespace are referenced by two or more unique keys.
+  ref:
+    create_link: Kreiraj vezu
+    links: Veze
+    title: Naslov
+    url: URL

@@ -1,0 +1,42 @@
+fof-rich-text:
+  admin:
+    settings:
+      toggle_on_editor: Prikaži preklopnik načina rada na editoru?
+      force_compact_paragraphs: Prisilno kompaktni paragrafi za sve korisnike (Enter pravi prijelom reda umjesto novog paragrafa)
+  lib:
+    composer:
+      toggle_button: Prebaci način uređivanja teksta
+      insert_button: Umetni
+      insert_image:
+        src_placeholder: Veza
+        title_placeholder: Naslov
+      insert_link:
+        text_placeholder: Tekst
+        href_placeholder: URL
+        title_placeholder: Naslov (prikazuje se pri prelasku mišem)
+        remove_button: Ukloni
+      additional_items_tooltip: Dodatne kontrole
+      bold_tooltip: Podebljani tekst ({modifierKey}-b)
+      code_tooltip: Inline kod ({modifierKey}-`)
+      code_block_tooltip: Umetni blok koda
+      header_tooltip: Promijeni u zaglavlje {level} ({modifierKey}-shift-{level})
+      horizontal_rule_tooltip: Umetni horizontalnu liniju
+      image_tooltip: Dodaj sliku
+      italic_tooltip: Kurzivni tekst ({modifierKey}-i)
+      link_tooltip: Dodaj vezu
+      ordered_list_tooltip: Numerisana lista ({modifierKey}-shift-9)
+      paragraph_tooltip: Promijeni u paragraf ({modifierKey}-shift-0)
+      quote_tooltip: Umetni citat ({modifierKey}-q)
+      spoiler_block_tooltip: Spoiler blok/padajući sadržaj
+      spoiler_inline_tooltip: Spoiler ({modifierKey}-;)
+      strike_tooltip: Precrtan tekst (alt-shift-5)
+      sub_tooltip: Indeks ({modifierKey}-,)
+      sup_tooltip: Eksponent ({modifierKey}-.)
+      text_type_tooltip: Odaberi vrstu teksta
+      unordered_list_tooltip: Lista s tačkama ({modifierKey}-shift-8)
+
+  forum:
+    settings:
+      composer_heading: Composer
+      use_rich_text_editor_label: Koristi editor s bogatim tekstom?
+      rich_text_compact_paragraphs_label: Ne razdvajaj paragrafe praznim redom.

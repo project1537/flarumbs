@@ -1,0 +1,58 @@
+fof-merge-discussions:
+  forum:
+    modal:
+      title: Spoji diskusije
+      search_discussions_placeholder: Pretražite diskusije...
+
+      ordering_heading: Redoslijed spajanja
+      ordering_date_label: Spoji objave prema datumu kreiranja
+      ordering_date_help: Objave u rezultujućoj diskusiji bit će poređane prema datumu svog individualnog kreiranja
+      ordering_suffix_label: Dodaj spojene objave na kraj diskusije
+      ordering_suffix_help: Objave koje se spajaju u preživjelu diskusiju bit će dodane na njen kraj
+
+      type_heading: Vrsta spajanja
+      type_target_label: Spoji u ovu diskusiju
+      type_target_help_text: Odaberite diskusiju/e za spajanje u {title}.
+
+      type_from_label: Spoji ovu diskusiju u drugu
+      type_from_help_text: Odaberite ciljnu diskusiju u koju će biti spojena {title}.
+
+      load_preview_button: Pregled
+      submit_button: => fof-merge-discussions.ref.merge
+
+    notification:
+      discussion_merged: Vaša diskusija {oldTitle} je spojena u ovu diskusiju od strane korisnika {username}.
+      preferences:
+        discussion_merged: Neko spoji jednu od mojih diskusija s drugom
+
+    discussion:
+      merge: => fof-merge-discussions.ref.merge
+
+    post:
+      merged: "{count, plural, one {Spojena 1 objava iz {titles}.} few {Spojene {count} objave iz {titles}.} other {Spojeno {count} objava iz {titles}.}}"
+
+  admin:
+    permissions:
+      merge_discussions_label: Spajanje diskusija
+    settings:
+      search_result_help: Koliko diskusija treba biti prikazano pri pretraživanju unutar modalnog prozora za spajanje diskusija.
+      search_result_label: Limit rezultata pretrage pri spajanju
+
+  api:
+    error:
+      merging_failed: Spajanje diskusija nije uspjelo.
+      updating_failed: Ažuriranje detalja diskusije nije uspjelo.
+      deleting_failed: Brisanje praznih diskusija nije uspjelo.
+      fixing_posts_number_failed: Ispravljanje numeracije objava nije uspjelo.
+      fixing_posts_number_meta_failed: Ispravljanje numeracije objava nije uspjelo.
+
+  ref:
+    merge: Spoji
+
+  email:
+    merged:
+      body: |
+        Vaša diskusija, {merged_discussion_title}, je spojena u {discussion_title} od strane korisnika {actor_display_name}.
+
+        Pogledajte ovdje {discussion_url} .
+      subject: Vaša diskusija "{merged_discussion_title}" je spojena

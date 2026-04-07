@@ -1,0 +1,18 @@
+core:
+  forum:
+    index_sort:
+      front_button: Naslovna
+    badge:
+      frontpage_tooltip: Istaknuto na naslovnoj
+    post_controls:
+      push_to_front_button: Istakni na naslovnoj
+      pull_from_front_button: Ukloni s naslovne
+
+fof-frontpage:
+  admin:
+    permissions:
+      can_push_to_frontpage_label: Isticanje diskusija na naslovnoj
+  lib:
+    gambits:
+      frontpage:
+        key: frontpage

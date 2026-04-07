@@ -1,0 +1,34 @@
+fof-share-social:
+  admin:
+    settings:
+      canonical-urls: Koristi kanonske URL-ove za dijeljenje
+      plain-copy: Prikaži kopiranje čistog URL-a
+      default-option: Zadana opcija dijeljenja
+      default-option-help: |
+        Odabirom zadane opcije modalni prozor se pretvara u padajuće dugme.
+        Ako je odabrano "Nativno dijeljenje", prikazat će se samo ako ga pretraživač podržava, inače se ponašanje vraća na originalni modalni prozor.
+  forum:
+    discussion:
+      share_button: Podijeli
+      share_dropdown_accessible_label: Otvori padajući izbornik za dijeljenje diskusije
+
+    modal:
+      title: Podijeli
+      copy_button: Kopiraj
+
+  lib:
+    networks:
+      facebook: Facebook
+      twitter: X (ranije Twitter)
+      linkedin: LinkedIn
+      reddit: Reddit
+      whatsapp: WhatsApp
+      telegram: Telegram
+
+      vkontakte: VKontakte
+      odnoklassniki: Odnoklassniki
+      my_mail: My World
+      qq: QQ
+      qzone: QZone
+
+      native: Nativno dijeljenje

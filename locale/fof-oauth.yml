@@ -1,0 +1,135 @@
+fof-oauth:
+  admin:
+    # This is used by extensions which extend fof/oauth to add additional providers
+    configure_button_label: Konfiguriši s FoF OAuth
+    settings_accessibility_label: "Postavke za {name}"
+
+    permissions:
+      moderate_user_providers: Upravljanje povezanim računima korisnika
+
+    settings:
+      advanced:
+        heading: Napredno
+        log-oauth-errors-label: Bilježi OAuth greške
+        log-oauth-errors-help: Ako je omogućeno, OAuth greške će biti zabilježene u Flarum logu. Ovo može pomoći pri otklanjanju OAuth problema, ali može sadržavati i osjetljive podatke.
+      only_icons_label: Prikaži samo ikone dugmadi za prijavu (alternativni izgled)
+      update_email_from_provider_label: Ažuriraj e-mail adresu od pružatelja
+      update_email_from_provider_help: Ako je omogućeno, e-mail adresa korisnika bit će ažurirana prema adresi koju pružatelj OAuth-a pruža pri svakoj prijavi na forum. Nisu svi pružatelji u mogućnosti proslijediti ažuriranu adresu — u tom slučaju ova postavka neće imati efekta.
+      disable_avatars_label: Onemogući avatare od pružatelja
+      disable_avatars_help: >
+        Ako je omogućeno, avatar korisnika neće biti ažuriran prema avataru pružatelja pri registraciji.
+        Napomena: ovo se odnosi samo na buduće registracije i neće promijeniti avatare postojećih korisnika.
+      providers:
+        callback_url_text: Ako je potrebno, postavite callback URL na {url}.
+        group_label: Dodijeli grupu
+        group_help: Odaberite grupu koja će automatski biti dodijeljena korisnicima koji se registruju putem ovog pružatelja.
+        no_group_label: Bez dodjele grupe
+
+        discord:
+          description: Kreirajte aplikaciju na {link}. Dodajte redirect URL u kartici OAuth2.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        facebook:
+          description: Kreirajte aplikaciju na {link}.
+
+          app_id_label: => fof-oauth.ref.settings.app_id
+          app_secret_label: => fof-oauth.ref.settings.app_secret
+
+        github:
+          description: Kreirajte OAuth aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+        gitlab:
+          description: Kreirajte aplikaciju na {link}. Dodijelite aplikaciji scope <code>read_user</code>.
+
+          client_id_label: => fof-oauth.ref.settings.app_id
+          client_secret_label: => fof-oauth.ref.settings.app_secret
+          domain_label: GitLab domena
+
+        google:
+          description: Kreirajte aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+          hosted_domain_label: Hosted domena (G Suite/Google Apps for Business, opcionalno)
+
+        linkedin:
+          description: Kreirajte aplikaciju na {link}.
+
+          client_id_label: => fof-oauth.ref.settings.client_id
+          client_secret_label: => fof-oauth.ref.settings.client_secret
+
+  forum:
+    log_in:
+      with_button: Prijava putem {provider}
+
+      # Modify these if your provider requires specific wording.
+      # You may use {provider} in the translation.
+      with_discord_button: '=> fof-oauth.forum.log_in.with_button'
+      with_facebook_button: '=> fof-oauth.forum.log_in.with_button'
+      with_github_button: '=> fof-oauth.forum.log_in.with_button'
+      with_gitlab_button: '=> fof-oauth.forum.log_in.with_button'
+      with_google_button: '=> fof-oauth.forum.log_in.with_button'
+      with_linkedin_button: '=> fof-oauth.forum.log_in.with_button'
+
+    user:
+      settings:
+        linked-account:
+          label: Povezani računi
+          last-used-label: Zadnje korišteno
+          link-created-label: Veza kreirana
+          identification-label: "{provider} ID"
+          orphaned-account: Prethodno ste se prijavili putem ovog pružatelja, ali forum je od tada onemogućio prijavu ovom metodom.
+          help: Povezani računi omogućavaju vam prijavu na forum putem vanjskih pružatelja.
+          identifier-label: "{provider} ID"
+          unlink-confirm: Jeste li sigurni da želite ukloniti vezu s {provider}? Nećete moći pristupiti forumu ovim putem dok se ponovo ne autentificirate.
+    # Modify these if you need to change how the provider name
+    # appears in the log in button.
+    providers:
+      discord: '=> fof-oauth.lib.providers.discord'
+      facebook: '=> fof-oauth.lib.providers.facebook'
+      github: '=> fof-oauth.lib.providers.github'
+      gitlab: '=> fof-oauth.lib.providers.gitlab'
+      google: '=> fof-oauth.lib.providers.google'
+      linkedin: '=> fof-oauth.lib.providers.linkedin'
+
+    account_linked:
+      title: Račun povezan
+      body: "Vaš račun na forumu <strong>{username}</strong> je sada povezan s {provider}. Ubuduće se možete prijaviti lozinkom foruma ili putem {provider}."
+      dismiss_button: Razumijem
+
+    signup:
+      username_help: Odaberite korisničko ime pod kojim ćete biti poznati ovdje
+
+    unlink: Ukloni vezu
+
+    error:
+      bad_verification_code: Nevažeći ili istekli token za verifikaciju. Pokušajte ponovo.
+      invalid_state: Nevažeće stanje. Pokušajte ponovo.
+      already_linked: Ovaj račun je već povezan s drugim korisnikom.
+
+  lib:
+    providers:
+      discord: Discord
+      facebook: Facebook
+      github: GitHub
+      gitlab: GitLab
+      google: Google
+      linkedin: LinkedIn
+
+    gambits:
+      sso:
+        key: sso
+        hint: pružatelj prijave
+
+  ref:
+    settings:
+      app_id: App ID
+      app_secret: App Secret
+
+      client_id: Client ID
+      client_secret: Client Secret

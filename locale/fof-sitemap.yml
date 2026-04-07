@@ -1,0 +1,47 @@
+fof-sitemap:
+    admin:
+        settings:
+            exclude_users: Isključi sve korisničke profile iz sitemapa
+            exclude_users_help: Prema zadanim postavkama, svi profili vidljivi gostima bit će indeksirani
+            exclude_tags: Isključi sve stranice oznaka iz sitemapa
+            exclude_tags_help: Prema zadanim postavkama, sve oznake vidljive gostima bit će indeksirane
+            build_button: Ponovo izgradi sitemape odmah
+            build_button_help: Pokreće trenutačnu ponovnu izgradnju svih sitemap fajlova. Zadatak će biti poslan u red čekanja ako je konfigurisan, inače će se izvršiti odmah.
+            build_success: Ponovna izgradnja sitemapa je uspješno dodana u red čekanja. Pratite napredak u logovima.
+            build_error: Dodavanje ponovne izgradnje sitemapa u red čekanja nije uspjelo. Provjerite logove i konfiguraciju reda čekanja.
+            last_build_time: Vrijeme posljednje izgradnje
+            mode_label: Način rada
+            mode_help: Odabir ispravnog načina rada za veličinu vašeg foruma je od ključne važnosti.
+            mode_help_runtime_label: Runtime način rada
+            mode_help_runtime: Za male forume, najvjerovatnije na shared hosting okruženjima, s ukupnim brojem diskusija, korisnika, oznaka i stranica manjim od 10.000 stavki. Sitemap se generira pri svakom zahtjevu.
+            mode_help_schedule: Sljedeći načini rada dodaju svoje zadatke u Flarum planer.
+            mode_help_schedule_setup: Bez ispravno podešenog Flarum planera, sljedeći načini rada neće funkcionisati. Pogledajte <a>ovdje za više informacija</a>.
+            mode_help_large: 50.000 je tehnički limit za sitemap fajlove. Ako imate više stavki za pohranu, koristite sljedeću opciju!
+            mode_help_multi_label: Višefajlni način rada
+            mode_help_multi: Najprikladniji za veće forume s 10.000 ili više stavki. Generiraju se i pohranjuju komprimirani sitemap fajlovi u više dijelova u folderu /public.
+            advanced_options_label: Napredne opcije
+            frequency_label: Koliko često planer treba ponovo graditi keširani sitemap?
+            risky_performance_improvements: Omogući rizična poboljšanja performansi
+            risky_performance_improvements_help: Ova poboljšanja ubrzavaju izvršavanje CRON zadatka na skupovima podataka s milijunima redova, ali mogu narušiti kompatibilnost s nekim ekstenzijama.
+            include_priority: Uključi vrijednosti prioriteta u sitemap
+            include_priority_help: Vrijednosti prioriteta Google ignorira, ali ih mogu koristiti drugi tražilice poput Binga i Yandexa
+            include_changefreq: Uključi vrijednosti učestalosti promjena u sitemap
+            include_changefreq_help: Vrijednosti učestalosti promjena Google ignorira, ali ih druge tražilice mogu koristiti za planiranje indeksiranja
+            modes:
+                runtime: Runtime
+                multi_file: Višefajlni
+            frequency:
+                hourly: Svaki sat
+                twice_daily: Dva puta dnevno
+                daily: Dnevno
+            soft_404:
+                heading: Prevencija soft 404 grešaka
+                help: Kada model ima malo ili nimalo relevantnog sadržaja, Google i drugi crawleri mogu takve stranice označiti kao "soft 404". Kako biste to spriječili, ovdje postavite minimalni broj stavki potreban za svaku kvalifikujuću stavku.
+                user:
+                    comments:
+                        minimum_item_threshold_label: "Korisnik: Minimalni broj komentara/objava"
+                        minimum_item_threshold_help: Minimalni broj komentara/objava koji korisnik mora imati da bi njihov profil bio uključen u sitemap.
+                tags:
+                    discussion:
+                        minimum_item_threshold_label: "Oznaka: Minimalni broj diskusija"
+                        minimum_item_threshold_help: Minimalni broj diskusija koji oznaka mora imati da bi bila uključena u sitemap.

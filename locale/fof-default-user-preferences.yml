@@ -1,0 +1,15 @@
+fof-default-user-preferences:
+  admin:
+    settings:
+      discloseOnline: Prikaži status online
+      discloseOnline-help: Kada je omogućeno, novi korisnici će dozvoliti drugima da vide kada su online. Administratori i korisnici s odgovarajućom dozvolom moći će vidjeti online status bez obzira na ovu postavku.
+      indexProfile: Indeksiraj profil
+      indexProfile-help: Kada je omogućeno, novi korisnici će dozvoliti tražilicama indeksiranje njihove profilne stranice, osim ako to nije blokirano drugim postavkama stranice ili ekstenzijama.
+      followAfterReply: Prati nakon odgovora
+      followAfterReply-help: Kada je omogućeno, novi korisnici će automatski pratiti diskusije na koje odgovore ili komentarišu.
+      postMentioned: E-mail pri spominjanju objave
+      postMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada se neka njihova objava spomene.
+      userMentioned: E-mail pri @spominjanju korisnika
+      userMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada ih neko @spomene.
+      groupMentioned: E-mail pri spominjanju grupe
+      groupMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada se spomene grupa kojoj pripadaju.

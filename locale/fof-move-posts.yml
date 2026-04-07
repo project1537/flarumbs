@@ -1,0 +1,63 @@
+fof-move-posts:
+  admin:
+    settings:
+      moved_first_post_content: Sadržaj prve objave premještene diskusije
+      moved_first_post_content_help: >
+        Kada diskusija ima samo jednu objavu, premještanje te objave rezultira uređivanjem prve objave izvorne diskusije kako bi ukazivala na novu diskusiju.
+        Sadržaj te objave možete urediti ovdje.
+      group_sequential_posts: Grupiši uzastopne događaje premještanja objava u jedan.
+
+    permissions:
+      move_posts: => fof-move-posts.ref.move_posts
+
+  forum:
+    badge:
+      first_moved_tooltip: Premješteno
+
+    discussion:
+      move_posts: => fof-move-posts.ref.move_posts
+
+    error:
+      move_old_post_to_newer_discussion: => fof-move-posts.ref.status.old_to_new_move
+      move_posts_to_same_discussion: Nije moguće premjestiti objave u istu diskusiju.
+
+    modal:
+      check: Provjeri vrstu operacije
+      destination: Odredišna diskusija
+      discussion_help: Koristit će se oznake izvorne diskusije i mogu se promijeniti nakon kreiranja.
+      discussion_name: => core.forum.composer_discussion.title_placeholder
+      new_discussion: Nova diskusija
+      selected_posts: "{count, plural, one {Odabrana 1 objava} few {Odabrane {count} objave} other {Odabrano {count} objava}}"
+      status:
+        complex_move: Bit će složeno premještanje — objave će biti ubačene između postojećih, što može promijeniti URL reference objava ciljne diskusije.
+        old_to_new_move: => fof-move-posts.ref.status.old_to_new_move
+        simple_move: Bit će jednostavno premještanje — objave će biti dodane na kraj diskusije.
+      submit: Nastavi
+      title: => fof-move-posts.ref.move_posts
+      confirm_move_all_to_new_discussion: Premještate sve objave iz ove diskusije u novu. U većini slučajeva, smislenije je urediti postojeću diskusiju — npr. promijeniti naslov, oznake ili druge atribute. Želite li nastaviti?
+
+    alerts:
+      posts_moved_to: "{count, plural, one {Objava premještena u {target_discussion}.} few {Premještene {count} objave u {target_discussion}.} other {Premješteno {count} objava u {target_discussion}.}}"
+
+    notifications:
+      post_moved_text: Jedna ili više vaših objava je premješteno u {targetDiscussionTitle}.
+
+    post:
+      unmove: Poništi odabir za premještanje
+      move: Odaberi za premještanje
+      moving: Premještanje objave
+
+    post_stream:
+      post_moved: "{count, plural, one {{username} je premjestio/la objavu u {target_discussion}.} few {{username} je premjestio/la {count} objave u {target_discussion}.} other {{username} je premjestio/la {count} objava u {target_discussion}.}}"
+
+  ref:
+    move_posts: Premjesti objave
+
+    status:
+      old_to_new_move: Nije moguće premjestiti stariju objavu u noviju diskusiju.
+
+  lib:
+    discussion:
+      first_post:
+        default_content: >
+          *Ova objava je premještena u **[%DISCUSSION_NAME%](%POST_LINK%)**.*

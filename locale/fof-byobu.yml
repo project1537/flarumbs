@@ -1,0 +1,161 @@
+fof-byobu:
+  forum:
+    badges:
+      is_private:
+        tooltip: Privatna diskusija
+
+    buttons:
+      add_recipients: Učesnici
+      submit: U redu
+      edit_recipients: Uredi učesnike
+      send_pd: "Pošalji poruku korisniku {username}"
+      cancel: Otkaži
+      make_public: Učini ovu diskusiju javnom
+      remove_from_discussion: Napusti ovu privatnu diskusiju
+
+    composer_private_discussion:
+      submit_button: Objavi privatnu diskusiju
+      title_placeholder: Naslov privatne diskusije
+
+    confirm:
+      make_public: Jeste li sigurni da želite ukloniti sve učesnike i učiniti ovu diskusiju vidljivom svima koji mogu pregledati dodijeljenu oznaku?
+
+    hero:
+      title: => fof-byobu.forum.nav.nav_item
+
+    labels:
+      recipients: "{count, plural, one {{count} učesnik} few {{count} učesnika} other {{count} učesnika}}"
+
+    nav:
+      start_button: Diskutuj privatno
+      nav_item: "Privatne diskusije"
+
+    input:
+      search_recipients: Pretražite učesnike unosom prvih tri znaka...
+
+    search:
+      headings:
+        groups: Grupe s dozvolama
+
+    modal:
+      titles:
+        update_recipients: Ažuriraj učesnike diskusije {title}
+        add_recipients: Dodaj učesnike u svoju diskusiju
+
+      labels:
+        selected_users: Odabrani korisnici
+        search_field: Pretraži korisnika
+
+      help:
+        add_recipients: Ova diskusija bit će vidljiva samo korisnicima koje ovdje odaberete. Potreban je najmanje 1 učesnik (osim vas samih).
+        update_recipients: Ova diskusija bit će vidljiva samo korisnicima koje ovdje odaberete.
+        selected_users: Kliknite na ime korisnika da biste ga uklonili.
+        click_user_to_remove_tooltip: Kliknite za uklanjanje
+
+    post:
+      recipients_modified:
+        added_and_removed: "{username} je dodao/la učesnike {added} i uklonio/la {removed}."
+        added: "{username} je dodao/la učesnike {added}."
+        made_public: "{username} je uklonio/la sve učesnike i učinio/la diskusiju javnom"
+        removed: "{username} je uklonio/la učesnike {removed}."
+        removed_self: "{username} je napustio/la privatnu diskusiju."
+
+    user:
+      settings:
+        block_pd: Blokiraj privatne diskusije
+      byobu_link: Privatne diskusije
+      dropdown_label: Privatne diskusije
+
+    notifications:
+      pd_label: Neko me uključi u novu privatnu diskusiju
+      pd_reply_label: Neko objavi u privatnoj diskusiji čiji sam učesnik
+      pd_reply_text: "{username} je objavio/la u privatnoj diskusiji u kojoj učestvujete"
+      pd_text: "{username} je pokrenuo/la novu privatnu diskusiju s vama"
+      pd_user_left_label: Učesnik napusti privatnu diskusiju u kojoj učestvujem
+      pd_user_left_text: "{username} je napustio/la privatnu diskusiju"
+      pd_added_text: "{username} vas je dodao/la u privatnu diskusiju"
+      pd_added_label: "Neko me doda u postojeću privatnu diskusiju"
+
+  admin:
+    permission:
+      create_private_discussions_with_users: Kreiranje privatnih diskusija s korisnicima
+      add_more_than_two_user_recipients: Dodavanje više od 2 učesnika u privatnu diskusiju
+      create_private_discussions_with_groups: Kreiranje privatnih diskusija s grupama
+      create_private_discussions_with_blocking_users: Kreiranje privatnih diskusija s korisnicima koji ih blokiraju
+      edit_user_recipients: Uređivanje korisnika koji učestvuju u privatnim diskusijama
+      edit_group_recipients: Uređivanje grupa koje učestvuju u privatnim diskusijama
+      make_private_into_public: Pretvaranje privatne diskusije u javnu
+      view_private_discussions-when-flagged: Pregled privatnih diskusija drugih korisnika ako su prijavljene
+
+    settings:
+      general:
+        heading: Opće postavke
+        help: "Ove postavke kontrolišu osnovne funkcije Byobua."
+      icon:
+        heading: Postavke ikona
+        help: "Ove postavke kontrolišu ikone koje Byobu koristi na forumu."
+      badge-icon: Oznaka Byobu diskusije
+      enable-make-public-option: Omogući opciju "učini javnom"
+      enable-make-public-option-help: Dodaje mogućnost korisnicima s dozvolom da uklone sve učesnike, dodjele novu oznaku i učine diskusiju javno vidljivom (prema postavkama vidljivosti odabrane oznake).
+      post-event-icon: Byobu događaji objava
+      delete_on_last_recipient_left: Briši privatne diskusije kada posljednji korisnik napusti
+      delete_on_last_recipient_left_help: Ako je omogućeno, privatne diskusije bit će trajno obrisane iz baze podataka kada ih napusti posljednji korisnik. U suprotnom, diskusija će biti skrivena (soft-delete).
+      hide_from_all_discussions_page: Sakrij privatne diskusije sa stranice "Sve diskusije"
+      hide_from_all_discussions_page_help: Privatne diskusije bit će dostupne samo sa stranice "Privatne diskusije" ili korisničkog profila
+
+  email:
+    subject:
+      private_discussion_created: "[Privatna diskusija] {display_name} je pokrenuo/la novu privatnu diskusiju s vama"
+      private_discussion_replied: "[Privatna diskusija] {display_name} je objavio/la u privatnoj diskusiji"
+      recipient_removed: "[Privatna diskusija] {display_name} je napustio/la diskusiju"
+      private_discussion_added: "[Privatna diskusija] {display_name} vas je dodao/la u privatnu diskusiju"
+
+    body:
+      private_discussion_created: |
+        {actor_display_name} je pokrenuo/la novu privatnu diskusiju s vama kao učesnikom: {discussion_title}.
+
+        Pogledajte ovdje:
+        {discussion_url}
+
+        Možda ćete se morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+
+      private_discussion_replied: |
+        {actor_display_name} je objavio/la u privatnoj diskusiji u kojoj ste učesnik: {discussion_title}.
+
+        Pogledajte ovdje:
+        {post_url}
+
+        Možda ćete se morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+
+      recipient_removed: |
+        {actor_display_name} je napustio/la privatnu diskusiju: {discussion_title}. Više neće moći pregledati njezin sadržaj.
+
+        Pogledajte ovdje:
+        {discussion_url}
+
+        Možda ćete se morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+
+      private_discussion_added: |
+        {actor_display_name} vas je dodao/la u postojeću privatnu diskusiju: {discussion_title}.
+
+        Pogledajte ovdje:
+        {discussion_url}
+
+        Možda ćete se morati prijaviti prije nego što budete morati pristupiti ovoj vezi.
+
+      made_public: |
+        {actor_display_name} je uklonio/la sve učesnike i učinio/la diskusiju javnom: {discussion_title}.
+
+        Pogledajte ovdje:
+        {discussion_url}
+
+        Možda ćete se morati prijaviti prije nego što budete mogli pristupiti ovoj vezi.
+
+  lib:
+    gambits:
+      byobu:
+        key: byobu
+      private:
+        key: private
+      allows-pd:
+        key: allows-pd

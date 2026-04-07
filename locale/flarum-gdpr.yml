@@ -1,0 +1,181 @@
+flarum-gdpr:
+    admin:
+        gdpr_page:
+            heading: Pregled GDPR podataka
+            description: Status različitih GDPR radnji i integracija
+            data_types:
+                title: Vrste podataka
+                help_text: |
+                    Ovo su trenutno registrovane vrste podataka. Svaka vrsta je navedena zajedno s pridruženim radnjama izvoza, anonimizacije i brisanja. Ako neka ekstenzija upravlja podacima koji potpadaju pod GDPR propise, treba registrovati svoje vrste podataka u <code>flarum/gdpr</code>.
+                    Podaci pohranjeni u tabeli <code>user</code> obrađuju se zasebno — pogledajte odjeljak o podacima korisničke tabele ispod.
+                type: Vrsta
+                export_description: Radnja izvoza
+                anonymize_description: Radnja anonimizacije
+                delete_description: Radnja brisanja
+                extension: Ekstenzija
+            settings:
+                heading: GDPR postavke
+                help_text: Tražite GDPR postavke? Nalaze se na stranici ekstenzije.
+                extension_settings_button: GDPR postavke
+            user_table_data:
+                title: Podaci korisničke tabele
+                help_text: |
+                    Uglavnom će sve kolone dodane u tabelu <code>user</code> biti obrađene automatski, kako za izvoz podataka tako i za brisanje.
+                    Međutim, postoje određeni posebni slučajevi koji su navedeni ispod.
+                column: Kolona
+                type: Vrsta
+                nullable: Dopušta null
+                pii: Lični podaci
+                redacted_on_export: Skriveno pri izvozu
+                extension: Ekstenzija
+                yes: Da
+                no: Ne
+                pii_tooltip: Ova kolona se smatra lično prepoznatljivim podatkom i bit će sakrivena u anonimizovanim kontekstima (npr. anonimizovani payloadi događaja).
+                redacted_on_export_tooltip: "Vrijednost ove kolone se briše (postavlja na null) pri generisanju izvoza korisničkih podataka. Kolona i dalje se pojavljuje u izvozu s null vrijednošću."
+        nav:
+            gdpr_button: GDPR integracije
+            gdpr_title: => flarum-gdpr.admin.gdpr_page.description
+
+        permissions:
+            process_erasure: Obrada zahtjeva za brisanje
+            process_export_for_others: Zahtijevanje i primanje izvoza podataka za druge korisnike
+            see_anonymized_user_badges: Pregled oznaka anonimizovanih korisnika
+        settings:
+            allow_anonymization: Dozvoli anonimizaciju za zahtjeve brisanja
+            allow_anonymization_help: Zadana opcija, preporučena za većinu zajednica. U ovom načinu rada, objave/komentari će biti sačuvani u što većoj mjeri dopuštenoj GDPR-om, ali sve lično prepoznatljive informacije se uklanjaju.
+            allow_deletion: Dozvoli brisanje za zahtjeve brisanja
+            allow_deletion_help: Mnogo stroža opcija. U ovom načinu rada, sve objave/komentari će biti obrisani, a korisnik će biti uklonjen iz baze podataka. Koristiti s oprezom.
+            default_anonymous_username: Zadano korisničko ime za anonimizovane korisnike
+            default_anonymous_username_help: Kada se korisnik anonimizuje, njegovo korisničko ime bit će zamijenjeno ovom vrijednošću, uz ID zahtjeva za anonimizaciju, npr. <code>Anonimni123</code>.
+            default_erasure: Zadana radnja za zahtjeve brisanja
+            default_erasure_help: Koja treba biti zadana radnja za zahtjeve brisanja?
+            default_erasure_options:
+                anonymization: Anonimizacija
+                deletion: Brisanje
+            gdpr_page:
+                title: Integracija podataka i radnje
+                help_text: Prije nego što odlučite koje radnje koristiti na svom forumu, neophodno je razumjeti koji podaci su integrisani i kako se obrađuju pri anonimizaciji i brisanju. Posjetite GDPR pregled kako biste razumjeli način obrade podataka i koje opcione ekstenzije su registrovale svoje podatke za obradu od strane ove ekstenzije.
+        userlist:
+            columns:
+                user_actions:
+                    data_export:
+                        button: Izvezi
+                        tooltip: Izvezi podatke za {username}
+
+    lib:
+        data:
+            avatar:
+                delete_description: Briše avatar korisnika s datotečnog sistema.
+                export_description: Preuzima avatar korisnika s datotečnog sistema i uključuje ga u izvoz.
+            discussions:
+                export_description: Izvozi sve rasprave koje je korisnik pokrenuo. Podaci ograničeni na naslov i datum kreiranja.
+            forum:
+                export_description: Izvozi naziv foruma, URL, korisničko ime, e-mail adresu i trenutni datum.
+            default_user_action: "Bez radnje — obrađuje zadano upravljanje podacima korisničke tabele."
+            no_action: Nije preduzeta nikakva radnja.
+            posts:
+                anonymize_description: Uklanja IP adresu iz svih objava korisnika.
+                delete_description: Briše sve objave korisnika.
+                export_description: Izvozi sve objave korisnika. Podaci ograničeni na sadržaj, datum kreiranja, IP adresu i ID rasprave.
+            tokens:
+                delete_description: Briše sve tokene koje je korisnik kreirao.
+                export_description: Izvozi sve tokene koje je korisnik kreirao. Podaci ograničeni na datum kreiranja i vrstu tokena.
+            user:
+                anonymize_description: Postavlja sve kolone u korisničkoj tabeli na null. Kolone koje ne dopuštaju null postavljaju se na zadane ili posebne vrijednosti. Lozinka se mijenja, postavke se vraćaju na zadane i sve grupe se uklanjaju.
+                delete_description: Briše korisnika iz baze podataka.
+                export_description: Izvozi podatke iz korisničke tabele. Sve kolone osim ID-a i lozinke.
+        request_data:
+            title: Zatraži podatke za {username}
+            text: >
+                Bit će pripremljena ZIP arhiva. Kada bude spremna, primit ćete obavijest s vezom za preuzimanje. Veza će ostati aktivna jedan dan.
+            request_button: Zatraži arhivu
+
+    email:
+        confirm_erasure:
+            subject: Potvrdite zahtjev za brisanje računa
+            body: |
+                Neko (nadamo se vi) je upravo zatražio brisanje računa `{display_name}`.
+
+                Kako biste potvrdili ovu radnju, molimo slijedite sljedeću vezu, nakon čega će vaš zahtjev biti obrađen od strane našeg tima.
+
+                {erasure_confirm_url}
+
+        erasure_completed:
+            deletion:
+                subject: Brisanje računa dovršeno
+                body: |
+                    Ovo je automatska, završna obavijest da je vaš račun obrisan.
+            anonymization:
+                subject: Anonimizacija računa dovršena
+                body: |
+                    Ovo je automatska, završna obavijest da je vaš račun anonimizovan.
+
+        erasure_cancelled:
+            subject: Zahtjev za brisanje računa otkazan
+            body: |
+                Ovo je automatska obavijest da je vaš zahtjev za otkazivanje brisanja računa obrađen.
+
+                Vaš račun neće biti obrisan.
+
+        export_available:
+            subject: Izvoz podataka dostupan
+            body: |
+                Zatražili ste izvoz podataka računa za {username}. Ovaj izvoz je uspješno generisan i dostupan je na:
+
+                {url}
+
+                Ovaj izvoz ostat će dostupan do {destroys_at}.
+
+    forum:
+        badges:
+            anonymized_user: Anonimizovani korisnik
+        delete_user:
+            title: Briši račun korisnika {username}
+            text: |
+                Jeste li sigurni da želite obrisati račun korisnika {username}?
+
+                Ova radnja je nepovratna.
+            modal_delete_button: Briši zadanom radnjom
+            delete_button: Briši
+        erasure_requests:
+            empty_text: Nema zahtjeva za brisanje računa na čekanju
+            item_text: "{name} je zatražio/la brisanje računa"
+            tooltip: Zahtjevi za brisanje računa
+            title: Zahtjevi za brisanje računa
+
+        erasure_request_confirmed: Potvrdili ste zahtjev za brisanje računa. Radnja će biti preduzeta u roku od 30 dana, kako zahtijeva GDPR.
+        settings:
+            data:
+                heading: Lični podaci
+            export_data_button: Izvezi podatke
+            export_data_help: "Zahtjevom za izvoz podataka dobit ćete preuzimljivu kopiju svih informacija vezanih za vaš račun. To uključuje objave, komentare i podatke profila."
+            request_erasure_button: Briši račun
+            request_erasure_help: "Zahtjevom za brisanje trajno ćete obrisati svoj račun i sve povezane podatke. Ova radnja je nepovratna. Prije nego što nastavite, provjerite jeste li sačuvali sve sadržaje koje želite zadržati."
+
+        process_erasure:
+            confirm: Jeste li sigurni da želite obrisati račun korisnika {name} u načinu rada {mode}?
+            title: Obradi zahtjev za brisanje
+            text: "{name} je zatražio/la brisanje računa."
+            comments_label: Komentari (opcionalno)
+            anonymization_button: Anonimizuj korisnika
+            deletion_button: Obriši korisnika
+            requested_at: "Zatraženo: {date}"
+            confirmed_at: "Potvrđeno: {date}"
+            eligible_at: "Prihvatljivo za automatsku obradu: {date}"
+
+        request_erasure:
+            title: Zatraži brisanje računa
+            reason: "Naveli ste sljedeći razlog: {reason}"
+            status:
+                awaiting_user_confirmation: |
+                    Trebali biste primiti e-mail za potvrdu zahtjeva za brisanje računa.
+                user_confirmed: |
+                    Potvrdili ste zahtjev za brisanje računa. Radnja će biti preduzeta u roku od 30 dana, kako zahtijeva GDPR.
+            text: Nakon što primi i potvrdi, administrator će pregledati vaš zahtjev u roku od 30 dana, kako zahtijeva GDPR.
+            password_label: Potvrdi lozinku
+            reason_label: Razlog (opcionalno)
+            cancel_button: Otkaži zahtjev
+            request_button: Zatraži brisanje
+        notification:
+            export-ready: "Vaš izvoz podataka za {username} je spreman za preuzimanje."
+        export_file: Izvoz korisničkih podataka za {username} ({email}) pripremljen {date} s foruma {forumTitle} ({url})
