@@ -3,9 +3,9 @@
 
 ![Bosnia and Herzegovina](https://user-images.githubusercontent.com/79749042/120553747-27fb8480-c3f9-11eb-98b0-ddaa6b26cfac.png)
 
-<b>LATEST VERSION:</b> 2.0.3
+<b>LATEST VERSION:</b> 2.0.4
 
-<b>RELEASE DATE:</b> 06-04-2026
+<b>RELEASE DATE:</b> 07-04-2026
 
 <b>SOFTWARE COMPATIBILITY:</b> FLARUM ^2.0
 
@@ -15,7 +15,7 @@
 ***
 
 ### INSTALL
-Flarum use Composer to manage its dependencies and extensions. The Bosnian Language Pack for Flarum Core and Multiple Extensions is available on Packagist and can be managed that way. Make sure that Composer v2.0 is installed on your machine, then run the following command in the location where Flarum is installed:
+Flarum use Composer to manage its dependencies and extensions. The Bosnian Language Pack for Flarum is available on Packagist and can be managed that way. Make sure that Composer v2.0 is installed on your machine, then run the following command in the location where Flarum is installed:
 
 <code>composer require project1537/flarumbs:"*"</code>
 
