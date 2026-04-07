@@ -1,0 +1,35 @@
+datlechin-link-preview:
+  admin:
+    sections:
+      general_label: Opće
+      general_description: Osnovne postavke prikaza pregleda veza.
+      performance_label: Performanse
+      performance_description: Optimizirajte način dohvatanja i keširanje pregleda veza.
+      url_filtering_label: Filtriranje URL-ova
+      url_filtering_description: Kontrolišite za koje URL-ove se generišu pregledi veza.
+      external_api_label: Vanjski API kao rezerva
+      external_api_description: Koristite vanjski servis kada direktno dohvatanje ne uspije (npr. stranice zaštićene od botova).
+    settings:
+      enable_batch_requests_label: Omogući grupnu obradu
+      enable_batch_requests_help: Poboljšajte performanse istovremenom obradom više pregleda veza. Kada je onemogućeno, veze se obrađuju jedna po jedna.
+      blacklist_label: Lista blokiranih domena
+      blacklist_help: Navedite domene ili URL-ove za koje se ne trebaju generisati pregledi veza. Odvojite više unosa zarezima.
+      blacklist_placeholder: "Primjeri: facebook.com, twitter.com/specific-page"
+      whitelist_label: Lista dozvoljenih domena
+      whitelist_help: Generiši preglede samo za ove domene ili URL-ove. Ostavite prazno kako biste dozvolili sve domene koje nisu blokirane.
+      whitelist_placeholder: "Primjeri: trusted-site.com, specific-domain.org/path"
+      convert_media_urls_label: Pregled medijskih URL-ova
+      convert_media_urls_help: Generiši preglede za URL-ove koji ukazuju na medijske fajlove (slike, videa i sl.).
+      use_google_favicons_label: Prikaži ikone stranica
+      use_google_favicons_help: Prikazuje favicon ikone web stranica putem Googleove usluge favicona radi lakšeg vizualnog prepoznavanja.
+      cache_time_label: Trajanje keša (minute)
+      cache_time_help: "Koliko dugo čuvati preglede veza prije osvježavanja. Postavite na 0 za isključivanje keširanja. Zadano: 60 minuta."
+      open_links_in_new_tab_label: Otvori veze u novoj kartici
+      open_links_in_new_tab_help: Uvijek otvara pregledane veze u novoj kartici pretraživača.
+      external_api_fallback_label: Vanjski API kao rezerva
+      external_api_fallback_help: Kada direktno dohvatanje ne uspije (npr. stranice zaštićene od botova poput Reutersa), koristi vanjski oEmbed API za dohvatanje metapodataka veze.
+      external_api_url_label: URL vanjskog API-ja
+      external_api_url_help: "Prilagođeni oEmbed API endpoint. Ostavite prazno za korištenje zadanog (Iframely open API). URL će biti dodan kao query parametar."
+
+  forum:
+    site_cannot_be_reached: Pregled nije moguće učitati. Provjerite URL i pokušajte ponovo.
