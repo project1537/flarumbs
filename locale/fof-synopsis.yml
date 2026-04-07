@@ -1,0 +1,21 @@
+fof-synopsis:
+  admin:
+    settings:
+      excerpt-length:
+        label: Dužina isječka sažetka u znakovima
+        help: Koliko znakova treba biti prikazano iz objave.
+      rich-excerpts:
+        label: Prikaži isječke s bogatim sadržajem
+        help: Kada je omogućeno, slike, ugrađeni sadržaj i drugi netekstualni elementi mogu biti uključeni u sinopsis
+      excerpt-type:
+        label: Koja objava treba biti prikazana kao isječak?
+        help: Odaberite hoće li se prva ili posljednja objava koristiti kao sadržaj sinopsisa
+      first-label: Prva objava
+      last-label: Posljednja objava
+      tags-enabled: Imate omogućenu ekstenziju <code>flarum/tags</code>. Ove postavke postaju zadane, osim ako pojedinačne oznake imaju vlastite postavke.
+  forum:
+    user:
+      settings:
+        summaries-heading: Sinopsis
+        show-summaries: Prikaži isječak svake diskusije u listama diskusija (Desktop/Tablet)
+        show-summaries-mobile: Prikaži isječak svake diskusije u listama diskusija (Mobilni uređaji)
