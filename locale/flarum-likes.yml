@@ -1,0 +1,56 @@
+flarum-likes:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      like_posts_label: Označi objave sa "Sviđa mi se"
+
+    settings:
+      like_own_posts_help: Kada je omogućeno, uz odgovarajuću dozvolu, korisnici mogu označiti vlastite objave sa „Sviđa mi se". Da biste spriječili korisnike da označe vlastite objave, onemogućite ovu postavku.
+      like_own_posts_label: Korisnici mogu označiti vlastite objave sa "Sviđa mi se"
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_liked_text: "{username} označio/la vašu objavu sa „Sviđa mi se\""  # Can be pluralized to agree with the number of users!
+
+    # These translations are displayed beneath individual posts.
+    post:
+      like_link: Sviđa mi se
+      liked_by_self_text: "{users} sviđa se ovo."  # Can be pluralized to agree with the number of users!
+      liked_by_text: "{count, plural, one {{users} se sviđa ovo} other {{users} se sviđa ovo}}."
+      others_link: => core.ref.some_others
+      unlike_link: Ne sviđa mi se
+      you_text: => core.ref.you
+
+    # These translations are used by the Users Who Like This modal dialog.
+    post_likes:
+      title: Korisnici kojima se ovo sviđa
+      load_more_button: => core.ref.load_more
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_liked_label: Neko označi jednu od mojih objava sa „Sviđa mi se"
+
+    # These translations are used in the User profile page.
+    user:
+      likes_link: Sviđanja
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      posts:
+        likedBy:
+          key: likedBy
+          hint: ID ili korisničko ime korisnika
