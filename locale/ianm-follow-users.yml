@@ -1,0 +1,141 @@
+flarum-gdpr:
+  lib:
+    data:
+      followuser:
+        export_description: Izvozi podatke o praćenim korisnicima i korisnicima koji prate.
+        anonymize_description: "=> flarum-gdpr.lib.data.followuser.delete_description"
+        delete_description: Briše sve podatke vezane za praćenje korisnika.
+
+ianm-follow-users:
+  admin:
+    permissions:
+      be_followed_label: Dozvoli korisnicima da budu praćeni
+    settings:
+      button-on-profile-label: Prikaži dugme Prati direktno u zaglavlju korisničkog profila
+      stats-on-profile-label: Prikaži broj pratitelja i praćenih na korisničkim profilima
+
+  forum:
+    followed: Praćeno
+    followers: "{count, plural, one {Pratitelj} other {Pratitelja}}"
+    profile_link: => ianm-follow-users.lib.following_link
+    followers_link: Pratitelji
+
+    profile_page:
+      no_following: Čini se da ne pratite nijednog korisnika.
+      no_followers: Čini se da još nemate pratitelja.
+
+    user_controls:
+      follow_button: => ianm-follow-users.lib.follow
+      unfollow_button: => ianm-follow-users.lib.unfollow
+      change_button: => ianm-follow-users.lib.change_follow_type
+
+    settings:
+      notify_new_follower_label: Neko počne pratiti moj profil
+      notify_new_unfollower_label: Neko prestane pratiti moj profil
+      notify_new_discussion_label: Neko koga pratim pokrene diskusiju
+      notify_new_post_label: Neko koga pratim objavi u postojećoj diskusiji
+      block_follow: Spriječi korisnike da prate moj profil
+
+    index:
+      follow_tag_button: => ianm-follow-users.lib.follow
+      unfollow_tag_button: => ianm-follow-users.lib.change_follow_type
+
+    notifications:
+      new_discussion_text: "{username} pokrenuo/la"
+      new_post_text: "{username} objavio/la u diskusiji"
+      new_follower_text: "{username} počeo/la pratiti vaš profil"
+      new_unfollower_text: "{username} prestao/la pratiti vaš profil"
+
+    badge:
+      label:
+        follow: Prati diskusije
+        lurk: Prati sve
+
+    filter:
+      following: Praćeni korisnici
+
+    modals:
+      select_follow_level:
+        title: "Odaberi nivo praćenja za {username}"
+        description: "Odaberite kako želite pratiti <em>{username}</em>."
+
+        follow_levels_heading: "Nivoi praćenja"
+        follow_select_label: "Vrsta praćenja"
+
+        no_user_attr_provided_err: "Ups, nešto je pošlo naopako pri otvaranju ovog prozora."
+        no_user_attr_provided_err_debug: "Atribut `user` nije proslijeđen modalu SelectFollowUserLevel pri kreiranju. Modal se ne može prikazati."
+
+        save_btn: "Spremi"
+        cancel_btn: "Otkaži"
+
+  email:
+    new_discussion_by_user:
+      subject: "{user_display_name} pokrenuo/la diskusiju"
+      plain:
+        body: |
+          {user_display_name} pokrenuo/la je novu diskusiju: {discussion_title}
+
+          {discussion_url}
+
+          ---
+
+          {post_content}
+      html:
+        body: "{user_display_name} pokrenuo/la je novu diskusiju: [{discussion_title}]({discussion_url})."
+
+    new_follower:
+      subject: "{follower_display_name} počeo/la pratiti vaš profil"
+      plain:
+        body: |
+          {follower_display_name} počeo/la je pratiti vaš profil i bit će obaviješten/a kada pokrenete novu diskusiju.
+
+          {profile_url}
+      html:
+        body: "{follower_display_name} počeo/la je pratiti vaš profil i bit će obaviješten/a kada pokrenete novu diskusiju."
+
+    new_post:
+      subject: "{user_display_name} objavio/la u {discussion_title}"
+      plain:
+        body: |
+          {user_display_name} objavio/la je u diskusiji {discussion_title}.
+
+          {post_url}
+
+          ---
+
+          {post_content}
+
+          ---
+
+          Nećete primati više obavijesti o ovoj diskusiji dok ne budete ažurni.
+      html:
+        body: "{user_display_name} objavio/la je u diskusiji [{discussion_title}]({post_url})."
+
+  lib:
+    following_link: Praćeni korisnici
+
+    follow: Prati
+    change_follow_type: Promijeni vrstu praćenja
+    unfollow: Prestani pratiti
+
+    follow_levels:
+      unfollow:
+        name: Ne prati
+
+        description: |
+          Ne primaj obavijesti o aktivnostima korisnika <em>{username}</em>.
+
+      follow:
+        name: Prati diskusije
+
+        description: |
+          Primaj obavijesti kada <em>{username}</em> pokrene novu diskusiju.
+
+      lurk:
+        name: Prati sve
+
+        description: |
+          Primaj obavijesti kada <em>{username}</em> pokrene novu diskusiju ili objavi u bilo kojoj diskusiji.
+    gambits:
+      followeduser:
+        key: followeduser
