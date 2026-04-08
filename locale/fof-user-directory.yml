@@ -1,0 +1,47 @@
+fof-user-directory:
+    forum:
+        header:
+            back_to_user_directory_tooltip: Povratak na imenik korisnika
+
+        hero:
+            title: => fof-user-directory.forum.page.nav
+
+        search:
+            users_heading: 'Pretraga svih korisnika za "{query}"'
+            field:
+                placeholder: Pretraži sve korisnike
+            kinds:
+                group: Grupa
+                text: Slobodni tekst
+        page:
+            nav: Imenik korisnika
+            refresh_tooltip: => core.forum.index.refresh_tooltip
+            load_more_button: => core.ref.load_more
+            empty_text: Nije pronađen nijedan korisnik koji odgovara vašoj pretrazi.
+            filter_button: Filtriraj grupe
+            usercard:
+                discussion-count: "{count, plural, one {{count} diskusija} few {{count} diskusije} other {{count} diskusija}}"
+                post-count: "{count, plural, one {{count} objava} few {{count} objave} other {{count} objava}}"
+
+    admin:
+        permissions:
+            view_user_directory: Pregled imenika korisnika
+        settings:
+            link: Dodaj vezu na početnoj stranici za korisnike koji mogu vidjeti imenik
+            default-sort: Zadano sortiranje
+            use-small-cards: Koristi male korisničke kartice
+            disable-global-search-source: Ne dodavaj imenik korisnika u Flarum globalno polje za pretragu
+            link-group-mentions: Poveži spominjanja grupa u objavama s imenikom korisnika
+
+    lib:
+        sort:
+            not_specified: Koristi Flarum zadano
+            default: Zadano
+            username_az: Korisničko ime (a-z)
+            username_za: Korisničko ime (z-a)
+            newest: Najnoviji
+            oldest: Najstariji
+            most_posts: Najviše objava
+            least_posts: Najmanje objava
+            most_discussions: Najviše diskusija
+            least_discussions: Najmanje diskusija
