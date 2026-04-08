@@ -1,0 +1,104 @@
+fof-username-request:
+  admin:
+    permissions:
+      moderate_requests: Odobravanje zahtjeva za promjenu korisničkog imena/nadimka
+      request_nickname: Zahtjev za promjenu nadimka
+      request_username: Zahtjev za promjenu korisničkog imena
+  forum:
+    nickname_modals:
+      action:
+        title: => fof-username-request.ref.nickname_change_request
+        help_text: Molimo provjerite da li zatražena promjena nadimka odgovara smjernicama foruma.
+        decision_title: Odluka
+        approval_label: Odobri
+        rejected_label: Odbij
+        submit_button: Pošalji
+        reason_title: Razlog odbijanja
+        success: Odluka je poslana.
+        name: '{name} je zatražio/la promjenu nadimka u "{requestedName}"'
+      results:
+        title: Zahtjev za promjenu nadimka
+        approved: 'Vaš zahtjev za promjenu nadimka je odobren'
+        dismiss_button: => core.ref.okay
+        new_name: 'Vaš nadimak je uspješno promijenjen u: {name}'
+        rejected: Vaš zahtjev za promjenu nadimka je odbijen
+        reason: 'Razlog odbijanja: <i>"{reason}"</i>.'
+        resubmit: Možete podnijeti novi zahtjev za promjenu nadimka iz postavki računa ako to želite.
+      request:
+        title: Zatraži promjenu nadimka
+        current_request: Već ste zatražili promjenu nadimka u "{name}". Možete ažurirati ili obrisati svoj zahtjev.
+        submit_button: Pošalji zahtjev
+        delete_button: Obriši zahtjev
+        confirmation_message: Vaš zahtjev za promjenu nadimka je podnesen i čeka odobrenje.
+        dismiss_button: => core.ref.okay
+        deleted: Zahtjev za promjenu nadimka je obrisan.
+
+    username_modals:
+      action:
+        title: => fof-username-request.ref.username_change_request
+        help_text: Molimo provjerite da li zatražena promjena korisničkog imena odgovara smjernicama foruma.
+        decision_title: Odluka
+        approval_label: Odobri
+        rejected_label: Odbij
+        submit_button: Pošalji
+        reason_title: Razlog odbijanja
+        success: Odluka je poslana.
+        name: '{name} je zatražio/la promjenu korisničkog imena u "{requestedName}"'
+      results:
+        title: Zahtjev za promjenu korisničkog imena
+        approved: 'Vaš zahtjev za promjenu korisničkog imena je odobren'
+        dismiss_button: => core.ref.okay
+        new_name: 'Vaše korisničko ime je uspješno promijenjeno u: {name}'
+        rejected: Vaš zahtjev za promjenu korisničkog imena je odbijen
+        reason: 'Razlog odbijanja: <i>"{reason}"</i>.'
+        resubmit: Možete podnijeti novi zahtjev za promjenu korisničkog imena iz postavki računa ako to želite.
+      request:
+        title: Zatraži promjenu korisničkog imena
+        current_request: Već ste zatražili promjenu korisničkog imena u "{name}". Možete ažurirati ili obrisati svoj zahtjev.
+        submit_button: Pošalji zahtjev
+        delete_button: Obriši zahtjev
+        confirmation_message: Vaš zahtjev za promjenu korisničkog imena je podnesen i čeka odobrenje.
+        dismiss_button: => core.ref.okay
+        deleted: Zahtjev za promjenu korisničkog imena je obrisan.
+
+    # Pending Requests Dropdown and List
+    pending_requests:
+      empty_text: Nema pronađenih zahtjeva za promjenu imena.
+      group_label: Zahtjevi
+      nickname_item_text: "{name} je zatražio/la promjenu nadimka"
+      nickname_exerpt: "Zatraženi nadimak: {requestedName}"
+      tooltip: => fof-username-request.ref.name_change_requests
+      title: => fof-username-request.ref.name_change_requests
+      username_item_text: "{name} je zatražio/la promjenu korisničkog imena"
+      username_exerpt: "Zatraženo korisničko ime: {requestedName}"
+
+    # Settings Page
+    settings:
+      nickname_request_button: Promijeni nadimak
+      username_request_button: Promijeni korisničko ime
+
+    user:
+      name_history_link: Historija imena
+
+  ref:
+    name_change_request: Zahtjev za promjenu imena
+    name_change_requests: Zahtjevi za promjenu imena
+    nickname_change_request: Zahtjev za promjenu nadimka
+    nickname_change_requests: Zahtjevi za promjenu nadimka
+    username_change_request: Zahtjev za promjenu korisničkog imena
+    username_change_requests: Zahtjevi za promjenu korisničkog imena
+
+  email:
+    body:
+      noReasonProvided: 'Razlog nije naveden.'
+      approved: |
+        Vaš zahtjev za promjenu korisničkog imena u "{new_username}" je odobren od strane korisnika {actor_display_name}.
+
+        Sada se možete prijaviti s novim korisničkim imenom: {login_url}
+      rejected: |
+        Vaš zahtjev za promjenu korisničkog imena s "{old_username}" na "{requested_username}" je odbijen od strane korisnika {actor_display_name}.
+
+        Razlog: {reason}
+    subject:
+      approved: "{display_name} je odobrio/la vašu promjenu korisničkog imena u {requested_username}"
+      rejected: "{display_name} je odbio/la vašu promjenu korisničkog imena u {requested_username}"
