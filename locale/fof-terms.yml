@@ -1,0 +1,90 @@
+fof-terms:
+    admin:
+        settings:
+            title: Postavke uslova
+
+            field:
+                signup-legal-text: Dodatni tekst na formi za registraciju
+                hide-updated-at: Ne prikazuj datum ažuriranja uslova kada je dostupno ažuriranje
+                date-format: Format datuma
+                date-format-help: Možete koristiti bilo koji važeći <a>Day.js</a> format. Ostavite polje prazno za zadani format.
+
+        titles:
+            policies: Pravilnici
+
+        buttons:
+            new-policy: Novi pravilnik
+            edit-policy: Uredi pravilnik
+            add-policy: Dodaj pravilnik
+            save-policy: Sačuvaj pravilnik
+            delete-policy: Obriši pravilnik
+            set-to-now: Postavi na sada
+
+        messages:
+            delete-policy-confirmation: >
+                Ovo će trajno obrisati pravilnik {name} i povezane datume prihvatanja iz baze podataka.
+                Pobrinite se da ste napravili rezervnu kopiju tih datuma ako su vam potrebni iz pravnih razloga.
+                Jeste li sigurni da želite obrisati ovaj pravilnik?
+
+        policies:
+            name: Naziv
+            name-help: Ovaj naziv bit će prikazan pored polja za potvrdu i kao naslov modalnog prozora ažuriranja.
+            url: URL
+            url-help: URL stranice na kojoj se mogu pročitati uslovi. Otvorit će se u novoj kartici pri kliku.
+            update-message: Poruka o ažuriranju
+            update-message-help: Poruka koja se prikazuje postojećim korisnicima koji još nisu prihvatili najnovije uslove.
+            terms-updated-at: Ažurirano
+            terms-updated-at-placeholder: GGGG-MM-DD (hh:mm:ss)
+            terms-updated-at-help: >
+                Datum posljednjeg ažuriranja uslova.
+                Postavljanje ove vrijednosti zahtijevat će od svih korisnika koji su prihvatili uslove prije tog datuma da ih ponovo prihvate.
+                Mora biti u prošlosti (u suprotnom korisnici ne bi mogli prihvatiti uslove i proći modalni prozor).
+            export-url: URL za izvoz
+            export-url-help: >
+                Svaki korisnik s dozvolom "Izvezi podatke svih pravilnika" može pristupiti ovim URL-ovima za preuzimanje liste korisnika koji su prihvatili ovaj pravilnik.
+                Više detalja o dostupnim opcijama možete pronaći na <a>wikiju ekstenzije</a>.
+            optional: Opcionalni pravilnik
+            optional-help: Kada je omogućeno, korisnici mogu koristiti forum i interagovati na njemu bez prihvatanja ovog pravilnika.
+
+        permissions:
+            see-user-policies-state: Pregled stanja prihvatanja pravilnika korisnika
+            postpone-policies-accept: Odlaganje prihvatanja novih uslova
+            export-policies: Izvoz podataka svih korisnika i pravilnika
+
+    forum:
+        signup:
+            i-accept: Prihvatam <a>{policy}</a>
+            must-accept: Pravilnik {policy} mora biti prihvaćen.
+
+        accept-modal:
+            title: Ažuriranje uslova
+            updated-at: Uslovi su ažurirani {date}
+            updated-recently: Uslovi su ažurirani od vaše posljednje posjete
+            i-accept: Prihvatam novi <a>{policy}</a>
+            accept: Potvrdi
+            close: Hvala na prihvatanju, možete se vratiti na forum
+
+        state-modal:
+            title: Stanje prihvatanja uslova za korisnika {username}
+            accepted-at: Prihvaćeno {date}
+            not-accepted: Nije prihvaćeno
+
+        update-alert:
+            must-accept-message: Pristup vašem računu je privremeno ograničen dok ne pregledate nove uslove.
+            can-accept-message: Nedavno smo ažurirali uslove. Morate ih prihvatiti kako biste nastavili koristiti ovu stranicu.
+            can-accept-optional-message: Nedavno smo ažurirali uslove. Možete ih pregledati kada vam odgovara.
+            review: Kliknite ovdje za pregled i prihvatanje novih uslova
+            close: Zatvori
+
+        user_settings:
+            optional_policies_label: Pravilnici
+
+        user_controls:
+            state_button: Stanje prihvatanja uslova
+
+flarum-gdpr:
+    lib:
+        data:
+            userpolicydata:
+                export_description: Detalji o prihvatanju uslova od strane korisnika.
+                delete_description: Uklanja zapis o prihvatanju uslova od strane korisnika.
