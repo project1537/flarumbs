@@ -1062,8 +1062,8 @@ core:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
-    greeting: "Zdravo {displayName},"
-    signoff: "Tim foruma {forumTitle}"
+    greeting: "Selam, {displayName}"
+    signoff: "Administracija foruma {forumTitle}"
 
     # These translations are used by the "informational" email template.
     informational:
