@@ -1,0 +1,123 @@
+flarum-mentions:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the mentions permissions
+    permissions:
+      mention_groups_label: Spominjanje grupa
+    # These translations are used in the mentions Settings page.
+    settings:
+      allow_username_format_label: Dozvoli format spominjanja korisničkog imena (@KorisnickoIme)
+      allow_username_format_text: |
+        Trenutni format za spominjanje korisnika je @"Ime za prikaz"#ID.
+        Ova postavka dozvoljava korištenje starog formata @KorisnickoIme, ali će biti konvertovan u novi format pri čuvanju.
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the composer (reply autocompletion function).
+    composer:
+      mention_tooltip: Spomeni korisnika, grupu ili objavu
+      reply_to_post_text: "Odgovor na #{number}"
+
+    # These translations are used by the mentioned by modal dialog.
+    mentioned_by:
+      title: Odgovori na ovu objavu
+      load_more_button: => core.ref.load_more
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_mentioned_text: "{username} je odgovorio/la na vašu objavu"
+      user_mentioned_text: "{username} vas je spomenuo/la"
+      group_mentioned_text: "{username} je spomenuo/la grupu čiji ste član"
+
+    # These translations are displayed beneath individual posts.
+    post:
+      mentioned_by_more_text: "još {count} odgovora."
+      mentioned_by_self_text: "{users} su odgovorili/le na ovo."
+      mentioned_by_text: "{users} su odgovorili/le na ovo."
+      others_text: => core.ref.some_others
+      quote_button: Citiraj
+      reply_link: => core.ref.reply
+      you_text: => core.ref.you
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_mentioned_label: Neko odgovori na jednu od mojih objava
+      notify_user_mentioned_label: Neko me spomene u objavi
+      notify_group_mentioned_label: Neko u objavi spomene grupu čiji sam član
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      mentions_link: Spominjanja
+
+    # These translations are used in the post mentions
+    post_mention:
+      deleted_text: "[nepoznato]"
+
+    group_mention:
+      deleted_text: "[nepoznata grupa]"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a post is replied to
+    post_mentioned:
+      subject: "{replier_display_name} je odgovorio/la na vašu objavu u {title}"
+      plain:
+        body: |
+          {replier_display_name} je odgovorio/la na vašu objavu (#{post_number}) u diskusiji {title}.
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{replier_display_name} je odgovorio/la na vašu objavu (#{post_number}) u diskusiji [{title}]({url})."
+
+    # These translations are used in emails sent when a user is mentioned
+    user_mentioned:
+      subject: "{mentioner_display_name} vas je spomenuo/la u {title}"
+      plain:
+        body: |
+          {mentioner_display_name} vas je spomenuo/la u objavi u diskusiji {title}.
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{mentioner_display_name} vas je spomenuo/la u objavi u diskusiji [{title}]({url})."
+
+    # These translations are used in emails sent when a group is mentioned
+    group_mentioned:
+      subject: "{mentioner_display_name} je u {title} spomenuo/la grupu čiji ste član"
+      plain:
+        body: |
+          {mentioner_display_name} je u diskusiji {title} spomenuo/la grupu čiji ste član.
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{mentioner_display_name} je u diskusiji [{title}]({url}) spomenuo/la grupu čiji ste član."
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      posts:
+        mentioned:
+          key: mentioned
+          hint: ID ili korisničko ime spomenutog korisnika
