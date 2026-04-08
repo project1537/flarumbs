@@ -1,0 +1,21 @@
+fof-user-bio:
+    admin:
+        permission:
+            view: Pregled biografije
+            editOwn: Uređivanje vlastite biografije
+            editAny: Uređivanje tuđe biografije
+        setting:
+            bioLimit: Limit znakova biografije
+            maxLines: Maksimalni broj redova za prikaz odjednom
+            allowFormatting: Dozvoli formatiranje u biografiji
+            allowFormatting_help: Ovo formatiranje je po dizajnu odvojeno od formatiranja objava. Ako su omogućene ekstenzije BBCode i/ili Markdown, bit će dostupne za formatiranje biografije. Slike i ugrađeni sadržaj nisu dozvoljeni. Ekstenzije koje dodaju podršku Flarum formateru moraju *eksplicitno* dodati podršku i za formater biografije.
+
+    forum:
+        userbioPlaceholder: Napišite nešto o sebi
+        userbioPlaceholderOtherUser: Napišite biografiju za korisnika {username}
+
+        profile:
+            cancel_confirm: Jeste li sigurni da želite otkazati uređivanje biografije? Sve napravljene izmjene bit će izgubljene.
+            cancel_button: Otkaži
+            save_button: Sačuvaj
+            edit_bio_label: Uredi biografiju
