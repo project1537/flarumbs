@@ -1,0 +1,40 @@
+flarum-statistics:
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    # These translations are used in the date selection modal.
+    date_selection_modal:
+      description: |
+        Odaberite prilagođeni vremenski raspon za prikaz statistika. Učitavanje podataka
+        može potrajati nekoliko minuta na forumima s velikom aktivnošću.
+      end_date: Krajnji datum (uključujući)
+      errors:
+        end_before_start: Krajnji datum mora biti nakon početnog datuma.
+      start_date: Početni datum (uključujući)
+      submit_button: Potvrdi vremenski raspon
+      title: Odaberite prilagođeni vremenski raspon
+
+    # These translations are used in the Statistics dashboard widget.
+    statistics:
+      discussions_heading: => core.ref.discussions
+      export_chart_button: Izvezi grafikon u SVG
+      last_12_months_label: Posljednjih 12 mjeseci
+      last_28_days_label: Posljednjih 28 dana
+      last_7_days_label: Posljednjih 7 dana
+      mini_heading: Statistike foruma
+      previous_28_days_label: Prethodnih 28 dana
+      previous_7_days_label: Prethodnih 7 dana
+      custom_label: Odaberi prilagođeni raspon...
+      custom_label_specified: "{fromDate} – {toDate}"
+      loading: => core.ref.loading
+      posts_heading: => core.ref.posts
+      today_label: Danas
+      total_label: Ukupno
+      users_heading: => core.ref.users
+      view_full: Prikaži više statistika
+      no_data: Nema dostupnih podataka za odabrani vremenski raspon.
+      current_period: Trenutni period
+      previous_period: Prethodni period
