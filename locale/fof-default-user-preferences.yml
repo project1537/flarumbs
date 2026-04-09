@@ -1,15 +1,15 @@
 fof-default-user-preferences:
   admin:
     settings:
-      discloseOnline: Prikaži status online
-      discloseOnline-help: Kada je omogućeno, novi korisnici će dozvoliti drugima da vide kada su online. Administratori i korisnici s odgovarajućom dozvolom moći će vidjeti online status bez obzira na ovu postavku.
+      discloseOnline: Prikaži status na mreži
+      discloseOnline-help: Kada je omogućeno, novi korisnici će dozvoliti drugima da vide kada su na mreži. Administratori i drugi korisnici s odgovarajućom dozvolom i dalje će moći vidjeti status bez obzira na ovu postavku.
       indexProfile: Indeksiraj profil
-      indexProfile-help: Kada je omogućeno, novi korisnici će dozvoliti tražilicama indeksiranje njihove profilne stranice, osim ako to nije blokirano drugim postavkama stranice ili ekstenzijama.
+      indexProfile-help: Kada je omogućeno, novi korisnici će dozvoliti pretraživačima da indeksiraju njihovu profilnu stranicu, osim ako to nije blokirano drugim postavkama sajta ili proširenja.
       followAfterReply: Prati nakon odgovora
-      followAfterReply-help: Kada je omogućeno, novi korisnici će automatski pratiti diskusije na koje odgovore ili komentarišu.
-      postMentioned: E-mail pri spominjanju objave
-      postMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada se neka njihova objava spomene.
-      userMentioned: E-mail pri @spominjanju korisnika
-      userMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada ih neko @spomene.
-      groupMentioned: E-mail pri spominjanju grupe
-      groupMentioned-help: Kada je omogućeno, novi korisnici će automatski dobivati e-mail obavijest kada se spomene grupa kojoj pripadaju.
+      followAfterReply-help: Kada je omogućeno, novi korisnici će automatski pratiti diskusije u kojima odgovore ili komentarišu.
+      postMentioned: E-pošta pri spominjanju objave
+      postMentioned-help: Kada je omogućeno, novi korisnici će automatski primati obavijest e-poštom kada se neka od njihovih objava spomene.
+      userMentioned: E-pošta pri @spominjanju korisnika
+      userMentioned-help: Kada je omogućeno, novi korisnici će automatski primati obavijest e-poštom kada ih se @spomene.
+      groupMentioned: E-pošta pri spominjanju grupe
+      groupMentioned-help: Kada je omogućeno, novi korisnici će automatski primati obavijest e-poštom kada se spomene grupa kojoj pripadaju.
