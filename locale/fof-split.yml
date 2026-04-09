@@ -1,0 +1,16 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: Odvoji objave iz diskusija
+    forum:
+        post:
+            was_split_to: "{count, plural, one {{count} objava je odvojena u {target}.} other {{count} objava je odvojeno u {target}.}}"
+            was_split_from: "{count, plural, one {{count} objava je odvojena iz {target}.} other {{count} objava je odvojeno iz {target}.}}"
+        split:
+            from: Odvoji od ovdje
+            to: Odvoji do ovdje
+            cancel: Otkaži odvajanje
+        modal:
+            title: Odvoji diskusiju
+            new_discussion_label: Navedite naslov za novu diskusiju
+            submit_button: Odvoji
