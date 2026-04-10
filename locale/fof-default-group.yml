@@ -1,0 +1,5 @@
+fof-default-group:
+  admin:
+    settings:
+      label: Zadana grupa
+      info: Ispod možete odabrati grupu koja će biti dodijeljena korisniku kada mu se račun aktivira.
