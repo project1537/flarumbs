@@ -336,6 +336,13 @@ core:
         no_readme: Čini se da ovo proširenje nema README datoteku
         title: "{extName} dokumentacija"
       replaced: Zamijenjeno
+      reset_settings:
+        button: Resetuj postavke
+        cancel_button: Otkaži
+        confirm_button: Resetuj
+        warning: "Ova radnja je nepovratna. Dolje navedene postavke bit će trajno obrisane iz baze podataka i vraćene na zadane vrijednosti. Podaci ovog proširenja neće biti uklonuti."
+        title: Resetuj postavke
+        title_extension: "Resetuj postavke za {extensionTitle}"
       safe_mode_warning: Sigurni način rada je trenutno aktivan. Proširenja nisu pokrenuta i njihove postavke stoga nisu dostupne.
 
     # These translations are used in the secondary header.
@@ -738,7 +745,7 @@ core:
       device_heading: Uređaj
       haptic_feedback_help: Dostupno samo na podržanim mobilnim uređajima
       haptic_feedback_label: Omogući haptičku povratnu informaciju
-      privacy_disclose_online_label: Dozvoli drugima da vide kada sam online
+      privacy_disclose_online_label: Dozvoli drugima da vide kada sam na mreži
       privacy_heading: Privatnost
       title: => core.ref.settings
 
@@ -1208,3 +1215,4 @@ core:
     members: Članovi
     mod: Moderator
     mods: Moderatori
+    
