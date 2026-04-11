@@ -1,0 +1,28 @@
+flarum-realtime:
+    forum:
+        push:
+            discussion-list-new-activity: "{count, plural, one {Prikaži {count} ažuriranu diskusiju} few {Prikaži {count} ažurirane diskusije} other {Prikaži {count} ažuriranih diskusija}}"
+            discussion-list-new-activity-with-auto-release: "{count, plural, one {{count} diskusija ima} few {{count} diskusije imaju} other {{count} diskusija ima}} novu aktivnost i bit će prikazana za {releaseTimeout} sekundi. Kliknite za prikaz odmah."
+        typing-indicator:
+            anonymous-user: "[Anonimni]"
+            people-are-typing: "{number, plural, one {{number} osoba piše} few {{number} osobe pišu} other {{number} osoba piše}}"
+            users-are-typing: "{count, plural, one {{users} piše} other {{users}{others, plural, =1 { i još {count} drugi} =0 {} other { i još {count} drugih}} pišu}}"
+            no-activity: Niko ne piše
+        user:
+            settings:
+                heading: Realtime
+                typing-indicator-type:
+                    help: Kada je omogućeno, indikator pisanja prikazuje korisnike koji trenutno pišu. Onemogućite ovo za prikaz samo broja korisnika koji trenutno pišu.
+                    label: Prikaži ko piše
+    admin:
+        permission:
+            view-who-types: Pregled ko piše
+        settings:
+            release-discussion-updates: Ažuriranja liste diskusija
+            release-discussion-updates-help: Kada je omogućeno, nove diskusije bit će gurnute u <code>DiscussionList</code> u definisanom intervalu ispod.
+            release-discussion-updates-interval: Interval automatskog guranja nove aktivnosti diskusija
+            release-discussion-updates-interval-help: U sekundama. 0 znači bez automatskog guranja.
+            notification-toast-dismiss-after: Trajanje obavijesti (toast)
+            notification-toast-dismiss-after-help: Koliko dugo (u sekundama) realtime toast obavijest ostaje na ekranu prije automatskog zatvaranja. Postavite na 0 za isključivanje toast obavijesti.
+            typing-indicator: Indikator pisanja
+            typing-indicator-help: Kada je omogućeno, uz odgovarajuću dozvolu, korisnici mogu vidjeti broj osoba koje trenutno pišu u diskusiji. Kada je onemogućeno, aktivnost pisanja se uklanja i iz sučelja i iz websocket payloada.
