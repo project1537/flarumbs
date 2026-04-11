@@ -1,0 +1,38 @@
+fof-pages:
+  admin:
+    edit_page:
+      content_label: => fof-pages.ref.content
+      content_placeholder: => fof-pages.ref.content
+      delete_page_button: Obriši stranicu
+      delete_page_confirmation: "Jeste li sigurni da želite obrisati ovu stranicu?"
+      hidden_label: Sačuvaj kao nacrt
+      restricted_label: Ograniči pristup (konfiguriši ko može pristupiti na kartici Dozvole)
+      html_label: Omogući HTML
+      set_as_home_page_confirmation: "Jeste li sigurni da želite postaviti ovu stranicu kao početnu?"
+      set_as_home_page_done: Početna stranica je ažurirana
+      slug_label: => fof-pages.ref.slug
+      slug_placeholder: => fof-pages.ref.slug
+      submit_button: => core.ref.save_changes
+      title: => fof-pages.ref.create_page
+      title_label: => fof-pages.ref.title
+      title_placeholder: => fof-pages.ref.title
+      url_label: => fof-pages.ref.url
+      url_placeholder: => fof-pages.ref.url
+    pages:
+      create_button: => fof-pages.ref.create_page
+    pages_list:
+      empty_text: Čini se da ovdje nema stranica.
+      title: => fof-pages.ref.title
+    permissions:
+      restricted: Pregled ograničenih stranica
+    badges:
+      hidden: Nacrt
+      restricted: Ograničeno
+
+  ref:
+    content: Sadržaj
+    create_page: Kreiraj stranicu
+    pages: Stranice
+    slug: Slug
+    title: Naslov
+    url: URL
