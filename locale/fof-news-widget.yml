@@ -1,0 +1,7 @@
+fof-news-widget:
+  admin:
+    settings:
+      add_line: Dodaj vijest
+      remove_line: Ukloni red
+      lines: Vijesti
+      html_warning: Molimo budite oprezni — sav HTML kôd bit će prikazan.
