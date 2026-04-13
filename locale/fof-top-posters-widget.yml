@@ -1,0 +1,11 @@
+fof-top-posters-widget:
+  admin:
+    settings:
+      info: Korisnici odabranih grupa bit će isključeni iz rezultata widgeta.
+  forum:
+    widget:
+      title: Najaktivniji ovaj mjesec
+  lib:
+    gambits:
+      top_poster:
+        key: top_poster
