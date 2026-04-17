@@ -1,0 +1,193 @@
+fof-polls:
+  admin:
+    settings:
+      general:
+        heading: Opće postavke
+        help: Ove postavke kontrolišu osnovne funkcije ekstenzije Ankete.
+      discussion_polls:
+        heading: Ankete u diskusijama
+        help: Ove postavke kontrolišu ankete koje su vezane za objave u diskusijama.
+      enable_discussion_polls: Omogući ankete u diskusijama
+      enable_discussion_polls_help: Kada je omogućeno, korisnici mogu kreirati ankete unutar diskusijskih objava. Onemogućite ovo ako želite koristiti samo globalne ankete.
+      global_polls:
+        heading: Globalne ankete
+        help: Ove postavke kontrolišu funkciju globalnih anketa.
+      image:
+        heading: Postavke slika
+        help: Konfigurirajte ograničenja veličine i dimenzije pri uploadu slika. Slike se automatski konvertuju u WebP format i generišu se responzivne varijante.
+      enable_global_polls: Omogući globalne ankete
+      enable_global_polls_help: Globalne ankete nisu vezane za određenu objavu i dostupne su s posebne stranice anketa.
+      enabled_poll_groups: Omogući grupe anketa
+      enabled_poll_groups_help: Grupe anketa omogućavaju grupiranje globalnih anketa i njihov prikaz na posebnoj stranici.
+      max_options: Maksimalni broj odgovora po anketi
+      options_color_blend: Miješanje boja teksta u odgovorima ankete
+      options_color_blend_help: Koristite ovo za miješanje boja radi bolje čitljivosti odgovora ankete. Onemogućite ako ova funkcija uzrokuje probleme s izgledom vašeg foruma.
+      max_image_upload_size: Maksimalna veličina uploada slike (KB)
+      max_image_upload_size_help: Maksimalna veličina fajla pri uploadu slika u kilobajtima. Slike se automatski konvertuju u WebP i mijenjaju veličinu nakon uploada, tako da će konačna pohranjena veličina biti znatno manja. Zadano je 10240 KB (10 MB).
+      image_height: Visina slike pri promjeni veličine (px)
+      image_width: Širina slike pri promjeni veličine (px)
+      image_dimensions_help: Osnovne dimenzije za pohranjene slike. HiDPI varijante (@2x, @3x) se generišu automatski kada je izvorna slika dovoljno velika.
+    permissions:
+      view_results_without_voting: Pregled rezultata bez glasanja
+      start: Pokretanje ankete
+      start_global: Pokretanje globalne ankete
+      self_edit: Uređivanje kreiranih anketa (zahtijeva dozvolu za uređivanje objava)
+      self_post_edit: Uređivanje *svih* anketa na vlastitim objavama (zahtijeva dozvolu za uređivanje objava)
+      upload_images: Dozvoli korisnicima upload slika za ankete
+      vote: Glasanje u anketama
+      change_vote: Promjena glasa
+      moderate: Uređivanje i uklanjanje anketa
+      view_group: Pregled grupa anketa
+      start_group: Kreiranje grupa anketa
+      moderate_group: Uređivanje i uklanjanje grupa anketa
+
+  forum:
+    days_remaining: Anketa završava {time}.
+    no_permission: Nemate dozvolu za glasanje
+    poll_ended: Ova anketa je završena.
+    public_poll: Prikaži glasače
+    max_votes_allowed: "{max, plural, one {Anketa dozvoljava glasanje za # odgovor} few {Anketa dozvoljava glasanje za # odgovora} other {Anketa dozvoljava glasanje za # odgovora}}."
+    polls_count: "{count, plural, one {{count} glas} few {{count} glasa} other {{count} glasova}}"
+    poll_never_ends: Anketa nema rok trajanja
+    answers: Odgovori
+
+    poll:
+      cannot_change_vote: Ne možete promijeniti glas nakon glasanja.
+      submit_button: Glasaj
+      start_poll_button: Pokreni globalnu anketu
+      cannot_start_poll_button: Pokretanje ankete nije moguće
+      total_votes: "{count, plural, one {Dat # glas} few {Dana # glasa} other {Dano # glasova}}"
+
+    poll_controls:
+      toggle_dropdown_accessible_label: Otvori izbornik kontrola ankete
+      edit_label: => core.ref.edit
+      delete_label: => core.ref.delete
+      view_label: => core.ref.view
+      delete_confirmation: Jeste li sigurni da želite obrisati ovu anketu?
+      delete_success_message: Anketa je uspješno obrisana.
+      delete_error_message: Došlo je do greške pri brisanju ankete.
+
+    poll_form:
+      delete: Obriši anketu
+      error: Došlo je do greške pri čuvanju ankete, molimo kontaktirajte administratora.
+
+    poll_groups:
+      composer:
+        add_title: Dodaj grupu anketa
+        edit_title: Uredi grupu anketa
+        save_changes: => core.ref.save_changes
+        delete: Obriši grupu anketa
+        groups_manager: Upravljanje grupama anketa
+        view_group: Prikaži grupu anketa
+        success: Grupa anketa je uspješno sačuvana.
+
+      list_page:
+        title: Grupe anketa
+        start_poll_group_button: Pokreni grupu anketa
+        cannot_start_poll_group_button: Pokretanje grupe anketa nije moguće
+        empty_text: Čini se da ovdje nema grupa anketa.
+        load_more_button: => core.ref.load_more
+        no_polls: U ovoj grupi nema anketa.
+        add_poll_button: Dodaj anketu u grupu
+
+      controls:
+        add_poll_label: Dodaj anketu
+        edit_label: => core.ref.edit
+        view_label: Prikaži grupu anketa
+        delete_label: => core.ref.delete
+        delete_confirmation: Jeste li sigurni da želite obrisati ovu grupu anketa?
+        delete_success_message: Grupa anketa je uspješno obrisana.
+        delete_error_message: Došlo je do greške pri brisanju grupe anketa.
+
+    polls_page:
+      title: Ankete
+
+    polls_list:
+      empty_text: Čini se da ovdje nema globalnih anketa zajednice.
+      load_more_button: => core.ref.load_more
+      sort_dropdown:
+        newest: Najnovije
+        oldest: Najstarije
+        most_voted: Najviše glasova
+        least_voted: Najmanje glasova
+        sort_dropdown.default: => fof-polls.forum.polls_list.sort_dropdown.newest
+
+    composer_discussion:
+      add_poll: => fof-polls.forum.moderation.add
+      edit_poll: => fof-polls.forum.moderation.edit
+      no_permission_alert: Nemate dozvolu za pokretanje ankete.
+
+    compose:
+      add_title: Dodaj anketu
+      edit_title: Uredi anketu
+      polls_manager: Upravljanje anketama
+      polls_preview: Prikaži anketu
+      continue_editing: Nastavi uređivanje
+      success: Anketa je uspješno sačuvana.
+
+    modal:
+      add_title: Dodaj anketu
+      add_option_label: Dodaj odgovor
+      date_placeholder: Datum završetka ankete (opcionalno)
+      edit_title: Uredi anketu
+      include_question: Morate unijeti pitanje
+      max: Možete imati najviše {max} odgovora
+      min: Morate unijeti najmanje 2 odgovora
+      no_voters: Nema glasova
+      option_placeholder: Odgovor
+      image_option_placeholder: URL slike (opcionalno)
+      options_label: Odgovori
+      public_poll_label: Dozvoli korisnicima da vide ko je glasao
+      allow_multiple_votes_label: Dozvoli korisnicima glasanje za više odgovora
+      max_votes_label: Maksimalan broj glasova po korisniku
+      max_votes_help: Postavite na 0 da dozvolite glasanje za sve odgovore.
+      hide_votes_label: Sakrij glasove dok anketa ne završi
+      hide_votes_label_help: Korisnik koji je pokrenuo anketu uvijek može vidjeti glasove.
+      allow_change_vote_label: Dozvoli korisnicima promjenu glasa
+      question_placeholder: Pitanje
+      subtitle_placeholder: Podnaslov/Opis (opcionalno)
+      submit: Pošalji
+      delete: => core.ref.delete
+      error: => core.lib.error.generic_message
+      poll_image:
+        label: Slika ankete
+        help: Uploadajte sliku za prikaz uz anketu (opcionalno).
+        alt_label: Alternativni tekst slike
+        alt_help_text: Ovaj tekst je obavezan kada je postavljena slika — prikazuje se ako slika ne uspije učitati.
+        url_deprecated: Ova anketa koristi vanjski URL slike. Vanjski URL-ovi su zastarjeli i bit će uklonjeni u budućoj verziji. Molimo ponovo uploadajte sliku putem dugmeta za upload.
+      poll_option_image:
+        label: Slika odgovora ankete
+        help: Uploadajte sliku za prikaz uz odgovor ankete (opcionalno).
+      date_clear: Ukloni datum završetka
+      tooltip:
+        options:
+          add-button: Dodaj odgovor
+          remove-button: Ukloni odgovor
+
+    moderation:
+      add: Dodaj anketu
+      delete: Ukloni anketu
+      delete_confirm: Jeste li sigurni da želite obrisati ovu anketu?
+      edit: Uredi anketu
+
+    page:
+      nav: Ankete
+      nav-all: Sve globalne ankete
+      nav-groups: Grupe anketa
+
+    showcase:
+      active-polls: Aktivne ankete
+      ended-polls: Završene ankete
+      no-active-polls: Trenutno nema aktivnih anketa.
+      no-recent-polls: Trenutno nema nedavno završenih anketa.
+
+    tooltip:
+      badge: Anketa
+      votes: "{count, plural, one {# glas} few {# glasa} other {# glasova}}"
+
+    votes_modal:
+      title: Glasači
+
+    upload_image:
+      remove_button: Obriši sliku
+      upload_button: Uploadaj sliku
