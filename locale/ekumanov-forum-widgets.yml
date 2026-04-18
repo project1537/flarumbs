@@ -1,9 +1,9 @@
 ekumanov-forum-widgets:
   forum:
     online_users:
-      title: Korisnici na mreži
-      empty: Trenutno nema korisnika na mreži.
-      hidden_users: skriveno
+      title: Korisnici online
+      empty: Trenutno nema korisnika online.
+      hidden_users: skriveni
       overflow_more: više
     stats:
       title: Statistike foruma
@@ -14,59 +14,65 @@ ekumanov-forum-widgets:
       tooltip_discussions: Diskusije
       tooltip_posts: Objave
       tooltip_users: Korisnici
-      tooltip_online: Korisnici na mreži
-      label_discussions: "{count, plural, one {diskusija} other {diskusija}}"
-      label_posts: "{count, plural, one {objava} other {objava}}"
-      label_users: "{count, plural, one {korisnik} other {korisnika}}"
-      label_online: "{count, plural, one {korisnik na mreži} other {korisnika na mreži}}"
+      tooltip_online: Korisnici online
+      label_discussions: "{count, plural, one {diskusija} few {diskusije} other {diskusija}}"
+      label_posts: "{count, plural, one {objava} few {objave} other {objava}}"
+      label_users: "{count, plural, one {korisnik} few {korisnika} other {korisnika}}"
+      label_online: "{count, plural, one {korisnik online} few {korisnika online} other {korisnika online}}"
       tooltip_latest_registration: "Posljednja registracija: {name}"
     aria:
       expand_details: Prikaži detalje foruma
       collapse_details: Sakrij detalje foruma
       details_panel: Detalji foruma
-      overflow_users: "{count} više korisnika na mreži"
+      overflow_users: "Još {count} korisnika online"
 
   admin:
     settings:
-      widget_layout: Raspored widgeta
-      widget_layout_help: "Klasično: kompaktan widget u bočnoj traci. Puna širina: jednoredan bar iznad liste diskusija."
+      widget_layout: Izgled widgeta
+      widget_layout_help: "Klasično: kompaktni widget u bočnoj traci. Puna širina: jednoredan bar iznad liste diskusija."
       widget_layout_classic: Bočna traka (klasično)
       widget_layout_full_width: Puna širina (iznad diskusija)
       bar_position_desktop: Pozicija bara (desktop)
-      bar_position_desktop_help: "Gdje postaviti statistički bar na desktopu u odnosu na alatnu traku. Primjenjuje se samo na raspored pune širine."
-      bar_position_mobile: Pozicija bara (mobilni)
-      bar_position_mobile_help: "Gdje postaviti statistički bar na mobilnim uređajima u odnosu na alatnu traku."
+      bar_position_desktop_help: "Gdje smjestiti statistički bar na desktopu u odnosu na alatnu traku. Primjenjuje se samo na izgled pune širine."
+      bar_position_mobile: Pozicija bara (mobilni uređaji)
+      bar_position_mobile_help: "Gdje smjestiti statistički bar na mobilnim uređajima u odnosu na alatnu traku."
       bar_position_above: Iznad alatne trake
       bar_position_inside: Unutar alatne trake
       bar_position_below: Ispod alatne trake
       widget_position: Pozicija widgeta u bočnoj traci (prioritet)
-      widget_position_help: "Kontroliše gdje se widget prikazuje u bočnoj traci. Niže (negativnije) vrijednosti pomjeraju ga prema dnu. Zadano: -10. Primjenjuje se samo na raspored s bočnom trakom."
+      widget_position_help: "Kontroliše gdje se widget pojavljuje u bočnoj traci. Niže (negativnije) vrijednosti ga postavljaju niže. Zadano: -10. Primjenjuje se samo na izgled bočne trake."
 
-      section_online_users: Korisnici na mreži
-      section_online_users_help: Konfigurišite prikaz korisnika na mreži u proširenom panelu widgeta.
-      show_online_users: Prikaži korisnike na mreži
-      show_online_users_help: Omogućite ili onemogućite funkciju korisnika na mreži u cijelosti. Kada je onemogućeno, neće se izvršavati upiti za korisnike na mreži.
-      max_online_users: Maksimalan broj korisnika na mreži za prikaz
-      max_online_users_help: "Maksimalan broj avatara prikazanih za obične korisnike. Korisnici iznad ovog broja prikazuju se kao indikator '+N više'. Veće vrijednosti povećavaju veličinu predmemorije i API opterećenje. Preporučeno: 10-20."
-      max_online_users_privileged: Maksimalan broj korisnika na mreži za prikaz (privilegovani)
-      max_online_users_privileged_help: "Maksimalan broj avatara prikazanih za privilegovane korisnike (one s dozvolom 'Uvijek prikaži kada je korisnik posljednji put viđen' — tipično administratori i moderatori). Budući da ova predmemorija služi manjem broju korisnika, može sigurno sadržavati više unosa. Preporučeno: 30-50."
-      last_seen_interval: Interval posljednjeg pojavljivanja (minute)
-      last_seen_interval_help: Koliko minuta od posljednje aktivnosti da se korisnik smatra aktivnim na mreži.
-      online_users_cache_ttl: Trajanje predmemorije korisnika na mreži (sekunde)
-      online_users_cache_ttl_help: "Koliko dugo predmemorirati listu korisnika na mreži. Održavaju se dvije odvojene predmemorije: jedna za privilegovane korisnike (one s dozvolom 'Uvijek prikaži kada je korisnik posljednji put viđen', koji mogu vidjeti i skrivene korisnike) i jedna za obične korisnike. Svaka predmemorija poštuje vlastito ograničenje maksimalnog prikaza."
+      section_online_users: Korisnici online
+      section_online_users_help: Konfigurirajte prikaz korisnika online u proširenom panelu widgeta.
+      show_online_users: Prikaži korisnike online
+      show_online_users_help: Potpuno omogući ili onemogući funkciju korisnika online. Kada je onemogućeno, neće se izvršavati nikakvi upiti o korisnicima online.
+      max_online_users: Maksimalan broj korisnika online za prikaz
+      max_online_users_help: "Maksimalan broj avatara za obične korisnike. Korisnici iznad ovog broja prikazuju se kao indikator \"+N više\". Veće vrijednosti povećavaju veličinu keša i API payload. Preporučeno: 10–20."
+      max_online_users_privileged: Maksimalan broj korisnika online za prikaz (privilegovani)
+      max_online_users_privileged_help: "Maksimalan broj avatara za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\" — obično administratori i moderatori). Budući da ovaj keš opslužuje manji broj korisnika, može sigurno pohraniti više unosa. Preporučeno: 30–50."
+      last_seen_interval: Interval posljednje aktivnosti (minute)
+      last_seen_interval_help: Koliko minuta od posljednje aktivnosti korisnik se smatra online.
+      online_users_cache_ttl: Trajanje keša korisnika online (sekunde)
+      online_users_cache_ttl_help: "Koliko dugo keširati listu korisnika online. Održavaju se dva odvojena keša: jedan za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\", koji mogu vidjeti i skrivene korisnike) i jedan za obične korisnike. Svaki keš poštuje vlastito ograničenje maksimalnog prikaza."
 
       section_statistics: Statistike foruma
-      section_statistics_help: Konfigurišite predmemoriranje za broj diskusija, objava, ukupan broj korisnika i statistike posljednje registracije.
+      section_statistics_help: Konfigurirajte keširanje za broj diskusija, objava, ukupan broj korisnika i statistiku posljednje registracije.
       show_discussions_count: Prikaži broj diskusija
       show_posts_count: Prikaži broj objava
       show_users_count: Prikaži broj korisnika
       show_latest_registration: Prikaži posljednju registraciju
-      stats_cache_duration: Trajanje predmemorije statistika (sekunde)
-      stats_cache_duration_help: "Koliko dugo predmemorirati broj diskusija, objava, ukupan broj korisnika i posljednju registraciju. Predmemorija se automatski poništava kada se diskusije, objave ili korisnici kreiraju ili brišu. Postavite na 0 da onemogućite predmemoriranje (nije preporučeno za velike forume)."
-      ignore_private_discussions: Ignoriši privatne diskusije u broju
+      stats_cache_duration: Trajanje keša statistika (sekunde)
+      stats_cache_duration_help: "Koliko dugo keširati broj diskusija, objava, ukupan broj korisnika i posljednju registraciju. Keš se automatski poništava kada se kreiraju ili brišu diskusije, objave ili korisnici. Postavite na 0 za isključivanje keširanja (nije preporučeno za velike forume)."
+      ignore_private_discussions: Ignoriši privatne diskusije u brojanju
+      show_toggle: Prikaži dugme za proširivanje/skupljanje
+      show_toggle_help: "Određuje da li se prikazuje dugme sa strelicom za proširivanje/skupljanje panela s detaljima. Kada je onemogućeno, panel se i dalje može otvoriti klikom na bar (način rada punog bara) ili na polje korisnika online (način rada online polja)."
+      expanded_panel_width: Širina proširenog panela (desktop)
+      expanded_panel_width_help: "Puni bar: panel se proteže kroz punu širinu bara, klik bilo gdje na baru proširuje panel. Online polje: panel se pojavljuje samo ispod broja korisnika online, klik na polje korisnika online proširuje panel."
+      expanded_panel_width_full_bar: Puna širina bara
+      expanded_panel_width_online_cell: Samo polje korisnika online
     permissions:
-      view_online_users: Pregledaj korisnike na mreži
-      view_discussions_count: Pregledaj broj diskusija
-      view_posts_count: Pregledaj broj objava
-      view_users_count: Pregledaj broj korisnika
-      view_latest_registration: Pregledaj posljednju registraciju
+      view_online_users: Pregled korisnika online
+      view_discussions_count: Pregled broja diskusija
+      view_posts_count: Pregled broja objava
+      view_users_count: Pregled broja korisnika
+      view_latest_registration: Pregled posljednje registracije
