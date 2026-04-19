@@ -588,8 +588,8 @@ core:
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
       profile_button: Profil
-      search_placeholder: Pretraži forum
-      search_role_label: Pretraži forum
+      search_placeholder: Pretraživanje...
+      search_role_label: Pretraživanje...
       session_dropdown_accessible_label: Prikaži/sakrij padajući izbornik opcija sesije
       settings_button: => core.ref.settings
       sign_up_link: => core.ref.sign_up
