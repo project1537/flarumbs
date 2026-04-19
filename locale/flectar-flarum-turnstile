@@ -1,0 +1,16 @@
+flectar-turnstile:
+  admin:
+    settings:
+      help_text: Generišite Turnstile ključeve na svom Cloudflare računu <a>ovdje</a>.
+      site_key: Ključ stranice
+      secret_key: Tajni ključ
+      signup: => core.forum.sign_up.title
+      signin: => core.forum.log_in.title
+      forgot: => core.forum.forgot_password.title
+  forum:
+    not_loaded_error: Cloudflare Turnstile se nije uspio učitati. Osvježite stranicu i provjerite vaš blokator reklama.
+    validation_error: Molimo završite Turnstile provjeru.
+    error: Došlo je do greške pri provjeri da ste čovjek. Molimo pokušajte ponovo.
+validation:
+  turnstile: Nismo mogli potvrditi jeste li robot ili ne. Osvježite stranicu i pokušajte ponovo.
+  required: Molimo završite Turnstile provjeru.
