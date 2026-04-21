@@ -1,0 +1,7 @@
+fof-photoswipe:
+  forum:
+    close_title: Zatvori
+    zoom_title: Zumiraj
+    arrow_prev_title: Prethodna
+    arrow_next_title: Sljedeća
+    error_msg: Slika se ne može učitati
