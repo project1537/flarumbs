@@ -1,0 +1,26 @@
+michaelbelgium-ai-autoreply:
+  admin:
+    settings:
+      platform_label: Platforma
+      platform_help: "Odaberite AI platformu."
+      api_key_label: API ključ
+      api_key_help: Nabavite API ključ na <a>{platform}</a>.
+      model_label: Model
+      model_help: "Saznajte više o <a>{platform} modelima</a> (zadano: <code>{model}</code>)."
+      max_tokens_label: Maks. tokena
+      max_tokens_help: <a>Što su tokeni i kako ih brojati?</a>
+      temperature_label: Temperatura
+      temperature_help: Kontroliše nasumičnost. Raspon je obično između 0 i 2, ali neke platforme imaju drugačije raspone.
+      user_prompt_label: Korisnički asistent
+      user_prompt_help: Unesite ID korisnika koji će se koristiti za generiranje AI odgovora.
+      system_prompt_label: Sistemski prompt
+      system_prompt_help: Pružite kontekst i upute asistentu, npr. navedite konkretan cilj ili ulogu.
+      system_prompt_placeholder: Vi ste koristan asistent na Flarum forumu.
+      user_prompt_badge_label: Oznaka korisničkog asistenta
+      user_prompt_badge_help: Tekst koji će se prikazivati ispod korisnika asistenta.
+      enable_on_discussion_started_label: Omogući pri pokretanju diskusije
+      enable_on_discussion_started_help: Kada je omogućeno, AI odgovara samo pri pokretanju diskusije. Kada je onemogućeno, diskusija postaje razgovor između pokretača i asistenta — asistent odgovara na svaku pokretačevu objavu.
+      enabled_tags_label: Oznake
+      enabled_tags_help: Odaberite u kojim oznakama će asistent generirati odgovore.
+    permissions:
+      use_chatgpt_assistant_label: Koristi AI asistenta
