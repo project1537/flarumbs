@@ -5,6 +5,7 @@ ekumanov-forum-widgets:
       empty: Trenutno nema korisnika online.
       hidden_users: skriveni
       overflow_more: više
+      guests: "{count, plural, one {gost} few {gosta} other {gostiju}}"
     stats:
       title: Statistike foruma
       discussions_count: "Diskusije: {count}"
@@ -19,6 +20,7 @@ ekumanov-forum-widgets:
       label_posts: "{count, plural, one {objava} few {objave} other {objava}}"
       label_users: "{count, plural, one {korisnik} few {korisnika} other {korisnika}}"
       label_online: "{count, plural, one {korisnik online} few {korisnika online} other {korisnika online}}"
+      label_online_over_total: "{online} online od ukupno {total} korisnika"
       tooltip_latest_registration: "Posljednja registracija: {name}"
     aria:
       expand_details: Prikaži detalje foruma
@@ -39,6 +41,7 @@ ekumanov-forum-widgets:
       bar_position_above: Iznad alatne trake
       bar_position_inside: Unutar alatne trake
       bar_position_below: Ispod alatne trake
+      bar_position_above_footer: Iznad podnožja
       widget_position: Pozicija widgeta u bočnoj traci (prioritet)
       widget_position_help: "Kontroliše gdje se widget pojavljuje u bočnoj traci. Niže (negativnije) vrijednosti ga postavljaju niže. Zadano: -10. Primjenjuje se samo na izgled bočne trake."
 
@@ -46,14 +49,16 @@ ekumanov-forum-widgets:
       section_online_users_help: Konfigurirajte prikaz korisnika online u proširenom panelu widgeta.
       show_online_users: Prikaži korisnike online
       show_online_users_help: Potpuno omogući ili onemogući funkciju korisnika online. Kada je onemogućeno, neće se izvršavati nikakvi upiti o korisnicima online.
-      max_online_users: Maksimalan broj korisnika online za prikaz
-      max_online_users_help: "Maksimalan broj avatara za obične korisnike. Korisnici iznad ovog broja prikazuju se kao indikator \"+N više\". Veće vrijednosti povećavaju veličinu keša i API payload. Preporučeno: 10–20."
-      max_online_users_privileged: Maksimalan broj korisnika online za prikaz (privilegovani)
-      max_online_users_privileged_help: "Maksimalan broj avatara za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\" — obično administratori i moderatori). Budući da ovaj keš opslužuje manji broj korisnika, može sigurno pohraniti više unosa. Preporučeno: 30–50."
       last_seen_interval: Interval posljednje aktivnosti (minute)
-      last_seen_interval_help: Koliko minuta od posljednje aktivnosti korisnik se smatra online.
+      last_seen_interval_help: "Koliko minuta od posljednje aktivnosti korisnik se smatra online. Zadano: 5, što je usklađeno s heartbeat prisutnošću (omogućena prema zadanim postavkama) — heartbeat osvježava aktivnost za korisnike s otvorenom i fokusiranom karticom, tako da aktivni korisnici neće ispasti offline. Ako onemogućite heartbeat, povećajte ovu vrijednost na 10 ili više kako biste spriječili nestajanje korisnika usred sesije."
       online_users_cache_ttl: Trajanje keša korisnika online (sekunde)
-      online_users_cache_ttl_help: "Koliko dugo keširati listu korisnika online. Održavaju se dva odvojena keša: jedan za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\", koji mogu vidjeti i skrivene korisnike) i jedan za obične korisnike. Svaki keš poštuje vlastito ograničenje maksimalnog prikaza."
+      online_users_cache_ttl_help: "Koliko dugo keširati listu korisnika online. Održavaju se dva odvojena keša: jedan za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\", koji mogu vidjeti i skrivene korisnike) i jedan za sve ostale."
+      enable_heartbeat: Omogući heartbeat prisutnosti
+      enable_heartbeat_help: "Kada je omogućeno, svaka otvorena i fokusirana kartica foruma šalje mali pozadinski ping. Za prijavljene korisnike to osvježava indikator \"online\" dok čitaju ili pišu bez navigacije između stranica (npr. tokom dugog odgovora putem realtime ekstenzije); za goste (kada je brojanje gostiju uključeno) na taj način se prikuplja broj gostiju. Opterećenje servera je zanemarivo — oba toka ograničavaju pisanje na strani servera, bez obzira na broj otvorenih kartica. Onemogućite ako ne želite nikakav pozadinski saobraćaj."
+      show_online_guests: Prikaži goste online
+      show_online_guests_help: "Kada je omogućeno, prikazuje se okvirni broj neprijavljenih posjetilaca u proširenom panelu kao kružić s tačkicama ispod skrivenih korisnika. Svaka kartica gosta pinguje mali endpoint koji bilježi hash IP adrese i User-Agenta posjetioca u kratkovječnu mapu prisutnosti; broj je broj jedinstvenih otisaka viđenih unutar \"intervala posljednje aktivnosti\". Brojanje je okvirno — posjetioci iza dijeljenog NAT-a broje se kao jedan, mobilni korisnici s rotacionim IP adresama mogu biti prebrojan. Na pregledaču posjetioca se ne pohranjuje nikakav trajni identifikator."
+      include_guests_in_total: Uključi goste u ukupan broj online
+      include_guests_in_total_help: "Kada je omogućeno, broj prikazan u baru (i u zaglavlju sekcije unutar proširenog panela) zbraja prijavljene članove i goste. Redovi s detaljima u proširenom panelu i dalje prikazuju svaku komponentu zasebno. Onemogućite kako bi broj u baru odražavao samo prijavljene članove."
 
       section_statistics: Statistike foruma
       section_statistics_help: Konfigurirajte keširanje za broj diskusija, objava, ukupan broj korisnika i statistiku posljednje registracije.
