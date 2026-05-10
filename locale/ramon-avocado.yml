@@ -1,0 +1,299 @@
+ramon-avocado:
+  admin:
+    loading: "Učitavanje…"
+    search_tags: "Pretraži oznake…"
+    settings:
+      # Sections
+      section_homepage: Početna stranica
+      section_auth: Prijava i registracija
+      section_search: Pretraga
+      section_posts: Objave
+      section_logo: Logo
+      section_footer: Podnožje
+      section_colored: Obojeni akcenti
+      section_team: Stranica tima
+      section_hero_image_tags: Naslovna slika u diskusijama
+
+      # Featured / categories on homepage
+      featured_tags_label: Izdvojene kategorije
+      featured_tags_help: Odabrane kategorije prikazuju se istaknuto sa zvjezdičnom oznakom na početnoj stranici i stranici kategorija.
+      featured_tags_empty: Nema pronađenih oznaka.
+      tag_picker_placeholder: "Odaberite oznake…"
+
+      # Showcase / portfolio
+      showcase_enabled_label: Omogući sekciju Istaknuto / Portfolio
+      showcase_enabled_help: Prikazuje slider istaknutog sadržaja na početnoj stranici s diskusijama iz odabranih oznaka.
+      showcase_tag_label: Oznake za Istaknuto / Portfolio
+      showcase_tag_help: Diskusije s ovih oznaka pojavljuju se u slideru istaknutog sadržaja na početnoj stranici.
+      showcase_heading_label: Naslov sekcije Istaknuto
+      showcase_heading_help: Prilagođeni naslov za sekciju istaknutog sadržaja. Ostavite prazno za korištenje zadanog.
+      showcase_count_label: Broj stavki u sekciji Istaknuto
+      showcase_count_help: Prikaži 1 do 5 kartica diskusija u sekciji istaknutog sadržaja.
+      showcase_image_style_label: Stil slike kartice
+      showcase_image_style_help: Odaberite između kompaktnog i prikaza slike pune visine.
+      showcase_image_style_default: Zadano (kompaktno)
+      showcase_image_style_full: Puna slika
+
+      # Section title overrides
+      section_titles_heading: Naslovi sekcija
+      section_titles_help: Zamijenite naslove sekcija početne stranice. Ostavite polje prazno za korištenje zadanih vrijednosti jezičnog paketa.
+      categories_heading_label: Naslov sekcije kategorija
+      popular_heading_label: Naslov sekcije popularnih diskusija
+      following_heading_label: Naslov sekcije praćenih diskusija
+
+      # Online users
+      show_online_users_label: Prikaži broj korisnika online
+      show_online_users_help: Prikazuje broj trenutno online korisnika.
+      show_online_count_label: Prikaži tekst broja online
+      show_online_count_help: 'Prikazuje oznaku "X online" pored avatara korisnika online.'
+
+      # Auth & banner
+      auth_image_label: Slika modalnog prozora za prijavu
+      auth_image_help: Pozadinska slika prikazana u desnom panelu modalnih prozora za prijavu, registraciju i zaboravljenu lozinku.
+      banner_image_label: Slika bannera
+      banner_image_help: Uploadajte sliku hero bannera prikazanu na vrhu foruma.
+      show_auth_buttons_label: Prikaži dugmad za prijavu i registraciju u zaglavlju za goste
+      show_auth_buttons_help: Prikazuje dugmad Prijava i Registracija u sekundarnoj navigaciji zaglavlja za goste.
+      show_guest_cta_label: Prikaži poziv na akciju za goste
+      show_guest_cta_help: Prikazuje poruku s pozivom na akciju za goste.
+      hero_image_position_label: Pozicija naslovne slike
+      hero_image_position_help: "Vrijednost CSS background-position, npr. 'center top' ili '50% 20%'."
+
+      # Custom hero (HTML)
+      custom_hero_enabled_label: Koristi prilagođeni hero sadržaj (HTML)
+      custom_hero_enabled_help: "Zamijenite zadani hero sadržaj (ikona, naslov, opis, dugmad Prijava/Registracija) vlastitim HTML-om. Omotač hero bannera, pozadinska slika i prekrivač ostaju netaknuti. Prikazuje se samo gostima — isto kao zadani hero."
+      custom_hero_html_label: Prilagođeni hero HTML
+      custom_hero_html_help: "HTML ubačen unutar prekrivača hero bannera (zamjenjuje .AvocadoHome-heroBannerContent). Podržani su inline <style> tagovi."
+
+      # Search
+      search_v1_label: Omogući V1 stil trake za pretragu
+      search_v1_help: Prikazuje inline padajući izbornik pretrage umjesto V2 modalnog prozora.
+
+      # Posts
+      show_share_label: Prikaži dugme Podijeli na objavama
+      show_share_help: Dodaje dugme akcije Podijeli na svaku objavu.
+      show_action_icons_label: Prikaži ikone na dugmadima Sviđa mi se i Odgovori
+      show_action_icons_help: Prikazuje Font Awesome ikone na dugmadima akcija Sviđa mi se i Odgovori.
+      fixed_avatar_effect_label: Omogući efekt fiksiranog avatara
+      fixed_avatar_effect_help: Zadržava avatar objave fiksniranim pri čitanju dugih komentara na desktopu.
+      threads_style_label: Omogući izgled diskusije u stilu Threads aplikacije
+      threads_style_help: Prikazuje prvu objavu (OP) kao karticu, a odgovori su uvučeni s lijevom ivicom, poput Threads aplikacije.
+
+      # Discussion hero decoration icon
+      hero_decoration_icon_label: Prikaži ikonu sekundarne oznake na hero sekciji diskusije
+      hero_decoration_icon_help: Prikazuje ikonu sekundarne oznake kao veliki dekorativni element na desnoj strani zaglavlja diskusije.
+      hero_decoration_icon_opacity_label: Prozirnost ikone (0–100)
+      hero_decoration_icon_opacity_help: Postavite prozirnost dekorativne ikone u procentima. 100 = potpuno neprozirna, 0 = nevidljiva.
+      hero_decoration_icon_count_label: Broj dekorativnih ikona
+      hero_decoration_icon_count_help: 1 ikona koristi prvu podoznaku. 2 ikone prikazuju i ikonu druge podoznake, pomjerenu ulijevo.
+      hero_decoration_icon_count_one: 1 ikona (prva podoznaka)
+      hero_decoration_icon_count_two: 2 ikone (prva i druga podoznaka)
+      hero_deco_divider_label: Prikaži razdjelnik između dekorativnih ikona
+      hero_deco_divider_help: Prikazuje ikonu u razmaku između dvije dekorativne ikone (npr. simbol "vs" za sportske stranice).
+      hero_deco_divider_icon_label: Klasa ikone razdjelnika
+      hero_deco_divider_icon_help: 'Font Awesome klasa za ikonu razdjelnika, npr. "fas fa-times" ili "fas fa-circle".'
+
+      # Colored accents
+      colored_enabled_label: Omogući obojene akcente
+      colored_enabled_help: Primjenjuje boju aktivne oznake ili diskusije na primarna dugmad, veze i druge UI akcente po forumu.
+      colored_border_style_label: Stil ivice kartice diskusije
+      colored_border_style_help: Dodaje obojenu ivicu karticama diskusija koristeći boju primarne oznake.
+      colored_border_style_none: Bez ivice
+      colored_border_style_left: Lijeva ivica
+      colored_border_style_full: Cijela ivica
+
+      # Post CTA
+      show_post_cta_label: Prikaži poziv na registraciju nakon prve objave za goste
+      show_post_cta_help: Prikazuje karticu s dugmadima Prijava/Registracija nakon prve objave u diskusiji, vidljivu samo gostima.
+      post_cta_position_label: Pozicija poziva na akciju (nakon koje objave)
+      post_cta_position_help: Ubacuje banner s pozivom na akciju između navedene objave i sljedeće.
+      post_cta_position_1: "Nakon objave #1"
+      post_cta_position_2: "Nakon objave #2"
+      post_cta_position_3: "Nakon objave #3"
+      post_cta_position_4: "Nakon objave #4"
+      post_cta_position_5: "Nakon objave #5"
+
+      # Logo
+      logo_svg_label: SVG logo
+      logo_svg_help: Uploadajte prilagođeni SVG logo za vaš forum.
+      logo_enabled_label: Omogući prilagođeni logo
+      logo_enabled_help: Prikazuje prilagođeni logo u zaglavlju.
+
+      # Loading spinner
+      custom_loading_spinner_label: Prilagođeni indikator učitavanja
+      custom_loading_spinner_help: Zamijenite zadani tekstualni indikator učitavanja animiranim SVG spinnerom.
+      loading_spinner_style_label: Stil spinnera
+      spinner_custom_code_label: Prilagođeni kod spinnera
+      spinner_custom_code_help: Zalijepite bilo koji SVG ili HTML koji će se koristiti kao indikator učitavanja.
+
+      # Links / avatar
+      hide_links_for_guests_label: Sakrij veze za goste
+      hide_links_for_guests_help: Sprečava goste da prate veze u objavama. Klik na vezu prikazuje prompt za prijavu/registraciju.
+      custom_default_avatar_label: Prilagođeni zadani avatar
+      custom_default_avatar_help: Uploadajte prilagođenu sliku zadanog avatara za korisnike bez avatara.
+
+      # Hero image on discussions (per-tag opt-in)
+      hero_image_tags_label: Oznake koje traže naslovnu sliku
+      hero_image_tags_help: "Kada korisnik doda jednu od ovih oznaka u novu diskusiju, composer otkriva opcionalno polje za upload slike. Uploadana slika prikazuje se kao pozadina zaglavlja diskusije i kao prva slika u slideru istaknutog sadržaja na početnoj stranici."
+
+      # Team page
+      team_enabled_label: Omogući stranicu tima
+      team_enabled_help: Prikazuje stranicu /team s popisom članova odabranih grupa.
+      team_title_label: Naslov stranice
+      team_desc_label: Opis stranice
+      team_desc_placeholder: Upoznajte ljude iza zajednice.
+      team_groups_label: Grupe za prikaz
+      team_groups_help: Članovi odabranih grupa bit će prikazani na stranici tima.
+      team_groups_empty: Nema pronađenih grupa.
+    footer_settings:
+      footer_enabled: Omogući prilagođeno podnožje
+      footer_company: Informacije o organizaciji
+      footer_company_name: Naziv organizacije
+      footer_company_description: Opis organizacije
+      footer_company_description_placeholder: "Kratki opis vaše organizacije ili foruma…"
+      footer_company_logo_url: URL loga organizacije
+      footer_links_config: Konfiguracija veza u podnožju
+      footer_links_help_json: "Konfigurirajte kolone veza u podnožju u JSON formatu. Svaka kolona treba imati naslov i listu veza s oznakom i URL-om."
+      footer_footer_bottom: Dno podnožja
+      footer_copyright_text: Tekst autorskih prava
+      footer_social: Veze na društvene mreže
+      footer_show_social: Prikaži veze na društvene mreže
+      footer_social_help_json: "Konfigurirajte veze na društvene mreže u JSON formatu. Koristite ključeve: facebook, twitter, linkedin, instagram, youtube."
+  forum:
+    actions:
+      share: Podijeli
+    post_cta:
+      text: "Sviđa vam se ono što vidite? Pridružite se diskusiji!"
+      or: "ili"
+    link_cta:
+      placeholder: "Prijavite se za pregled veze"
+    search:
+      title: "Pretraga"
+      placeholder: "Pretraži…"
+      placeholder_hero: "Pretraži forum…"
+      hero_title: "Što tražite?"
+      hero_sub: "Pretražujte diskusije, objave i članove"
+      tab_discussions: Diskusije
+      tab_posts: Objave
+      tab_users: Korisnici
+      search_button: Pretraži
+      clear: Obriši
+      sort_relevance: Relevantnost
+      sort_latest: Najnovije
+      sort_top: Najpopularnije
+      sort_newest: Najnovije
+      sort_oldest: Najstarije
+      no_posts_found: "Nisu pronađene objave za \"{q}\"."
+      no_posts_match: "Nema objava koje odgovaraju ovim filterima."
+      no_users_found: "Nisu pronađeni korisnici za \"{q}\"."
+      no_discussions_query: "Nisu pronađene diskusije za \"{q}\"."
+      no_discussions_filter: "Nema diskusija koje odgovaraju ovim filterima."
+      enter_search_term: "Unesite pojam za pretragu korisnika."
+      posts_for: "Objave za"
+      posts_filtered_by: "Objave filtrirane po"
+      posts_title: "Pretraga objava"
+      filtered_by: "Filtrirano po"
+      results: "Rezultati pretrage"
+      results_for: "Rezultati za"
+      tip: "Savjet: koristite prefiks "
+      tip_suffix: " za filtriranje po oznaci"
+    header:
+      back: Nazad
+      back_home: Nazad na početnu
+      search: Pretraži
+      or: "ili"
+    discussion:
+      post_singular: objava
+      post_plural: objave
+      participant_singular: učesnik
+      participant_plural: učesnici
+      hero_image_add: Dodaj sliku
+      hero_image_replace: Zamijeni sliku
+      hero_image_remove: Ukloni sliku
+      hero_image_remove_confirm: Ukloniti naslovnu sliku iz ove diskusije?
+    home:
+      all_categories: Sve kategorije
+      all_title: Sve diskusije
+      back_home: Početna
+      badge_following: Pratim
+      badge_sticky: Prikvačeno
+      badge_unread_tooltip: "{count} nepročitanih objava"
+      categories_heading: Kategorije
+      choose_tags: Odaberite oznake
+      composer_body_placeholder: "Podijelite svoje mišljenje…"
+      composer_close: Zatvori
+      composer_edit: Uredi
+      composer_post: Objavi diskusiju
+      composer_preview: Pregled
+      composer_preview_empty: "Nema sadržaja za pregled."
+      composer_submitting: "Objavljujem…"
+      composer_title_placeholder: "Naslov diskusije…"
+      composer_hero_image_label: Naslovna slika (opcionalno)
+      composer_hero_image_picked: Slika odabrana
+      composer_hero_image_remove: Ukloni sliku
+      composer_hero_image_upload_failed: "Naslovna slika se nije mogla uploadati. Možete pokušati ponovo na stranici diskusije."
+      discussion_singular: diskusija
+      discussions: diskusije
+      filter_tags: Filtriraj oznake
+      following_heading: Pratim
+      like: Sviđa mi se
+      like_count_plural: "{count} sviđanja"
+      like_count_singular: "1 sviđanje"
+      log_in: Prijava
+      more: više
+      new_discussion: Nova diskusija
+      no_tags_found: Nema pronađenih oznaka
+      or: "ili"
+      popular_heading: Popularne diskusije
+      popular_no_discussions: "Još nema diskusija."
+      replies: Odgovori
+      reply_count_plural: "{count} odgovora"
+      reply_count_singular: "1 odgovor"
+      reply_label: Odgovori
+      reply_singular: "1 odgovor"
+      reply_plural: "{count} odgovora"
+      see_all: Prikaži sve
+      see_other_replies: "Prikaži ostalih {count} odgovora"
+      see_other_reply_singular: "Prikaži još {count} odgovor"
+      sign_up: Registrujte se
+      sort_trending: Popularno
+      start_discussion: "Recite svima na čemu radite…"
+      today_time: "Danas, {time}"
+      untitled: Bez naslova
+      view: Prikaži
+      view_post: Prikaži objavu
+      post_singular: "1 objava"
+      post_plural: "{count} objava"
+      discussion_singular_card: "1 diskusija"
+      discussion_plural_card: "{count} diskusija"
+      yesterday_time: "Jučer, {time}"
+      showcase_heading: "Istaknuto"
+    discussions:
+      title: Sve diskusije
+      home: Nazad na početnu
+      load_more: Učitaj više
+      empty: "Nisu pronađene diskusije."
+    post:
+      op_badge: OP
+    messages:
+      deleted_message: Poruka je obrisana
+    tags:
+      title: Kategorije
+      home: Početna
+      discussion_singular: diskusija
+      discussion_plural: diskusija
+      other_tags_label: Ostale oznake
+      featured: Izdvojeno
+      all_discussions: Sve diskusije
+    team:
+      title: Naš tim
+      disabled: Ova stranica nije dostupna.
+      empty: Nisu pronađeni članovi.
+      no_bio: Član zajednice.
+      discussions: diskusija
+      posts: objava
+      member_since: "Član od"
+      member_singular: član
+      member_plural: članova
+    link:
+      login_to_view: "Prijavite se za pregled veze"
