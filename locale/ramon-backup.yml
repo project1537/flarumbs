@@ -1,5 +1,13 @@
 ramon-backup:
   admin:
+    errors:
+      generic: "Nešto je pošlo naopako. Pokušajte ponovo."
+      boundary_title: "Ovaj odjeljak nije moguće prikazati."
+      boundary_body: "Došlo je do neočekivane greške. Ostatak panela i dalje radi — pokušajte ponovo ili osvježite stranicu ako se problem nastavi."
+      boundary_retry: "Pokušaj ponovo"
+      confirm_default: "Potvrdi"
+      cancel_default: "Otkaži"
+
     permissions:
       manage_label: "Upravljanje sigurnosnim kopijama"
 
@@ -24,15 +32,22 @@ ramon-backup:
       plain: "Nešifrovano"
       download_title: "Preuzmi"
       delete_title: "Obriši"
+      confirm_delete_title: "Obrisati ovu sigurnosnu kopiju?"
       confirm_delete: "Trajno obrisati ovu sigurnosnu kopiju? .flarum datoteka bit će uklonjena s poslužitelja."
       deleted: "Sigurnosna kopija obrisana."
       delete_failed: "Sigurnosna kopija nije mogla biti obrisana."
+      load_failed: "Lista sigurnosnih kopija nije mogla biti učitana."
+      retry: "Pokušaj ponovo"
 
     encryption:
       section_title: "Enkripcija"
       section_help: "Šifrujte nove sigurnosne kopije asimetričnim parom ključeva. Javni ključ se čuva u bazi podataka, a privatni ključ MORA biti dodan u config.php — web proces nikad ne čuva ključ koji mu nije eksplicitno dodijeljen."
+      clipboard_unavailable: "Vaš preglednik ne dozvoljava kopiranje u međuspremnik. Odaberite vrijednost ručno."
+      clipboard_failed: "Kopiranje nije uspjelo — vaš preglednik je blokirao pristup međuspremniku. Odaberite vrijednost ručno."
       status:
         unknown: "Nije moguće učitati status enkripcije."
+        load_failed: "Nije moguće učitati status enkripcije s poslužitelja."
+        retry: "Pokušaj ponovo"
         libsodium_missing: "libsodium nije dostupan na ovom poslužitelju. Enkripcija ne može biti omogućena."
         healthy: "Enkripcija je konfigurirana. Nove sigurnosne kopije bit će automatski šifrovane kada označite 'šifruj' u modalnom prozoru izvoza."
         not_setup: "Par ključeva još nije generiran. Sigurnosne kopije bit će sačuvane u nešifrovanom obliku, osim ako ne odaberete enkripciju pri svakom izvozu."
@@ -46,6 +61,7 @@ ramon-backup:
         private_missing_body: "Javni ključ je generiran, ali odgovarajući privatni ključ nije u vašem config.php. Postojeće šifrovane sigurnosne kopije neće se moći dešifrovati dok se privatni ključ ne vrati."
       actions:
         generate: "Generiraj par ključeva"
+        generate_failed: "Par ključeva nije mogao biti generiran."
       public_key:
         label: "Trenutni javni ključ"
         copy_title: "Kopiraj javni ključ"
@@ -98,6 +114,7 @@ ramon-backup:
       start_button: "Pokreni izradu kopije"
       start_failed: "Izrada sigurnosne kopije nije mogla biti pokrenuta."
       cancel_button: "Otkaži"
+      cancel_failed_warn: "Prozor je zatvoren, ali poslužitelj možda još drži zaključanost zadatka izvoza. Provjerite listu kopija za trenutak — ako zadatak ostane zapeo, pokušajte ponovo ili kontaktirajte podršku."
       close_button: "Zatvori"
       completed: "Sigurnosna kopija kreirana."
       files_count: "{done} / {total} datoteka"
@@ -107,6 +124,7 @@ ramon-backup:
       phase_finalize: "Dovršavanje…"
       phase_done: "Završeno"
       phase_error: "Greška"
+      phase_error_network: "Veza s poslužiteljem prekinuta tokom izrade sigurnosne kopije. Zadatak možda još uvijek radi na poslužitelju — provjerite listu kopija za trenutak."
 
     import_modal:
       title: "Uvezi sigurnosnu kopiju"
@@ -115,6 +133,7 @@ ramon-backup:
       choose_file: "Kliknite za odabir .flarum datoteke"
       upload_button: "Otpremi i pregledaj"
       upload_failed: "Otpremanje nije uspjelo."
+      upload_idle_timeout: "Otpremanje se zaustavilo (nema podataka duže od minute). Provjerite mrežnu vezu i pokušajte ponovo."
       uploading_pct: "Otpremanje… {pct}%"
       inspecting_archive: "Pregled arhive…"
       extensions_tag_workbench: "workbench"
@@ -143,6 +162,7 @@ ramon-backup:
       start_button: "Obnovi"
       start_failed: "Obnavljanje nije moglo biti pokrenuto."
       cancel_button: "Otkaži"
+      cancel_failed_warn: "Prozor je zatvoren, ali poslužitelj možda još primjenjuje promjene. Provjerite stanje poslužitelja prije ponovnog pokušaja."
       close_button: "Zatvori"
       completed: "Obnavljanje završeno."
       reload_required: "Podaci foruma su zamijenjeni. Osvježite stranicu da nastavite s novom sesijom — vaša prethodna prijava možda je također zamijenjena."
@@ -161,4 +181,5 @@ ramon-backup:
       phase_finalize: "Dovršavanje…"
       phase_done: "Završeno"
       phase_error: "Greška"
+      phase_error_network: "Veza s poslužiteljem prekinuta tokom obnavljanja. Poslužitelj možda još zapisuje podatke — pričekajte trenutak i provjerite stanje baze podataka prije ponovnog pokušaja."
       url_rewrite_note: "URL-ovi u bazi podataka koji referenciraju izvorni poslužitelj bit će automatski prepisani na URL ovog poslužitelja."
