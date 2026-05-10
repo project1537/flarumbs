@@ -1,0 +1,20 @@
+ramon-guest-cta:
+  admin:
+    settings:
+      hide_links_label: Sakrij linkove za goste
+      hide_links_help: Sprječava goste da prate linkove u objavama. Klikom na link prikazuje se poziv za prijavu ili registraciju.
+      show_post_cta_label: Prikaži poziv za registraciju gostima nakon određenog broja objava
+      show_post_cta_help: Prikazuje karticu za prijavu / registraciju između objava u diskusiji, vidljivu samo gostima. Koristite postavku pozicije da odaberete nakon koje objave se pojavljuje.
+      position_label: Pozicija poziva (nakon koje objave)
+      position_help: Umetni banner poziva između ove objave i sljedeće.
+      position_1: "Nakon objave #1"
+      position_2: "Nakon objave #2"
+      position_3: "Nakon objave #3"
+      position_4: "Nakon objave #4"
+      position_5: "Nakon objave #5"
+  forum:
+    post_cta:
+      text: "Sviđa vam se što vidite? Pridružite se diskusiji!"
+      or: "ili"
+    link_cta:
+      placeholder: "Prijavite se za prikaz linka"
