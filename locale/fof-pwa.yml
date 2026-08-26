@@ -1,0 +1,102 @@
+fof-pwa:
+  admin:
+    nav:
+      pwa_button: Progresivna web aplikacija
+      pwa_text: Konfigurišite Flarum da radi kao progresivna web aplikacija (PWA), koja se može instalirati na mobilne uređaje.
+    pwa:
+      about:
+        description_label: Opis
+        description_text: Opis možete postaviti na stranici 'Osnovno' u vašoj administratorskoj ploči.
+        long_name_label: Puni naziv
+        long_name_text: Naziv web aplikacije koji se prikazuje korisniku.
+        heading: O aplikaciji
+        short_name_label: Kratki naziv
+        short_name_text: Naziv aplikacije koji se prikazuje korisniku kada nema dovoljno prostora za puni naziv.
+      colors:
+        heading: Boje
+        background_color_label: Boja pozadine
+        background_color_text: Ovo se koristi kao boja rezervnog mjesta za uvodni ekran koji se prikazuje dok se vaša PWA učitava. Ne koristi se nakon što se aplikacija učita.
+        theme_color_label: Boja teme
+        theme_color_text: Ovu boju uređaji ponekad koriste prilikom prikazivanja vaše aplikacije, na primjer na Android sistemu za prebacivanje između zadataka kao boju koja okružuje stranicu.
+      maintenance:
+        heading: Održavanje
+        debug_label: Debug režim?
+        debug_text: Ovo će bilježiti informacije o obavještenjima u `storage/logs`. Općenito bi trebalo biti onemogućeno kako se logovi ne bi nepotrebno punili.
+        reset_vapid_button: Resetuj VAPID ključeve
+        reset_vapid_text: Ovo će regenerisati VAPID ključeve i obrisati sve postojeće pretplate koje koriste trenutne VAPID ključeve.
+        reset_vapid_confirm: Resetovanje VAPID ključeva će ukloniti sve pretplate koje koriste postojeće ključeve, tako da korisnici neće primati nikakva obavještenja do sljedeće posjete vašoj stranici. Ovo bi trebalo raditi samo prilikom prvog postavljanja push obavještenja, ili ako push obavještenja uopšte ne rade i iznad se prikazuje upozorenje o nedostajućim VAPID ključevima.
+        reset_vapid_success: VAPID ključevi su uspješno resetovani. Resetovano je {count} pretplata. Ponovo učitajte stranicu da vidite ažurirani izvještaj provjere statusa.
+      firebase_config:
+        heading: Firebase
+        help_text: Da biste dodali podršku za push obavještenja prilikom objavljivanja vaše aplikacije u Apple App Store-u, morate koristiti Firebase kako biste dodali push obavještenja u vašu aplikaciju. Molimo generišite vašu Firebase Service Config datoteku i otpremite je ovdje. <a>Pogledajte dokumentaciju</a>.
+        upload_successful: Vaša Firebase konfiguracija je uspješno otpremljena.
+        upload_file: Otpremi datoteku
+      other:
+        heading: Ostalo
+        force_portrait_text: Prisili portret orijentaciju?
+        push_notif_preference_default_to_email_label: Zadano postavi push preferencije na e-mail?
+        push_notif_preference_default_to_email_text: Ako je omogućeno, korisnici će zadano imati omogućena push obavještenja za sve tipove obavještenja kod kojih su e-mail obavještenja zadano omogućena. Ako je onemogućeno, korisnici će zadano imati onemogućena push obavještenja.
+        user_max_subscriptions_label: Maksimalan broj push pretplata po korisniku
+        user_max_subscriptions_text: Koliko push pretplata bi svaki korisnik trebao moći imati istovremeno? Kada korisnik primi push obavještenje, svaka pretplata rezultira API pozivom. Svaka pretplata obično odgovara pregledniku koji je korisnik koristio.
+        window_controls_overlay_label: Omogući preklop kontrola prozora (Window Controls Overlay)?
+        window_controls_overlay_text: |
+          Ako je omogućeno, korisnici mogu dobiti imerzivnije iskustvo nalik izvornim aplikacijama sakrivanjem izvorne trake naslova. Da li se preklop kontrola prozora zaista primjenjuje zavisi od preferencija korisnika i kompatibilnosti preglednika. Nakon omogućavanja ovoga, morate prilagoditi vašu traku naslova pomoću CSS-a/JS-a, u suprotnom će kontrole prekrivati elemente gornje navigacijske trake vašeg foruma, a prozor će biti gotovo nemoguće pomjerati, što rezultira lošim iskustvom.
+
+          Vidi također: <compatibilitylink>Kompatibilnost preglednika za preklop kontrola prozora</compatibilitylink> i <learnlink>O preklopu kontrola prozora na Microsoft Learn-u</learnlink>
+
+      heading: Konfiguracija progresivne web aplikacije
+      text: Konfigurišite vaš Flarum forum da radi kao progresivna web aplikacija! Imajte na umu da ovo automatski ne stavlja vašu stranicu u trgovinu aplikacija. Umjesto toga, korisnicima daje opciju 'Dodaj na početni ekran' za vašu stranicu. Nudimo neke provjere statusa, ali najbolji način da ovo testirate jeste da sami pokušate instalirati aplikaciju (pretražite web za upute o instalaciji progresivnih web aplikacija). Imajte na umu da upite za 'instaliraj ovu PWA' kontrolišu preglednici i ne mogu ih pokrenuti programeri, administratori ili programi. Razmislite o uključivanju uputa za instalaciju PWA u dokumentaciju vaše stranice.
+      status_check_heading: Provjera statusa
+      logo_heading: Logotipi i ikone
+      logo_text: |
+        Morate otpremiti najmanje jedan logotip da bi vaša progresivna web aplikacija bila instalabilna. Imajte na umu da svi logotipi moraju biti kvadratni; ako nisu, bit će promijenjene veličine i eventualno rastegnuti.
+
+        Ispod je dostupno nekoliko opcija veličine. Preporučujemo da otpremite logotip za što je moguće više njih, jer ovo podržava više uređaja.
+
+        Možete otpremiti jedan veliki logotip u polja za manje veličine. Na primjer, možete otpremiti logotip veličine 1000x1000px u SVA polja za otpremanje ispod. Međutim, ako otpremite logotip veličine 50x50px u polje 512x512, bit će značajno rastegnut.
+
+      logo_size_text: Otpremite logotip koji će biti skaliran na {size} sa {size} piksela.
+      submit_button: Sačuvaj postavke
+      refreshed_message: PWA konfiguracija je uspješno osvježena.
+    status:
+      config_no_https: URL u vašoj datoteci config.php ne koristi HTTPS. HTTPS je obavezan da bi progresivne web aplikacije radile.
+      possible_https_disabled: Vaša stranica možda ne radi na HTTPS-u. Čišćenje keša (administratorska ploča => dugme alati) bi moglo pomoći. Ako radi na HTTPS-u, zanemarite ovo. Ako ne radi, imajte na umu da je HTTPS obavezan da bi progresivne web aplikacije radile.
+      no_logo: Morate otpremiti najmanje jedan logotip, veličine najmanje 144x144px, da bi PWA bila instalabilna.
+      no_name: Morate navesti puni naziv da bi vaša aplikacija radila.
+      no_vapid_keys: Nisu pronađeni VAPID ključevi. Oni su obavezni za slanje push obavještenja. VAPID ključeve možete resetovati ispod.
+      key_gen_failed: "Generisanje ključeva potrebnih za push obavještenja nije uspjelo. Puna poruka greške je bila: {error}"
+      suggest_gmp: Čini se da gmp PHP ekstenzija nije omogućena na vašem serveru. Nije strogo neophodna, ali može poboljšati performanse i preporučuje se. Neki dijeljeni hosting servisi je možda ne podržavaju.
+      success: Nisu pronađeni potencijalni problemi!
+  forum:
+    alerts:
+      optin: Push obavještenja su vam omogućena, ali niste konfigurisali ovaj uređaj.
+      optin_button: Konfiguriši
+    discussion_controls:
+      share_button: Podijeli
+    post_controls:
+      share_button: Podijeli
+      share_api:
+        title: "Odgovor korisnika {username} na {title}"
+    user_controls:
+      share_button: Podijeli
+    settings:
+      push_header: Push
+      pwa_notifications:
+        access_default: Zbog ograničenja preglednika, morate se prijaviti za primanje push obavještenja na ovom uređaju.
+        access_default_button: Prijavi se
+        access_denied: Morate prilagoditi postavke vašeg preglednika kako biste primali push obavještenja na ovom uređaju.
+        access_denied_button: Saznaj kako
+        no_browser_support: Ovaj preglednik ne podržava push obavještenja za progresivne web aplikacije.
+        no_browser_support_button: Saznaj više
+
+  views:
+    offline:
+      header: Greška mrežne veze
+      text: Ova aplikacija zahtijeva mrežnu vezu; ne može se koristiti offline. Molimo provjerite vašu vezu.
+
+flarum-gdpr:
+  lib:
+    data:
+      pushsubscriptions:
+        export_description: "Izvozi sve pretplate na push obavještenja i tokene uređaja povezane sa korisnikom."
+        delete_description: "Briše sve pretplate na push obavještenja i tokene uređaja povezane sa korisnikom."
