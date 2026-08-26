@@ -1,28 +1,36 @@
 flarum-realtime:
     forum:
         push:
-            discussion-list-new-activity: "{count, plural, one {Prikaži {count} ažuriranu diskusiju} few {Prikaži {count} ažurirane diskusije} other {Prikaži {count} ažuriranih diskusija}}"
-            discussion-list-new-activity-with-auto-release: "{count, plural, one {{count} diskusija ima} few {{count} diskusije imaju} other {{count} diskusija ima}} novu aktivnost i bit će prikazana za {releaseTimeout} sekundi. Kliknite za prikaz odmah."
+            discussion-list-new-activity: "{count, plural, one {Prikaži # ažuriranu diskusiju} other {Prikaži # ažuriranih diskusija}}"
+            discussion-list-new-activity-with-auto-release: "{count, plural, one {# diskusija ima} other {# diskusija ima}} ažuriranu aktivnost i bit će prikazana za {releaseTimeout} sekundi. Kliknite da prikažete odmah."
         typing-indicator:
-            anonymous-user: "[Anonimni]"
-            people-are-typing: "{number, plural, one {{number} osoba piše} few {{number} osobe pišu} other {{number} osoba piše}}"
-            users-are-typing: "{count, plural, one {{users} piše} other {{users}{others, plural, =1 { i još {count} drugi} =0 {} other { i još {count} drugih}} pišu}}"
-            no-activity: Niko ne piše
+            anonymous-user: "[Skriveno]"
+            hidden-user: "{username} (skriveno)"
+            people-are-typing: "{number, plural, one {# osoba kuca} other {# osoba kuca}}"
+            users-are-typing: "{count, plural, one {{users} kuca} other {{users}{others, plural, =1 { i još # osobu} =0 {} other { i još # osoba}} kucaju}}"
+            no-activity: Niko ne kuca
+        index-typing:
+            someone-typing: Neko kuca u ovoj diskusiji
+            someone-typing-tag: Neko kuca u ovoj oznaci
         user:
             settings:
-                heading: Realtime
+                heading: Ažuriranja uživo
                 typing-indicator-type:
-                    help: Kada je omogućeno, indikator pisanja prikazuje korisnike koji trenutno pišu. Onemogućite ovo za prikaz samo broja korisnika koji trenutno pišu.
-                    label: Prikaži ko piše
+                    help: Kada je omogućeno, indikator kucanja će prikazivati korisnike koji trenutno kucaju. Onemogućite ovo da se prikazuje samo broj korisnika koji trenutno kucaju.
+                    label: Prikaži ko kuca
     admin:
         permission:
-            view-who-types: Pregled ko piše
+            view-who-types: Pregled ko kuca
         settings:
             release-discussion-updates: Ažuriranja liste diskusija
-            release-discussion-updates-help: Kada je omogućeno, nove diskusije bit će gurnute u <code>DiscussionList</code> u definisanom intervalu ispod.
-            release-discussion-updates-interval: Interval automatskog guranja nove aktivnosti diskusija
+            release-discussion-updates-help: Kada je omogućeno, nove diskusije će biti gurnute u <code>DiscussionList</code> u definisanom intervalu ispod.
+            release-discussion-updates-interval: Interval za automatsko guranje nove aktivnosti diskusija
             release-discussion-updates-interval-help: U sekundama. 0 znači bez automatskog guranja.
-            notification-toast-dismiss-after: Trajanje obavijesti (toast)
-            notification-toast-dismiss-after-help: Koliko dugo (u sekundama) realtime toast obavijest ostaje na ekranu prije automatskog zatvaranja. Postavite na 0 za isključivanje toast obavijesti.
-            typing-indicator: Indikator pisanja
-            typing-indicator-help: Kada je omogućeno, uz odgovarajuću dozvolu, korisnici mogu vidjeti broj osoba koje trenutno pišu u diskusiji. Kada je onemogućeno, aktivnost pisanja se uklanja i iz sučelja i iz websocket payloada.
+            notification-toast-dismiss-after: Trajanje iskačućeg obavještenja
+            notification-toast-dismiss-after-help: Koliko dugo (u sekundama) iskačuće obavještenje uživo ostaje na ekranu prije nego što se automatski ukloni. Postavite na 0 da onemogućite iskačuća obavještenja.
+            typing-indicator: Indikator kucanja
+            typing-indicator-help: Kada je omogućeno, u skladu sa dozvolom, korisnici mogu vidjeti broj drugih korisnika koji trenutno kucaju u diskusiji. Kada je onemogućeno, aktivnost kucanja se uklanja i iz korisničkog sučelja i iz websocket podataka.
+            index-typing-indicator: Tačkice kucanja na listi diskusija
+            index-typing-indicator-help: Kada je omogućeno, diskretna ikona se pojavljuje na listi diskusija za svaku javno vidljivu diskusiju u kojoj neko trenutno kuca. Imena se ne prikazuju.
+            index-typing-indicator-restricted: Tačkice kucanja na listi diskusija u ograničenim oznakama
+            index-typing-indicator-restricted-help: Također prikaži tačkice kucanja za diskusije u ograničenim oznakama, korisnicima koji mogu vidjeti te oznake. Zahtijeva ekstenziju Tags. Zadano isključeno.
