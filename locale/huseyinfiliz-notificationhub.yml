@@ -1,0 +1,81 @@
+huseyinfiliz-notificationhub:
+  admin:
+    title:
+      page_title: "Tipovi obavještenja"
+
+    permissions:
+      send_all: "Slanje obavještenja svim korisnicima"
+      send_user: "Slanje obavještenja pojedinačnim korisnicima"
+
+    recipient_kinds:
+      user: => huseyinfiliz-notificationhub.forum.recipient_kinds.user
+      group: => huseyinfiliz-notificationhub.forum.recipient_kinds.group
+
+    modal_notification:
+      recipients_placeholder: => huseyinfiliz-notificationhub.forum.modal_notification.recipients_placeholder
+
+    settings:
+      add_button: "Dodaj tip obavještenja"
+      no_data: "Još nema tipova obavještenja."
+      delete_confirm: "Jeste li sigurni da želite obrisati ovaj tip obavještenja i sva njegova povezana obavještenja?"
+      fields:
+        actions: "Radnje"
+        name: "Naziv tipa obavještenja"
+        excerpt_key: "Zadani izvod"
+        description: "Opis tipa obavještenja"
+        icon: "Zadana ikona"
+        default_message_key: "Zadana poruka"
+        permission: "Dozvola za tip obavještenja"
+        color: "Boja tipa obavještenja"
+        default_url: "Zadani link"
+        default_recipients: "Zadani primaoci"
+        sort_order: "Redoslijed sortiranja"
+        active: "Aktivno"
+        color_invalid: "Boja mora biti važeći heksadecimalni kod, npr. #ff0000 ili #f00."
+        preview: "Pregled"
+        preview_placeholder: "Naziv tipa obavještenja"
+        permission_help: "Odaberite grupe članova ovlaštene za slanje ovog obavještenja. Ako ostavite prazno, svi ovlašteni moderatori/administratori mogu ga slati."
+        permission_placeholder: "Unesite naziv grupe..."
+      save: "Sačuvaj"
+      edit_notification_type: "Uredi tip obavještenja"
+      add_notification_type: "Dodaj tip obavještenja"
+
+  forum:
+    links:
+      notification_individual: "Pošalji obavještenje"
+      notification_all: "Pošalji obavještenje"
+
+    modal_notification:
+      title_text: "Pošalji obavještenje"
+      recipients_label: "Primaoci"
+      recipients_placeholder: "Unesite korisničko ime ili naziv grupe..."
+      message_label: "Poruka"
+      url_label: "Ciljni link"
+      url_placeholder: "https://www.primjer.com"
+      submit_button: "Pošalji obavještenje"
+      notification_sent_message: "Obavještenja su poslana na {recipientsCount} korisnika!"
+      notification_type_label: "Tip obavještenja"
+      no_notification_types: "Nisu pronađeni aktivni tipovi obavještenja."
+      preview_title: "Pregled obavještenja"
+      preview_message_placeholder: "Poruka obavještenja.."
+      preview_all_members: "Svi članovi"
+
+    recipient_kinds:
+      user: "Korisnik"
+      group: "Grupa"
+
+  api:
+    message_required: "Poruka je obavezna."
+    user_ids_required: "ID-jevi korisnika su obavezni."
+    subject_id_required: "Tip obavještenja je obavezan."
+    no_valid_recipients: "Nisu pronađeni važeći primaoci."
+    name_required: "Naziv tipa obavještenja je obavezan."
+    invalid_url: "Otkriven je nevažeći protokol URL-a."
+    name_too_long: "Naziv ne smije biti duži od 255 znakova."
+    message_too_long: "Poruka ne smije biti duža od 5000 znakova."
+    url_too_long: "URL ne smije biti duži od 2048 znakova."
+    invalid_url_scheme: "Nevažeća shema URL-a. Dozvoljeni su samo HTTP, HTTPS, mailto, tel ili relativni linkovi."
+    sort_order_invalid: "Redoslijed sortiranja mora biti nenegativan broj."
+    field_too_long: "Ovo polje je predugačko."
+    invalid_color: "Boja mora biti važeći heksadecimalni kod (npr. #ff0000 ili #f00)."
+    multiple_recipients_not_allowed: "Nemate dozvolu za istovremeno slanje većem broju primalaca."
