@@ -20,7 +20,7 @@ fof-pwa:
         theme_color_text: Ovu boju uređaji ponekad koriste prilikom prikazivanja vaše aplikacije, na primjer na Android sistemu za prebacivanje između zadataka kao boju koja okružuje stranicu.
       maintenance:
         heading: Održavanje
-        debug_label: Debug režim?
+        debug_label: Omogući debug režim
         debug_text: Ovo će bilježiti informacije o obavještenjima u `storage/logs`. Općenito bi trebalo biti onemogućeno kako se logovi ne bi nepotrebno punili.
         reset_vapid_button: Resetuj VAPID ključeve
         reset_vapid_text: Ovo će regenerisati VAPID ključeve i obrisati sve postojeće pretplate koje koriste trenutne VAPID ključeve.
@@ -33,12 +33,12 @@ fof-pwa:
         upload_file: Otpremi datoteku
       other:
         heading: Ostalo
-        force_portrait_text: Prisili portret orijentaciju?
-        push_notif_preference_default_to_email_label: Zadano postavi push preferencije na e-mail?
+        force_portrait_text: Prisili portret orijentaciju
+        push_notif_preference_default_to_email_label: Zadano postavi push preferencije na e-mail
         push_notif_preference_default_to_email_text: Ako je omogućeno, korisnici će zadano imati omogućena push obavještenja za sve tipove obavještenja kod kojih su e-mail obavještenja zadano omogućena. Ako je onemogućeno, korisnici će zadano imati onemogućena push obavještenja.
         user_max_subscriptions_label: Maksimalan broj push pretplata po korisniku
         user_max_subscriptions_text: Koliko push pretplata bi svaki korisnik trebao moći imati istovremeno? Kada korisnik primi push obavještenje, svaka pretplata rezultira API pozivom. Svaka pretplata obično odgovara pregledniku koji je korisnik koristio.
-        window_controls_overlay_label: Omogući preklop kontrola prozora (Window Controls Overlay)?
+        window_controls_overlay_label: Omogući preklop kontrola prozora (Window Controls Overlay)
         window_controls_overlay_text: |
           Ako je omogućeno, korisnici mogu dobiti imerzivnije iskustvo nalik izvornim aplikacijama sakrivanjem izvorne trake naslova. Da li se preklop kontrola prozora zaista primjenjuje zavisi od preferencija korisnika i kompatibilnosti preglednika. Nakon omogućavanja ovoga, morate prilagoditi vašu traku naslova pomoću CSS-a/JS-a, u suprotnom će kontrole prekrivati elemente gornje navigacijske trake vašeg foruma, a prozor će biti gotovo nemoguće pomjerati, što rezultira lošim iskustvom.
 
@@ -69,8 +69,11 @@ fof-pwa:
       success: Nisu pronađeni potencijalni problemi!
   forum:
     alerts:
-      optin: Push obavještenja su vam omogućena, ali niste konfigurisali ovaj uređaj.
-      optin_button: Konfiguriši
+      optin: Ovaj forum može slati push obavještenja na ovaj uređaj. Želite li ih omogućiti?
+      optin_enable_button: Omogući
+      optin_success: Push obavještenja su omogućena na ovom uređaju.
+      optin_declined: Push obavještenja su blokirana. Možete ih kasnije dozvoliti u postavkama vašeg preglednika.
+      optin_deferred: Push obavještenja nisu omogućena. Možete ih kasnije omogućiti u vašim postavkama obavještenja.
     discussion_controls:
       share_button: Podijeli
     post_controls:
@@ -88,6 +91,22 @@ fof-pwa:
         access_denied_button: Saznaj kako
         no_browser_support: Ovaj preglednik ne podržava push obavještenja za progresivne web aplikacije.
         no_browser_support_button: Saznaj više
+    notifications_help:
+      browser_notifications_title: Kako omogućiti obavještenja u pregledniku
+      title: Omogući push obavještenja
+      description: Ako ste ranije blokirali obavještenja, slijedite upute ispod da ih ponovo omogućite na vašem uređaju.
+
+      chromium_title: Google Chrome, Microsoft Edge i Android
+      chromium_instructions: Kliknite na ikonu informacija o stranici (ikona lokota ili podešavanja) pored web adrese u vašem pregledniku. Odaberite "Postavke stranice" (ili "Dozvole"), pronađite "Obavještenja" i promijenite postavku na "Dozvoli".
+
+      firefox_title: Mozilla Firefox
+      firefox_instructions: Kliknite na ikonu lokota pored web adrese. Ako je "Obavještenja" označeno kao "Blokirano", kliknite na "X" pored njega da uklonite ograničenje. Osvježite stranicu i dozvolite obavještenja kada budete upitani.
+
+      safari_mac_title: Apple Safari (macOS)
+      safari_mac_instructions: Otvorite meni Safari na vrhu ekrana i odaberite "Postavke" (ili "Preference"). Kliknite na karticu "Web stranice", odaberite "Obavještenja" u lijevom bočnom meniju, pronađite ovaj forum na listi i promijenite postavku na "Dozvoli".
+
+      safari_ios_title: Apple iPhone i iPad (iOS/iPadOS)
+      safari_ios_instructions: Push obavještenja na iOS-u zahtijevaju da aplikacija bude instalirana. U Safariju dodirnite ikonu "Podijeli" i odaberite "Dodaj na početni ekran". Zatim otvorite novoinstaliranu aplikaciju. Ako su obavještenja blokirana, otvorite aplikaciju iOS "Postavke", idite na "Obavještenja", odaberite ovu web aplikaciju sa liste i uključite "Dozvoli obavještenja".
 
   views:
     offline:
