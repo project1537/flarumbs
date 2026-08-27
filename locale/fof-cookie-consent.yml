@@ -1,0 +1,103 @@
+fof-cookie-consent:
+  admin:
+    settings:
+      configuration_title: Opcije konfiguracije
+      configuration_button_title: Link "Saznaj više"
+      text_help: |
+        Tekst prikazan posjetiocima nalazi se u jezičkim datotekama ove ekstenzije, pa
+        se može prevesti. Nadjačajte ga sa FoF Linguist-om ili jezičkim paketom.
+
+      learnMoreLinkUrl: Link
+      learnMoreLinkUrl_help: Ostavite prazno da sakrijete link.
+
+      appearance_title: Izgled
+      layout: Raspored
+      layout_help: Kontroliše oblik banera za saglasnost.
+      position: Pozicija
+      equalWeightButtons: Daj oba dugmeta jednaku vizuelnu težinu
+      equalWeightButtons_help: Preporučeno. Identično stiliziranje dugmeta za prihvatanje i odbijanje sprečava usmjeravanje posjetilaca ka prihvatanju.
+
+      colors_help: |
+        Baner prati temu vašeg foruma, uključujući tamni režim. Postavite boju
+        samo da je nadjačate — ostavite prazno da naslijedi zadanu.
+      catchall_title: Neprijavljeni kolačići
+      sweepUndeclared: Obriši kolačiće koje nijedna ekstenzija nije prijavila
+      sweepUndeclared_help: |
+        Kada posjetilac odbije, također obriši kolačiće koje nijedna ekstenzija nije prijavila
+        putem ekstendera za saglasnost na kolačiće. Ovo hvata pratioce iz
+        ekstenzija koje to nisu usvojile — ali će također obrisati kolačiće koje
+        neka ekstenzija zaista treba, što je može pokvariti. Koristite listu dozvoljenih
+        ispod da ih poštedite.
+      allowedCookies: Nikada ne briši ove kolačiće
+      allowedCookies_help: |
+        Po jedan naziv u svakom redu. Obavijte kosim crtama za obrazac, npr. /^app_/.
+        Kolačići koje Flarum sam postavlja se uvijek zadržavaju.
+
+      theme_popup_title: Boje skočnog prozora
+      backgroundColor: Pozadina
+      textColor: Tekst
+      theme_dismiss_title: Boje dugmadi
+      buttonBackgroundColor: Pozadina
+      buttonTextColor: Tekst
+
+      layouts:
+        box: Okvir
+        box_wide: Okvir (širok)
+        box_inline: Okvir (uklopljen u red)
+        cloud: Oblak
+        cloud_inline: Oblak (uklopljen u red)
+        bar: Traka
+        bar_inline: Traka (uklopljena u red)
+
+      positions:
+        top_left: Gore lijevo
+        top_center: Gore u sredini
+        top_right: Gore desno
+        middle_left: Sredina lijevo
+        middle_center: Sredina
+        middle_right: Sredina desno
+        bottom_left: Dolje lijevo
+        bottom_center: Dolje u sredini
+        bottom_right: Dolje desno
+
+  forum:
+    banner:
+      description: Ova stranica koristi kolačiće. Možete upravljati vašim preferencijama ili prihvatiti sve kolačiće.
+      accept: Prihvati
+      decline: Odbij
+      preferences: Upravljaj preferencijama
+      learn_more: Saznaj više
+
+    preferences:
+      title: Preferencije kolačića
+      save: Sačuvaj preferencije
+      description: >-
+        Kolačići su male datoteke koje ova stranica pohranjuje u vašem pregledniku. Ispod je
+        prikazano šta se pohranjuje i zašto. Svoj izbor možete promijeniti u bilo kojem trenutku.
+      cookie_table:
+        name: Kolačić
+        description: Svrha
+
+    cookies:
+      flarum_session: Održava vašu prijavu dok pregledate stranicu.
+      flarum_remember: Automatski vas ponovo prijavljuje prilikom sljedeće posjete.
+      locale: Pamti jezik koji ste odabrali.
+      cc_cookie: Pamti vaš izbor u vezi sa kolačićima kako vas ne bismo ponovo pitali.
+
+    categories:
+      necessary:
+        title: Strogo neophodni
+        description: >-
+          Neophodni da bi stranica funkcionisala — prijava, ostajanje prijavljenim i
+          pamćenje vašeg izbora u vezi sa kolačićima. Ovi se ne mogu isključiti.
+
+      analytics:
+        title: Analitika
+        description: >-
+          Pomažu nam da razumijemo kako se forum koristi, kako bismo ga mogli poboljšati.
+          Ništa od ovoga nije neophodno da bi forum funkcionisao.
+
+      marketing:
+        title: Marketing
+        description: >-
+          Koriste se za mjerenje efikasnosti oglašavanja i za prikazivanje oglasa na drugim stranicama.
