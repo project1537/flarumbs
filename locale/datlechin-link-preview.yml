@@ -1,35 +1,72 @@
 datlechin-link-preview:
+
   admin:
+
     sections:
-      general_label: Opće
-      general_description: Osnovne postavke prikaza pregleda veza.
+      appearance_label: Izgled
+      appearance_description: Kako pregled izgleda i kuda vodi klik na njega.
+      behaviour_label: Ponašanje
+      behaviour_description: Koji linkovi u objavi dobijaju pregled.
       performance_label: Performanse
-      performance_description: Optimizirajte način dohvatanja i keširanje pregleda veza.
-      url_filtering_label: Filtriranje URL-ova
-      url_filtering_description: Kontrolišite za koje URL-ove se generišu pregledi veza.
-      external_api_label: Vanjski API kao rezerva
-      external_api_description: Koristite vanjski servis kada direktno dohvatanje ne uspije (npr. stranice zaštićene od botova).
+      performance_description: Kako se pregledi dohvataju i koliko dugo se čuvaju.
+      filtering_label: Filtriranje
+      filtering_description: >
+        Koje stranice se mogu prikazati u pregledu. Po jedan unos u redu, ili
+        odvojeni zarezima. Host se poklapa i sa svojim poddomenama, a *
+        predstavlja jedan dio naziva.
+
     settings:
-      enable_batch_requests_label: Omogući grupnu obradu
-      enable_batch_requests_help: Poboljšajte performanse istovremenom obradom više pregleda veza. Kada je onemogućeno, veze se obrađuju jedna po jedna.
-      blacklist_label: Lista blokiranih domena
-      blacklist_help: Navedite domene ili URL-ove za koje se ne trebaju generisati pregledi veza. Odvojite više unosa zarezima.
-      blacklist_placeholder: "Primjeri: facebook.com, twitter.com/specific-page"
-      whitelist_label: Lista dozvoljenih domena
-      whitelist_help: Generiši preglede samo za ove domene ili URL-ove. Ostavite prazno kako biste dozvolili sve domene koje nisu blokirane.
-      whitelist_placeholder: "Primjeri: trusted-site.com, specific-domain.org/path"
-      convert_media_urls_label: Pregled medijskih URL-ova
-      convert_media_urls_help: Generiši preglede za URL-ove koji ukazuju na medijske fajlove (slike, videa i sl.).
-      use_google_favicons_label: Prikaži ikone stranica
-      use_google_favicons_help: Prikazuje favicon ikone web stranica putem Googleove usluge favicona radi lakšeg vizualnog prepoznavanja.
-      cache_time_label: Trajanje keša (minute)
-      cache_time_help: "Koliko dugo čuvati preglede veza prije osvježavanja. Postavite na 0 za isključivanje keširanja. Zadano: 60 minuta."
-      open_links_in_new_tab_label: Otvori veze u novoj kartici
-      open_links_in_new_tab_help: Uvijek otvara pregledane veze u novoj kartici pretraživača.
-      external_api_fallback_label: Vanjski API kao rezerva
-      external_api_fallback_help: Kada direktno dohvatanje ne uspije (npr. stranice zaštićene od botova poput Reutersa), koristi vanjski oEmbed API za dohvatanje metapodataka veze.
-      external_api_url_label: URL vanjskog API-ja
-      external_api_url_help: "Prilagođeni oEmbed API endpoint. Ostavite prazno za korištenje zadanog (Iframely open API). URL će biti dodan kao query parametar."
+      open_links_in_new_tab_label: Otvaraj linkove u novoj kartici
+      open_links_in_new_tab_help: Samo za druge stranice. Diskusija ovdje se uvijek otvara u istoj kartici.
+
+      google_favicon_fallback_label: Koristi Google kao rezervu za ikone stranica
+      google_favicon_fallback_help: >
+        Koristi se kada stranica ne nudi vlastitu ikonu. Ovo obavještava Google
+        na koje stranice vaši članovi postavljaju linkove.
+
+      preview_internal_links_label: Prikaži pregled linkova ka ovom forumu
+      preview_internal_links_help: >
+        Link ovdje ka diskusiji, članu, oznaci ili početnoj stranici postaje
+        kartica pročitana iz baze podataka, tako da se ništa ne dohvata sa
+        interneta i niko ne vidi više nego što je već mogao otvoriti.
+
+      skip_media_links_label: Preskoči linkove ka medijskim datotekama
+      skip_media_links_help: Za linkove koji se završavaju slikom, audio ili video datotekom, koje Flarum već prikazuje.
+
+      max_previews_per_post_label: Pregleda po objavi
+      max_previews_per_post_help: Linkovi nakon ovog broja ostaju kao obični linkovi.
+
+      enable_batch_requests_label: Dohvataj preglede u grupama
+      enable_batch_requests_help: >
+        Jedan zahtjev za cijelu stranicu umjesto po jednog za svaki link.
+        Isključite ovo samo ako nešto ispred foruma to odbija.
+
+      cache_time_label: Trajanje keširanja (minute)
+      cache_time_help: Koliko dugo se pregled čuva prije nego što se stranica ponovo pročita. 0 isključuje keširanje.
+
+      allowlist_label: Dozvoljene stranice
+      allowlist_help: Dok ovo nije prazno, pregled se prikazuje samo za linkove koji se s ovim poklapaju.
+      allowlist_placeholder: "docs.primjer.com, *.wikipedia.org"
+
+      blocklist_label: Blokirane stranice
+      blocklist_help: Nikada se ne prikazuje pregled, čak i kada ih lista dozvoljenih propušta.
+      blocklist_placeholder: "primjer.com, vijesti.primjer.org/sponzorisano"
 
   forum:
-    site_cannot_be_reached: Pregled nije moguće učitati. Provjerite URL i pokušajte ponovo.
+
+    loading: Učitavanje pregleda
+
+    # The facts a card built from the database lists under its title. Only the
+    # counted ones need a string: the rest carry their own text or a date.
+    meta:
+      replies: "{count, plural, one {# odgovor} other {# odgovora}}"
+      posts: "{count, plural, one {# objava} other {# objava}}"
+      discussions: "{count, plural, one {# diskusija} other {# diskusija}}"
+
+    # Shown only when something on the forum is counting clicks. Both the number
+    # and the decision that it is worth showing come from that extension.
+    clicks: "{count, plural, one {# klik} other {# klikova}}"
+
+    settings:
+      hide_link_previews_label: Sakrij preglede linkova
+      hide_link_previews_help: Prikaži običnu adresu umjesto kartice pregleda u svakoj objavi koju čitate.
