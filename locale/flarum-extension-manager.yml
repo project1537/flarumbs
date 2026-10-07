@@ -1,187 +1,174 @@
 flarum-extension-manager:
   admin:
     auth_config:
-      add_label: Nova metoda autentifikacije
+      add_label: "Nova metoda autentifikacije"
       add_modal:
-        host_label: Host
+        host_label: "Server (host)"
         host_placeholder: "primjer: bearer.flarum.org"
-        submit_button: Pošalji
-        token_label: Token
-        type_label: Vrsta
+        submit_button: "Sačuvaj"
+        token_label: "Token"
+        type_label: "Vrsta"
         unchanged_token_placeholder: "(nepromijenjeno)"
-      delete_confirmation: Jeste li sigurni da želite obrisati ovu metodu autentifikacije?
-      delete_label: Obriši metodu autentifikacije
-      edit_label: Uredi metodu autentifikacije
+      delete_confirmation: "Jeste li sigurni da želite obrisati ovu metodu autentifikacije?"
+      delete_label: "Obriši metodu autentifikacije"
+      edit_label: "Uredi metodu autentifikacije"
       fields:
-        host: Host
-        token: Token
-      no_auth_methods_configured: Nema konfiguriranih metoda autentifikacije. Ovo je neobavezna napredna funkcija koja omogućava instaliranje iz privatnih repozitorija.
-      remove_button_label: Ukloni metodu autentifikacije
-      title: Metode autentifikacije
+        host: "Server (host)"
+        token: "Token"
+      no_auth_methods_configured: "Nije podešena nijedna metoda autentifikacije. Ovo je neobavezna napredna funkcija koja omogućava instalaciju iz privatnih repozitorija."
+      remove_button_label: "Ukloni metodu autentifikacije"
+      title: "Metode autentifikacije"
       types:
-        github-oauth: GitHub OAuth
-        gitlab-oauth: GitLab OAuth
-        gitlab-token: GitLab Token
-        bearer: HTTP Bearer
+        github-oauth: "GitHub OAuth"
+        gitlab-oauth: "GitLab OAuth"
+        gitlab-token: "GitLab token"
+        bearer: "HTTP Bearer"
     composer:
-      add_repository_label: Dodaj repozitorij
-      delete_repository_confirmation: Jeste li sigurni da želite obrisati ovaj repozitorij? Sva proširenja instalirana iz ovog repozitorija bit će uklonjena.
-      delete_repository_label: Obriši repozitorij
-      edit_repository_label: Uredi repozitorij
-      title: Composer
+      add_repository_label: "Dodaj repozitorij"
+      delete_repository_confirmation: "Jeste li sigurni da želite obrisati ovaj repozitorij? Sve ekstenzije instalirane iz njega bit će uklonjene."
+      delete_repository_label: "Obriši repozitorij"
+      edit_repository_label: "Uredi repozitorij"
+      title: "Composer"
       minimum_stability:
-        label: Minimalna stabilnost
-        help: Vrsta paketa kojima je dozvoljeno instaliranje. Nemojte mijenjati ovo osim ako znate šta radite.
+        label: "Minimalna stabilnost"
+        help: "Vrsta paketa koje je dozvoljeno instalirati. Ne mijenjajte ovu postavku ako niste potpuno sigurni šta radite."
         options:
-          stable: Stabilno (preporučeno)
-          rc: Release Candidate
-          beta: Beta
-          alpha: Alpha
-          dev: Dev
+          stable: "Stabilno (preporučeno)"
+          rc: "Kandidat za izdanje (RC)"
+          beta: "Beta"
+          alpha: "Alfa"
+          dev: "Razvojno (dev)"
       repositories:
-        label: Repozitoriji
-        help: >
-          Dodajte dodatne repozitorije iz kojih možete instalirati pakete. Ovo je napredna funkcija — nemojte dodavati repozitorije kojima ne vjerujete, jer se mogu koristiti za izvršavanje zlonamjernog kôda na vašem serveru.
+        label: "Repozitoriji"
+        help: "Dodajte dodatne repozitorije iz kojih se mogu instalirati paketi. Ovo je napredna funkcija: ne dodajte repozitorije kojima ne vjerujete, jer se mogu iskoristiti za izvršavanje zlonamjernog koda na vašem serveru."
         types:
           composer: composer
           vcs: vcs
           path: path
         add_modal:
-          name_label: Naziv
-          type_label: Vrsta
-          url: URL
-          submit_button: Pošalji
+          name_label: "Naziv"
+          type_label: "Vrsta"
+          url: "URL"
+          submit_button: "Sačuvaj"
 
     exceptions:
-      composer_command_failure: Izvršavanje nije uspjelo. Provjerite Composer logove u storage/logs/composer.
-      extension_already_installed: Proširenje je već instalirano.
-      extension_not_directly_dependency: Proširenje je instalirano kao zavisnost drugog proširenja i ne može se direktno ukloniti.
-      extension_not_installed: Proširenje nije pronađeno.
+      composer_command_failure: "Izvršavanje nije uspjelo. Provjerite Composer zapise u folderu storage/logs/composer."
+      extension_already_installed: "Ekstenzija je već instalirana."
+      extension_not_directly_dependency: "Ekstenzija je instalirana kao zavisnost druge ekstenzije, pa se ne može direktno ukloniti."
+      extension_not_installed: "Ekstenzija nije pronađena."
 
       guessed_cause:
-        extension_incompatible_with_instance: Proširenje najvjerovatnije nije kompatibilno s vašom trenutnom Flarum instalacijom.
-        extension_not_found: Proširenje nije pronađeno ili ne postoji.
-        extensions_incompatible_with_new_major: >
-          Neka instalirana proširenja nisu kompatibilna s najnovijom glavnom verzijom.
-          Molimo pričekajte da autori ažuriraju proširenja radi kompatibilnosti, ili ih uklonite prije nastavka.
+        extension_incompatible_with_instance: "Ekstenzija najvjerovatnije nije kompatibilna s trenutnom Flarum instalacijom."
+        extension_not_found: "Ekstenzija nije pronađena ili ne postoji."
+        extensions_incompatible_with_new_major: "Neke instalirane ekstenzije nisu kompatibilne s najnovijom glavnom verzijom. Sačekajte da ih autori prilagode ili ih uklonite prije nastavka."
 
     extensions:
-      check_why_it_failed_updating: Prikaži zašto nije ažurirano na najnoviju verziju.
-      install: Instaliraj novo proširenje
-      install_help: >
-        Unesite naziv paketa proširenja za nastavak. Možete navesti <semantic_link>semantičku verziju</semantic_link> koristeći format <code>vendor/package-name:version</code>.
-        Posjetite {link} za pregled dostupnih paketa.
-      proceed: Nastavi
-      remove: Deinstaliraj
-      successful_install: "{extension} je uspješno instalirano, preusmjeravanje.."
-      successful_remove: Proširenje je uspješno uklonjeno.
-      successful_update: "{extension} je uspješno ažurirano, preusmjeravanje.."
-      update: Ažuriraj
-      update_soft_label: Meko ažuriranje
-      update_hard_label: Tvrdo ažuriranje
+      already_installed: "Ova ekstenzija je već instalirana"
+      check_why_it_failed_updating: "Prikaži zašto nije ažurirana na najnoviju verziju."
+      install: "Instaliraj novu ekstenziju"
+      install_help: "Za nastavak unesite naziv paketa ekstenzije. <semantic_link>Semantičku verziju</semantic_link> možete navesti u formatu <code>vendor/package-name:version</code>. Dostupne pakete pregledajte na {link}."
+      proceed: "Nastavi"
+      remove: "Deinstaliraj"
+      successful_install: "Ekstenzija {extension} je uspješno instalirana. Preusmjeravanje..."
+      successful_remove: "Ekstenzija je uspješno uklonjena."
+      successful_update: "Ekstenzija {extension} je uspješno ažurirana. Preusmjeravanje..."
+      update: "Ažuriraj"
+      update_soft_label: "Blago ažuriranje"
+      update_hard_label: "Prisilno ažuriranje"
 
-    file_permissions: >
-      Upravitelj proširenja zahtijeva dozvole čitanja i pisanja na sljedećim datotekama i direktorijima: composer.json, composer.lock, vendor, storage, storage/.composer
+    file_permissions: "Upravitelj ekstenzija zahtijeva dozvole za čitanje i pisanje nad sljedećim datotekama i folderima: composer.json, composer.lock, vendor, storage, storage/.composer"
 
     major_updater:
-      description: >
-        Glavna Flarum ažuriranja nisu kompatibilna s prethodnim verzijama, što znači da neka od vaših trenutno instaliranih proširenja i ručno napravljene izmjene možda neće raditi s novom verzijom.
-        Molimo napravite sigurnosnu kopiju baze podataka i datoteka prije nastavka.
-      dry_run: Probno pokretanje
-      dry_run_help: Probno pokretanje simulira ažuriranje kako bi provjerilo može li se vaša trenutna postavka sigurno ažurirati. Ovo ne garantuje da će ručno napravljene prilagodbe raditi u novijoj verziji.
+      description: "Nadogradnje na novu glavnu verziju Flaruma nisu unazad kompatibilne: neke od trenutno instaliranih ekstenzija i ručno unesenih izmjena možda neće raditi u novoj verziji. Prije nastavka obavezno napravite rezervnu kopiju baze podataka i datoteka."
+      dry_run: "Probno pokretanje"
+      dry_run_help: "Probno pokretanje simulira nadogradnju i provjerava može li se trenutna instalacija sigurno nadograditi. To ne garantuje da će vaše ručne prilagodbe raditi u novoj verziji."
       failure:
-        desc: Posljednje glavno ažuriranje nije uspjelo — neka instalirana proširenja nisu kompatibilna s novom glavnom verzijom.
-        why: Saznajte više
+        desc: "Posljednja nadogradnja na glavnu verziju nije uspjela jer neke instalirane ekstenzije nisu kompatibilne s njom."
+        why: "Saznajte više"
 
-      title: Dostupno je glavno ažuriranje Flarum {version}
-      update: Ažuriraj
+      title: "Dostupna je nadogradnja na Flarum {version}"
+      update: "Nadogradi"
 
     minor_update_confirmation:
-      content: Ovo će također ažurirati sva ostala proširenja/pakete za koje su dostupna ažuriranja.
+      content: "Ovim će se ažurirati i sve druge ekstenzije i paketi za koje postoje ažuriranja."
 
-    required_php_functions: >
-      Upravitelj proširenja zahtijeva da sljedeće PHP funkcije budu omogućene: <code>{functions}</code>.
-      Ako nemate pristup PHP konfiguraciji, kontaktirajte vašeg hosting pružatelja.
+    required_php_functions: "Upravitelj ekstenzija zahtijeva da budu uključene sljedeće PHP funkcije: <code>{functions}</code>. Ako nemate pristup PHP konfiguraciji, obratite se svom hosting provajderu."
 
     sections:
       discover:
-        description: Dodajte nove funkcionalnosti i integracije vašem Flarum forumu putem proširenja.
-        empty_results: Čini se da nema dostupnih proširenja.
+        description: "Dodajte nove funkcije i integracije na edukativnu platformu pomoću ekstenzija."
+        empty_results: "Nema dostupnih ekstenzija."
         extension:
           badges:
-            abandoned: Napušteno
-            fof: Friends Of Flarum
-            flarum: Flarum
-          downloads: "{count, plural, one {{formattedCount} preuzimanje} other {{formattedCount} preuzimanja}}"
-        search: Pretraži...
-        server_error: Usluga trenutno nije dostupna, molimo pokušajte ponovo kasnije.
+            abandoned: "Napušteno"
+            fof: "Friends Of Flarum"
+            flarum: "Flarum"
+          downloads: "{count, plural, one {{formattedCount} preuzimanje} few {{formattedCount} preuzimanja} other {{formattedCount} preuzimanja}}"
+        search: "Pretraži..."
+        server_error: "Usluga trenutno nije dostupna. Pokušajte ponovo kasnije."
         sort:
-          top: Najviše preuzimanja
+          top: "Najviše preuzimanja"
         tabs:
-          discover: Otkrijte
-          extensions: Proširenja
-          languages: Jezici
-          themes: Teme
-        title: Proširenja
+          discover: "Otkrij"
+          extensions: "Ekstenzije"
+          languages: "Jezici"
+          themes: "Vizuelni stilovi"
+        title: "Ekstenzije"
       queue:
         columns:
-          details: Pojedinosti
-          elapsed_time: Završeno za
-          peak_memory_used: Vršna upotreba memorije
-          operation: Operacija
-          package: Paket
-          status: Status
-        none: Još nema zadataka.
+          details: "Detalji"
+          elapsed_time: "Završeno za"
+          peak_memory_used: "Najveća potrošnja memorije"
+          operation: "Radnja"
+          package: "Paket"
+          status: "Status"
+        none: "Još nema zadataka."
         operations:
-          extension_install: Instaliraj proširenje
-          extension_remove: Ukloni proširenje
-          extension_update: Ažuriraj proširenje
-          update_check: Provjeri ažuriranja
-          update_global: Ažuriraj sve softverske pakete
-          update_major: Glavno ažuriranje
-          update_minor: Sporedno ažuriranje
-          why_not: Analiziraj zašto se paket ne može ažurirati
+          extension_install: "Instalacija ekstenzije"
+          extension_remove: "Uklanjanje ekstenzije"
+          extension_update: "Ažuriranje ekstenzije"
+          update_check: "Provjera ažuriranja"
+          update_global: "Ažuriranje svih softverskih paketa"
+          update_major: "Nadogradnja glavne verzije"
+          update_minor: "Manje ažuriranje"
+          why_not: "Analiza zašto se paket ne može ažurirati"
         output_modal:
-          cause_unknown: Nepoznato
-          command: Composer komanda
-          guessed_cause: Uzrok
-          output: Izlaz
-        refresh: Osvježi listu zadataka
+          cause_unknown: "Nepoznato"
+          command: "Composer naredba"
+          guessed_cause: "Uzrok"
+          output: "Izlaz"
+        refresh: "Osvježi listu zadataka"
         statuses:
-          success: Uspješno
-          failure: Neuspješno
-          pending: Na čekanju
-          running: U toku
-        task_just_started: Zadatak je upravo pokrenut
-        title: Red zadataka
+          success: "Uspješno"
+          failure: "Neuspjelo"
+          pending: "Na čekanju"
+          running: "U toku"
+        task_just_started: "Zadatak je upravo pokrenut"
+        title: "Red zadataka"
       settings:
-        title: Opcije i red zadataka
-        description: Konfigurišite upravitelja proširenja i pregledajte operacije u redu zadataka.
+        title: "Opcije i red zadataka"
+        description: "Podesite upravitelja ekstenzija i pratite radnje u redu zadataka."
 
     settings:
       title: => core.ref.settings
-      access_warning: Budite oprezni kome dajete pristup admin sučelju — upravitelja proširenja zlonamjerni korisnici mogu zloupotrijebiti za instaliranje paketa koji mogu dovesti do sigurnosnih propusta.
-      debug_mode_warning: Pokrenuti ste u načinu uklanjanja grešaka. Upravitelj proširenja ne može ispravno instalirati i ažurirati lokalne razvojne pakete. Za tu svrhu molimo koristite sučelje komandne linije.
-      queue_jobs: Pokreni operacije u pozadinskom redu zadataka
-      queue_jobs_help: >
-        Možete pročitati o <basic_impl_link>osnovnoj implementaciji reda</basic_impl_link> ili <adv_impl_link>naprednijoj</adv_impl_link>.
-        Osigurajte da PHP verzija koja se koristi za red zadataka bude {php_version}. Osigurajte da su <folder_perms_link>dozvole mapa</folder_perms_link> ispravno konfigurisane.
-      task_retention_days: Broj dana čuvanja zadataka
-      task_retention_days_help: >
-          Broj dana čuvanja završenih zadataka u bazi podataka. Zadaci stariji od toga bit će obrisani.
-          Postavite na 0 da biste čuvali sve zadatke.
+      access_warning: "Pažljivo birajte kome dajete pristup administratorskom panelu: zlonamjerne osobe mogu zloupotrijebiti upravitelja ekstenzija za instalaciju paketa koji ugrožavaju sigurnost."
+      debug_mode_warning: "Platforma radi u režimu za otklanjanje grešaka (debug), pa upravitelj ekstenzija ne može ispravno instalirati i ažurirati lokalne razvojne pakete. Za to koristite komandnu liniju."
+      queue_jobs: "Izvršavaj radnje u pozadinskom redu zadataka"
+      queue_jobs_help: "Pročitajte više o <basic_impl_link>osnovnoj</basic_impl_link> ili <adv_impl_link>naprednijoj</adv_impl_link> implementaciji reda zadataka. Provjerite da red zadataka koristi PHP verziju {php_version} i da su <folder_perms_link>dozvole za foldere</folder_perms_link> ispravno podešene."
+      task_retention_days: "Čuvanje zadataka (dani)"
+      task_retention_days_help: "Broj dana tokom kojih se završeni zadaci čuvaju u bazi podataka. Stariji zadaci se brišu. Vrijednost 0 čuva sve zadatke."
 
     updater:
-      up_to_date: Nema dostupnih ažuriranja.
-      check_for_updates: Provjeri ažuriranja
-      flarum: Flarum jezgro
-      global_update_successful: Svi paketi su uspješno ažurirani.
+      up_to_date: "Nema dostupnih ažuriranja."
+      check_for_updates: "Provjeri ažuriranja"
+      flarum: "Flarum jezgro"
+      global_update_successful: "Svi paketi su uspješno ažurirani."
       last_update_checked_at: "Posljednja provjera ažuriranja: "
-      run_global_update: Pokreni globalno ažuriranje
-      updater_title: Ažuriranja
-      updater_help: Pokreće provjeru novih ažuriranja proširenja i Flaruma.
+      run_global_update: "Ažuriraj sve"
+      updater_title: "Ažuriranja"
+      updater_help: "Provjerava ima li novih verzija ekstenzija i Flaruma."
 
-    update_successful: Flarum je uspješno ažuriran.
+    update_successful: "Flarum je uspješno ažuriran."
 
     why_not_modal:
-      title: Zašto se ne može ažurirati
+      title: "Zašto se ne ažurira?"
