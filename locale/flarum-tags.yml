@@ -10,33 +10,40 @@ flarum-tags:
     # These translations are used in the Basics page.
     basics:
       tags_label: => flarum-tags.ref.tags
+      slug_driver_options:
+        default: "Podrazumijevano"
+        id_with_slug: "ID s nazivom u URL-u"
 
     # These translations are used in the Edit Tag modal dialog.
     edit_tag:
       color_label: => core.ref.color
-      delete_tag_button: Obriši oznaku
-      delete_tag_confirmation: "Jeste li sigurni da želite obrisati ovu oznaku? Diskusije s ovom oznakom NEĆE biti obrisane."
-      description_label: Opis
-      hide_label: Sakrij iz svih diskusija
+      delete_tag_button: "Obriši oznaku"
+      default_sort_label: "Podrazumijevani redoslijed"
+      default_sort_none: "Podrazumijevani redoslijed platforme"
+      default_sort_text: "Kako su poredane teme s ovom oznakom kada korisnik sam ne odabere redoslijed."
+      default_sort_unavailable: "{sort} (više nije dostupno)"
+      delete_tag_confirmation: "Jeste li sigurni da želite obrisati ovu oznaku? Teme s ovom oznakom NEĆE biti obrisane."
+      description_label: "Opis"
+      hide_label: "Sakrij sa stranice Sve teme"
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
       name_label: => flarum-tags.ref.name
       name_placeholder: => flarum-tags.ref.name
-      slug_label: Slug
+      slug_label: "Naziv u URL-u"
       submit_button: => core.ref.save_changes
-      title: Kreiraj oznaku
+      title: "Oznaka"
 
     # These translations are used in the navigation bar.
     nav:
       tags_button: => flarum-tags.ref.tags
-      tags_text: Upravljajte listom oznaka dostupnih za organizaciju diskusija.
+      tags_text: "Upravljajte listom oznaka kojima se organizuju teme."
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      allow_edit_tags_label: Dozvoli uređivanje oznaka
-      bypass_tag_counts_label: Zaobiđi zahtjeve oznaka
-      restrict_by_tag_heading: Ograniči po oznaci
-      tag_discussions_label: Označavanje diskusija
+      allow_edit_tags_label: "Dozvoli uređivanje oznaka"
+      bypass_tag_counts_label: "Zaobilaženje ograničenja broja oznaka"
+      restrict_by_tag_heading: "Ograniči po oznaci"
+      tag_discussions_label: "Označavanje tema"
 
     # These translations are used in the Tags custom settings component.
     settings:
@@ -45,80 +52,86 @@ flarum-tags:
     # These translations are used in the Tag Settings modal dialog.
     tag_settings:
       range_separator_text: " do "
-      required_primary_heading: Obavezan broj primarnih oznaka
-      required_primary_text: Unesite minimalni i maksimalni broj primarnih oznaka koje se mogu primijeniti na diskusiju.
-      required_secondary_heading: Obavezan broj sekundarnih oznaka
-      required_secondary_text: Unesite minimalni i maksimalni broj sekundarnih oznaka koje se mogu primijeniti na diskusiju.
-      title: Postavke oznaka
+      required_primary_heading: "Potreban broj primarnih oznaka"
+      required_primary_text: "Unesite najmanji i najveći broj primarnih oznaka koje tema može imati."
+      required_secondary_heading: "Potreban broj sekundarnih oznaka"
+      required_secondary_text: "Unesite najmanji i najveći broj sekundarnih oznaka koje tema može imati."
+      title: "Postavke oznaka"
 
     # These translations are used in the Tags page.
     tags:
-      about_tags_text: "Oznake se koriste za kategorizaciju diskusija. Primarne oznake su poput tradicionalnih kategorija na forumu: mogu biti organizovane u dvostepenu hijerarhiju. Sekundarne oznake nemaju hijerarhiju ni redoslijed i korisne su za detaljniju kategorizaciju."
-      create_primary_tag_button: Kreiraj primarnu oznaku
-      create_secondary_tag_button: Kreiraj sekundarnu oznaku
-      edit_tag_label: Uredi oznaku {tag}
-      primary_heading: Primarne oznake
-      secondary_heading: Sekundarne oznake
-      settings_heading: Postavke
+      about_tags_text: "Oznake služe za razvrstavanje tema. Primarne oznake su poput klasičnih kategorija: mogu se organizovati u hijerarhiju s dva nivoa. Sekundarne oznake nemaju hijerarhiju ni redoslijed i korisne su za finije razvrstavanje."
+      create_primary_tag_button: "Nova primarna oznaka"
+      create_secondary_tag_button: "Nova sekundarna oznaka"
+      edit_tag_label: "Uredi oznaku {tag}"
+      primary_heading: "Primarne oznake"
+      secondary_heading: "Sekundarne oznake"
+      settings_heading: "Postavke"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are displayed on the page that lists all tags.
     all_tags:
-      meta_description_text: Sve oznake
+      meta_description_text: "Sve oznake"
       meta_title_text: => flarum-tags.ref.tags
 
     # These translations are used by the Choose Tags modal dialog.
     choose_tags:
-      edit_title: "Uredi oznake za {title}"
-      title: Odaberite oznake za svoju diskusiju
+      edit_title: "Uredi oznake teme „{title}“"
+      title: "Odaberite oznake za svoju temu"
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
       choose_tags_link: => flarum-tags.ref.choose_tags
 
+    # These translations are used by the Tag column in flarum/deck.
+    deck:
+      column_label: "Oznaka"
+      tag_label: "Oznaka"
+      tag_placeholder: "Pretraži oznake"
+
     # These translations are used by the discussion control buttons.
     discussion_controls:
-      edit_tags_button: Uredi oznake
+      edit_tags_button: "Uredi oznake"
 
     header:
-      back_to_tags_tooltip: Povratak na listu oznaka
+      back_to_tags_tooltip: "Nazad na listu oznaka"
 
     # These translations are used on the index page, peripheral to the discussion list.
     index:
-      more_link: Više...
+      more_link: "Više..."
       tags_link: => flarum-tags.ref.tags
-      untagged_link: Bez oznake
+      untagged_link: "Bez oznake"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
-      added_and_removed_tags_text: "{username} je dodao/la {tagsAdded} i uklonio/la {tagsRemoved} {time}."
-      added_tags_text: "{username} je dodao/la {tagsAdded} {time}."
-      removed_tags_text: "{username} je uklonio/la {tagsRemoved} {time}."
-      tags_text: "{count, plural, one {{tags} oznaka} few {{tags} oznake} other {{tags} oznaka}}"
+      added_and_removed_tags_text: "{username} – dodano: {tagsAdded}; uklonjeno: {tagsRemoved} {time}."
+      added_tags_text: "{username} – dodano: {tagsAdded} {time}."
+      removed_tags_text: "{username} – uklonjeno: {tagsRemoved} {time}."
+      tags_text: "{count, plural, =1 {oznaka {tags}} other {oznake {tags}}}"
 
     # These translations are used when visiting a single tag's discussion list.
     tag:
-      meta_description_text: "Sve diskusije s oznakom {tag}"
+      meta_description_text: "Sve teme s oznakom {tag}"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
 
     # This translation is displayed in place of the name of a tag that's been deleted.
-    deleted_tag_text: Obrisano
+    deleted_tag_text: "Obrisana oznaka"
 
     # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
     gambits:
       discussions:
         tag:
-          key: tag
-          hint: naziv oznake, lista naziva oznaka odvojena zarezima, ili "untagged"
+          key: oznaka
+          hint: "naziv oznake, više naziva odvojenih zarezom ili untagged (teme bez oznake)"
 
     # These translations are used in the tag selection modal.
     tag_selection_modal:
-      bypass_requirements: Zaobiđi zahtjeve oznaka
-      choose_primary_placeholder: "{count, plural, one {Odaberite primarnu oznaku} other {Odaberite {count} primarne oznake}}"
+      bypass_requirements: "Zaobiđi ograničenja broja oznaka"
+      choose_primary_placeholder: "{count, plural, =1 {Odaberite primarnu oznaku} one {Odaberite # primarnu oznaku} few {Odaberite # primarne oznake} other {Odaberite # primarnih oznaka}}"
       choose_secondary_placeholder: => flarum-tags.ref.choose_tags_placeholder
       choose_tags_placeholder: => flarum-tags.ref.choose_tags_placeholder
       submit_button: => core.ref.okay
@@ -130,7 +143,20 @@ flarum-tags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    choose_tags: Odaberite oznake
-    choose_tags_placeholder: "{count, plural, one {Odaberite još 1 oznaku} few {Odaberite još {count} oznake} other {Odaberite još {count} oznaka}}"
-    name: Naziv
-    tags: Oznake
+    choose_tags: "Odaberite oznake"
+    choose_tags_placeholder: "{count, plural, one {Odaberite još # oznaku} few {Odaberite još # oznake} other {Odaberite još # oznaka}}"
+    name: "Naziv"
+    tags: "Oznake"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        tagged: "Oznake teme {discussion} promijenjene su sa {old_tags} na {new_tags}"
+      tag:
+        created: "Kreirana oznaka {tag}"
+        updated: "Izmijenjena oznaka {tag}"
+        deleted: "Obrisana oznaka {tag}"
