@@ -2,27 +2,29 @@ flarum-gdpr:
   lib:
     data:
       followuser:
-        export_description: Izvozi podatke o praćenim korisnicima i korisnicima koji prate.
+        export_description: "Izvozi podatke o korisnicima koje korisnik prati i korisnicima koji njega prate."
         anonymize_description: "=> flarum-gdpr.lib.data.followuser.delete_description"
-        delete_description: Briše sve podatke vezane za praćenje korisnika.
+        delete_description: "Briše sve podatke povezane s praćenjem korisnika."
 
 ianm-follow-users:
   admin:
     permissions:
-      be_followed_label: Dozvoli korisnicima da budu praćeni
+      follow_label: "Praćenje drugih korisnika"
+      be_followed_label: "Drugi korisnici ih mogu pratiti"
+      view_followed_users_label: "Uvid u to koga član prati"
     settings:
-      button-on-profile-label: Prikaži dugme Prati direktno u zaglavlju korisničkog profila
-      stats-on-profile-label: Prikaži broj pratitelja i praćenih na korisničkim profilima
+      button-on-profile-label: "Prikaži dugme „Prati“ direktno u zaglavlju profila korisnika"
+      stats-on-profile-label: "Prikaži broj pratilaca i praćenih korisnika na profilima"
 
   forum:
-    followed: Praćeno
-    followers: "{count, plural, one {Pratitelj} other {Pratitelja}}"
+    followed: "Praćeni"
+    followers: "{count, plural, one {Pratilac} few {Pratioca} other {Pratilaca}}"
     profile_link: => ianm-follow-users.lib.following_link
-    followers_link: Pratitelji
+    followers_link: "Pratioci"
 
     profile_page:
-      no_following: Čini se da ne pratite nijednog korisnika.
-      no_followers: Čini se da još nemate pratitelja.
+      no_following: "Još nikoga ne pratite."
+      no_followers: "Još nemate pratilaca."
 
     user_controls:
       follow_button: => ianm-follow-users.lib.follow
@@ -30,50 +32,50 @@ ianm-follow-users:
       change_button: => ianm-follow-users.lib.change_follow_type
 
     settings:
-      notify_new_follower_label: Neko počne pratiti moj profil
-      notify_new_unfollower_label: Neko prestane pratiti moj profil
-      notify_new_discussion_label: Neko koga pratim pokrene diskusiju
-      notify_new_post_label: Neko koga pratim objavi u postojećoj diskusiji
-      block_follow: Spriječi korisnike da prate moj profil
+      notify_new_follower_label: "Neko me počne pratiti"
+      notify_new_unfollower_label: "Neko me prestane pratiti"
+      notify_new_discussion_label: "Neko koga pratim pokrene temu"
+      notify_new_post_label: "Neko koga pratim objavi u postojećoj temi"
+      block_follow: "Ne dozvoli drugima da me prate"
 
     index:
       follow_tag_button: => ianm-follow-users.lib.follow
       unfollow_tag_button: => ianm-follow-users.lib.change_follow_type
 
     notifications:
-      new_discussion_text: "{username} pokrenuo/la"
-      new_post_text: "{username} objavio/la u diskusiji"
-      new_follower_text: "{username} počeo/la pratiti vaš profil"
-      new_unfollower_text: "{username} prestao/la pratiti vaš profil"
+      new_discussion_text: "{username} – nova tema"
+      new_post_text: "{username} – nova objava u temi"
+      new_follower_text: "{username} vas sada prati"
+      new_unfollower_text: "{username} vas više ne prati"
 
     badge:
       label:
-        follow: Prati diskusije
-        lurk: Prati sve
+        follow: "Prati teme"
+        lurk: "Prati sve"
 
     filter:
-      following: Praćeni korisnici
+      following: "Praćeni korisnici"
 
     modals:
       select_follow_level:
-        title: "Odaberi nivo praćenja za {username}"
-        description: "Odaberite kako želite pratiti <em>{username}</em>."
+        title: "Nivo praćenja za korisnika {username}"
+        description: "Odaberite kako želite pratiti korisnika <em>{username}</em>."
 
         follow_levels_heading: "Nivoi praćenja"
         follow_select_label: "Vrsta praćenja"
 
-        no_user_attr_provided_err: "Ups, nešto je pošlo naopako pri otvaranju ovog prozora."
-        no_user_attr_provided_err_debug: "Atribut `user` nije proslijeđen modalu SelectFollowUserLevel pri kreiranju. Modal se ne može prikazati."
+        no_user_attr_provided_err: "Došlo je do greške pri otvaranju ovog prozora."
+        no_user_attr_provided_err_debug: "Prozoru SelectFollowUserLevel pri kreiranju nije proslijeđen atribut `user`. Prozor se ne može prikazati."
 
-        save_btn: "Spremi"
-        cancel_btn: "Otkaži"
+        save_btn: "Sačuvaj"
+        cancel_btn: "Odustani"
 
   email:
     new_discussion_by_user:
-      subject: "{user_display_name} pokrenuo/la diskusiju"
+      subject: "Nova tema korisnika {user_display_name}"
       plain:
         body: |
-          {user_display_name} pokrenuo/la je novu diskusiju: {discussion_title}
+          Nova tema korisnika {user_display_name}: {discussion_title}
 
           {discussion_url}
 
@@ -81,23 +83,23 @@ ianm-follow-users:
 
           {post_content}
       html:
-        body: "{user_display_name} pokrenuo/la je novu diskusiju: [{discussion_title}]({discussion_url})."
+        body: "Nova tema korisnika {user_display_name}: [{discussion_title}]({discussion_url})."
 
     new_follower:
-      subject: "{follower_display_name} počeo/la pratiti vaš profil"
+      subject: "{follower_display_name} Vas sada prati"
       plain:
         body: |
-          {follower_display_name} počeo/la je pratiti vaš profil i bit će obaviješten/a kada pokrenete novu diskusiju.
+          {follower_display_name} Vas sada prati i dobijat će obavještenje kada pokrenete novu temu.
 
           {profile_url}
       html:
-        body: "{follower_display_name} počeo/la je pratiti vaš profil i bit će obaviješten/a kada pokrenete novu diskusiju."
+        body: "{follower_display_name} Vas sada prati i dobijat će obavještenje kada pokrenete novu temu."
 
     new_post:
-      subject: "{user_display_name} objavio/la u {discussion_title}"
+      subject: "Nova objava korisnika {user_display_name} u temi {discussion_title}"
       plain:
         body: |
-          {user_display_name} objavio/la je u diskusiji {discussion_title}.
+          Nova objava korisnika {user_display_name} u temi {discussion_title}.
 
           {post_url}
 
@@ -107,35 +109,35 @@ ianm-follow-users:
 
           ---
 
-          Nećete primati više obavijesti o ovoj diskusiji dok ne budete ažurni.
+          Dok ne pročitate nove objave u ovoj temi, nećete primati nova obavještenja o njoj.
       html:
-        body: "{user_display_name} objavio/la je u diskusiji [{discussion_title}]({post_url})."
+        body: "Nova objava korisnika {user_display_name} u temi [{discussion_title}]({post_url})."
 
   lib:
-    following_link: Praćeni korisnici
+    following_link: "Praćeni korisnici"
 
-    follow: Prati
-    change_follow_type: Promijeni vrstu praćenja
-    unfollow: Prestani pratiti
+    follow: "Prati"
+    change_follow_type: "Promijeni vrstu praćenja"
+    unfollow: "Prestani pratiti"
 
     follow_levels:
       unfollow:
-        name: Ne prati
+        name: "Ne prati"
 
         description: |
-          Ne primaj obavijesti o aktivnostima korisnika <em>{username}</em>.
+          Ne primaj obavještenja o aktivnostima korisnika <em>{username}</em>.
 
       follow:
-        name: Prati diskusije
+        name: "Prati teme"
 
         description: |
-          Primaj obavijesti kada <em>{username}</em> pokrene novu diskusiju.
+          Primaj obavještenja kada <em>{username}</em> pokrene novu temu.
 
       lurk:
-        name: Prati sve
+        name: "Prati sve"
 
         description: |
-          Primaj obavijesti kada <em>{username}</em> pokrene novu diskusiju ili objavi u bilo kojoj diskusiji.
+          Primaj obavještenja kada <em>{username}</em> pokrene novu temu ili objavi u bilo kojoj temi.
     gambits:
       followeduser:
-        key: followeduser
+        key: praceni
