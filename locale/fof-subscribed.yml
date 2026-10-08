@@ -1,58 +1,58 @@
 fof-subscribed:
     forum:
         settings:
-            defaults_label: Postavi "{setting}" kao zadano uključeno
-            forced_label: Prisilno uključi "{setting}" za sve
-            notify_discussion_created_label: Neko pokrene raspravu
-            notify_post_created_label: Neko napiše novu objavu ili odgovor
-            notify_post_unapproved_label: Kreirana objava čeka odobrenje
-            notify_user_created_label: Neko se registruje
-            notify_post_flagged_label: Neko prijavi objavu
+            defaults_label: "Neka „{setting}“ bude podrazumijevano uključeno"
+            forced_label: "Obavezno uključi „{setting}“ za sve"
+            notify_discussion_created_label: "Neko pokrene temu"
+            notify_post_created_label: "Neko napiše novu objavu ili odgovor"
+            notify_post_unapproved_label: "Nova objava čeka odobrenje"
+            notify_user_created_label: "Pridruži se novi član"
+            notify_post_flagged_label: "Neko prijavi objavu"
         notifications:
-            discussion_created_text: "{username} je pokrenuo/la novu raspravu"
-            post_created_text: "{username} je napisao/la novu objavu"
-            post_unapproved_text: "{username} je kreirao/la objavu koja čeka odobrenje"
-            user_created_text: "{username} se upravo registrovao/la"
-            post_flagged_text: "{username} je prijavio/la objavu"
+            discussion_created_text: "{username} – nova tema"
+            post_created_text: "{username} – nova objava"
+            post_unapproved_text: "{username} – objava čeka odobrenje"
+            user_created_text: "{username} – novi član"
+            post_flagged_text: "{username} – prijavljena objava"
     admin:
         permission:
-            subscribe_to_discussion_created: Dozvola primanja obavijesti o novoj raspravi
-            subscribe_to_post_created: Dozvola primanja obavijesti o novoj objavi ili odgovoru
-            subscribe_to_post_unapproved: Dozvola primanja obavijesti o neodobrenoj objavi
-            subscribe_to_user_created: Dozvola primanja obavijesti o novom korisniku
-            subscribe_to_post_flagged: Dozvola primanja obavijesti o prijavi objave
+            subscribe_to_discussion_created: "Primanje obavještenja o novim temama"
+            subscribe_to_post_created: "Primanje obavještenja o novim objavama i odgovorima"
+            subscribe_to_post_unapproved: "Primanje obavještenja o objavama koje čekaju odobrenje"
+            subscribe_to_user_created: "Primanje obavještenja o novim članovima"
+            subscribe_to_post_flagged: "Primanje obavještenja o prijavljenim objavama"
     email:
         subject:
-            newDiscussion: "[Pretplata | Nova rasprava] {title}"
-            newUser: "[Pretplata | Novi korisnik] {username}"
-            postUnapproved: "[Pretplata | Čeka odobrenje] {username} je objavio/la u {title}"
-            postCreated: "[Pretplata | Nova objava] {username} je napisao/la novu objavu u {title}"
-            postFlagged: "[Pretplata | Nova prijava] {username} je prijavio/la objavu u {title}"
+            newDiscussion: "[Pretplata | Nova tema] {title}"
+            newUser: "[Pretplata | Novi član] {username}"
+            postUnapproved: "[Pretplata | Čeka odobrenje] {username} – objava u temi {title}"
+            postCreated: "[Pretplata | Nova objava] {username} – objava u temi {title}"
+            postFlagged: "[Pretplata | Prijava] {username} – prijavljena objava u temi {title}"
         body:
             newDiscussion: |
-                Selam {recipient_display_name},
+                Zdravo, {recipient_display_name},
 
-                {actor_display_name} je pokrenuo/la novu raspravu: {discussion_title}
+                nova tema korisnika {actor_display_name}: {discussion_title}
 
-                Za pregled ove rasprave posjetite sljedeću vezu:
+                Temu možete pogledati na sljedećem linku:
                 {discussion_url}
 
                 ---
 
                 {post_content}
             newUser: |
-                Selam {recipient_display_name},
+                Zdravo, {recipient_display_name},
 
-                {actor_display_name} se upravo pridružio/la na {forum_url}.
+                novi član platforme {forum_url}: {actor_display_name}.
 
-                Za pregled profila ovog korisnika posjetite sljedeću vezu:
+                Profil novog člana možete pogledati na sljedećem linku:
                 {user_url}
             postUnapproved: |
-                Selam {recipient_display_name},
+                Zdravo, {recipient_display_name},
 
-                {actor_display_name} je kreirao/la objavu koja nije automatski odobrena u raspravi {discussion_title}
+                nova objava korisnika {actor_display_name} u temi {discussion_title} nije automatski odobrena.
 
-                Za pregled ove objave posjetite sljedeću vezu:
+                Objavu možete pogledati na sljedećem linku:
                 {post_url}
 
                 ---
@@ -60,21 +60,21 @@ fof-subscribed:
                 {post_content}
 
             postCreated: |
-                Selam {recipient_display_name},
+                Zdravo, {recipient_display_name},
 
-                {actor_display_name} je napisao/la novu objavu u raspravi {discussion_title}
+                nova objava korisnika {actor_display_name} u temi {discussion_title}.
 
-                Za pregled ove objave posjetite sljedeću vezu:
+                Objavu možete pogledati na sljedećem linku:
                 {post_url}
 
                 ---
 
                 {post_content}
-            
+
             postFlagged: |
-                Selam {recipient_display_name},
+                Zdravo, {recipient_display_name},
 
-                {actor_display_name} je prijavio/la objavu u raspravi {discussion_title}
+                prijavljena je objava u temi {discussion_title} (prijava: {actor_display_name}).
 
-                Za pregled ove objave posjetite sljedeću vezu:
+                Objavu možete pogledati na sljedećem linku:
                 {post_url}
