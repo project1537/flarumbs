@@ -1,11 +1,11 @@
 fof-first-post-approval:
     admin:
         permissions:
-            bypass: Objavljuj bez odobrenja prve objave
+            bypass: "Objavljivanje bez odobrenja prvih objava"
         settings:
-            discussionCount: Broj prvih diskusija za koje je potrebno odobrenje
-            discussionCount_help: Postavite na 0 da se nove diskusije zadržavaju na odobrenju na osnovu broja objava umjesto toga.
-            postCount: Broj prvih objava za koje je potrebno odobrenje
-            postCount_help: Nakon što ovoliko objava korisnika bude odobreno, njegove/njene objave se odmah objavljuju.
-            restrictPrivateDiscussions: Onemogući privatne diskusije dok ne budu odobrene
-            restrictPrivateDiscussions_help: Privatne diskusije se ne mogu zadržati na odobrenju, pa se korisnicima koji još podliježu odobrenju prve objave onemogućava njihovo pokretanje. Isključite ovo da im dozvolite slobodno pokretanje privatnih diskusija.
+            discussionCount: "Broj prvih tema koje zahtijevaju odobrenje"
+            discussionCount_help: "Vrijednost 0 znači da se nove teme zadržavaju radi odobrenja na osnovu broja objava."
+            postCount: "Broj prvih objava koje zahtijevaju odobrenje"
+            postCount_help: "Kada se odobri ovoliko objava nekog korisnika, sve naredne objave tog korisnika objavljuju se odmah."
+            restrictPrivateDiscussions: "Zabrani privatne teme do odobrenja"
+            restrictPrivateDiscussions_help: "Privatne teme ne mogu se zadržati radi odobrenja, pa korisnici čije objave još podliježu odobrenju ne mogu pokretati privatne teme. Isključite ovu opciju ako im želite dozvoliti da slobodno pokreću privatne teme."
