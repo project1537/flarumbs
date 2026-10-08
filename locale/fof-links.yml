@@ -7,43 +7,93 @@ fof-links:
   # Translations in this namespace are used by the admin interface.
   admin:
 
-    # These strings are used in the Edit Link modal dialog.
+    # These strings are used in the link editor.
     edit_link:
-      delete_link_button: Obriši vezu
-      delete_link_confirmation: "Jeste li sigurni da želite obrisati ovu vezu?"
-      internal_link: "Je li ovo interna veza?"
-      open_newtab: "Otvori vezu u novoj kartici"
-      submit_button: => core.ref.save_changes
       title: => fof-links.ref.create_link
+      title_child: "Novi link ispod stavke {parent}"
       title_label: => fof-links.ref.title
       title_placeholder: => fof-links.ref.title
+
       icon_label: => core.ref.icon
       icon_text: => core.ref.icon_text
-      icon_additional_text: Za ikone brendova koristite prefiks <code>fab fa-</code>.
-      url_description: Ostavite prazno za prikaz kao natpis.
-      url_label: => fof-links.ref.url
-      url_placeholder: => fof-links.ref.url
-      use_rel_me: Dodaj atribut <code>rel="me"</code> za potvrdu identiteta na drugim stranicama
-      visibility:
-        help: Veze su prema zadanim postavkama vidljive samo <code>{admin}</code> korisnicima. Prilagodite dozvole kako biste odredili ko može vidjeti ovu vezu.
-        help-disabled: Sačuvajte vezu prije promjene postavki vidljivosti.
-        label: Vidljivost veze
-        guest-only:
-          label: "Samo za {guest}?"
-          help: "Ovu vezu mogu vidjeti samo {guest}. Dozvola iznad treba biti postavljena na '{everyone}'."
+      icon_additional_text: "Za ikonu brenda koristite prefiks <code>fab fa-</code>."
 
-    # These strings are used in the Links page.
+      type:
+        heading: "Šta ovaj link radi"
+        internal:
+          label: "Vodi na stranicu ove platforme"
+          help: "Otvara se bez ponovnog učitavanja stranice."
+        external:
+          label: "Vodi na drugu web stranicu"
+          help: "Otvara adresu izvan ove platforme."
+        label:
+          label: "Ne vodi nigdje"
+          help: "Prikazuje se kao natpis. Koristite ga kao naziv grupe linkova."
+
+      url_label: => fof-links.ref.url
+      url_help:
+        internal: "Dio adrese nakon {baseUrl}, počevši kosom crtom."
+        external: "Puna adresa, uključujući <code>https://</code>."
+      url_placeholder:
+        internal: "/tags"
+        external: "https://example.com"
+
+      options_label: "Opcije"
+      open_newtab: "Otvori u novoj kartici"
+      use_rel_me: "Dodaj atribut <code>rel=\"me\"</code>"
+      use_rel_me_help: "Omogućava stranici na koju link vodi da potvrdi da je ova platforma vaša."
+
+      visibility:
+        label: "Ko ga vidi"
+        help: "Novi link vidljiv je samo grupi {admin}. Da ga učinite dostupnim drugima, proširite dozvolu."
+        help-disabled: "Sačuvajte link prije nego što odredite ko ga vidi."
+        guest-only:
+          label: "Prikaži samo grupi {guest}"
+          help: "Prijavljeni korisnici neće vidjeti ovaj link. Dozvola iznad treba biti postavljena na „{everyone}“."
+
+      submit_button: => core.ref.save_changes
+      delete_link_button: "Obriši link"
+      delete_link_confirmation: "Jeste li sigurni da želite obrisati „{title}“?"
+
+    # These strings are used on the links page.
     links:
-      create_button: => fof-links.ref.create_link
       links: => fof-links.ref.links
-      preconfigured: Veze na ovom forumu su unaprijed konfigurisane i ne mogu se ovdje uređivati.
+      description: "Linkovi se prikazuju u navigaciji platforme, redoslijedom kojim su ovdje navedeni."
+      create_button: => fof-links.ref.create_link
+      preconfigured: "Linkovi na ovoj platformi unaprijed su podešeni u kodu i ne mogu se ovdje uređivati."
+      no_url: "Bez linka, prikazuje se kao natpis"
+
+      reorder_help: "Link prevucite za ručicu da promijenite redoslijed ili ga spustite na drugi link da ga smjestite ispod njega. Kada je ručica u fokusu, isto možete uraditi tipkama sa strelicama."
+      reorder_loading: "Priprema liste za promjenu redoslijeda…"
+      reorder_accessible_label: "Promijeni položaj stavke {title}. Strelicama je pomjerite gore, dolje, ispod linka iznad ili nazad van njega."
+
+      edit_accessible_label: "Uredi {title}"
+      add_child_accessible_label: "Dodaj link ispod stavke {title}"
+
+      audience_everyone: "Vidljivo svima"
+      flag:
+        new_tab: "Nova kartica"
+        rel_me: "rel=\"me\""
+        guest_only: "Samo gosti"
+
+      moved: "Link {title} premješten je na poziciju {position} od {total}."
+      moved_under: "Link {title} premješten je ispod stavke {parent}, pozicija {position} od {total}."
 
     settings:
-      show_icons_only_on_tablet: Prikaži samo ikone na ekranima tableta
+      heading: "Postavke"
+      show_icons_only_on_tablet: "Na tabletima prikazuj samo ikone"
+      show_icons_only_on_tablet_help: "Sakriva nazive linkova na širinama ekrana od 768px do 991px, gdje navigacija ima najmanje prostora. Čitači ekrana i dalje izgovaraju nazive."
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used in the header menu.
+    header:
+      toggle_dropdown_accessible_label: "Prikaži linkove ispod stavke {title}"
 
   # Strings in this namespace are referenced by two or more unique keys.
   ref:
-    create_link: Kreiraj vezu
-    links: Veze
-    title: Naslov
-    url: URL
+    create_link: "Novi link"
+    links: "Linkovi"
+    title: "Naziv"
+    url: "URL"
