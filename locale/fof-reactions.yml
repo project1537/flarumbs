@@ -1,85 +1,87 @@
 fof-reactions:
   forum:
-    disabled-reaction: Trenutno ne možete koristiti ovu reakciju, molimo osvježite stranicu
-    warning: Vaša reakcija je konvertovana
-    notification: '{username} je reagovao/la sa {reaction} na vašu objavu'
+    disabled-reaction: "Ova reakcija trenutno nije dostupna. Osvježite stranicu."
+    warning: "Vaša reakcija je pretvorena"
+    notification: "{username} – reakcija {reaction} na vašu objavu"
     settings:
-        notify_post_reacted_label: Neko reaguje na jednu od mojih objava
-    reacting-own-post: Ne možete reagovati na vlastitu objavu
+        notify_post_reacted_label: "Neko reaguje na neku od mojih objava"
+    reacting-own-post: "Ne možete reagovati na vlastitu objavu"
     modal:
-        title: Reakcije
-        anonymous_count: "{count, plural, one {# anonimni korisnik} other {# anonimnih korisnika}}"
-        no_reactions: Još nema reakcija
-        load_more: Učitaj više
-        others_count: "+ {count, plural, one {# drugi} other {# drugih}}"
-        remove_all_reaction_type: Ukloni sve reakcije {reaction}
-        remove_user_reaction: Ukloni reakciju
-    mod_item: Pregledaj reakcije
-    react_button_label: Reagiraj
-    unreact_button_label: Ukloni reakciju
-    reaction_button_label: "Reagiraj sa {reaction}"
-    reacted_with_label: "{count, plural, one {{reaction} (# reakcija)} other {{reaction} (# reakcija)}}"
+        title: "Reakcije"
+        anonymous_count: "{count, plural, one {# anonimni korisnik} few {# anonimna korisnika} other {# anonimnih korisnika}}"
+        no_reactions: "Još nema reakcija"
+        load_more: "Učitaj još"
+        others_count: "+ {count, plural, one {# osoba} few {# osobe} other {# osoba}}"
+        remove_all_reaction_type: "Ukloni sve reakcije {reaction}"
+        remove_user_reaction: "Ukloni reakciju"
+        confirm_remove_all_reaction_type: "Jeste li sigurni da želite ukloniti sve reakcije {reaction} s ove objave? Ova radnja se ne može poništiti."
+        confirm_remove_user_reaction: "Jeste li sigurni da želite ukloniti reakciju {reaction} korisnika {username} s ove objave? Ova radnja se ne može poništiti."
+    mod_item: "Pogledaj reakcije"
+    react_button_label: "Reaguj"
+    unreact_button_label: "Ukloni reakciju"
+    reaction_button_label: "Reaguj sa {reaction}"
+    reacted_with_label: "{count, plural, one {{reaction} (# reakcija)} few {{reaction} (# reakcije)} other {{reaction} (# reakcija)}}"
 
   admin:
     permissions:
-        react_posts_label: Reagiraj na objave
-        see_reactions_label: Vidi ko je reagovao na objave
-        delete_post_reactions_label: Briši reakcije na objavama
+        react_posts_label: "Reagovanje na objave"
+        see_reactions_label: "Uvid u to ko je reagovao na objave"
+        delete_post_reactions_label: "Brisanje reakcija na objavama"
 
     page:
       cdn:
-        title: CDN
+        title: "CDN"
         help: |
-          Zadano, resursi reakcija se serviraju s Cloudflare CDN-a. Možete navesti i drugu CDN adresu
-          prema potrebi. <code>[codepoint]</code> bit će zamijenjen s kodnom točkom emojija.
+          Resursi reakcija podrazumijevano se isporučuju s Cloudflareovog CDN-a. Po potrebi možete navesti adresu bilo kojeg drugog CDN-a.
+          <code>[codepoint]</code> se zamjenjuje kodnom tačkom (codepoint) emojija.
 
-          Na primjer, za prelazak na Noto Emoji putem jsdelivra, unesite <code>https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@v2.040/svg/emoji_u[codepoint].svg</code>.
+          Na primjer, za prelazak na Noto Emoji putem jsdelivra unesite <code>https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@v2.040/svg/emoji_u[codepoint].svg</code>.
 
-          Vaš CDN mora podržavati Emoji/Unicode {emojibase} ili noviji. Koristite [twemoji] za zamjenu Twemoji verzijom.
-        label: URL
-        default-url: "Zadano: {url}"
+          CDN mora podržavati Emoji/Unicode {emojibase} ili noviju verziju. Koristite [twemoji] da se umetne verzija Twemojija.
+        label: "URL"
+        default-url: "Podrazumijevano: {url}"
       reactions:
-        title: Reakcije
-        reactions: Trenutne reakcije
-        Helptext: Unesite naziv (identifikator) emojija ili Font Awesome ikonice i odaberite željenu vrstu.
+        title: "Reakcije"
+        reactions: "Trenutne reakcije"
+        Helptext: "Unesite naziv (identifikator) emojija ili FontAwesome ikone i odaberite vrstu."
         help:
-          display: Prikaz
-          identifier: Identifikator
-        delete_confirmation: Jeste li sigurni da želite obrisati ovu reakciju? Ova radnja ne može biti poništena.
-        delete_reaction_button: Obriši reakciju
-        add_reaction_button: Dodaj reakciju
-        add_reaction_label: Dodaj novu reakciju
+          display: "Prikaz"
+          identifier: "Identifikator"
+        delete_confirmation: "Jeste li sigurni da želite obrisati ovu reakciju? Ova radnja se ne može poništiti."
+        delete_reaction_button: "Obriši reakciju"
+        add_reaction_button: "Dodaj reakciju"
+        add_reaction_label: "Dodaj novu reakciju"
 
         header:
-            display: Tekst prikaza
-            identifier: Identifikator ikonice/emojija
-            type: Vrsta
-            enabled: Omogućeno
-            action: Radnja
-            preview: Pregled
+            display: "Prikazani tekst"
+            identifier: "Identifikator ikone/emojija"
+            type: "Vrsta"
+            enabled: "Uključeno"
+            action: "Radnja"
+            preview: "Pregled"
 
       convert:
-        help: Ako ste upravo ažurirali proširenje, vaše reakcije će morati biti konvertovane. Ako ste upravo instalirali ovo proširenje, možete slobodno zanemariti ovu poruku.
-        button: Konvertuj stare reakcije
-        converting: Vaše reakcije se sada konvertuju. Osvježite sajt nakon nekoliko minuta da vidite završetak procesa. (Vrijeme konverzije može potrajati ovisno o ukupnom broju reakcija)
-        converted: "Uspješno konvertovano svih {number} sviđanja"
+        help: "Ako ste upravo ažurirali ekstenziju, reakcije morate pretvoriti u novi format. Ako ste ekstenziju upravo instalirali, ovu poruku možete zanemariti."
+        button: "Pretvori stare reakcije"
+        converting: "Reakcije se sada pretvaraju. Osvježite stranicu za nekoliko minuta da vidite da je postupak završen. (Pretvaranje može potrajati, zavisno od ukupnog broja reakcija.)"
+        converted: "Uspješno pretvorena sviđanja: {number}"
 
       settings:
-        react_own_posts_help: Kada je omogućeno, uz odgovarajuću dozvolu, korisnici mogu reagovati na vlastite objave. Da biste spriječili korisnike da reaguju na vlastite objave, onemogućite ovu postavku.
-        react_own_posts_label: Korisnici mogu reagovati na vlastite objave
-        allow-anonymous: Dozvoli anonimne reakcije (gosti)
-        allow-anonymous-help: Ako je omogućeno, gosti i anonimni korisnici moći će reagovati na objave. Anonimne reakcije neće biti vezane za korisnički profil i bit će grupisane u listi reakcija.
+        react_own_posts_help: "Kada je uključeno, korisnici koji imaju dozvolu mogu reagovati na vlastite objave na platformi. Da to spriječite, isključite ovu postavku."
+        react_own_posts_label: "Korisnici mogu reagovati na vlastite objave"
+        allow-anonymous: "Dozvoli anonimne reakcije (gosti)"
+        allow-anonymous-help: "Ako je uključeno, gosti i anonimni korisnici mogu reagovati na objave. Anonimne reakcije nisu povezane s profilom korisnika i u listi reakcija prikazuju se zbirno."
         integrations:
-          legend: Integracije
-          warning: Ista reakcija <strong>ne može</strong> biti konvertovana i u sviđanje <strong>i</strong> u pozitivan glas
+          legend: "Integracije"
+          warning: "Ista reakcija <strong>ne može</strong> se pretvoriti i u sviđanje <strong>i</strong> u pozitivan glas"
           gamification:
-            legend: Gamifikacija
-            upvoteLabel: Konvertuj reakcije u pozitivne glasove
-            upvoteHelptext: Unesite identifikator reakcije koju želite automatski konvertovati u pozitivan glas
-            downvoteLabel: Konvertuj reakcije u negativne glasove
-            downvoteHelptext: Unesite identifikator reakcije koju želite automatski konvertovati u negativan glas
+            legend: "Gamifikacija"
+            upvoteLabel: "Pretvaraj reakcije u pozitivne glasove"
+            upvoteHelptext: "Unesite identifikator reakcije koja se automatski pretvara u pozitivan glas"
+            downvoteLabel: "Pretvaraj reakcije u negativne glasove"
+            downvoteHelptext: "Unesite identifikator reakcije koja se automatski pretvara u negativan glas"
 
           likes:
-            legend: Sviđanja
-            Label: Konvertuj reakcije u sviđanja
-            Helptext: Unesite identifikator reakcije koju želite automatski konvertovati u sviđanje
+            legend: "Sviđanja"
+            Label: "Pretvaraj reakcije u sviđanja"
+            Helptext: "Unesite identifikator reakcije koja se automatski pretvara u sviđanje"
