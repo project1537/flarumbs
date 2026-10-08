@@ -2,20 +2,20 @@ fof-synopsis:
   admin:
     settings:
       excerpt-length:
-        label: Dužina isječka sažetka u znakovima
-        help: Koliko znakova treba biti prikazano iz objave.
+        label: "Dužina sažetka (broj znakova)"
+        help: "Koliko se znakova objave prikazuje u sažetku."
       rich-excerpts:
-        label: Prikaži isječke s bogatim sadržajem
-        help: Kada je omogućeno, slike, ugrađeni sadržaj i drugi netekstualni elementi mogu biti uključeni u sinopsis
+        label: "Prikazuj sažetke s bogatim sadržajem"
+        help: "Kada je uključeno, sažetak može sadržavati slike, ugrađeni sadržaj i druge netekstualne elemente."
       excerpt-type:
-        label: Koja objava treba biti prikazana kao isječak?
-        help: Odaberite hoće li se prva ili posljednja objava koristiti kao sadržaj sinopsisa
-      first-label: Prva objava
-      last-label: Posljednja objava
-      tags-enabled: Imate omogućenu ekstenziju <code>flarum/tags</code>. Ove postavke postaju zadane, osim ako pojedinačne oznake imaju vlastite postavke.
+        label: "Koja objava se prikazuje kao sažetak?"
+        help: "Odaberite da li se za sažetak koristi prva ili posljednja objava teme."
+      first-label: "Prva objava"
+      last-label: "Posljednja objava"
+      tags-enabled: "Uključena je ekstenzija <code>flarum/tags</code>. Ove postavke postaju podrazumijevane, osim za oznake koje imaju vlastite postavke."
   forum:
     user:
       settings:
-        summaries-heading: Sinopsis
-        show-summaries: Prikaži isječak svake diskusije u listama diskusija (Desktop/Tablet)
-        show-summaries-mobile: Prikaži isječak svake diskusije u listama diskusija (Mobilni uređaji)
+        summaries-heading: "Sažeci tema"
+        show-summaries: "Prikazuj sažetak svake teme u listama tema (računar/tablet)"
+        show-summaries-mobile: "Prikazuj sažetak svake teme u listama tema (mobitel)"
