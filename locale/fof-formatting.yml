@@ -1,10 +1,10 @@
 fof-formatting:
   admin:
     plugins:
-      Autoimage: Automatski pretvori URL-ove slika u prikaz slika
-      Autovideo: Automatski pretvori URL-ove videa u reproducibilne videozapise
-      FancyPants: Koristi naprednu tipografiju
-      HTMLEntities: Koristi HTML entitete
-      MediaEmbed: Ugrađivanje sadržaja s dozvoljenih stranica
-      PipeTables: Tablice u ASCII stilu
-      TaskLists: Liste zadataka u GitHub/GitLab stilu
+      Autoimage: "Pretvaraj URL-ove slika u slike"
+      Autovideo: "Pretvaraj URL-ove videozapisa u videozapise koji se mogu pokrenuti"
+      FancyPants: "Koristi tipografske znakove (navodnike, crtice, tri tačke)"
+      HTMLEntities: "Koristi HTML entitete"
+      MediaEmbed: "Ugrađuj sadržaj s dozvoljenih web stranica"
+      PipeTables: "Tabele u ASCII stilu"
+      TaskLists: "Liste zadataka u stilu GitHuba/GitLaba"
