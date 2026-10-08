@@ -3,13 +3,13 @@ fof-pages:
     edit_page:
       content_label: => fof-pages.ref.content
       content_placeholder: => fof-pages.ref.content
-      delete_page_button: Obriši stranicu
+      delete_page_button: "Obriši stranicu"
       delete_page_confirmation: "Jeste li sigurni da želite obrisati ovu stranicu?"
-      hidden_label: Sačuvaj kao nacrt
-      restricted_label: Ograniči pristup (konfiguriši ko može pristupiti na kartici Dozvole)
-      html_label: Omogući HTML
-      set_as_home_page_confirmation: "Jeste li sigurni da želite postaviti ovu stranicu kao početnu?"
-      set_as_home_page_done: Početna stranica je ažurirana
+      hidden_label: "Sačuvaj kao nacrt"
+      restricted_label: "Ograniči pristup (ko smije pristupiti, podešava se na kartici Dozvole)"
+      html_label: "Uključi HTML"
+      set_as_home_page_confirmation: "Jeste li sigurni da želite ovu stranicu postaviti kao početnu?"
+      set_as_home_page_done: "Početna stranica je promijenjena"
       slug_label: => fof-pages.ref.slug
       slug_placeholder: => fof-pages.ref.slug
       submit_button: => core.ref.save_changes
@@ -21,18 +21,18 @@ fof-pages:
     pages:
       create_button: => fof-pages.ref.create_page
     pages_list:
-      empty_text: Čini se da ovdje nema stranica.
+      empty_text: "Ovdje još nema stranica."
       title: => fof-pages.ref.title
     permissions:
-      restricted: Pregled ograničenih stranica
+      restricted: "Pregled stranica s ograničenim pristupom"
     badges:
-      hidden: Nacrt
-      restricted: Ograničeno
+      hidden: "Nacrt"
+      restricted: "Ograničeno"
 
   ref:
-    content: Sadržaj
-    create_page: Kreiraj stranicu
-    pages: Stranice
-    slug: Slug
-    title: Naslov
-    url: URL
+    content: "Sadržaj"
+    create_page: "Nova stranica"
+    pages: "Stranice"
+    slug: "Naziv u URL-u"
+    title: "Naslov"
+    url: "URL"
