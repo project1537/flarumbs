@@ -2,261 +2,338 @@ flarum-gdpr:
   lib:
     data:
       uploads:
-        export_description: Sve datoteke koje je korisnik otpremio.
-        anonymize_description: Uklanja referencu na korisnika iz otpremljenih datoteka. Same datoteke ostaju dostupne korisnicima koji su ih mogli vidjeti prije anonimizacije.
-        delete_description: Briše sve datoteke koje je korisnik otpremio.
+        export_description: "Sve datoteke koje je korisnik učitao."
+        anonymize_description: "Uklanja vezu između korisnika i učitanih datoteka. Same datoteke ostaju dostupne korisnicima koji su ih mogli vidjeti prije anonimizacije."
+        delete_description: "Briše sve datoteke koje je korisnik učitao."
 
 fof-upload:
   admin:
     nav:
-      shared-uploads-button: Dijeljene datoteke
+      shared-uploads-button: "Zajedničke datoteke"
     shared-uploads:
-      description: Otpremite datoteke koje mogu koristiti svi korisnici vašeg foruma.
+      description: "Učitajte datoteke koje mogu koristiti svi korisnici platforme."
       introduction: |
-        Dijeljene datoteke su datoteke koje mogu koristiti svi korisnici vašeg foruma. Nisu priložene nijednoj objavi, ali se mogu umetnuti u objave putem upravitelja medija.
+        Zajedničke datoteke mogu koristiti svi korisnici platforme. Nisu priložene uz neku objavu, ali se mogu umetnuti u objave putem upravitelja medija.
 
-        <strong>Upozorenje:</strong> Dijeljene datoteke nisu zaštićene nikakvim dozvolama. Svako s URL-om ih može pregledati.
-      no-files: Još nisu otpremljene dijeljene datoteke.
-      title: Dijeljene datoteke
-      upload-new-button: Otpremi novu datoteku
+        <strong>Upozorenje:</strong> zajedničke datoteke nisu zaštićene nikakvim dozvolama. Može ih vidjeti svako ko ima njihov URL.
+      no-files: "Još nije učitana nijedna zajednička datoteka."
+      title: "Zajedničke datoteke"
+      upload-new-button: "Učitaj novu datoteku"
     pane:
-      title: Otprema
-      description: Postavite usluge i postavke otpremanja.
+      title: "Učitavanje datoteka"
+      description: "Podesite servise i postavke za učitavanje datoteka."
     help_texts:
       disable-download-logging: |
-        Onemogući bilježenje svakog preuzimanja koje naprave korisnici vašeg foruma. Ako ostane omogućeno, moći ćete vidjeti broj preuzimanja i ostale metrike u bliskoj budućnosti.
+        Isključuje bilježenje svakog preuzimanja koje korisnici platforme naprave. Ako bilježenje ostane uključeno, ubuduće ćete moći vidjeti broj preuzimanja i druge pokazatelje.
       disable-hotlink-protection: |
-        Zaštita od hotlinkinga sprječava otvaranje preuzimanja s drugih sajtova. Trenutna metoda zahtijeva csrf token i ID objave.
+        Zaštita od direktnog povezivanja (hotlink) sprečava otvaranje preuzimanja s drugih web stranica. Trenutni način zahtijeva CSRF token i ID objave.
       download_templates: |
-        Predlošci preuzimanja određuju kako se otpremljene datoteke prikazuju na vašem forumu, npr. kao pregledi, dugmad. Trenutno dostupni:
+        Predlošci prikaza određuju kako se učitane datoteke prikazuju na platformi, npr. kao pregled ili dugme. Trenutno su dostupni:
       mime_types: |
-        Ovdje konfigurirajte vaše mapiranje. Svaki regularni izraz MIME tipa bit će obrađen određenim adapterom za otpremu i predloškom preuzimanja.
-        Opciono, dodijelite svakom unosu oznaku dozvole (npr. "Slike", "Videi") da biste kreirali posebnu dozvolu u rešetki dozvola.
-        Ovo vam omogućava ograničavanje koje grupe mogu otpremati određene vrste datoteka — pored osnovne dozvole "Otpremanje datoteka" koja je uvijek obavezna.
+        Odredite koje datoteke članovi smiju učitavati, gdje se koja vrsta čuva i kako se prikazuje u objavi.
+      mime_order: |
+        Pravila se provjeravaju odozgo prema dolje i primjenjuje se prvo koje odgovara, zato specifičnija pravila stavite iznad općih.
       resize: |
-        Odaberite da li želite promijeniti veličinu slika prije otpremanja. Možete odabrati maksimalnu širinu i visinu u pikselima. Proces promjene veličine zadržava omjer stranica slika.
+        Odaberite da li se slike smanjuju prije učitavanja. Možete odrediti najveću širinu i visinu u pikselima. Pri smanjivanju se zadržava omjer stranica slike.
       client_extension: |
-        Zadano, Upload bira sigurnu ekstenziju datoteke na osnovu MIME tipa.
-        Za neke vrste datoteka zasnovane na ZIP-u ili binarnim podacima, ovo može rezultirati korištenjem generičkih ekstenzija umjesto očekivanih.
-        Ovdje možete unijeti listu ekstenzija datoteka odvojenih zarezom koje će se zadržati doslovno.
+        Ekstenzija Upload podrazumijevano bira siguran nastavak imena datoteke na osnovu MIME tipa.
+        Kod nekih vrsta datoteka zasnovanih na ZIP-u ili binarnim podacima to može dati općeniti nastavak umjesto očekivanog.
+        Ovdje unesite listu nastavaka odvojenih zarezom koji će se zadržati u izvornom obliku.
       thumbnails: |
-        Generirajte smanjenu sličicu za slike pri otpremanju. Sličica se prikazuje umetnuto;
-        klikom na nju otvara se originalna datoteka pune rezolucije u novoj kartici. Sličice značajno
-        smanjuju potrošnju propusnog opsega i težinu stranice za forume s mnogo velikih slika.
+        Pri učitavanju slika pravi se smanjena minijatura. Minijatura se prikazuje u objavi,
+        a klik na nju otvara izvornu datoteku u punoj rezoluciji u novoj kartici. Minijature znatno
+        smanjuju potrošnju protoka i veličinu stranica na platformama s mnogo velikih slika.
+      thumbnail_quality: |
+        Kvalitet kodiranja od 1 do 100, primjenjuje se na WebP i JPEG minijature. Veće vrijednosti daju oštriju sliku,
+        ali veće datoteke. GIF i PNG minijature su bez gubitaka i zanemaruju ovu postavku.
+        Postojeće minijature zadržavaju trenutni kvalitet dok se ponovo ne naprave naredbom backfill.
       watermark: |
-        Odaberite da li će slike dobiti vodeni žig pri otpremanju. Vodeni žigovi se dodaju na ne-gif slike prema vašim donjim postavkama.
-      s3_compatible_storage: |
-        Sljedeće postavke su potrebne samo pri korištenju S3 kompatibilnog pohrane. Ako koristite AWS, možete ih ostaviti praznim.
+        Odaberite da li se slikama pri učitavanju dodaje vodeni žig. Vodeni žig dodaje se svim slikama osim GIF-ova, prema postavkama ispod.
+      storage_intro: |
+        Ovdje su prikazani servisi koje ste podesili ili koje koristi neka vrsta datoteka. Servis možete podesiti
+        prije nego što mu dodijelite ijednu vrstu datoteka – dodijelite ga na kartici Datoteke kada budete spremni.
+      storage_configure_another: |
+        Drugi servisi za pohranu su instalirani, ali još nisu podešeni. Podešavanje servisa ne mijenja mjesto čuvanja datoteka
+        dok ga ne dodijelite nekoj vrsti datoteka.
+      storage_not_installed: "Tražite Amazon S3, Cloudflare R2 ili Qiniu? Za njih je potreban dodatni paket – pogledajte <a>instalacija adaptera za pohranu</a>."
+      local_cdn: |
+        Neobavezno. Ako <code>assets/files</code> isporučujete putem CDN-a, unesite njegov osnovni URL i linkovi učitanih datoteka koristit će ga.
+        Ostavite prazno da se datoteke isporučuju direktno s platforme.
+      s3_provider: |
+        Odabirom provajdera određuju se format endpointa, način adresiranja i podrška za ACL ispod. Odaberite „Drugi S3-kompatibilni“
+        ako vaš provajder nije na listi.
+      s3_endpoint: |
+        URL S3 API-ja provajdera – ne javni URL vašeg bucketa. Za Amazon S3 nije potreban.
       s3_acl: |
-        ACL koji treba primijeniti na otpremljeni objekt (zadano: private). Za moguće vrijednosti, pogledajte https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl
+        Primjenjuje se na svaki učitani objekat. Ostavite prazno za podrazumijevanu postavku provajdera (obično privatno).
+        Koristite <code>public-read</code> ako datoteke moraju biti čitljive direktno iz bucketa.
+      s3_acl_unsupported: |
+        {provider} ne podržava ACL. Javni pristup podesite u kontrolnoj tabli samog provajdera.
+      s3_path_style: |
+        Smješta bucket u putanju URL-a umjesto u naziv hosta. Obavezno za MinIO i Cloudflare R2;
+        postavlja se automatski kada odaberete provajdera.
       custom_s3_url: |
-        Koristite ovu postavku ako koristite S3-kompatibilnu uslugu koja zahtijeva određeni format URL-a (npr. Backblaze B2) ili ako imate problema sa zadanim formatom URL-a. Ova postavka generalno nije neophodna za većinu usluga. Osigurajte da URL uključuje protokol (https://) i da je ispravno formatiran. Primjer: https://your-bucket.s3.your-region.backblazeb2.com
+        Javni osnovni URL s kojeg se isporučuju datoteke – CDN ili vlastita domena ispred bucketa.
+        Ostavite prazno da se koristi podrazumijevani URL provajdera. Mora sadržavati <code>https://</code>.
       s3_instance_profile: |
-        Ostavite ključ i tajni ključ praznim da biste koristili akreditive iz profila instance.
+        Ostavite oba polja prazna da se umjesto toga koristi IAM uloga – radi samo na EC2, ECS ili EKS.
       composer_buttons: |
-        Zadano, vidljiva su oba dugmeta — za upravitelja medija i za otpremu. Možete odabrati i prikazivanje samo jednog dugmeta.
+        Podrazumijevano su vidljiva oba dugmeta: dugme upravitelja medija i dugme za učitavanje. Možete odabrati i da se prikazuje samo jedno.
+    tabs:
+      files: "Datoteke"
+      storage: "Pohrana"
+      images: "Slike"
+      advanced: "Napredno"
+      unsaved_changes: "Ova kartica ima nesačuvane izmjene"
+      unsaved_hint: "Imate nesačuvane izmjene."
     labels:
+      storage:
+        configure_another: "Podesi drugi servis za pohranu (dostupno: {count})"
+        hide_unused: "Sakrij servise koji se ne koriste"
       aws-s3:
-        bucket: Bucket
-        key: Ključ
-        region: Regija
-        secret: Tajni ključ
-        title: Postavke AWS S3 pohrane
-        advanced_title: Napredne postavke S3 pohrane
-        endpoint: Endpoint
-        use_path_style_endpoint: Koristi endpoint s putanjom
-        acl: Lista kontrole pristupa (ACL)
-        custom_url: Prilagođeni S3 URL
+        bucket: "Bucket"
+        key: "ID pristupnog ključa (Access key ID)"
+        region: "Regija"
+        secret: "Tajni pristupni ključ (Secret access key)"
+        title: "S3 pohrana"
+        provider: "Provajder"
+        advanced_title: "Napredne opcije"
+        endpoint: "Endpoint"
+        use_path_style_endpoint: "Koristi adresiranje putem putanje (path-style)"
+        acl: "Lista kontrole pristupa (ACL)"
+        custom_url: "Javni URL"
       disable-download-logging:
-        title: Onemogući bilježenje preuzimanja
-        toggle: Onemogući
+        title: "Isključi bilježenje preuzimanja"
+        toggle: "Isključi"
       disable-hotlink-protection:
-        title: Onemogući zaštitu od hotlinkinga
-        toggle: Onemogući
+        title: "Isključi zaštitu od direktnog povezivanja"
+        toggle: "Isključi"
       imgur:
-        client_id: Imgur client ID
-        title: Postavke pohrane slika na Imgyru
-        tos: Vaša je odgovornost osigurati da korisnici vašeg foruma poštuju Imgurove <a>Uvjete korištenja</a>
+        client_id: "Imgur client ID"
+        deprecated: "Imgur više ne izdaje API client ID-ove, pa je ovaj adapter zastario i bit će uklonjen u nekoj od narednih verzija. Prebacite ove vrste datoteka na drugi adapter za pohranu."
+        title: "Postavke pohrane slika na Imgur"
+        tos: "Vaša je odgovornost da korisnici platforme poštuju Imgurove <a>uvjete korištenja</a>"
       local:
-        cdn_url: URL za isporuku sadržaja (prefiks datotekama)
-        title: Postavke lokalne pohrane
-      configured_by_environment: Vaše postavke pohrane su unaprijed konfigurisane putem varijabli okruženja.
+        cdn_url: "URL za isporuku sadržaja (prefiks za datoteke)"
+        title: "Postavke lokalne pohrane"
+      configured_by_environment: "Postavke pohrane unaprijed su podešene putem varijabli okruženja."
       qiniu:
-        title: Postavke Qiniu pohrane
-        key: Ključ
-        secret: Tajni ključ
-        bucket: Bucket
+        title: "Postavke Qiniu pohrane"
+        key: "Ključ"
+        secret: "Tajni ključ"
+        bucket: "Bucket"
       preferences:
-        max_file_size: Maksimalna veličina datoteke (u kilobajtima)
-        mime_types: "Konfigurirajte mapiranje MIME tipa i adaptera za otpremu"
+        max_file_size: "Najveća veličina datoteke"
+        max_file_size_equivalent: "Sprema se kao <code>{kb}</code> KB ({value})."
+        mime_types: "Vrste datoteka"
         mime_type_regex_placeholder: "npr. ^image/(jpeg|png|gif)$"
-        mime_type_regex_invalid: "Nevažeći regularni izraz (npr. prazne alternative poput ||)"
-        mime_type_permission_placeholder: "Oznaka dozvole (neobavezno, npr. Slike)"
-        title: Opće postavke
-        php_ini_values: "Vaše vrijednosti <code>php.ini</code> su <code>post_max_size={post}</code> i <code>upload_max_filesize={upload}</code>. Osigurajte da je ovdje postavljena vrijednost ispod ovih pragova ili ih prilagodite. Ako koristite <code>Nginx</code>, osigurajte i da je <code>client_max_body_size</code> dovoljne veličine za odabrano ograničenje."
+        mime_type_regex_invalid: "Neispravan regularni izraz (npr. prazne alternative poput ||)"
+        mime_type_permission_placeholder: "Neobavezno, npr. Slike"
+        mime_type_remove: "Ukloni ovu vrstu datoteka"
+        mime_type_add: "Dodaj ovu vrstu datoteka"
+        mime_column_pattern: "Vrsta datoteke"
+        mime_column_pattern_help: "Vrste datoteka na koje se pravilo odnosi, prepoznate po MIME tipu datoteke."
+        mime_column_storage: "Čuva se u"
+        mime_column_storage_help: "Servis za pohranu na koji se učitavaju datoteke ove vrste."
+        mime_column_display: "Prikazuje se kao"
+        mime_column_display_help: "Kako se datoteka prikazuje u objavi – kao pregled u tekstu, dugme za preuzimanje i sl."
+        mime_column_permission: "Naziv dozvole"
+        mime_column_permission_help: "Neobavezno. Ako ovdje upišete naziv, nastaje posebna dozvola kojom određujete ko smije učitavati ove datoteke."
+        mime_move_up: "Pomjeri gore (ranija provjera)"
+        mime_move_down: "Pomjeri dolje (kasnija provjera)"
+        mime_edit_pattern: "Uredi uzorak"
+        mime_use_simple: "Koristi jednostavni uređivač"
+        mime_advanced_pattern: "Napredni uzorak"
+        mime_add_subtype: "Dodaj format datoteke"
+        mime_add_subtype_placeholder: "npr. webp"
+        mime_remove_subtype: "Ukloni {subtype}"
+        mime_add_prompt: "Dodaj vrste datoteka…"
+        mime_add_custom: "Prilagođeni uzorak…"
+      mime_presets:
+        images: "Slike"
+        pdf: "PDF dokumenti"
+        documents: "Word dokumenti"
+        spreadsheets: "Tabele"
+        archives: "Arhive (zip, tar, 7z)"
+        audio: "Audio"
+        video: "Video"
+        title: "Opće postavke"
+        php_ini_values: "Vrijednosti u <code>php.ini</code> su <code>post_max_size={post}</code> i <code>upload_max_filesize={upload}</code>. Vrijednost postavljena ovdje mora biti ispod tih granica, ili ih prilagodite. Ako koristite <code>Nginx</code>, provjerite i da je <code>client_max_body_size</code> dovoljno velik za odabrano ograničenje."
       resize:
-        max_width: Maksimalna širina/visina slike
-        title: Promjena veličine slike
-        toggle: Promijeni veličinu slika
+        max_width: "Najveća širina/visina slike"
+        title: "Smanjivanje slika"
+        toggle: "Smanjuj slike"
       client_extension:
-        title: Korisničke ekstenzije datoteka
+        title: "Nastavci imena datoteka koje zadaje korisnik"
+        placeholder: "npr. docx, xlsx, epub"
       thumbnails:
-        title: Sličice slika
-        toggle: Generiraj sličice pri otpremanju
-        webp_toggle: "Kodiraj sličice kao WebP (preporučeno, ~30% manje)"
-        max_width: Maksimalna širina sličice (px)
+        title: "Minijature slika"
+        toggle: "Pravi minijature pri učitavanju"
+        webp_toggle: "Kodiraj minijature u formatu WebP (preporučeno, oko 30% manje datoteke)"
+        max_width: "Najveća širina minijature (px)"
+        quality: "Kvalitet minijature"
       watermark:
-        file: Otpremite sliku vodenog žiga
+        file: "Učitajte sliku vodenog žiga"
         opacity: "Neprozirnost vodenog žiga (0–100)"
-        padding: "Razmak od ruba (px)"
-        position: Pozicija vodenog žiga
+        padding: "Udaljenost od ruba (px)"
+        position: "Položaj vodenog žiga"
         size_percent: "Veličina vodenog žiga (% širine slike)"
-        title: Vodeni žig na slikama
-        toggle: Dodaj vodeni žig na slike
+        title: "Vodeni žig na slikama"
+        toggle: "Dodaj vodeni žig na slike"
       svg-sanitizer:
-        title: SVG sanitajzer
-        allow_animate: Dozvoli SVG animacije
-        help: Konfigurirajte kako se SVG datoteke obrađuju i sanitiziraju pri otpremanju. SVG datoteke mogu sadržavati potencijalno štetne skripte i treba ih pažljivo rukovati. Otpremljeni SVG-ovi se sanitiziraju pri otpremanju i štetne skripte i oznake se uklanjaju.
-        allow_animate_help: Omogućavanje SVG animacija može uvesti sigurnosne ranjivosti jer animirani SVG-ovi mogu sadržavati zlonamjerni kôd. Omogućite ovu postavku na vlastitu odgovornost i samo ako imate povjerenja u vaše korisnike.
+        title: "Čišćenje SVG datoteka"
+        allow_animate: "Dozvoli SVG animacije"
+        help: "Podesite kako se SVG datoteke obrađuju i čiste pri učitavanju. SVG datoteke mogu sadržavati potencijalno štetne skripte i s njima treba pažljivo postupati. Učitani SVG-ovi se pri učitavanju čiste, a štetne skripte i tagovi uklanjaju."
+        allow_animate_help: "Uključivanje SVG animacija može otvoriti sigurnosne propuste, jer animirani SVG-ovi mogu sadržavati zlonamjerni kod. Uključite ovu postavku na vlastitu odgovornost i samo ako vjerujete svojim korisnicima."
       composer_buttons:
-        title: Dugmad u editoru
+        title: "Dugmad u uređivaču objava"
         options:
-          both: Oba
-          upload-btn: Samo dugme za otpremu
-          media-btn: Samo dugme za upravitelja medija
-      inspect-mime: Ispitaj MIME tip datoteke
+          both: "Oba"
+          upload-btn: "Samo dugme za učitavanje"
+          media-btn: "Samo dugme upravitelja medija"
+      inspect-mime: "Provjeri MIME tip datoteke"
 
     warnings:
       fileinfo_missing: |
-        PHP ekstenzija <strong>fileinfo</strong> nije učitana na ovom serveru. FoF Upload će i dalje raditi, ali unakrsna provjera MIME tipova je onemogućena, što smanjuje zaštitu od lažiranih vrsta datoteka. Omogućite ekstenziju u vašoj PHP konfiguraciji za najveću sigurnost.
+        PHP ekstenzija <strong>fileinfo</strong> nije učitana na ovom serveru. FoF Upload će i dalje raditi, ali je isključena unakrsna provjera MIME tipa, što smanjuje zaštitu od lažno predstavljenih vrsta datoteka. Radi najbolje sigurnosti uključite ovu ekstenziju u PHP konfiguraciji.
+      max_file_size_exceeds_php: "Ovo premašuje stvarno ograničenje učitavanja na serveru od <strong>{limit}</strong> (<code>post_max_size={post}</code>, <code>upload_max_filesize={upload}</code>). PHP će odbiti datoteke veće od tog ograničenja bez obzira na ovu postavku. Smanjite ovu vrijednost ili povećajte ograničenja u <code>php.ini</code> (i <code>client_max_body_size</code> ako koristite Nginx)."
     permissions:
-      download_label: Preuzimanje datoteka
-      upload_label: Otpremanje datoteka (osnovna dozvola, obavezna za sve otpreme)
-      upload_mime_label: "Otpremanje {label}"
-      view_user_uploads_label: Pregled korisničkih otprema
-      delete_uploads_of_others_label: Brisanje korisničkih otprema
-      upload_shared_label: Otpremanje dijeljenih datoteka
-      access_shared_label: Pristup dijeljenim datotekama u upravitelju medija
+      download_label: "Preuzimanje datoteka"
+      upload_label: "Učitavanje datoteka (osnovna dozvola, potrebna za svako učitavanje)"
+      upload_mime_label: "Učitavanje: {label}"
+      view_user_uploads_label: "Pregled datoteka koje su učitali korisnici"
+      delete_uploads_of_others_label: "Brisanje datoteka koje su učitali korisnici"
+      upload_shared_label: "Učitavanje zajedničkih datoteka"
+      access_shared_label: "Pristup zajedničkim datotekama u upravitelju medija"
     templates:
-      file: Zadani predložak preuzimanja datoteke
+      file: "Podrazumijevani predložak za preuzimanje datoteka"
       file_description: |
-        Prikazuje naziv datoteke i opće informacije. Preuzimanja proksira kroz PHP, omogućavajući prikupljanje statistika i zaštitu od hotlinkinga.
-      image: Zadani predložak preuzimanja slike
+        Prikazuje naziv datoteke i osnovne informacije. Preuzimanja idu preko PHP-a, što omogućava prikupljanje statistike i zaštitu od direktnog povezivanja.
+      image: "Podrazumijevani predložak za preuzimanje slika"
       image_description: |
-        Prikazuje sličicu slike i proksira preuzimanje kroz PHP. Omogućava prikupljanje statistika i zaštitu od hotlinkinga.
-      image-preview: Predložak potpunog pregleda slike
+        Prikazuje minijaturu slike, a preuzimanje ide preko PHP-a. Time se omogućava prikupljanje statistike i zaštita od direktnog povezivanja.
+      image-preview: "Predložak za potpuni pregled slike"
       image-preview_description: |
-        Prikazuje potpunu sliku umetnuto. Nema funkcionalnosti preuzimanja, statistike se ne prikupljaju i zaštita od hotlinkinga se ignorira.
-      markdown-image: Markdown predložak slike
+        Prikazuje cijelu sliku u tekstu objave. Bez funkcije preuzimanja; statistika se ne prikuplja, a zaštita od direktnog povezivanja se ne primjenjuje.
+      markdown-image: "Predložak za Markdown sliku"
       markdown-image_description: |
-        Prikazuje potpunu sliku umetnuto koristeći Markdown. <strong>Morate imati instaliran i omogućen flarum/markdown da bi ovo radilo.</strong> Nema funkcionalnosti preuzimanja, statistike se ne prikupljaju i zaštita od hotlinkinga se ignorira.
-      bbcode-image: BBCode predložak slike
+        Prikazuje cijelu sliku u tekstu objave putem Markdowna. <strong>Za ovo mora biti instalirana i uključena ekstenzija flarum/markdown.</strong> Bez funkcije preuzimanja; statistika se ne prikuplja, a zaštita od direktnog povezivanja se ne primjenjuje.
+      bbcode-image: "Predložak za BBCode sliku"
       bbcode-image_description: |
-        Prikazuje potpunu sliku umetnuto koristeći BBCode. <strong>Morate imati instaliran i omogućen flarum/bbcode da bi ovo radilo.</strong> Nema funkcionalnosti preuzimanja, statistike se ne prikupljaju i zaštita od hotlinkinga se ignorira.
-      just-url: Samo URL
+        Prikazuje cijelu sliku u tekstu objave putem BBCodea. <strong>Za ovo mora biti instalirana i uključena ekstenzija flarum/bbcode.</strong> Bez funkcije preuzimanja; statistika se ne prikuplja, a zaštita od direktnog povezivanja se ne primjenjuje.
+      just-url: "Samo URL"
       just-url_description: |
-        Umeće samo URL. Prikazivanje može preuzeti druge ekstenzije s automatskim linkanjem. Nema funkcionalnosti preuzimanja, statistike se ne prikupljaju i zaštita od hotlinkinga se ignorira.
-      text-preview: Tekstualni pregled
+        Umeće samo URL. Prikaz mogu preuzeti druge ekstenzije koje automatski pretvaraju adrese u linkove. Bez funkcije preuzimanja; statistika se ne prikuplja, a zaštita od direktnog povezivanja se ne primjenjuje.
+      text-preview: "Pregled teksta"
       text-preview_description: |
-        Umeće pregled (prvih 5 redova) tekstualne datoteke, s opcijom proširivanja za prikaz cijelog sadržaja datoteke.
+        Umeće pregled tekstualne datoteke (prvih 5 redova), uz mogućnost proširenja na cijeli sadržaj datoteke.
     upload_methods:
-      aws-s3: S3 ili kompatibilno
-      imgur: Imgur
-      local: Lokalno
-      ovh-svfs: OVH SVFS
-      qiniu: QiNiu
+      aws-s3: "S3 ili kompatibilno"
+      imgur: "Imgur"
+      local: "Lokalno"
+      ovh-svfs: "OVH SVFS"
+      qiniu: "QiNiu"
     inspect-mime:
-      title: Ispitivanje MIME tipa
+      title: "Provjera MIME tipa"
       description: |
-        FoF Upload koristi biblioteku <a>PHP Mime Detector</a> za uobičajene MIME tipove i PHP Fileinfo kao rezervu.
+        FoF Upload za uobičajene MIME tipove koristi biblioteku <a>PHP Mime Detector</a>, a PHP Fileinfo kao rezervu.
         MIME vrijednost koju vraća Fileinfo može se razlikovati od servera do servera!
-      select: Odaberite datoteku ispod da biste pregledali vrijednosti koje će se koristiti. Datoteka neće biti sačuvana.
-      laravel-validation: Laravel provjera datoteke
-      no-file-selected: Nema datoteke
-      validation-passed: Prošlo
-      validation-failed: "Nije prošlo: {error}"
-      mime-detector: Mime Detector (primarni)
-      mime-fileinfo: PHP Fileinfo (rezervni)
-      guessed-extension: Zadana ekstenzija datoteke (ako originalna nije na listi dozvoljenih)
-      not-available: Nema rezultata
+      select: "Odaberite datoteku ispod da vidite vrijednosti koje će se koristiti. Datoteka neće biti sačuvana."
+      laravel-validation: "Laravel provjera datoteke"
+      no-file-selected: "Nema datoteke"
+      validation-passed: "Uspješno"
+      validation-failed: "Neuspješno: {error}"
+      mime-detector: "Mime Detector (glavni)"
+      mime-fileinfo: "PHP Fileinfo (rezervni)"
+      guessed-extension: "Podrazumijevani nastavak imena datoteke (ako izvorni nije na listi dozvoljenih)"
+      not-available: "Nema rezultata"
   forum:
-    media_manager: Upravitelj medija
+    media_manager: "Upravitelj medija"
+
+    display_name:
+      title: "Naziv preuzimanja"
+      title_plural: "Nazivi preuzimanja"
+      help: "Prikazuje se na preuzimanju umjesto naziva datoteke. Ostavite nepromijenjeno da se koristi naziv datoteke."
+      insert: "Umetni"
+      use_file_name: "Koristi nazive datoteka"
 
     buttons:
-      attach: Priloži
-      upload: Otpremi
-      upload_shared: Dijeljeno
-      user_uploads: Korisničke otpreme
-      cancel: Otkaži
-      media: Moji mediji
-      shared_media: Dijeljeni mediji
+      attach: "Priloži"
+      upload: "Učitaj"
+      upload_shared: "Zajedničko"
+      user_uploads: "Datoteke korisnika"
+      cancel: "Odustani"
+      media: "Moji mediji"
+      shared_media: "Zajednički mediji"
 
     states:
-      error: Greška
-      loading: Otpremanje
-      unauthorized: Nemate dozvolu za preuzimanje datoteka
+      error: "Greška"
+      loading: "Učitavanje"
+      unauthorized: "Nemate dozvolu za preuzimanje ove datoteke"
+      permission_required: "Potrebna je dozvola"
 
     validation:
-      max_size: "Otpreme veće od {max} kb nisu prihvaćene."
+      max_size: "Datoteke veće od {max} KB nisu dozvoljene."
 
     text_preview:
-      expand: Proširi pregled
-      collapse: Skupi pregled
-      download: Preuzmi datoteku
+      expand: "Proširi pregled"
+      collapse: "Skupi pregled"
+      download: "Preuzmi datoteku"
       error: |
-        Greška pri pregledu datoteke. Možda je obrisana ili je navedeni ID datoteke nevažeći.
-      no_snippet_preview: "<pregled će se pojaviti ovdje nakon objave>"
-      no_snippet: "<nema dostupnog pregleda>"
+        Greška pri pregledu datoteke. Možda je obrisana ili ID datoteke nije ispravan.
+      no_snippet_preview: "(pregled će se pojaviti nakon objavljivanja)"
+      no_snippet: "(pregled nije dostupan)"
   api:
     upload_errors:
-      forbidden_type: Otpremanje datoteka ovog tipa nije dozvoljeno.
-      mime_permission_denied: Nemate dozvolu za otpremanje ovog tipa datoteke.
-      unsupported_type: "Adapter za otpremu ne podržava navedeni MIME tip: {mime}."
-      could_not_detect_mime: Nije moguće otkriti MIME tip ove datoteke, molimo pokušajte ponovo.
-      max_upload_file_size_ini: Dostignut limit maksimalne veličine otpreme iz php.ini.
-      max_upload_file_size_form: Dostignut limit maksimalne veličine otpreme iz forme.
-      partial_upload: Nepotpuna otprema.
-      no_file_uploaded: Nije otpremljena nijedna datoteka.
-      no_upload_tmp_folder: Nema privremene mape za otpremanje datoteka.
-      cannot_write_to_disk: Nije moguće pisanje na disk.
-      upload_blocked_by_php_extension: PHP ekstenzija je blokirala otpremu.
-      no_files_made_it_to_upload: Molimo otpremajte datoteke ne veće od {max} kb.
+      forbidden_type: "Učitavanje datoteka ove vrste nije dozvoljeno."
+      mime_permission_denied: "Nemate dozvolu za učitavanje ove vrste datoteka."
+      unsupported_type: "Adapter za učitavanje ne podržava ovaj MIME tip: {mime}."
+      could_not_detect_mime: "MIME tip ove datoteke nije prepoznat. Pokušajte ponovo."
+      max_upload_file_size_ini: "Dostignuto je ograničenje veličine datoteke iz php.ini."
+      max_upload_file_size_form: "Dostignuto je ograničenje veličine datoteke iz obrasca."
+      partial_upload: "Datoteka je samo djelimično učitana."
+      no_file_uploaded: "Nijedna datoteka nije učitana."
+      no_upload_tmp_folder: "Ne postoji privremeni folder za učitavanje datoteka."
+      cannot_write_to_disk: "Upisivanje na disk nije moguće."
+      upload_blocked_by_php_extension: "Učitavanje je blokirala PHP ekstenzija."
+      no_files_made_it_to_upload: "Učitavajte datoteke koje nisu veće od {max} KB."
   lib:
     upload-shared-file-modal:
-      title: Nova dijeljena datoteka
-      dropzone: Prevucite i ispustite datoteke ovdje ili kliknite za pretraživanje
-      hide-from-media-gallery: Sakrij iz galerije medija korisnika
-      upload: Otpremi
+      title: "Nova zajednička datoteka"
+      dropzone: "Prevucite datoteke ovdje ili kliknite da ih odaberete"
+      hide-from-media-gallery: "Sakrij iz galerije medija korisnika"
+      upload: "Učitaj"
 
     file_list:
-      loading: Učitavanje datoteka...
-      empty: Nema datoteka za prikaz.
-      release_to_upload: Ispustite za otpremanje
-      modal_empty_desktop: Vaša lista datoteka je prazna. Kliknite dugme ili prevucite datoteku ovdje za otpremanje.
-      modal_empty_phone: Vaša lista datoteka je prazna. Tapnite dugme iznad za otpremanje datoteke.
-      select_file_a11y_label: Odaberi datoteku "{fileName}"
+      loading: "Učitavanje datoteka..."
+      empty: "Nema datoteka za prikaz."
+      load_error: "Datoteke nisu učitane. Pokušajte ponovo."
+      release_to_upload: "Pustite da učitate"
+      modal_empty_desktop: "Lista datoteka je prazna. Kliknite dugme ili prevucite datoteku ovdje da je učitate."
+      modal_empty_phone: "Lista datoteka je prazna. Dodirnite dugme iznad da učitate datoteku."
+      select_file_a11y_label: "Odaberi datoteku „{fileName}“"
       confirm_selection_btn: "{fileCount, plural, =0 {Ništa nije odabrano} one {Odaberi datoteku} other {Odaberi datoteke}}"
-      load_more_files_btn: Učitaj više datoteka
-      delete_file_a11y_label: Obriši datoteku "{fileName}"
-      delete_confirmation: Jeste li sigurni da želite obrisati "{fileName}"?
+      load_more_files_btn: "Učitaj još datoteka"
+      delete_file_a11y_label: "Obriši datoteku „{fileName}“"
+      delete_confirmation: "Jeste li sigurni da želite obrisati „{fileName}“?"
 
       hide_file:
-        btn_a11y_label_hide: Sakrij "{fileName}" iz upravitelja medija
-        btn_a11y_label_show: Prikaži "{fileName}" u upravitelju medija
-        hide_confirmation: Jeste li sigurni da želite sakriti "{fileName}"? Skrivanjem datoteke uklonit ćete je samo iz vašeg upravitelja medija i neće utjecati na postojeće objave.
-        hide_success: Datoteka skrivena
-        show_confirmation: Jeste li sigurni da želite prikazati "{fileName}"? Prikazivanjem datoteke učinit ćete je vidljivom u vašem upravitelju medija.
-        show_success: Datoteka prikazana
-        hide_fail: Nije moguće sakriti datoteku "{fileName}"
-        show_fail: Nije moguće prikazati datoteku "{fileName}"
-        loading: Skrivanje datoteke...
+        btn_a11y_label_hide: "Sakrij „{fileName}“ iz upravitelja medija"
+        btn_a11y_label_show: "Prikaži „{fileName}“ u upravitelju medija"
+        hide_confirmation: "Jeste li sigurni da želite sakriti „{fileName}“? Sakrivanje uklanja datoteku samo iz vašeg upravitelja medija i ne utiče na postojeće objave."
+        hide_success: "Datoteka je sakrivena"
+        show_confirmation: "Jeste li sigurni da želite prikazati „{fileName}“? Datoteka će ponovo biti vidljiva u vašem upravitelju medija."
+        show_success: "Datoteka je prikazana"
+        hide_fail: "Sakrivanje datoteke „{fileName}“ nije uspjelo"
+        show_fail: "Prikazivanje datoteke „{fileName}“ nije uspjelo"
+        loading: "Sakrivanje datoteke..."
       hide_shared_file:
-        btn_a11y_label_hide: Učini "{fileName}" privatnom (bez javnog URL-a)
-        btn_a11y_label_show: Učini "{fileName}" javnom (s javnim URL-om)
-        hide_confirmation: Jeste li sigurni da želite učiniti "{fileName}" privatnom? Privatizacijom datoteke uklonit ćete njen javni URL, ali to neće utjecati na postojeće objave. Također više neće biti vidljiva u upravitelju medija neovlaštenim korisnicima.
-        hide_success: Datoteka je postala privatna
-        show_confirmation: Jeste li sigurni da želite učiniti "{fileName}" javnom? Datoteka postaje dostupna svima s javnim URL-om i svako je može dijeliti putem upravitelja medija.
-        show_success: Datoteka je postala javna
-        hide_fail: Nije moguće učiniti datoteku "{fileName}" privatnom
-        show_fail: Nije moguće učiniti datoteku "{fileName}" javnom
-        loading: Postavljanje datoteke kao privatne...
+        btn_a11y_label_hide: "Učini „{fileName}“ privatnom (bez javnog URL-a)"
+        btn_a11y_label_show: "Učini „{fileName}“ javnom (s javnim URL-om)"
+        hide_confirmation: "Jeste li sigurni da želite učiniti „{fileName}“ privatnom? Time se uklanja njen javni URL, ali postojeće objave ostaju netaknute. Datoteka više neće biti vidljiva u upravitelju medija korisnicima bez ovlaštenja."
+        hide_success: "Datoteka je sada privatna"
+        show_confirmation: "Jeste li sigurni da želite učiniti „{fileName}“ javnom? Javna datoteka dostupna je svakome ko ima javni URL i svako je može dijeliti putem upravitelja medija."
+        show_success: "Datoteka je sada javna"
+        hide_fail: "Datoteka „{fileName}“ nije postala privatna"
+        show_fail: "Datoteka „{fileName}“ nije postala javna"
+        loading: "Datoteka postaje privatna..."
