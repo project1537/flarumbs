@@ -1,21 +1,30 @@
 fof-user-bio:
     admin:
         permission:
-            view: Pregled biografije
-            editOwn: Uređivanje vlastite biografije
-            editAny: Uređivanje tuđe biografije
+            view: "Pregled biografije"
+            editOwn: "Uređivanje vlastite biografije"
+            editAny: "Uređivanje biografije bilo kojeg korisnika"
         setting:
-            bioLimit: Limit znakova biografije
-            maxLines: Maksimalni broj redova za prikaz odjednom
-            allowFormatting: Dozvoli formatiranje u biografiji
-            allowFormatting_help: Ovo formatiranje je po dizajnu odvojeno od formatiranja objava. Ako su omogućene ekstenzije BBCode i/ili Markdown, bit će dostupne za formatiranje biografije. Slike i ugrađeni sadržaj nisu dozvoljeni. Ekstenzije koje dodaju podršku Flarum formateru moraju *eksplicitno* dodati podršku i za formater biografije.
+            bioLimit: "Najveći broj znakova u biografiji"
+            maxLines: "Najveći broj redova koji se prikazuju odjednom"
+            allowFormatting: "Dozvoli formatiranje u biografiji"
+            allowFormatting_help: "Ovo formatiranje je namjerno odvojeno od formatiranja objava. Ako su uključene ekstenzije BBCode i/ili Markdown, mogu se koristiti i za formatiranje biografije. Slike i ugrađeni sadržaj nisu dozvoljeni. Ekstenzije koje proširuju Flarumov formater moraju *izričito* dodati podršku za formater biografije."
 
     forum:
-        userbioPlaceholder: Napišite nešto o sebi
-        userbioPlaceholderOtherUser: Napišite biografiju za korisnika {username}
+        userbioPlaceholder: "Napišite nešto o sebi"
+        userbioPlaceholderOtherUser: "Napišite biografiju za korisnika {username}"
 
         profile:
-            cancel_confirm: Jeste li sigurni da želite otkazati uređivanje biografije? Sve napravljene izmjene bit će izgubljene.
-            cancel_button: Otkaži
-            save_button: Sačuvaj
-            edit_bio_label: Uredi biografiju
+            cancel_confirm: "Jeste li sigurni da želite prekinuti uređivanje biografije? Sve izmjene koje ste napravili bit će izgubljene."
+            cancel_button: "Odustani"
+            save_button: "Sačuvaj"
+            edit_bio_label: "Uredi biografiju"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+    lib:
+        browser:
+            user:
+                bio_changed: "Izmijenjena biografija korisnika {username}"
