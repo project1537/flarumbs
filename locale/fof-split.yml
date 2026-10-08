@@ -1,16 +1,26 @@
 fof-split:
     admin:
         permissions:
-            split_discussion_label: Odvoji objave iz diskusija
+            split_discussion_label: "Izdvajanje objava iz tema u nove teme"
     forum:
         post:
-            was_split_to: "{count, plural, one {{count} objava je odvojena u {target}.} other {{count} objava je odvojeno u {target}.}}"
-            was_split_from: "{count, plural, one {{count} objava je odvojena iz {target}.} other {{count} objava je odvojeno iz {target}.}}"
+            was_split_to: "{count, plural, one {# objava izdvojena je u temu {target}.} few {# objave izdvojene su u temu {target}.} other {# objava izdvojeno je u temu {target}.}}"
+            was_split_from: "{count, plural, one {# objava izdvojena je iz teme {target}.} few {# objave izdvojene su iz teme {target}.} other {# objava izdvojeno je iz teme {target}.}}"
         split:
-            from: Odvoji od ovdje
-            to: Odvoji do ovdje
-            cancel: Otkaži odvajanje
+            from: "Izdvoji od ove objave"
+            to: "Izdvoji do ove objave"
+            cancel: "Odustani od izdvajanja"
         modal:
-            title: Odvoji diskusiju
-            new_discussion_label: Navedite naslov za novu diskusiju
-            submit_button: Odvoji
+            title: "Izdvajanje u novu temu"
+            new_discussion_label: "Unesite naslov nove teme"
+            submit_button: "Izdvoji"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        split_away: "Izdvajanje objava (broj: {post_count}) iz teme {discussion} u temu {new_discussion}"
+        split_into: "Izdvajanje objava (broj: {post_count}) u novu temu {discussion}"
