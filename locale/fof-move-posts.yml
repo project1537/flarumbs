@@ -1,63 +1,70 @@
 fof-move-posts:
   admin:
     settings:
-      moved_first_post_content: Sadržaj prve objave premještene diskusije
-      moved_first_post_content_help: >
-        Kada diskusija ima samo jednu objavu, premještanje te objave rezultira uređivanjem prve objave izvorne diskusije kako bi ukazivala na novu diskusiju.
-        Sadržaj te objave možete urediti ovdje.
-      group_sequential_posts: Grupiši uzastopne događaje premještanja objava u jedan.
+      moved_first_post_content: "Sadržaj prve objave premještene teme"
+      moved_first_post_content_help: "Kada tema ima samo jednu objavu, njenim premještanjem prva objava izvorne teme mijenja se tako da upućuje na novu temu. Sadržaj te objave možete urediti ovdje."
+      group_sequential_posts: "Spoji uzastopne obavijesti o premještanju objava u jednu."
 
     permissions:
       move_posts: => fof-move-posts.ref.move_posts
 
   forum:
     badge:
-      first_moved_tooltip: Premješteno
+      first_moved_tooltip: "Premješteno"
 
     discussion:
       move_posts: => fof-move-posts.ref.move_posts
 
     error:
       move_old_post_to_newer_discussion: => fof-move-posts.ref.status.old_to_new_move
-      move_posts_to_same_discussion: Nije moguće premjestiti objave u istu diskusiju.
+      move_posts_to_same_discussion: "Objave se ne mogu premjestiti u istu temu."
 
     modal:
-      check: Provjeri vrstu operacije
-      destination: Odredišna diskusija
-      discussion_help: Koristit će se oznake izvorne diskusije i mogu se promijeniti nakon kreiranja.
+      check: "Provjeri vrstu premještanja"
+      destination: "Ciljna tema"
+      discussion_help: "Koristit će se oznake izvorne teme, a mogu se promijeniti nakon što se tema napravi."
       discussion_name: => core.forum.composer_discussion.title_placeholder
-      new_discussion: Nova diskusija
-      selected_posts: "{count, plural, one {Odabrana 1 objava} few {Odabrane {count} objave} other {Odabrano {count} objava}}"
+      new_discussion: "Nova tema"
+      selected_posts: "{count, plural, one {Odabrana je # objava} few {Odabrane su # objave} other {Odabrano je # objava}}"
       status:
-        complex_move: Bit će složeno premještanje — objave će biti ubačene između postojećih, što može promijeniti URL reference objava ciljne diskusije.
+        complex_move: "Ovo će biti složeno premještanje: objave će biti umetnute između postojećih objava, pa će se promijeniti i stari URL-ovi objava u ciljnoj temi."
         old_to_new_move: => fof-move-posts.ref.status.old_to_new_move
-        simple_move: Bit će jednostavno premještanje — objave će biti dodane na kraj diskusije.
-      submit: Nastavi
+        simple_move: "Ovo će biti jednostavno premještanje: sve objave bit će dodane na kraj teme."
+      submit: "Nastavi"
       title: => fof-move-posts.ref.move_posts
-      confirm_move_all_to_new_discussion: Premještate sve objave iz ove diskusije u novu. U većini slučajeva, smislenije je urediti postojeću diskusiju — npr. promijeniti naslov, oznake ili druge atribute. Želite li nastaviti?
+      confirm_move_all_to_new_discussion: "Spremate se premjestiti sve objave iz ove teme u novu temu. U većini slučajeva smislenije je urediti postojeću temu, npr. promijeniti njen naslov, oznake ili druge podatke. Želite li nastaviti?"
 
     alerts:
-      posts_moved_to: "{count, plural, one {Objava premještena u {target_discussion}.} few {Premještene {count} objave u {target_discussion}.} other {Premješteno {count} objava u {target_discussion}.}}"
+      posts_moved_to: "{count, plural, one {# objava premještena je u temu {target_discussion}.} few {# objave premještene su u temu {target_discussion}.} other {# objava premješteno je u temu {target_discussion}.}}"
 
     notifications:
-      post_moved_text: Jedna ili više vaših objava je premješteno u {targetDiscussionTitle}.
+      post_moved_text: "Jedna ili više vaših objava premještena je u temu {targetDiscussionTitle}."
 
     post:
-      unmove: Poništi odabir za premještanje
-      move: Odaberi za premještanje
-      moving: Premještanje objave
+      unmove: "Poništi odabir za premještanje"
+      move: "Odaberi za premještanje"
+      moving: "Premještanje objave"
 
     post_stream:
-      post_moved: "{count, plural, one {{username} je premjestio/la objavu u {target_discussion}.} few {{username} je premjestio/la {count} objave u {target_discussion}.} other {{username} je premjestio/la {count} objava u {target_discussion}.}}"
+      post_moved: "{count, plural, one {{username} – # objava premještena je u temu {target_discussion}.} few {{username} – # objave premještene su u temu {target_discussion}.} other {{username} – # objava premješteno je u temu {target_discussion}.}}"
 
   ref:
-    move_posts: Premjesti objave
+    move_posts: "Premjesti objave"
 
     status:
-      old_to_new_move: Nije moguće premjestiti stariju objavu u noviju diskusiju.
+      old_to_new_move: "Starija objava ne može se premjestiti u noviju temu."
 
   lib:
     discussion:
       first_post:
         default_content: >
-          *Ova objava je premještena u **[%DISCUSSION_NAME%](%POST_LINK%)**.*
+          *Ova objava je premještena u temu **[%DISCUSSION_NAME%](%POST_LINK%)**.*
+
+# Audit log action labels, contributed to the flarum/audit namespace.
+# Rendered by flarum-audit at flarum-audit.lib.browser.<action>.
+flarum-audit:
+  lib:
+    browser:
+      posts:
+        moved: "{post_count, plural, one {Premještena je # objava} few {Premještene su # objave} other {Premješteno je # objava}} iz teme {discussion} u temu {new_discussion}"
+        moved_to_new_discussion: "{post_count, plural, one {Premještena je # objava} few {Premještene su # objave} other {Premješteno je # objava}} iz teme {discussion} u novu temu {new_discussion}"
