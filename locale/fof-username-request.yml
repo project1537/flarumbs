@@ -1,104 +1,118 @@
 fof-username-request:
   admin:
     permissions:
-      moderate_requests: Odobravanje zahtjeva za promjenu korisničkog imena/nadimka
-      request_nickname: Zahtjev za promjenu nadimka
-      request_username: Zahtjev za promjenu korisničkog imena
+      moderate_requests: "Odobravanje zahtjeva za promjenu korisničkog i prikazanog imena"
+      request_nickname: "Slanje zahtjeva za promjenu prikazanog imena"
+      request_username: "Slanje zahtjeva za promjenu korisničkog imena"
   forum:
     nickname_modals:
       action:
         title: => fof-username-request.ref.nickname_change_request
-        help_text: Molimo provjerite da li zatražena promjena nadimka odgovara smjernicama foruma.
-        decision_title: Odluka
-        approval_label: Odobri
-        rejected_label: Odbij
-        submit_button: Pošalji
-        reason_title: Razlog odbijanja
-        success: Odluka je poslana.
-        name: '{name} je zatražio/la promjenu nadimka u "{requestedName}"'
+        help_text: "Provjerite da li je zatraženo prikazano ime u skladu s pravilima platforme."
+        decision_title: "Odluka"
+        approval_label: "Odobri"
+        rejected_label: "Odbij"
+        submit_button: "Pošalji"
+        reason_title: "Razlog odbijanja"
+        success: "Odluka je poslana."
+        name: "{name} – zahtjev za promjenu prikazanog imena u „{requestedName}“"
       results:
-        title: Zahtjev za promjenu nadimka
-        approved: 'Vaš zahtjev za promjenu nadimka je odobren'
+        title: "Zahtjev za promjenu prikazanog imena"
+        approved: "Vaš zahtjev za promjenu prikazanog imena je odobren"
         dismiss_button: => core.ref.okay
-        new_name: 'Vaš nadimak je uspješno promijenjen u: {name}'
-        rejected: Vaš zahtjev za promjenu nadimka je odbijen
-        reason: 'Razlog odbijanja: <i>"{reason}"</i>.'
-        resubmit: Možete podnijeti novi zahtjev za promjenu nadimka iz postavki računa ako to želite.
+        new_name: "Vaše prikazano ime uspješno je promijenjeno u: {name}"
+        rejected: "Vaš zahtjev za promjenu prikazanog imena je odbijen"
+        reason: "Razlog odbijanja: <i>„{reason}“</i>."
+        resubmit: "Ako želite, u postavkama korisničkog računa sada možete poslati novi zahtjev za promjenu prikazanog imena."
       request:
-        title: Zatraži promjenu nadimka
-        current_request: Već ste zatražili promjenu nadimka u "{name}". Možete ažurirati ili obrisati svoj zahtjev.
-        submit_button: Pošalji zahtjev
-        delete_button: Obriši zahtjev
-        confirmation_message: Vaš zahtjev za promjenu nadimka je podnesen i čeka odobrenje.
+        title: "Zahtjev za promjenu prikazanog imena"
+        current_request: "Već ste zatražili promjenu prikazanog imena u „{name}“. Zahtjev možete izmijeniti ili obrisati."
+        submit_button: "Pošalji zahtjev"
+        delete_button: "Obriši zahtjev"
+        confirmation_message: "Vaš zahtjev za promjenu prikazanog imena je poslan i čeka odobrenje."
         dismiss_button: => core.ref.okay
-        deleted: Zahtjev za promjenu nadimka je obrisan.
+        deleted: "Zahtjev za promjenu prikazanog imena je obrisan."
 
     username_modals:
       action:
         title: => fof-username-request.ref.username_change_request
-        help_text: Molimo provjerite da li zatražena promjena korisničkog imena odgovara smjernicama foruma.
-        decision_title: Odluka
-        approval_label: Odobri
-        rejected_label: Odbij
-        submit_button: Pošalji
-        reason_title: Razlog odbijanja
-        success: Odluka je poslana.
-        name: '{name} je zatražio/la promjenu korisničkog imena u "{requestedName}"'
+        help_text: "Provjerite da li je zatraženo korisničko ime u skladu s pravilima platforme."
+        decision_title: "Odluka"
+        approval_label: "Odobri"
+        rejected_label: "Odbij"
+        submit_button: "Pošalji"
+        reason_title: "Razlog odbijanja"
+        success: "Odluka je poslana."
+        name: "{name} – zahtjev za promjenu korisničkog imena u „{requestedName}“"
       results:
-        title: Zahtjev za promjenu korisničkog imena
-        approved: 'Vaš zahtjev za promjenu korisničkog imena je odobren'
+        title: "Zahtjev za promjenu korisničkog imena"
+        approved: "Vaš zahtjev za promjenu korisničkog imena je odobren"
         dismiss_button: => core.ref.okay
-        new_name: 'Vaše korisničko ime je uspješno promijenjeno u: {name}'
-        rejected: Vaš zahtjev za promjenu korisničkog imena je odbijen
-        reason: 'Razlog odbijanja: <i>"{reason}"</i>.'
-        resubmit: Možete podnijeti novi zahtjev za promjenu korisničkog imena iz postavki računa ako to želite.
+        new_name: "Vaše korisničko ime uspješno je promijenjeno u: {name}"
+        rejected: "Vaš zahtjev za promjenu korisničkog imena je odbijen"
+        reason: "Razlog odbijanja: <i>„{reason}“</i>."
+        resubmit: "Ako želite, u postavkama korisničkog računa sada možete poslati novi zahtjev za promjenu korisničkog imena."
       request:
-        title: Zatraži promjenu korisničkog imena
-        current_request: Već ste zatražili promjenu korisničkog imena u "{name}". Možete ažurirati ili obrisati svoj zahtjev.
-        submit_button: Pošalji zahtjev
-        delete_button: Obriši zahtjev
-        confirmation_message: Vaš zahtjev za promjenu korisničkog imena je podnesen i čeka odobrenje.
+        title: "Zahtjev za promjenu korisničkog imena"
+        current_request: "Već ste zatražili promjenu korisničkog imena u „{name}“. Zahtjev možete izmijeniti ili obrisati."
+        submit_button: "Pošalji zahtjev"
+        delete_button: "Obriši zahtjev"
+        confirmation_message: "Vaš zahtjev za promjenu korisničkog imena je poslan i čeka odobrenje."
         dismiss_button: => core.ref.okay
-        deleted: Zahtjev za promjenu korisničkog imena je obrisan.
+        deleted: "Zahtjev za promjenu korisničkog imena je obrisan."
 
     # Pending Requests Dropdown and List
     pending_requests:
-      empty_text: Nema pronađenih zahtjeva za promjenu imena.
-      group_label: Zahtjevi
-      nickname_item_text: "{name} je zatražio/la promjenu nadimka"
-      nickname_exerpt: "Zatraženi nadimak: {requestedName}"
+      empty_text: "Nema zahtjeva za promjenu imena."
+      group_label: "Zahtjevi"
+      nickname_item_text: "{name} – zahtjev za promjenu prikazanog imena"
+      nickname_exerpt: "Zatraženo prikazano ime: {requestedName}"
       tooltip: => fof-username-request.ref.name_change_requests
       title: => fof-username-request.ref.name_change_requests
-      username_item_text: "{name} je zatražio/la promjenu korisničkog imena"
+      username_item_text: "{name} – zahtjev za promjenu korisničkog imena"
       username_exerpt: "Zatraženo korisničko ime: {requestedName}"
 
     # Settings Page
     settings:
-      nickname_request_button: Promijeni nadimak
-      username_request_button: Promijeni korisničko ime
+      nickname_request_button: "Promijeni prikazano ime"
+      username_request_button: "Promijeni korisničko ime"
 
     user:
-      name_history_link: Historija imena
+      name_history_link: "Historija imena"
 
   ref:
-    name_change_request: Zahtjev za promjenu imena
-    name_change_requests: Zahtjevi za promjenu imena
-    nickname_change_request: Zahtjev za promjenu nadimka
-    nickname_change_requests: Zahtjevi za promjenu nadimka
-    username_change_request: Zahtjev za promjenu korisničkog imena
-    username_change_requests: Zahtjevi za promjenu korisničkog imena
+    name_change_request: "Zahtjev za promjenu imena"
+    name_change_requests: "Zahtjevi za promjenu imena"
+    nickname_change_request: "Zahtjev za promjenu prikazanog imena"
+    nickname_change_requests: "Zahtjevi za promjenu prikazanog imena"
+    username_change_request: "Zahtjev za promjenu korisničkog imena"
+    username_change_requests: "Zahtjevi za promjenu korisničkog imena"
 
   email:
     body:
-      noReasonProvided: 'Razlog nije naveden.'
+      noReasonProvided: "Razlog nije naveden."
       approved: |
-        Vaš zahtjev za promjenu korisničkog imena u "{new_username}" je odobren od strane korisnika {actor_display_name}.
+        Vaš zahtjev za promjenu korisničkog imena u „{new_username}“ je odobren (odluka: {actor_display_name}).
 
-        Sada se možete prijaviti s novim korisničkim imenom: {login_url}
+        Sada se možete prijaviti novim korisničkim imenom: {login_url}
       rejected: |
-        Vaš zahtjev za promjenu korisničkog imena s "{old_username}" na "{requested_username}" je odbijen od strane korisnika {actor_display_name}.
+        Vaš zahtjev za promjenu korisničkog imena iz „{old_username}“ u „{requested_username}“ je odbijen (odluka: {actor_display_name}).
 
         Razlog: {reason}
     subject:
-      approved: "{display_name} je odobrio/la vašu promjenu korisničkog imena u {requested_username}"
-      rejected: "{display_name} je odbio/la vašu promjenu korisničkog imena u {requested_username}"
+      approved: "{display_name}: odobrena promjena korisničkog imena u {requested_username}"
+      rejected: "{display_name}: odbijena promjena korisničkog imena u {requested_username}"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      user:
+        nickname_requested: "Zatraženo novo prikazano ime {new_nickname} za korisnika {username}"
+        nickname_request_approved: "Odobrena promjena prikazanog imena korisnika {username} iz {old_nickname} u {new_nickname}"
+        nickname_request_rejected: "Odbijena promjena prikazanog imena korisnika {username}"
+        username_requested: "Zatraženo novo korisničko ime {new_username} za korisnika {username}"
+        username_request_approved: "Odobrena promjena korisničkog imena korisnika {username} iz {old_username} u {new_username}"
+        username_request_rejected: "Odbijena promjena korisničkog imena korisnika {username}"
