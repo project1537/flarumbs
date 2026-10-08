@@ -3,90 +3,91 @@ forumaker-friendship:
     errors:
       user_not_found: "Korisnik nije pronađen"
       request_not_found: "Zahtjev za prijateljstvo nije pronađen"
-      not_recipient: "Ne možete odgovoriti na ovaj zahtjev"
-      not_friends: "Niste prijatelji sa ovim korisnikom"
-      self_request: "Ne možete poslati zahtjev za prijateljstvo samom sebi"
-      already_friends: "Već ste prijatelji sa ovim korisnikom"
+      not_friends: "Niste prijatelji s ovim korisnikom"
+      self_request: "Ne možete sami sebi poslati zahtjev za prijateljstvo"
+      already_friends: "S ovim korisnikom ste već prijatelji"
 
   forum:
     user:
       friends_tab: "Prijatelji"
-      friends_count: "{count, plural, one {# prijatelj} other {# prijatelja}}"
+      friends_count: "{count, plural, one {# prijatelj} few {# prijatelja} other {# prijatelja}}"
       requests_btn: "Zahtjevi"
+      requests_btn_count: "{count, plural, one {# zahtjev} few {# zahtjeva} other {# zahtjeva}}"
       no_friends: "Još nema prijatelja"
+      friends_hidden: "Lista prijatelja je skrivena"
       friends_since: "Prijatelji od {date}"
-      load_more: "Učitaj više"
+      load_more: "Učitaj još"
 
     dropdown:
-      add_friend_btn: "Dodaj prijatelja"
-      cancel_request_btn: "Otkaži zahtjev za prijateljstvo"
-      remove_friend_btn: "Ukloni prijatelja"
+      add_friend_btn: "Dodaj u prijatelje"
+      cancel_request_btn: "Povuci zahtjev za prijateljstvo"
+      remove_friend_btn: "Ukloni iz prijatelja"
 
     add_modal:
-      title: "Dodaj prijatelja"
+      title: "Dodavanje u prijatelje"
       text: "Poslati korisniku {username} zahtjev za prijateljstvo?"
-      confirm_btn: "Dodaj prijatelja"
-      cancel_btn: "Otkaži"
+      confirm_btn: "Dodaj u prijatelje"
+      cancel_btn: "Odustani"
       success: "Zahtjev za prijateljstvo je poslan"
 
     pending_modal:
-      text: "Ovaj korisnik vam je već poslao zahtjev za prijateljstvo"
-      accept_btn: "Dodaj prijatelja"
+      text: "Od ovog korisnika već imate zahtjev za prijateljstvo"
+      accept_btn: "Dodaj u prijatelje"
       decline_btn: "Odbij"
 
     cancel_request_modal:
-      title: "Otkaži zahtjev za prijateljstvo"
-      text: "Otkazati vaš zahtjev za prijateljstvo poslan korisniku {username}?"
-      confirm_btn: "Ipak ne"
-      cancel_btn: "Ostavi tako"
+      title: "Povlačenje zahtjeva za prijateljstvo"
+      text: "Povući zahtjev za prijateljstvo upućen korisniku {username}?"
+      confirm_btn: "Povuci zahtjev"
+      cancel_btn: "Ostavi"
 
     remove_modal:
-      title: "Ukloni prijatelja"
-      text: "Ukloniti korisnika {username} iz liste prijatelja?"
+      title: "Uklanjanje iz prijatelja"
+      text: "Ukloniti korisnika {username} iz prijatelja?"
       confirm_btn: "Ukloni"
-      cancel_btn: "Ne uklanjaj"
+      cancel_btn: "Nemoj ukloniti"
       success: "Više niste prijatelji"
 
     requests_modal:
       title: "Zahtjevi za prijateljstvo"
-      incoming_tab: "Dolazni — {count}"
-      outgoing_tab: "Odlazni — {count}"
+      incoming_tab: "Primljeni — {count}"
+      outgoing_tab: "Poslani — {count}"
       history_btn: "Historija"
       search_placeholder: "Pretraži po imenu"
-      no_incoming: "Nema dolaznih zahtjeva"
-      no_outgoing: "Nema odlaznih zahtjeva"
+      no_incoming: "Nema primljenih zahtjeva"
+      no_outgoing: "Nema poslanih zahtjeva"
       accept_btn: "Prihvati"
       decline_btn: "Odbij"
-      cancel_btn: "Otkaži"
-      cancel_success: "Zahtjev je otkazan"
+      cancel_btn: "Povuci"
+      cancel_success: "Zahtjev je povučen"
       accept_success: "Sada ste prijatelji"
 
     history_modal:
       title: "Historija"
       empty: "Još nema historije"
-      load_more: "Učitaj više"
+      load_more: "Učitaj još"
 
     history:
-      requested_self: "Poslali ste korisniku {username} zahtjev za prijateljstvo"
-      requested_other: "{username} vam je poslao/la zahtjev za prijateljstvo"
-      cancelled_self: "Predomislili ste se u vezi sa korisnikom {username}"
-      cancelled_other: "{username} je otkazao/la svoj zahtjev"
+      requested_self: "Poslali ste zahtjev za prijateljstvo korisniku {username}"
+      requested_other: "Zahtjev za prijateljstvo od korisnika {username}"
+      cancelled_self: "Povukli ste zahtjev upućen korisniku {username}"
+      cancelled_other: "Zahtjev korisnika {username} je povučen"
       accepted_self: "Prihvatili ste zahtjev korisnika {username}"
-      accepted_other: "{username} je prihvatio/la vaš zahtjev"
+      accepted_other: "Zahtjev upućen korisniku {username} je prihvaćen"
       declined_self: "Odbili ste zahtjev korisnika {username}"
-      declined_other: "{username} je odbio/la vaš zahtjev"
+      declined_other: "Zahtjev upućen korisniku {username} je odbijen"
       removed_self: "Uklonili ste korisnika {username} iz prijatelja"
-      removed_other: "{username} vas je uklonio/la iz prijatelja"
+      removed_other: "Uklonjeni ste iz prijatelja korisnika {username}"
 
     notifications:
-      requested_text: "{name} želi da vas doda kao prijatelja"
-      removed_text: "{name} vas je uklonio/la iz prijatelja"
-      declined_text: "{name} je odbio/la vaš zahtjev za prijateljstvo"
+      requested_text: "{name} – zahtjev za prijateljstvo"
+      removed_text: "Uklonjeni ste iz prijatelja korisnika {name}"
+      declined_text: "Zahtjev za prijateljstvo upućen korisniku {name} je odbijen"
 
     settings:
       section_label: "Prijatelji"
-      show_on_usercard: "Prikaži broj prijatelja pored avatara u profilu"
-      show_in_posts: "Prikaži broj prijatelja pored avatara u objavama"
+      show_on_usercard: "Prikaži broj prijatelja pored profilne slike na profilu"
+      show_in_posts: "Prikaži broj prijatelja pored profilne slike u objavama"
       notify_requested_label: "Neko mi pošalje zahtjev za prijateljstvo"
       notify_removed_label: "Neko me ukloni iz prijatelja"
       notify_declined_label: "Neko odbije moj zahtjev za prijateljstvo"
@@ -94,17 +95,22 @@ forumaker-friendship:
   admin:
     sections:
       badges: "Značka"
+      history: "Historija"
 
     settings:
-      badges_intro: "Gdje je omogućeno, korisnici će ovo moći kontrolisati u vlastitim postavkama"
-      show_badge_on_usercard: "Prikaži broj prijatelja pored avatara u profilu"
-      show_badge_on_usercard_help: "Prikazuje se pored online statusa/datuma pridruživanja na kartici profila"
-      show_badge_on_post: "Prikaži broj prijatelja pored avatara u objavama"
-      show_badge_on_post_help: "Prikazuje se pored avatara u zaglavlju objave"
-      badge_color: "Boja i ikona"
+      badges_intro: "Gdje je uključeno, korisnici ovo mogu sami podesiti u svojim postavkama"
+      show_badge_on_usercard: "Prikaži broj prijatelja pored profilne slike na profilu"
+      show_badge_on_usercard_help: "Prikazuje se na kartici profila, pored statusa „na mreži“ i datuma registracije"
+      show_badge_on_post: "Prikaži broj prijatelja pored profilne slike u objavama"
+      show_badge_on_post_help: "Prikazuje se pored profilne slike u zaglavlju objave"
+      badge_color: "Boja i ikona na profilu"
+      badge_bg_color: "Boja pozadine u objavama"
+      event_retention_intro: "Stari zapisi iz historije zahtjeva automatski se brišu jednom dnevno"
+      event_retention_days: "Čuvanje historije (dani)"
+      event_retention_days_help: "Vrijednost 0 isključuje brisanje – historija se čuva trajno"
 
     permissions:
-      add_friends: "Dodaj prijatelje"
+      add_friends: "Dodavanje prijatelja"
       view_others: "Pregled prijatelja drugih korisnika"
-      moderate: "Moderiraj prijateljstva"
-      manage: "Upravljaj prijateljstvima"
+      moderate: "Moderacija prijateljstava"
+      manage: "Upravljanje prijateljstvima"
