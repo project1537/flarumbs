@@ -1,24 +1,24 @@
 fof-socialprofile:
   admin:
     permissions:
-      view: Pregled društvenog profila
-      editOwn: Uređivanje vlastitog društvenog profila
-      editAny: Uređivanje bilo kojeg društvenog profila
+      view: "Pregled profila na društvenim mrežama"
+      editOwn: "Uređivanje vlastitih profila na društvenim mrežama"
+      editAny: "Uređivanje profila na društvenim mrežama bilo kojeg korisnika"
 
     settings:
-      allow_external_favicons_label: "Dozvoli ikonice vanjskih web stranica (koristi favicon API vanjskog pružatelja)"
-      favicon_provider_label: Vanjski pružatelj favicona
+      allow_external_favicons_label: "Dozvoli ikone vanjskih web stranica (koristi API vanjskog provajdera ikona)"
+      favicon_provider_label: "Vanjski provajder ikona stranica"
 
   forum:
     edit:
-      edit: Uredi dugmad društvenih mreža
-      add: Dodaj dugmad društvenih mreža
-      headtitle: Uredi dugmad
-      title: Naziv
-      url: URL
-      submit: Spremi
-      delete: Obriši
-      deletetitle: Obriši dugme
-      save_disabled_fetching_favicons: Jedna ili više ikonice se dohvaćaju. Molimo pričekajte.
-      favicon: Favicon
-      grey_favicon: Sivi favicon
+      edit: "Uredite dugmad za društvene mreže"
+      add: "Dodajte dugmad za svoje društvene mreže"
+      headtitle: "Uređivanje dugmadi"
+      title: "Naziv"
+      url: "URL"
+      submit: "Sačuvaj"
+      delete: "Obriši"
+      deletetitle: "Obriši dugme"
+      save_disabled_fetching_favicons: "Jedna ili više ikona se još preuzima. Molimo sačekajte."
+      favicon: "Ikona stranice"
+      grey_favicon: "Siva ikona stranice"
