@@ -1,26 +1,26 @@
 michaelbelgium-ai-autoreply:
   admin:
     settings:
-      platform_label: Platforma
-      platform_help: "Odaberite AI platformu."
-      api_key_label: API ključ
-      api_key_help: Nabavite API ključ na <a>{platform}</a>.
-      model_label: Model
-      model_help: "Saznajte više o <a>{platform} modelima</a> (zadano: <code>{model}</code>)."
-      max_tokens_label: Maks. tokena
-      max_tokens_help: <a>Što su tokeni i kako ih brojati?</a>
-      temperature_label: Temperatura
-      temperature_help: Kontroliše nasumičnost. Raspon je obično između 0 i 2, ali neke platforme imaju drugačije raspone.
-      user_prompt_label: Korisnički asistent
-      user_prompt_help: Unesite ID korisnika koji će se koristiti za generiranje AI odgovora.
-      system_prompt_label: Sistemski prompt
-      system_prompt_help: Pružite kontekst i upute asistentu, npr. navedite konkretan cilj ili ulogu.
-      system_prompt_placeholder: Vi ste koristan asistent na Flarum forumu.
-      user_prompt_badge_label: Oznaka korisničkog asistenta
-      user_prompt_badge_help: Tekst koji će se prikazivati ispod korisnika asistenta.
-      enable_on_discussion_started_label: Omogući pri pokretanju diskusije
-      enable_on_discussion_started_help: Kada je omogućeno, AI odgovara samo pri pokretanju diskusije. Kada je onemogućeno, diskusija postaje razgovor između pokretača i asistenta — asistent odgovara na svaku pokretačevu objavu.
-      enabled_tags_label: Oznake
-      enabled_tags_help: Odaberite u kojim oznakama će asistent generirati odgovore.
+      platform_label: "Platforma"
+      platform_help: "Odaberite AI platformu koja će se koristiti."
+      api_key_label: "API ključ"
+      api_key_help: "API ključ preuzmite na stranici <a>{platform}</a>."
+      model_label: "Model"
+      model_help: "Saznajte više o <a>modelima platforme {platform}</a> (podrazumijevano: <code>{model}</code>)."
+      max_tokens_label: "Najveći broj tokena"
+      max_tokens_help: "<a>Šta su tokeni i kako se broje?</a>"
+      temperature_label: "Temperatura"
+      temperature_help: "Određuje nasumičnost odgovora. Raspon je obično od 0 do 2, ali neke platforme koriste drugačije raspone."
+      user_prompt_label: "Korisnički račun asistenta"
+      user_prompt_help: "Unesite ID korisnika u čije ime će se objavljivati AI odgovori."
+      system_prompt_label: "Sistemske upute (system prompt)"
+      system_prompt_help: "Dajte asistentu kontekst i upute, npr. odredite njegov cilj ili ulogu."
+      system_prompt_placeholder: "Ti si koristan asistent na edukativnoj platformi."
+      user_prompt_badge_label: "Značka korisnika asistenta"
+      user_prompt_badge_help: "Tekst koji se prikazuje ispod imena korisnika asistenta."
+      enable_on_discussion_started_label: "Odgovaraj samo na početku teme"
+      enable_on_discussion_started_help: "Kada je uključeno, AI odgovara samo na prvu objavu teme. Kada je isključeno, tema postaje razgovor između autora teme i asistenta: asistent odgovara na svaku objavu autora teme."
+      enabled_tags_label: "Oznake"
+      enabled_tags_help: "Odaberite oznake u čijim će temama asistent odgovarati."
     permissions:
-      use_chatgpt_assistant_label: Koristi AI asistenta
+      use_chatgpt_assistant_label: "Korištenje AI asistenta"
