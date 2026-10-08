@@ -1,68 +1,94 @@
 fof-follow-tags:
   forum:
     settings:
-      notify_new_discussion_label: Neko pokrene diskusiju u oznaci koju pratim
-      notify_new_post_label: Neko objavi u oznaci koju pratim
-      notify_new_discussion_tag_label: Neko prebaci diskusiju u oznaku koju pratim
+      notify_new_discussion_label: "Neko pokrene temu s oznakom koju pratim"
+      notify_new_post_label: "Neko objavi u temi s oznakom koju pratim"
+      notify_new_discussion_tag_label: "Neko temi doda oznaku koju pratim"
 
     index:
-      follow_tag_button: Prati
-      unfollow_tag_button: Prestani pratiti
+      follow_tag_button: "Prati"
+      unfollow_tag_button: "Prestani pratiti"
 
       following:
         following_none_label: => fof-follow-tags.ref.filtering_options.none
         following_tags_label: => fof-follow-tags.ref.filtering_options.tags
 
     badge:
-      following_tag_tooltip: Pratim
-      lurking_tag_tooltip: Tiho pratim
+      following_tag_tooltip: "Pratite"
+      lurking_tag_tooltip: "Pratite sve"
 
     sub_controls:
-      header: "Pretplata za {tagName}"
-      subscription_label: "Odaberite nivo pretplate za {tagName}"
+      header: "Praćenje oznake {tagName}"
+      subscription_label: "Odaberite nivo praćenja za oznaku {tagName}"
       follow_button: => fof-follow-tags.ref.follow
       following_button: => fof-follow-tags.ref.following
-      following_text: Primaj obavijesti o svim novim diskusijama.
+      following_text: "Obavještenja o svim novim temama."
       hiding_button: => fof-follow-tags.ref.hiding
-      hiding_text: Sakrij diskusije sa stranice Sve diskusije.
+      hiding_text: "Teme se ne prikazuju na stranici Sve teme."
       ignoring_button: => fof-follow-tags.ref.ignoring
-      ignoring_text: Nikada ne primaj obavijesti.
+      ignoring_text: "Bez ikakvih obavještenja."
       lurking_button: => fof-follow-tags.ref.lurking
-      lurking_text: Primaj obavijesti o svim novim diskusijama i odgovorima.
-      not_following_button: Ne pratim
-      not_following_text: "Primaj obavijesti samo kada te neko @spomene."
-      notify_alert_tooltip: Primaj forumsku obavijest o novim diskusijama ili objavama
-      notify_email_tooltip: Primaj e-mail o novim diskusijama ili objavama
-      submit_button: Potvrdi pretplatu
+      lurking_text: "Obavještenja o svim novim temama i odgovorima."
+      not_following_button: "Bez praćenja"
+      not_following_text: "Obavještenja samo kada vas neko spomene (@)."
+      notify_alert_tooltip: "Obavještenje na platformi kada ima novih tema ili objava"
+      notify_email_tooltip: "E-mail kada ima novih tema ili objava"
+      submit_button: "Potvrdi praćenje"
 
     hero:
       title: => flarum-subscriptions.forum.index.following_link
 
     notifications:
-      new_discussion_text: "{username} je pokrenuo/la"
-      new_post_text: "{username} je objavio/la"
-      new_discussion_tag_text: "{username} je promijenio/la oznaku"
+      new_discussion_text: "{username} – nova tema"
+      new_post_text: "{username} – nova objava"
+      new_discussion_tag_text: "{username} – promijenjena oznaka teme"
+
+    prompt:
+      choose_button: "Odaberite oznake koje želite pratiti"
+      modal_title: "Odaberite oznake koje želite pratiti"
+      later_button: "Podsjeti me kasnije"
+      continue_button: "Nastavi na platformu"
+
 
     user:
       settings:
-        heading: Praćenje oznaka
-        filter_label: Šta prikazati po zadanim postavkama na stranici Pratim
+        heading: "Praćenje oznaka"
+
+        filter_label: "Šta se podrazumijevano prikazuje na stranici Praćeno"
 
   admin:
     settings:
-      following_page_default_label: Zadani filter stranice Pratim
+      following_page_default_label: "Podrazumijevani filter stranice Praćeno"
 
       following_none_label: => fof-follow-tags.ref.filtering_options.none
       following_tags_label: => fof-follow-tags.ref.filtering_options.tags
 
+      prompt_new_users_label: "Ponudi novim korisnicima da odaberu oznake koje će pratiti"
+      prompt_new_users_help: "Korisnicima koji još nisu potvrdili izbor prikazuje se prozor s ponudom za praćenje oznaka. Prozor se pojavljuje pri svakoj posjeti, sve dok korisnik ne klikne „Nastavi na platformu“."
+      prompt_button_on_following_page_label: "Prikaži dugme „Odaberite oznake koje želite pratiti“ na stranici Praćeno"
+      prompt_tag_strategy_label: "Oznake koje se nude u prozoru"
+      prompt_tag_strategy_options:
+        primary: "Primarne oznake prvog nivoa"
+        primaryAndChildren: "Sve primarne oznake, svih nivoa"
+        primaryAndSecondary: "Primarne oznake prvog nivoa i sekundarne oznake"
+        secondary: "Samo sekundarne oznake"
+        all: "Sve oznake"
+        list: "Oznake odabrane ispod"
+      prompt_tag_ids_label: "Oznake koje se nude"
+      all_discussions_on_following_page_for_guests_label: "Gostima na stranici Praćeno prikazuj sve teme"
+
+    basics:
+      following_label: => flarum-subscriptions.forum.index.following_link
+
+
   email:
     newDiscussionInTag:
-      subject: "[Oznaka | Nova diskusija] {title}"
+      subject: "[Oznaka | Nova tema] {title}"
       plain:
         body: |
-          {actor_display_name} je pokrenuo/la diskusiju u oznaci koju pratite: {discussion_title}
+          Nova tema korisnika {actor_display_name} s oznakom koju pratite: {discussion_title}
 
-          Za pregled nove diskusije posjetite sljedeću vezu:
+          Novu temu možete pogledati na sljedećem linku:
           {discussion_url}
 
           ---
@@ -70,14 +96,14 @@ fof-follow-tags:
           {content}
       html:
         body: |
-          {actor_display_name} je pokrenuo/la diskusiju u oznaci koju pratite: [{discussion_title}]({discussion_url})
+          Nova tema korisnika {actor_display_name} s oznakom koju pratite: [{discussion_title}]({discussion_url})
     newPostInTag:
       subject: "[Oznaka | Nova objava] {title}"
       plain:
         body: |
-          {actor_display_name} je objavio/la u diskusiji u oznaci koju pratite: {discussion_title}
+          Nova objava korisnika {actor_display_name} u temi s oznakom koju pratite: {discussion_title}
 
-          Za pregled nove aktivnosti posjetite sljedeću vezu:
+          Novu aktivnost možete pogledati na sljedećem linku:
           {post_url}
 
           ---
@@ -85,14 +111,14 @@ fof-follow-tags:
           {content}
       html:
         body: |
-          {actor_display_name} je objavio/la u diskusiji u oznaci koju pratite: [{discussion_title}]({post_url})
+          Nova objava korisnika {actor_display_name} u temi s oznakom koju pratite: [{discussion_title}]({post_url})
     newDiscussionTag:
-      subject: "[Oznaka | Promjena oznake] {title}"
+      subject: "[Oznaka | Promijenjena oznaka] {title}"
       plain:
         body: |
-          {actor_display_name} je promijenio/la oznaku diskusije autora {author_display_name} u oznaku koju pratite: {discussion_title}
+          Tema korisnika {author_display_name} dobila je oznaku koju pratite: {discussion_title} (izmjena: {actor_display_name})
 
-          Za pregled diskusije posjetite sljedeću vezu:
+          Temu možete pogledati na sljedećem linku:
           {discussion_url}
 
           ---
@@ -100,21 +126,21 @@ fof-follow-tags:
           {content}
       html:
         body: |
-          {actor_display_name} je promijenio/la oznaku diskusije autora {author_display_name} u oznaku koju pratite: [{discussion_title}]({discussion_url})
+          Tema korisnika {author_display_name} dobila je oznaku koju pratite: [{discussion_title}]({discussion_url}) (izmjena: {actor_display_name})
   ref:
-    follow: Prati
-    following: Pratim
-    hiding: Skriveno
-    ignoring: Ignoriram
-    lurking: Tiho pratim
+    follow: "Prati"
+    following: "Praćenje"
+    hiding: "Sakriveno"
+    ignoring: "Zanemareno"
+    lurking: "Potpuno praćenje"
 
     filtering_options:
-      none: Praćene diskusije
-      tags: Praćene oznake
+      none: "Praćene teme"
+      tags: "Praćene oznake"
 
 flarum-gdpr:
   lib:
     data:
       tagsubscription:
-        export_description: Izvozi detalje nivoa pretplate za oznaku, ako postoji.
-        anonymize_description: Uklanja pretplatu korisnika na oznaku.
+        export_description: "Izvozi podatke o nivou praćenja oznake, ako postoji."
+        anonymize_description: "Uklanja praćenje oznake za korisnika."
