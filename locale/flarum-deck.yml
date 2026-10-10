@@ -1,0 +1,101 @@
+flarum-deck:
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      use_deck_label: "Korištenje pregleda uživo"
+
+    settings:
+      max_columns_help: "Svaka kolona pri svakom osvježavanju šalje poseban zahtjev serveru. Od 1 do 12."
+      max_columns_label: "Najveći broj kolona po članu"
+      poll_interval_help: "Koliko često kolone provjeravaju novu aktivnost kada Realtime nije povezan. Vrijednost 0 to isključuje; najmanja vrijednost je 15."
+      poll_interval_label: "Interval osvježavanja (sekunde)"
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    add_column:
+      author_label: "Član"
+      author_placeholder: "Pretraži članove"
+      back_button: "Nazad"
+      discussion_label: "Tema"
+      discussion_placeholder: "Pretraži teme"
+      filter_help: "Kombinujte filtere iz pretrage, npr. oznaka:, autor:, je:neprocitano ili je:praceno. Obične riječi nisu podržane."
+      filter_invalid_message: "Koristite samo filtere, npr. oznaka:podrska je:neprocitano. Obične riječi nisu podržane."
+      filter_label: "Filteri"
+      group_invalid_message: "Odaberite grupu."
+      group_label: "Grupa"
+      in_deck_badge: "Već u pregledu"
+      in_deck_count_badge: "Već u pregledu ×{count}"
+      filter_placeholder: "npr. oznaka:podrska je:neprocitano"
+      invalid_value_message: "Unesite ispravnu vrijednost za polje „{field}“."
+      pick_a_result_message: "Za polje „{field}“ odaberite jedan od ponuđenih rezultata."
+      submit_button: "Dodaj kolonu"
+      title: "Dodavanje kolone"
+      use_filters_button: "Koristi ove filtere"
+
+    column:
+      controls_label: "Opcije kolone {title}"
+      drag_handle_label: "Prevucite da pomjerite kolonu {title}"
+      move_left_button: "Pomjeri lijevo"
+      move_right_button: "Pomjeri desno"
+      move_to_bottom_row_button: "Pomjeri u donji red"
+      move_to_top_row_button: "Pomjeri u gornji red"
+      moved_announcement: "Pomjereno na poziciju {position} od {count}."
+      moved_in_bottom_row_announcement: "Pomjereno na poziciju {position} od {count} u donjem redu."
+      moved_in_top_row_announcement: "Pomjereno na poziciju {position} od {count} u gornjem redu."
+      new_items_button: "{count, plural, one {# nova} few {# nove} other {# novih}}"
+      open_discussion_button: "Otvori temu"
+      refresh_button: "Osvježi"
+      remove_button: "Ukloni kolonu"
+      reset_width_button: "Vrati širinu"
+      resize_label: "Promijeni širinu kolone {title}"
+
+    column_types:
+      all: "Sve teme"
+      author: "Teme člana"
+      author_posts: "Objave člana"
+      author_posts_title: "Objave korisnika {username}"
+      author_title: "Teme korisnika {username}"
+      discussion: "Jedna tema"
+      filter: "Prilagođeni filter"
+      group_posts: "Objave grupe"
+      group_posts_title: "Objave grupe {group}"
+      typing: "Ko trenutno piše"
+      unread: "Nepročitano"
+
+    discussion_controls:
+      add_to_deck_button: "Dodaj u pregled uživo"
+      added_message: "Ova tema je sada kolona u vašem pregledu uživo."
+
+    index:
+      deck_link: "Pregled uživo"
+
+    typing:
+      empty_text: "Trenutno niko ne piše."
+      offline_text: "Za prikaz ko trenutno piše potrebna je stalna veza s Realtime serverom."
+      replying_text: "{name} piše odgovor u temi {discussion}"
+      someone: "Neko"
+      starting_in_text: "{name} pokreće temu (oznake: {tags})"
+      starting_text: "{name} pokreće temu"
+      was_replying_text: "{name} – nedavno pisanje odgovora u temi {discussion}"
+      was_starting_in_text: "{name} – nedavno pokretanje teme (oznake: {tags})"
+      was_starting_text: "{name} – nedavno pokretanje teme"
+
+    page:
+      add_column_button: "Dodaj kolonu"
+      column_limit_reached_text: "Dostigli ste najveći dozvoljeni broj kolona."
+      drop_row_hint: "Spustite kolonu ovdje da započnete drugi red"
+      empty_text: "Vaš pregled uživo je prazan. Dodajte kolonu da razgovore pratite uživo."
+      exit_fullscreen_button: "Izađi iz prikaza preko cijelog ekrana"
+      fullscreen_button: "Prikaz preko cijelog ekrana"
+      hero:
+        hide_label: "Sakrij ovaj uvod"
+        subtitle: "Pratite sve razgovore koji vas zanimaju, jedan pored drugog i uživo. Dodajte kolone, prevucite ih na željeno mjesto i rasporedite u najviše dva reda."
+      navigator_label: "Kolone"
+      options_label: "Opcije pregleda uživo"
+      reset_button: "Vrati kolone"
+      resize_rows_label: "Promijeni visinu redova"
+      reset_confirmation: "Zamijeniti vaše kolone podrazumijevanim skupom? Ova radnja se ne može poništiti."
+      scroll_left_label: "Pomjeri lijevo"
+      scroll_right_label: "Pomjeri desno"
+      title: "Pregled uživo"
