@@ -9,17 +9,18 @@ flarum-akismet:
 
     # These translations are used in the Akismet Settings.
     akismet_settings:
-      api_key_label: API ključ
-      title: Akismet postavke
-      delete_blatant_spam_label: Automatski obriši očigledni spam
-      delete_blatant_spam_help: Ako Akismet utvrdi da je komentar očigledni spam, objava će biti automatski obrisana umjesto što se prijavljuje moderatorima
+      api_key_label: "API ključ"
+      invalid_api_key_message: "Akismet je odbio ovaj API ključ. Provjerite ga u svom Akismet korisničkom računu i pokušajte ponovo."
+      title: "Postavke za Akismet"
+      delete_blatant_spam_label: "Automatski briši očigledan spam"
+      delete_blatant_spam_help: "Ako Akismet utvrdi da je objava očigledan spam, objava se automatski briše umjesto da se samo prijavi moderatorima."
     permissions:
-      bypass_akismet: Zaobiđi Akismet
+      bypass_akismet: "Zaobilaženje Akismet provjere"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are used by the frame displayed around flagged posts.
     post:
-      akismet_flagged_text: Akismet označio kao spam
-      not_spam_button: Nije spam
+      akismet_flagged_text: "Akismet: označeno kao spam"
+      not_spam_button: "Nije spam"
