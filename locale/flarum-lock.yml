@@ -9,32 +9,32 @@ flarum-lock:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      lock_discussions_label: Zaključaj diskusije
+      lock_discussions_label: "Zaključavanje tema"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are displayed as tooltips for discussion badges.
     badge:
-      locked_tooltip: Zaključano
+      locked_tooltip: "Zaključano"
 
     # These translations are used by the discussion control buttons.
     discussion_controls:
-      lock_button: Zaključaj
-      unlock_button: Otključaj
+      lock_button: "Zaključaj"
+      unlock_button: "Otključaj"
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
-      discussion_locked_text: "{username} zaključao/la"
+      discussion_locked_text: "{username} – tema je zaključana"
 
     # These translations are displayed between posts in the post stream.
     post_stream:
-      discussion_locked_text: "{username} zaključao/la diskusiju {time}."
-      discussion_unlocked_text: "{username} otključao/la diskusiju {time}."
+      discussion_locked_text: "{username} – tema je zaključana {time}."
+      discussion_unlocked_text: "{username} – tema je otključana {time}."
 
     # These translations are used in the Settings page.
     settings:
-      notify_discussion_locked_label: Neko zaključa diskusiju koju sam pokrenuo/la
+      notify_discussion_locked_label: "Neko zaključa moju temu"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
@@ -43,4 +43,14 @@ flarum-lock:
     gambits:
       discussions:
         locked:
-          key: locked
+          key: zakljucano
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        locked: "Zaključana tema {discussion}"
+        unlocked: "Otključana tema {discussion}"
