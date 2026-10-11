@@ -33,11 +33,46 @@ fof-pwa:
         upload_file: "Učitaj datoteku"
       other:
         heading: "Ostalo"
-        force_portrait_text: "Uvijek koristi uspravnu orijentaciju ekrana"
+        display_label: "Način prikaza"
+        display_text: |
+          Kako se aplikacija otvara kada se pokrene preko svoje ikone:
+
+          Samostalna aplikacija: zaseban prozor aplikacije, bez adresne trake preglednika.
+          Minimalni interfejs: kao samostalna aplikacija, uz osnovnu navigaciju poput dugmadi za nazad i ponovno učitavanje.
+          Preko cijelog ekrana: koristi cijeli ekran, bez kontrola preglednika.
+          Preglednik: otvara se u običnoj kartici ili prozoru preglednika.
+
+          Ako odabrani način nije podržan, preglednik može koristiti zamjenski.
+        display_options:
+          standalone: "Samostalna aplikacija"
+          minimal_ui: "Minimalni interfejs"
+          fullscreen: "Preko cijelog ekrana"
+          browser: "Preglednik"
+        orientation_label: "Orijentacija ekrana"
+        orientation_text: |
+          Bilo koja: aplikacija se okreće zajedno s uređajem.
+          Prirodna: koristi uobičajenu orijentaciju uređaja, na telefonima obično uspravnu, a na monitorima položenu.
+          Uspravno: aplikacija ostaje vertikalna.
+          Položeno: aplikacija ostaje horizontalna.
+
+          Uspravna i položena orijentacija imaju po dva položaja, zakrenuta za 180 stepeni. Odaberite opciju „primarno“ ili „sekundarno“ da se koristi samo jedan od njih. Na telefonu „Uspravno (primarno)“ obično znači normalno držanje, a „Uspravno (sekundarno)“ naopako. Kod položene orijentacije, koji je položaj primarni, zavisi od uređaja.
+
+          Neki preglednici i uređaji mogu zanemariti odabranu orijentaciju.
+        orientation_options:
+          any: "Bilo koja"
+          natural: "Prirodna"
+          portrait: "Uspravno"
+          portrait_primary: "Uspravno (primarno)"
+          portrait_secondary: "Uspravno (sekundarno)"
+          landscape: "Položeno"
+          landscape_primary: "Položeno (primarno)"
+          landscape_secondary: "Položeno (sekundarno)"
         push_notif_preference_default_to_email_label: "Push postavke preuzimaju podrazumijevane e-mail postavke"
         push_notif_preference_default_to_email_text: "Ako je uključeno, korisnici će podrazumijevano imati uključena push obavještenja za sve vrste obavještenja za koje su podrazumijevano uključena e-mail obavještenja. Ako je isključeno, push obavještenja su podrazumijevano isključena."
         window_controls_overlay_label: "Uključi Window Controls Overlay (prekrivanje naslovne trake)"
         window_controls_overlay_text: |
+          Kada ga koristi podržani desktop preglednik, Window Controls Overlay ima prednost nad odabranim načinom prikaza.
+
           Ako je uključeno, korisnici mogu dobiti doživljaj bliži izvornoj aplikaciji, jer se sakriva sistemska naslovna traka prozora. Da li će se ova opcija zaista primijeniti, zavisi od postavki korisnika i podrške preglednika. Nakon uključivanja naslovnu traku obavezno prilagodite CSS/JS kodom; u suprotnom će kontrole prozora prekriti elemente gornje navigacije platforme, a prozor će se gotovo nemoguće pomjerati, što kvari korisničko iskustvo.
 
           Pogledajte i: <compatibilitylink>podrška preglednika za Window Controls Overlay</compatibilitylink> i <learnlink>Window Controls Overlay na Microsoft Learnu</learnlink>
@@ -113,6 +148,7 @@ fof-pwa:
       safari_ios_instructions: "Na iOS-u push obavještenja rade samo ako je aplikacija instalirana. U Safariju dodirnite ikonu „Dijeli“ (Share) i odaberite „Dodaj na početni ekran“ (Add to Home Screen). Zatim otvorite novoinstaliranu aplikaciju. Ako su obavještenja blokirana, otvorite iOS aplikaciju „Postavke“ (Settings), idite na „Obavještenja“ (Notifications), odaberite ovu web aplikaciju s liste i uključite „Dozvoli obavještenja“ (Allow Notifications)."
 
   api:
+    keys_invalid: "Push obavještenja nisu uključena jer je preglednik poslao neispravne ključeve za šifrovanje. Pokušajte ponovo uključiti obavještenja."
     endpoint_https_required: "Push obavještenja nisu uključena jer je preglednik poslao neispravan URL push servisa „{url}“. Potreban je ispravan HTTPS URL."
     endpoint_host_not_allowed: "Push obavještenja nisu uključena jer server push servisa „{host}“ koji koristi vaš preglednik nije dozvoljen. Obratite se administratoru platforme."
 
