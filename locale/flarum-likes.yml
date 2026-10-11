@@ -9,11 +9,11 @@ flarum-likes:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      like_posts_label: Označi objave sa "Sviđa mi se"
+      like_posts_label: "Označavanje objava sa „Sviđa mi se“"
 
     settings:
-      like_own_posts_help: Kada je omogućeno, uz odgovarajuću dozvolu, korisnici mogu označiti vlastite objave sa „Sviđa mi se". Da biste spriječili korisnike da označe vlastite objave, onemogućite ovu postavku.
-      like_own_posts_label: Korisnici mogu označiti vlastite objave sa "Sviđa mi se"
+      like_own_posts_help: "Kada je uključeno, korisnici koji imaju dozvolu mogu i vlastite objave označiti sa „Sviđa mi se“. Da to spriječite, isključite ovu postavku."
+      like_own_posts_label: "Korisnici mogu i vlastite objave označiti sa „Sviđa mi se“"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -21,29 +21,29 @@ flarum-likes:
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
       others_text: => core.ref.some_others
-      post_liked_text: "{username} označio/la vašu objavu sa „Sviđa mi se\""  # Can be pluralized to agree with the number of users!
+      post_liked_text: "Vaša objava se sviđa: {username}"  # Can be pluralized to agree with the number of users!
 
     # These translations are displayed beneath individual posts.
     post:
-      like_link: Sviđa mi se
-      liked_by_self_text: "{users} sviđa se ovo."  # Can be pluralized to agree with the number of users!
-      liked_by_text: "{count, plural, one {{users} se sviđa ovo} other {{users} se sviđa ovo}}."
+      like_link: "Sviđa mi se"
+      liked_by_self_text: "Ovo se sviđa: {users}."  # Can be pluralized to agree with the number of users!
+      liked_by_text: "{count, plural, one {Ovo se sviđa: {users}} other {Ovo se sviđa: {users}}}."
       others_link: => core.ref.some_others
-      unlike_link: Ne sviđa mi se
+      unlike_link: "Povuci sviđanje"
       you_text: => core.ref.you
 
     # These translations are used by the Users Who Like This modal dialog.
     post_likes:
-      title: Korisnici kojima se ovo sviđa
+      title: "Kome se ovo sviđa"
       load_more_button: => core.ref.load_more
 
     # These translations are used in the Settings page.
     settings:
-      notify_post_liked_label: Neko označi jednu od mojih objava sa „Sviđa mi se"
+      notify_post_liked_label: "Nekome se sviđa neka od mojih objava"
 
     # These translations are used in the User profile page.
     user:
-      likes_link: Sviđanja
+      likes_link: "Sviđanja"
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
@@ -52,5 +52,5 @@ flarum-likes:
     gambits:
       posts:
         likedBy:
-          key: likedBy
-          hint: ID ili korisničko ime korisnika
+          key: svidjanje
+          hint: "ID ili korisničko ime korisnika"
