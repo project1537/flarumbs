@@ -9,68 +9,68 @@ flarum-suspend:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      suspend_users_label: Suspendiraj korisnike
+      suspend_users_label: "Blokiranje korisnika"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
     # These translations are used in the suspension notifications
     notifications:
-      user_suspended_text: "Vaš račun je suspendovan na {timeReadable}"
-      user_suspended_indefinite_text: Vaš račun je suspendovan na neodređeno vrijeme
-      user_unsuspended_text: Suspenzija vašeg računa je ukinuta
+      user_suspended_text: "Vaš korisnički račun je blokiran na {timeReadable}"
+      user_suspended_indefinite_text: "Vaš korisnički račun je blokiran na neodređeno vrijeme"
+      user_unsuspended_text: "Blokada vašeg korisničkog računa je uklonjena"
 
     # These translations are used for the suspension reason informational modal to the suspended user.
     suspension_info:
-      dismiss_button: Zatvori
-      indefinite: Ovo je suspenzija na neodređeno vrijeme
-      limited: "Ova suspenzija ostaje na snazi do {date}"
-      title: Ovaj račun je suspendovan
+      dismiss_button: "Zatvori"
+      indefinite: "Blokada je na neodređeno vrijeme"
+      limited: "Blokada traje do {date}"
+      title: "Ovaj korisnički račun je blokiran"
 
     # These translations are used in the Suspend User modal dialog (admin function).
     suspend_user:
-      display_message: Prikaži poruku korisniku
-      indefinitely_label: Suspendovan na neodređeno vrijeme
+      display_message: "Poruka koja se prikazuje korisniku"
+      indefinitely_label: "Blokiran na neodređeno vrijeme"
       limited_time_days_text: " dana"
-      limited_time_label: Suspendovan na ograničeno vrijeme...
-      not_suspended_label: Nije suspendovan
-      placeholder_optional: Neobavezno
-      reason: Razlog suspenzije
-      status_heading: Status suspenzije
+      limited_time_label: "Blokiran na određeno vrijeme..."
+      not_suspended_label: "Nije blokiran"
+      placeholder_optional: "Neobavezno"
+      reason: "Razlog blokade"
+      status_heading: "Status blokade"
       submit_button: => core.ref.save_changes
-      title: "Suspendiraj {username}"
+      title: "Blokada korisnika {username}"
 
     # These translations are displayed as tooltips for user badges.
     user_badge:
-      suspended_tooltip: Suspendovan
+      suspended_tooltip: "Blokiran"
 
     # These translations are found on the user profile page (admin function).
     user_controls:
-      suspend_button: Suspendiraj
+      suspend_button: "Blokiraj"
 
   # Translations in this namespace are used by suspension email notifications
   email:
-    no_reason_given: Nije naveden razlog za ovu suspenziju.
+    no_reason_given: "Razlog blokade nije naveden."
     suspended:
-      subject: Vaš račun je suspendovan
+      subject: "Vaš korisnički račun je blokiran"
       plain:
         body: |
-          Vaš račun je suspendovan iz sljedećeg razloga:
+          Vaš korisnički račun je blokiran iz sljedećeg razloga:
 
           ---
           {suspension_message}
           ---
       html:
-        body: "Vaš račun na forumu {forumTitle} je suspendovan iz sljedećeg razloga:"
+        body: "Vaš korisnički račun na platformi {forumTitle} je blokiran iz sljedećeg razloga:"
 
     unsuspended:
-      subject: Suspenzija vašeg računa je ukinuta
+      subject: "Blokada Vašeg korisničkog računa je uklonjena"
       plain:
         body: |
-          Suspenzija vašeg računa je ukinuta. Možete se vratiti na forum klikom na sljedeći link:
+          Blokada Vašeg korisničkog računa je uklonjena. Na platformu se možete vratiti putem sljedećeg linka:
 
           {forum_url}
       html:
-        body: "Suspenzija vašeg računa je ukinuta. Možete se vratiti na [{forumTitle}]({forum_url}) kada budete spremni."
+        body: "Blokada Vašeg korisničkog računa je uklonjena. Na platformu [{forumTitle}]({forum_url}) možete se vratiti kada budete spremni."
 
   # Translations in this namespace are used by the forum and admin interfaces.
   lib:
@@ -79,4 +79,14 @@ flarum-suspend:
     gambits:
       users:
         suspended:
-          key: suspended
+          key: blokiran
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      user:
+        suspended: "Blokiran korisnik {username} do {until}"
+        unsuspended: "Uklonjena blokada korisnika {username}"
