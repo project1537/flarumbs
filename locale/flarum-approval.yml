@@ -9,9 +9,9 @@ flarum-approval:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      approve_posts_label: Odobri objave
-      reply_without_approval_label: Odgovaraj na diskusije bez odobrenja
-      start_discussions_without_approval_label: Pokreni diskusije bez odobrenja
+      approve_posts_label: "Odobravanje objava"
+      reply_without_approval_label: "Odgovaranje u temama bez odobrenja"
+      start_discussions_without_approval_label: "Pokretanje tema bez odobrenja"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
@@ -26,7 +26,7 @@ flarum-approval:
 
     # These translations are used by the post control buttons.
     post_controls:
-      approve_button: Odobri
+      approve_button: "Odobri"
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
@@ -34,4 +34,15 @@ flarum-approval:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    awaiting_approval: Čeka odobrenje
+    awaiting_approval: "Čeka odobrenje"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        approved: "Odobrena tema {discussion}"
+      post:
+        approved: "Odobrena objava {post} korisnika {postuser} u temi {discussion}"
