@@ -9,50 +9,51 @@ flarum-flags:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
-      flag_posts_label: Prijavi objave
-      view_flags_label: Pregled prijavljenih objava
+      flag_posts_label: "Prijavljivanje objava"
+      view_flags_label: "Pregled prijavljenih objava"
 
     # These translations are used in the Flags Settings modal dialog.
     settings:
-      flag_own_posts_label: Dozvoli korisnicima da prijave vlastite objave
-      guidelines_url_label: URL pravila zajednice
-      title: Postavke prijava
+      flag_own_posts_label: "Dozvoli korisnicima da prijave vlastite objave"
+      guidelines_url_label: "URL pravila platforme"
+      title: "Postavke prijava objava"
 
   # Translations in this namespace are used by the forum user interface.
   forum:
 
     # These translations are used by the Flag Post modal dialog.
     flag_post:
-      confirmation_message: Hvala što ste prijavili ovu objavu. Naši moderatori će je pregledati.
+      confirmation_message: "Hvala što ste prijavili ovu objavu. Moderatori će je pregledati."
       dismiss_button: => core.ref.okay
-      reason_details_placeholder: Dodatne pojedinosti (neobavezno)
-      reason_inappropriate_label: Neprikladno
-      reason_inappropriate_text: "Ova objava je uvredljiva, zloupotrebljava ili krši naša <a>pravila zajednice</a>."
-      reason_missing_message: Molimo navedite neke pojedinosti za naše moderatore.
-      reason_off_topic_label: "Izvan teme"
-      reason_off_topic_text: Ova objava nije relevantna za trenutnu diskusiju i trebala bi biti premještena drugdje.
-      reason_other_label: Ostalo (molimo navedite)
-      reason_spam_label: Spam
-      reason_spam_text: Ova objava je reklama.
+      reason_details_placeholder: "Dodatni detalji (neobavezno)"
+      reason_inappropriate_label: "Neprimjereno"
+      reason_inappropriate_text: "Objava je uvredljiva, zlonamjerna ili krši <a>pravila platforme</a>."
+      reason_inappropriate_text_no_guidelines: "Objava je uvredljiva ili zlonamjerna."
+      reason_missing_message: "Navedite nekoliko detalja za moderatore."
+      reason_off_topic_label: "Nije na temu"
+      reason_off_topic_text: "Objava nije povezana s ovom temom i treba je premjestiti."
+      reason_other_label: "Ostalo (navedite)"
+      reason_spam_label: "Spam"
+      reason_spam_text: "Objava je reklama."
       submit_button: => flarum-flags.ref.flag_post
       title: => flarum-flags.ref.flag_post
 
     # These translations are used by the Flagged Posts dropdown, a.k.a. "the flag".
     flagged_posts:
-      empty_text: Nema prijava
-      item_text: "{username} u <em>{discussion}</em>"
+      empty_text: "Nema prijavljenih objava"
+      item_text: "{username} u temi <em>{discussion}</em>"
       title: => flarum-flags.ref.flagged_posts
       tooltip: => flarum-flags.ref.flagged_posts
 
     # These translations are used by the frame displayed around flagged posts.
     post:
-      dismiss_flag_button: Odbaci prijavu
-      flagged_by_text: "Prijavio/la {username}"
-      flagged_by_with_reason_text: "Prijavio/la {username} kao {reason}"
+      dismiss_flag_button: "Odbaci prijavu"
+      flagged_by_text: "Prijava: {username}"
+      flagged_by_with_reason_text: "Prijava: {username} · razlog: {reason}"
 
     # These translations are used by the post control buttons.
     post_controls:
-      flag_button: Prijavi
+      flag_button: "Prijavi"
 
   ##
   # REUSED TRANSLATIONS - These keys should not be used directly in code!
@@ -60,5 +61,15 @@ flarum-flags:
 
   # Translations in this namespace are referenced by two or more unique keys.
   ref:
-    flag_post: Prijavi objavu
-    flagged_posts: Prijavljene objave
+    flag_post: "Prijavi objavu"
+    flagged_posts: "Prijavljene objave"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      post:
+        dismissed_flags: "Odbačene prijave objave {post} korisnika {postuser} u temi {discussion}"
+        flagged: "Prijavljena objava {post} korisnika {postuser} u temi {discussion} (razlog: {reason})"
