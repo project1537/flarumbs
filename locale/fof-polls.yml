@@ -90,6 +90,9 @@ fof-polls:
         edit_title: "Uredi grupu anketa"
         save_changes: => core.ref.save_changes
         delete: "Obriši grupu anketa"
+        name_label: "Naziv"
+        name_required: "Grupa anketa mora imati naziv."
+        error: "Došlo je do greške pri čuvanju grupe anketa. Obratite se administratoru."
         groups_manager: "Upravitelj grupa anketa"
         view_group: "Pogledaj grupu anketa"
         success: "Grupa anketa je uspješno sačuvana."
@@ -165,6 +168,7 @@ fof-polls:
       option_placeholder: "Odgovor"
       image_option_placeholder: "URL slike (neobavezno)"
       options_label: "Odgovori"
+      settings_label: "Glasanje"
       public_poll_label: "Dozvoli prikaz liste glasača"
       allow_multiple_votes_label: "Dozvoli glasanje za više opcija"
       max_votes_label: "Najveći broj glasova po korisniku"
@@ -219,3 +223,21 @@ fof-polls:
     upload_image:
       remove_button: "Obriši sliku"
       upload_button: "Učitaj sliku"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      poll:
+        created: "Kreirana anketa {title}"
+        updated: "Izmijenjena anketa {title}"
+        deleted: "Obrisana anketa {title}"
+        published: "Objavljena anketa {title}"
+        unpublished: "Anketa {title} vraćena u nacrt"
+        voted: "Glasanje u anketi {title}"
+      poll_group:
+        created: "Kreirana grupa anketa {name}"
+        updated: "Izmijenjena grupa anketa {name}"
+        deleted: "Obrisana grupa anketa {name}"
