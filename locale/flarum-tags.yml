@@ -36,7 +36,7 @@ flarum-tags:
     # These translations are used in the navigation bar.
     nav:
       tags_button: => flarum-tags.ref.tags
-      tags_text: "Upravljajte listom oznaka kojima se organizuju teme."
+      tags_text: "Upravljajte listom oznaka kojima se organiziraju teme."
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
@@ -60,7 +60,7 @@ flarum-tags:
 
     # These translations are used in the Tags page.
     tags:
-      about_tags_text: "Oznake služe za razvrstavanje tema. Primarne oznake su poput klasičnih kategorija: mogu se organizovati u hijerarhiju s dva nivoa. Sekundarne oznake nemaju hijerarhiju ni redoslijed i korisne su za finije razvrstavanje."
+      about_tags_text: "Oznake služe za razvrstavanje tema. Primarne oznake su poput klasičnih kategorija: mogu se organizirati u hijerarhiju s dva nivoa. Sekundarne oznake nemaju hijerarhiju ni redoslijed i korisne su za finije razvrstavanje."
       create_primary_tag_button: "Nova primarna oznaka"
       create_secondary_tag_button: "Nova sekundarna oznaka"
       edit_tag_label: "Uredi oznaku {tag}"
