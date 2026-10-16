@@ -1,103 +1,90 @@
 fof-cookie-consent:
   admin:
     settings:
-      configuration_title: Opcije konfiguracije
-      configuration_button_title: Link "Saznaj više"
+      configuration_title: "Opcije konfiguracije"
+      configuration_button_title: "Link „Saznajte više“"
       text_help: |
-        Tekst prikazan posjetiocima nalazi se u jezičkim datotekama ove ekstenzije, pa
-        se može prevesti. Nadjačajte ga sa FoF Linguist-om ili jezičkim paketom.
+        Tekstovi koji se prikazuju posjetiocima nalaze se u jezičkim datotekama ove ekstenzije, pa se mogu prevesti. Možete ih izmijeniti ekstenzijom FoF Linguist ili jezičkim paketom.
 
-      learnMoreLinkUrl: Link
-      learnMoreLinkUrl_help: Ostavite prazno da sakrijete link.
+      learnMoreLinkUrl: "Link"
+      learnMoreLinkUrl_help: "Ostavite prazno da se link ne prikazuje."
 
-      appearance_title: Izgled
-      layout: Raspored
-      layout_help: Kontroliše oblik banera za saglasnost.
-      position: Pozicija
-      equalWeightButtons: Daj oba dugmeta jednaku vizuelnu težinu
-      equalWeightButtons_help: Preporučeno. Identično stiliziranje dugmeta za prihvatanje i odbijanje sprečava usmjeravanje posjetilaca ka prihvatanju.
+      appearance_title: "Izgled"
+      layout: "Raspored"
+      layout_help: "Određuje oblik obavještenja o kolačićima."
+      position: "Položaj"
+      equalWeightButtons: "Oba dugmeta jednako istaknuta"
+      equalWeightButtons_help: "Preporučeno. Kada dugmad za prihvatanje i odbijanje izgledaju jednako, posjetioci se ne navode na prihvatanje."
 
       colors_help: |
-        Baner prati temu vašeg foruma, uključujući tamni režim. Postavite boju
-        samo da je nadjačate — ostavite prazno da naslijedi zadanu.
-      catchall_title: Neprijavljeni kolačići
-      sweepUndeclared: Obriši kolačiće koje nijedna ekstenzija nije prijavila
+        Obavještenje prati izgled platforme, uključujući tamni režim. Boju postavite samo ako je želite promijeniti, a ostavite prazno da se preuzme iz izgleda.
+      catchall_title: "Nedeklarirani kolačići"
+      sweepUndeclared: "Briši kolačiće koje nijedna ekstenzija nije deklarirala"
       sweepUndeclared_help: |
-        Kada posjetilac odbije, također obriši kolačiće koje nijedna ekstenzija nije prijavila
-        putem ekstendera za saglasnost na kolačiće. Ovo hvata pratioce iz
-        ekstenzija koje to nisu usvojile — ali će također obrisati kolačiće koje
-        neka ekstenzija zaista treba, što je može pokvariti. Koristite listu dozvoljenih
-        ispod da ih poštedite.
-      allowedCookies: Nikada ne briši ove kolačiće
+        Kada posjetilac odbije kolačiće, brišu se i kolačići koje nijedna ekstenzija nije deklarirala putem ove ekstenzije za kolačiće. Tako se uklanjaju i alati za praćenje iz ekstenzija koje je još ne podržavaju, ali se brišu i kolačići koji su nekoj ekstenziji zaista potrebni, pa ona može prestati ispravno raditi. Takve kolačiće izuzmite listom ispod.
+      allowedCookies: "Nikad ne briši ove kolačiće"
       allowedCookies_help: |
-        Po jedan naziv u svakom redu. Obavijte kosim crtama za obrazac, npr. /^app_/.
-        Kolačići koje Flarum sam postavlja se uvijek zadržavaju.
+        Jedan naziv po redu. Za uzorak naziv stavite između kosih crta, npr. /^app_/.
+        Kolačići koje postavlja sam Flarum uvijek se zadržavaju.
 
-      theme_popup_title: Boje skočnog prozora
-      backgroundColor: Pozadina
-      textColor: Tekst
-      theme_dismiss_title: Boje dugmadi
-      buttonBackgroundColor: Pozadina
-      buttonTextColor: Tekst
+      theme_popup_title: "Boje obavještenja"
+      backgroundColor: "Pozadina"
+      textColor: "Tekst"
+      theme_dismiss_title: "Boje dugmadi"
+      buttonBackgroundColor: "Pozadina"
+      buttonTextColor: "Tekst"
 
       layouts:
-        box: Okvir
-        box_wide: Okvir (širok)
-        box_inline: Okvir (uklopljen u red)
-        cloud: Oblak
-        cloud_inline: Oblak (uklopljen u red)
-        bar: Traka
-        bar_inline: Traka (uklopljena u red)
+        box: "Okvir"
+        box_wide: "Okvir (širok)"
+        box_inline: "Okvir (dugmad u nizu)"
+        cloud: "Oblak"
+        cloud_inline: "Oblak (dugmad u nizu)"
+        bar: "Traka"
+        bar_inline: "Traka (dugmad u nizu)"
 
       positions:
-        top_left: Gore lijevo
-        top_center: Gore u sredini
-        top_right: Gore desno
-        middle_left: Sredina lijevo
-        middle_center: Sredina
-        middle_right: Sredina desno
-        bottom_left: Dolje lijevo
-        bottom_center: Dolje u sredini
-        bottom_right: Dolje desno
+        top_left: "Gore lijevo"
+        top_center: "Gore u sredini"
+        top_right: "Gore desno"
+        middle_left: "U sredini lijevo"
+        middle_center: "U sredini"
+        middle_right: "U sredini desno"
+        bottom_left: "Dolje lijevo"
+        bottom_center: "Dolje u sredini"
+        bottom_right: "Dolje desno"
 
   forum:
     banner:
-      description: Ova stranica koristi kolačiće. Možete upravljati vašim preferencijama ili prihvatiti sve kolačiće.
-      accept: Prihvati
-      decline: Odbij
-      preferences: Upravljaj preferencijama
-      learn_more: Saznaj više
+      description: "Ova platforma koristi kolačiće. Možete upravljati postavkama ili prihvatiti sve kolačiće."
+      accept: "Prihvati"
+      decline: "Odbij"
+      preferences: "Upravljaj postavkama"
+      learn_more: "Saznajte više"
 
     preferences:
-      title: Preferencije kolačića
-      save: Sačuvaj preferencije
-      description: >-
-        Kolačići su male datoteke koje ova stranica pohranjuje u vašem pregledniku. Ispod je
-        prikazano šta se pohranjuje i zašto. Svoj izbor možete promijeniti u bilo kojem trenutku.
+      title: "Postavke kolačića"
+      save: "Sačuvaj postavke"
+      description: "Kolačići su male datoteke koje ova platforma čuva u vašem pregledniku. U nastavku je navedeno šta se čuva i zašto. Svoj izbor možete promijeniti u bilo kojem trenutku."
       cookie_table:
-        name: Kolačić
-        description: Svrha
+        name: "Kolačić"
+        description: "Namjena"
 
     cookies:
-      flarum_session: Održava vašu prijavu dok pregledate stranicu.
-      flarum_remember: Automatski vas ponovo prijavljuje prilikom sljedeće posjete.
-      locale: Pamti jezik koji ste odabrali.
-      cc_cookie: Pamti vaš izbor u vezi sa kolačićima kako vas ne bismo ponovo pitali.
+      flarum_session: "Održava vašu prijavu dok koristite platformu."
+      flarum_remember: "Automatski vas prijavljuje pri sljedećoj posjeti."
+      locale: "Pamti jezik koji ste odabrali."
+      cc_cookie: "Pamti vaš izbor o kolačićima, da vas ne bismo ponovo pitali."
 
     categories:
       necessary:
-        title: Strogo neophodni
-        description: >-
-          Neophodni da bi stranica funkcionisala — prijava, ostajanje prijavljenim i
-          pamćenje vašeg izbora u vezi sa kolačićima. Ovi se ne mogu isključiti.
+        title: "Neophodni kolačići"
+        description: "Potrebni za rad platforme: prijavu, održavanje prijave i pamćenje vašeg izbora o kolačićima. Ne mogu se isključiti."
 
       analytics:
-        title: Analitika
-        description: >-
-          Pomažu nam da razumijemo kako se forum koristi, kako bismo ga mogli poboljšati.
-          Ništa od ovoga nije neophodno da bi forum funkcionisao.
+        title: "Analitika"
+        description: "Pomažu nam da razumijemo kako se platforma koristi, kako bismo je mogli poboljšati. Nijedan od ovih kolačića nije potreban za rad platforme."
 
       marketing:
-        title: Marketing
-        description: >-
-          Koriste se za mjerenje efikasnosti oglašavanja i za prikazivanje oglasa na drugim stranicama.
+        title: "Marketing"
+        description: "Koriste se za mjerenje uspješnosti oglasa i za prikazivanje oglasa na drugim stranicama."
