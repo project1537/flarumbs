@@ -1,83 +1,83 @@
 ekumanov-forum-widgets:
   forum:
     online_users:
-      title: Korisnici online
-      empty: Trenutno nema korisnika online.
-      hidden_users: skriveni
-      overflow_more: više
+      title: "Korisnici na mreži"
+      empty: "Trenutno nema korisnika na mreži."
+      hidden_users: "skriveno"
+      overflow_more: "još"
       guests: "{count, plural, one {gost} few {gosta} other {gostiju}}"
     stats:
-      title: Statistike foruma
-      discussions_count: "Diskusije: {count}"
+      title: "Statistika platforme"
+      discussions_count: "Teme: {count}"
       posts_count: "Objave: {count}"
       users_count: "Korisnici: {count}"
-      latest_registration: "Posljednja registracija:"
-      tooltip_discussions: Diskusije
-      tooltip_posts: Objave
-      tooltip_users: Korisnici
-      tooltip_online: Korisnici online
-      label_discussions: "{count, plural, one {diskusija} few {diskusije} other {diskusija}}"
+      latest_registration: "Najnoviji korisnik:"
+      tooltip_discussions: "Teme"
+      tooltip_posts: "Objave"
+      tooltip_users: "Korisnici"
+      tooltip_online: "Korisnici na mreži"
+      label_discussions: "{count, plural, one {tema} few {teme} other {tema}}"
       label_posts: "{count, plural, one {objava} few {objave} other {objava}}"
       label_users: "{count, plural, one {korisnik} few {korisnika} other {korisnika}}"
-      label_online: "{count, plural, one {korisnik online} few {korisnika online} other {korisnika online}}"
-      label_online_over_total: "{online} online od ukupno {total} korisnika"
-      tooltip_latest_registration: "Posljednja registracija: {name}"
+      label_online: "{count, plural, one {na mreži} few {na mreži} other {na mreži}}"
+      label_online_over_total: "Na mreži: {online} od ukupno {total} korisnika"
+      tooltip_latest_registration: "Najnoviji korisnik: {name}"
     aria:
-      expand_details: Prikaži detalje foruma
-      collapse_details: Sakrij detalje foruma
-      details_panel: Detalji foruma
-      overflow_users: "Još {count} korisnika online"
+      expand_details: "Prikaži detalje o platformi"
+      collapse_details: "Sakrij detalje o platformi"
+      details_panel: "Detalji o platformi"
+      overflow_users: "Ostali korisnici na mreži: {count}"
 
   admin:
     settings:
-      widget_layout: Izgled widgeta
-      widget_layout_help: "Klasično: kompaktni widget u bočnoj traci. Puna širina: jednoredan bar iznad liste diskusija."
-      widget_layout_classic: Bočna traka (klasično)
-      widget_layout_full_width: Puna širina (iznad diskusija)
-      bar_position_desktop: Pozicija bara (desktop)
-      bar_position_desktop_help: "Gdje smjestiti statistički bar na desktopu u odnosu na alatnu traku. Primjenjuje se samo na izgled pune širine."
-      bar_position_mobile: Pozicija bara (mobilni uređaji)
-      bar_position_mobile_help: "Gdje smjestiti statistički bar na mobilnim uređajima u odnosu na alatnu traku."
-      bar_position_above: Iznad alatne trake
-      bar_position_inside: Unutar alatne trake
-      bar_position_below: Ispod alatne trake
-      bar_position_above_footer: Iznad podnožja
-      widget_position: Pozicija widgeta u bočnoj traci (prioritet)
-      widget_position_help: "Kontroliše gdje se widget pojavljuje u bočnoj traci. Niže (negativnije) vrijednosti ga postavljaju niže. Zadano: -10. Primjenjuje se samo na izgled bočne trake."
+      widget_layout: "Raspored dodatka"
+      widget_layout_help: "Klasični: sažet prikaz u bočnoj traci. Puna širina: traka u jednom redu iznad liste tema."
+      widget_layout_classic: "Bočna traka (klasični)"
+      widget_layout_full_width: "Puna širina (iznad tema)"
+      bar_position_desktop: "Položaj trake (računar)"
+      bar_position_desktop_help: "Gdje se na računaru prikazuje traka sa statistikom u odnosu na traku s alatima. Važi samo za raspored pune širine."
+      bar_position_mobile: "Položaj trake (mobitel)"
+      bar_position_mobile_help: "Gdje se na mobitelu prikazuje traka sa statistikom u odnosu na traku s alatima."
+      bar_position_above: "Iznad trake s alatima"
+      bar_position_inside: "Unutar trake s alatima"
+      bar_position_below: "Ispod trake s alatima"
+      bar_position_above_footer: "Iznad podnožja"
+      widget_position: "Položaj u bočnoj traci (prioritet)"
+      widget_position_help: "Određuje gdje se dodatak prikazuje u bočnoj traci. Manje (negativnije) vrijednosti spuštaju ga niže. Podrazumijevano: -10. Važi samo za raspored s bočnom trakom."
 
-      section_online_users: Korisnici online
-      section_online_users_help: Konfigurirajte prikaz korisnika online u proširenom panelu widgeta.
-      show_online_users: Prikaži korisnike online
-      show_online_users_help: Potpuno omogući ili onemogući funkciju korisnika online. Kada je onemogućeno, neće se izvršavati nikakvi upiti o korisnicima online.
-      last_seen_interval: Interval posljednje aktivnosti (minute)
-      last_seen_interval_help: "Koliko minuta od posljednje aktivnosti korisnik se smatra online. Zadano: 5, što je usklađeno s heartbeat prisutnošću (omogućena prema zadanim postavkama) — heartbeat osvježava aktivnost za korisnike s otvorenom i fokusiranom karticom, tako da aktivni korisnici neće ispasti offline. Ako onemogućite heartbeat, povećajte ovu vrijednost na 10 ili više kako biste spriječili nestajanje korisnika usred sesije."
-      online_users_cache_ttl: Trajanje keša korisnika online (sekunde)
-      online_users_cache_ttl_help: "Koliko dugo keširati listu korisnika online. Održavaju se dva odvojena keša: jedan za privilegovane korisnike (one s dozvolom \"Uvijek prikazuj vrijeme posljednje aktivnosti korisnika\", koji mogu vidjeti i skrivene korisnike) i jedan za sve ostale."
-      enable_heartbeat: Omogući heartbeat prisutnosti
-      enable_heartbeat_help: "Kada je omogućeno, svaka otvorena i fokusirana kartica foruma šalje mali pozadinski ping. Za prijavljene korisnike to osvježava indikator \"online\" dok čitaju ili pišu bez navigacije između stranica (npr. tokom dugog odgovora putem realtime ekstenzije); za goste (kada je brojanje gostiju uključeno) na taj način se prikuplja broj gostiju. Opterećenje servera je zanemarivo — oba toka ograničavaju pisanje na strani servera, bez obzira na broj otvorenih kartica. Onemogućite ako ne želite nikakav pozadinski saobraćaj."
-      show_online_guests: Prikaži goste online
-      show_online_guests_help: "Kada je omogućeno, prikazuje se okvirni broj neprijavljenih posjetilaca u proširenom panelu kao kružić s tačkicama ispod skrivenih korisnika. Svaka kartica gosta pinguje mali endpoint koji bilježi hash IP adrese i User-Agenta posjetioca u kratkovječnu mapu prisutnosti; broj je broj jedinstvenih otisaka viđenih unutar \"intervala posljednje aktivnosti\". Brojanje je okvirno — posjetioci iza dijeljenog NAT-a broje se kao jedan, mobilni korisnici s rotacionim IP adresama mogu biti prebrojan. Na pregledaču posjetioca se ne pohranjuje nikakav trajni identifikator."
-      include_guests_in_total: Uključi goste u ukupan broj online
-      include_guests_in_total_help: "Kada je omogućeno, broj prikazan u baru (i u zaglavlju sekcije unutar proširenog panela) zbraja prijavljene članove i goste. Redovi s detaljima u proširenom panelu i dalje prikazuju svaku komponentu zasebno. Onemogućite kako bi broj u baru odražavao samo prijavljene članove."
+      section_online_users: "Korisnici na mreži"
+      section_online_users_help: "Podešavanje prikaza korisnika na mreži u proširenom panelu."
+      show_online_users: "Prikaži korisnike na mreži"
+      show_online_users_help: "Potpuno uključuje ili isključuje prikaz korisnika na mreži. Kada je isključen, upiti o korisnicima na mreži se ne izvršavaju."
+      last_seen_interval: "Interval posljednje aktivnosti (minute)"
+      last_seen_interval_help: "Koliko minuta nakon posljednje aktivnosti se korisnik smatra prisutnim na mreži. Podrazumijevano: 5, što odgovara signalu prisutnosti (uključen podrazumijevano). Signal održava aktivnost svježom dok je kartica s platformom otvorena i u fokusu, pa aktivni korisnici ne nestaju s liste. Ako isključite signal prisutnosti, povećajte ovu vrijednost na 10 ili više, da korisnici ne bi povremeno nestajali s liste usred korištenja."
+      online_users_cache_ttl: "Trajanje keš memorije za korisnike na mreži (sekunde)"
+      online_users_cache_ttl_help: "Koliko dugo se lista korisnika na mreži čuva u keš memoriji. Vode se dvije odvojene keš memorije: jedna za korisnike s dozvolom „Uvijek vidi vrijeme posljednje aktivnosti korisnika“, koji vide i skrivene korisnike, i jedna za sve ostale."
+      enable_heartbeat: "Uključi signal prisutnosti"
+      enable_heartbeat_help: "Kada je uključen, svaka otvorena kartica s platformom koja je u fokusu šalje mali signal u pozadini. Za prijavljene korisnike to održava oznaku „na mreži“ tačnom dok čitaju ili pišu bez prelaska na druge stranice (npr. pri pisanju dužeg odgovora uz ekstenziju za rad uživo). Za goste (kada je uključeno brojanje gostiju) na ovaj način se prikuplja broj gostiju. Opterećenje servera je zanemarivo: upisi se na serveru ograničavaju, bez obzira na broj otvorenih kartica. Isključite ako ne želite nikakav promet u pozadini."
+      show_online_guests: "Prikaži goste na mreži"
+      show_online_guests_help: "Kada je uključeno, u proširenom panelu se ispod skrivenih korisnika, kao krug s isprekidanom linijom, prikazuje približan broj neprijavljenih posjetilaca. Svaka kartica gosta šalje signal na posebnu adresu, koja hash IP adrese i podataka o pregledniku (User-Agent) bilježi u kratkotrajnu evidenciju prisutnosti. Broj gostiju je broj jedinstvenih zapisa unutar „intervala posljednje aktivnosti“. Brojanje je približno: posjetioci iza zajedničke mreže (NAT) broje se kao jedan, a korisnici mobilnih mreža s promjenjivim IP adresama mogu biti brojani više puta. U pregledniku posjetioca ne čuva se nikakav trajni identifikator."
+      include_guests_in_total: "Uračunaj goste u glavni broj korisnika na mreži"
+      include_guests_in_total_help: "Kada je uključeno, broj prikazan u traci (i u zaglavlju odjeljka u proširenom panelu) zbir je prijavljenih korisnika i gostiju. Redovi s detaljima u proširenom panelu i dalje ih prikazuju odvojeno. Isključite ako broj u traci treba obuhvatiti samo prijavljene korisnike."
 
-      section_statistics: Statistike foruma
-      section_statistics_help: Konfigurirajte keširanje za broj diskusija, objava, ukupan broj korisnika i statistiku posljednje registracije.
-      show_discussions_count: Prikaži broj diskusija
-      show_posts_count: Prikaži broj objava
-      show_users_count: Prikaži broj korisnika
-      show_latest_registration: Prikaži posljednju registraciju
-      stats_cache_duration: Trajanje keša statistika (sekunde)
-      stats_cache_duration_help: "Koliko dugo keširati broj diskusija, objava, ukupan broj korisnika i posljednju registraciju. Keš se automatski poništava kada se kreiraju ili brišu diskusije, objave ili korisnici. Postavite na 0 za isključivanje keširanja (nije preporučeno za velike forume)."
-      ignore_private_discussions: Ignoriši privatne diskusije u brojanju
-      show_toggle: Prikaži dugme za proširivanje/skupljanje
-      show_toggle_help: "Određuje da li se prikazuje dugme sa strelicom za proširivanje/skupljanje panela s detaljima. Kada je onemogućeno, panel se i dalje može otvoriti klikom na bar (način rada punog bara) ili na polje korisnika online (način rada online polja)."
-      expanded_panel_width: Širina proširenog panela (desktop)
-      expanded_panel_width_help: "Puni bar: panel se proteže kroz punu širinu bara, klik bilo gdje na baru proširuje panel. Online polje: panel se pojavljuje samo ispod broja korisnika online, klik na polje korisnika online proširuje panel."
-      expanded_panel_width_full_bar: Puna širina bara
-      expanded_panel_width_online_cell: Samo polje korisnika online
+      section_statistics: "Statistika platforme"
+      section_statistics_help: "Podešavanje keš memorije za broj tema, broj objava, ukupan broj korisnika i najnovijeg korisnika."
+      show_discussions_count: "Prikaži broj tema"
+      show_posts_count: "Prikaži broj objava"
+      show_users_count: "Prikaži broj korisnika"
+      show_latest_registration: "Prikaži najnovijeg korisnika"
+      stats_cache_duration: "Trajanje keš memorije za statistiku (sekunde)"
+      stats_cache_duration_help: "Koliko dugo se broj tema, broj objava, ukupan broj korisnika i najnoviji korisnik čuvaju u keš memoriji. Keš memorija se automatski briše kada se teme, objave ili korisnici dodaju ili obrišu. Vrijednost 0 isključuje keš memoriju (ne preporučuje se za velike platforme)."
+      ignore_private_discussions: "Ne uračunavaj privatne teme"
+      show_toggle: "Prikaži dugme za proširivanje i skupljanje"
+      show_toggle_help: "Da li se prikazuje dugme sa strelicom koje proširuje i skuplja panel s detaljima. Kada je isključeno, panel se i dalje otvara klikom na traku (način „cijela traka“) ili na polje s brojem korisnika na mreži (način „samo polje korisnika na mreži“)."
+      expanded_panel_width: "Širina proširenog panela (računar)"
+      expanded_panel_width_help: "Cijela traka: panel zauzima punu širinu trake, a otvara se klikom bilo gdje na traku. Samo polje korisnika na mreži: panel se prikazuje samo ispod broja korisnika na mreži, a otvara se klikom na to polje."
+      expanded_panel_width_full_bar: "Cijela traka"
+      expanded_panel_width_online_cell: "Samo polje korisnika na mreži"
     permissions:
-      view_online_users: Pregled korisnika online
-      view_discussions_count: Pregled broja diskusija
-      view_posts_count: Pregled broja objava
-      view_users_count: Pregled broja korisnika
-      view_latest_registration: Pregled posljednje registracije
+      view_online_users: "Pregled korisnika na mreži"
+      view_discussions_count: "Pregled broja tema"
+      view_posts_count: "Pregled broja objava"
+      view_users_count: "Pregled broja korisnika"
+      view_latest_registration: "Pregled najnovijeg korisnika"
