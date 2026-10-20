@@ -1,0 +1,31 @@
+name: Update extension list
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "locale/**"
+      - ".github/scripts/update-readme.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate the extension list
+        run: python3 .github/scripts/update-readme.py
+
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update extension list in README" README.md
+          git push
