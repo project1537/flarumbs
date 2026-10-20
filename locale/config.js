@@ -1,6 +1,6 @@
 // Bosanski (BS)
 
-(function () {
+;(function () {
   // Gramatička množina: 1, 21, 31… / 2–4, 22–24… / ostalo (5–20, 25–30…)
   function oblik(n) {
     var d = n % 10, s = n % 100;
