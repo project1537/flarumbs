@@ -1,24 +1,43 @@
 core:
+  # Sort names are needed in two places that do not share a namespace: the
+  # forum's sorting control reads `core.forum.index_sort.{key}_button`, while
+  # the admin panel's tag default-sort dropdown reads
+  # `core.lib.index_sort.{key}_button` — and the `forum` namespace is not
+  # shipped to the admin frontend. Core registers its own sort labels under
+  # both for exactly this reason, so ours have to be in both too. The real
+  # strings live under `ref` and each namespace points at them, so the two can
+  # never drift apart.
+  ref:
+    most_viewed: "Najviše pregleda"
+    least_viewed: "Najmanje pregleda"
+
   forum:
     index_sort:
-      most_viewed_button: Najgledanije
-      least_viewed_button: Najmanje gledano
+      most_viewed_button: => core.ref.most_viewed
+      least_viewed_button: => core.ref.least_viewed
+
+  lib:
+    index_sort:
+      most_viewed_button: => core.ref.most_viewed
+      least_viewed_button: => core.ref.least_viewed
 
 fof-discussion-views:
   forum:
     modal_resetviews:
-      title: Resetuj broj pregleda diskusije
-      submit: Potvrdi
-      label: Postavi broj pregleda na
-      invalid: Unesite ispravan broj veći ili jednak 0
+      title: "Promjena broja pregleda teme"
+      submit: "Sačuvaj"
+      label: "Novi broj pregleda"
+      invalid: "Unesite ispravan broj, jednak ili veći od 0"
     discussion_controls:
-      resetviews_button: Postavi broj pregleda
+      resetviews_button: "Promijeni broj pregleda"
   admin:
     permissions:
-      reset_views_label: Postavljanje broja pregleda diskusije
+      reset_views_label: "Promjena broja pregleda tema"
     settings:
-      ignore_crawlers: Ignoriši posjete crawlera
+      ignore_crawlers: "Ne broji posjete pretraživača (botova)"
+      dedupe_ttl: "Sekunde prije ponovnog brojanja istog posjetioca"
+      dedupe_ttl_help: "Koliko dugo se posjetilac pamti nakon pregleda teme, da se osvježavanje stranice ili povratak na temu ne bi ponovo brojali. Vrijednost 0 broji svaki pregled."
   lib:
     gambits:
       popular:
-        key: popular
+        key: popularno
