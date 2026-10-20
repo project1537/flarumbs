@@ -27,3 +27,7 @@ fof-ignore-users:
     badge:
       user_label: "Zanemareni korisnik"
       discussion_label: "Tema zanemarenog korisnika"
+    post:
+      toggle_label: "Prikaži ili sakrij objavu zanemarenog korisnika"
+    messages:
+      cannot_send_text: "U ovom razgovoru ne možete slati poruke."

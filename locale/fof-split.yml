@@ -14,6 +14,10 @@ fof-split:
             title: "Izdvajanje u novu temu"
             new_discussion_label: "Unesite naslov nove teme"
             submit_button: "Izdvoji"
+    api:
+        errors:
+            first_post: "Početna objava teme ne može se izdvojiti."
+            end_before_start: "Izdvajanje mora završiti na objavi od koje počinje ili nakon nje."
 
 # Labels for the audit log entries this extension produces, rendered by the (optional)
 # flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend

@@ -60,6 +60,9 @@ fof-oauth:
 
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
+      oauth_only_label: "Dozvoli prijavu i registraciju samo putem OAuth provajdera"
+      oauth_only_help: "Kada je uključeno, članovi se više ne mogu prijaviti, registrirati niti promijeniti lozinku pomoću lozinke, nego koriste uključene provajdere. Administratori zadržavaju prijavu lozinkom, preko linka „Prijava za administratore“ u prozoru za prijavu. Postojeći članovi bez povezanog provajdera povezuju se pri prvoj prijavi putem provajdera, ako provajder potvrdi istu e-mail adresu; ostalima će trebati pomoć administratora. Nema efekta dok nijedan provajder nije uključen. U dozvolama ostavite „Registracija“ postavljenu na „Otvorena“, inače se novi članovi ne mogu registrirati ni putem provajdera."
+      oauth_only_sign_up_closed_warning: "Registracija je u <a>dozvolama</a> postavljena na „Zatvorena“. Flarum tu postavku koristi i za registracije putem provajdera, pa se dok je zatvorena niko ne može pridružiti."
 
   forum:
     log_in:
@@ -74,6 +77,8 @@ fof-oauth:
       with_gitlab_button: '=> fof-oauth.forum.log_in.with_button'
       with_google_button: '=> fof-oauth.forum.log_in.with_button'
       with_linkedin_button: '=> fof-oauth.forum.log_in.with_button'
+      unverified_email_in_use_oauth_only: "Servis {provider} nije potvrdio ovu e-mail adresu, pa je ne možemo koristiti za vašu prijavu. Potvrdite adresu kod servisa {provider} i pokušajte ponovo ili zatražite pomoć administratora."
+      admin_log_in_link: "Prijava za administratore"
 
     user:
       settings:

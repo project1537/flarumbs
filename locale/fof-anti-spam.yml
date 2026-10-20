@@ -3,7 +3,6 @@ fof-anti-spam:
     permissions:
       spamblock_users_label: "Označavanje korisnika kao spamera"
     settings:
-      button: "Postavke"
       content-filter:
         heading: "Filter sadržaja"
         introduction: "Automatski prepoznaje i prijavljuje spam sadržaj novih korisnika. Sistem prati objave i teme nedavno registriranih korisnika i traži uobičajene znakove spama, poput brojeva telefona, e-mail adresa i sumnjivih URL-ova."
@@ -37,8 +36,6 @@ fof-anti-spam:
         auto_unapprove_help: "Kada je uključeno, sadržaj koji dostigne prag za spam šalje se u red za odobrenje (zahtijeva flarum/approval). Moderatori ga moraju odobriti prije nego što postane vidljiv."
         auto_flag_label: "Automatski prijavljuj spam sadržaj"
         auto_flag_help: "Kada je uključeno, sadržaj koji dostigne prag za prijavu automatski se prijavljuje moderatorima na pregled (zahtijeva flarum/flags). Razlog prijave sadrži detalje o tome zašto je sadržaj prepoznat kao spam."
-        system_user_id_label: "ID sistemskog korisnika za prijave"
-        system_user_id_help: "ID korisnika koji se navodi kao autor automatskih prijava spama. Obično je to administratorski ili sistemski račun. Ako nije podešeno, koristi se korisnik s ID-om 1."
         no_action_extensions: "Za automatske moderatorske radnje instalirajte ekstenzije flarum/approval i/ili flarum/flags. Prepoznati spam tada se obrađuje kroz ugrađeni red za odobrenje i sistem prijava."
 
         allowlist_heading: "Dozvoljene domene"
@@ -52,6 +49,14 @@ fof-anti-spam:
         advanced_patterns_heading: "Napredni uzorci blokiranja"
         advanced_block_patterns_label: "Napredni uzorci (regex)"
         advanced_block_patterns_help: "Prilagođeni regex uzorci za napredne korisnike. Koristite s oprezom – neispravni uzorci se preskaču. Format je JSON niz objekata s ključem \"pattern\" i neobaveznim ključem \"description\"."
+        flag_account_label: "Račun koji prijavljuje spam"
+        flag_account_help: "Prikazuje se kao autor automatskih prijava spama u redu za moderaciju. Ako ostane podrazumijevana vrijednost, prijave podnosi prvi administrator."
+        flag_account_default: "Podrazumijevano: prvi administrator"
+        flag_account_choose_button: "Odaberi…"
+        flag_account_default_button: "Koristi podrazumijevano"
+        flag_account_modal_title: "Odaberite račun koji prijavljuje spam"
+        flag_account_missing: "Odabrani račun više ne postoji, pa spam prijavljuje prvi administrator dok ne odaberete drugi."
+        flag_account_in_code: "Odabrano u extend.php putem assignFlagsToModerator(), pa se ovdje ne može mijenjati."
 
       default-actions:
         delete_user_label: "Obriši korisnika"
@@ -97,9 +102,7 @@ fof-anti-spam:
         blocked_asns_help: "Jedan po redu ili odvojeni zarezom. Registracije s ovih mreža odbijaju se bez daljnjeg, bez obzira na to da li je adresa na listi. StopForumSpam pri svakom upitu vraća broj mreže, a gotovo niko ne posjećuje forum s mreže hosting provajdera. Prihvata 31272 ili AS31272. Ostavite prazno da se mreža samo bilježi, bez radnje."
         max_listing_age_label: "Zanemari zapise starije od (dana)"
         max_listing_age_help: "Zapis od prije nekoliko godina malo govori o onome ko se registrira danas. Vrijednost 0 zadržava sve zapise, bez obzira na starost. Domene i mreže s crne liste uvijek se poštuju, bez obzira na ovu postavku."
-        registration_throttle_label: "Sekundi između registracija s iste adrese"
-        registration_throttle_help: "Flarum ograničava koliko često neko može objavljivati, ali ne i koliko često može praviti korisničke račune. Vrijednost 0 isključuje ovo ograničenje. Imajte na umu da uredi, škole i mobilne mreže dijele jednu adresu na mnogo ljudi."
-        lookup_failed: "StopForumSpam trenutno nije dostupan (posljednji neuspjeh: {when}). Dok se ne oporavi, registracije prolaze bez provjere."
+        lookup_failed: "StopForumSpam trenutno nije dostupan (prvi neuspjeh: {when}). Dok se ne oporavi, registracije prolaze bez provjere."
         email_hash_label: "Koristi hash e-mail adrese"
         email_hash_help: "Umjesto same e-mail adrese šalje se njen MD5 hash. Tim načinom zaobilaze se sve crne liste, normalizacija i provjere prikrivenih adresa."
 
@@ -110,7 +113,24 @@ fof-anti-spam:
         sfs_lookup_help: "Ako je uključeno, pri registraciji novog korisnika provjerava se baza podataka StopForumSpam. Ako se korisnik pronađe (korisničko ime, IP adresa, e-mail), a ta provjera je uključena i StopForumSpam pouzdanost dostigne podešeni nivo, korisnik ne može završiti registraciju."
 
         report_blocked_registrations_label: "Prijavljuj blokirane registracije"
-        report_blocked_registrations_help: "Kada funkcija „Provjeravaj registracije“ blokira registraciju, pokušaj se prijavljuje servisu StopForumSpam, kako bi se aktivnost spamera bolje potvrdila. Zahtijeva podešen StopForumSpam API ključ (pogledajte ispod)."
+        report_blocked_registrations_help: "Kada registraciju blokiraju podaci samog StopForumSpama, pokušaj se prijavljuje tom servisu, kako bi se aktivnost spamera potvrdila. Blokade zbog mreže Tor ili zabranjene mreže nikad se ne prijavljuju, jer su one pravilo ove platforme, a ne dokaz. Zahtijeva StopForumSpam API ključ (pogledajte iznad)."
+        checks_heading: "Šta se provjerava"
+        thresholds_heading: "Kada blokirati"
+        also_block_heading: "Dodatno blokiraj"
+        reporting_heading: "Prijavljivanje"
+      sign_ups:
+        heading: "Provjere pri registraciji"
+        introduction: "Provjere koje platforma sama obavlja pri svakoj registraciji, bez slanja podataka vanjskim servisima. Provjere preko StopForumSpama imaju posebnu karticu."
+        honeypot_heading: "Honeypot"
+        honeypot_label: "Hvataj botove koji popunjavaju obrasce"
+        honeypot_help: "U obrazac za registraciju dodaje polje koje ljudi nikad ne vide i odbija registracije koje ga popune ili stignu brže nego što bi to čovjek mogao. Hvata botove koje StopForumSpam još nije zabilježio, ništa ne šalje izvan platforme i ništa ne traži od stvarnih korisnika."
+        honeypot_min_seconds_label: "Najmanji broj sekundi do registracije"
+        honeypot_min_seconds_help: "Računa se od trenutka kada je stranica učitana. Čovjeku koji čita obrazac treba više vremena od ovoga, a skripti ne treba."
+        honeypot_strict_label: "Odbij registracije koje zaobiđu obrazac"
+        honeypot_strict_help: "Odbija i registracije gostiju poslane bez obrasca, kakve šalju skripte koje se obraćaju direktno API-ju. Ostavite isključeno ako korisničke račune preko API-ja pravi aplikacija, SSO veza ili neki drugi alat."
+        throttle_heading: "Ograničenje učestalosti"
+        registration_throttle_label: "Sekundi između registracija s iste adrese"
+        registration_throttle_help: "Flarum ograničava koliko često neko može objavljivati, ali ne i koliko često može praviti korisničke račune. Vrijednost 0 isključuje ovo ograničenje. Imajte na umu da uredi, škole i mobilne mreže dijele jednu adresu na mnogo ljudi."
 
     statistics:
       heading: "Zaštita od spama"
@@ -129,8 +149,7 @@ fof-anti-spam:
       button: "Blokirane registracije"
       title: "Blokirane registracije"
       no-records: "Nema blokiranih registracija."
-      help: |
-        Ova stranica prikazuje sve registracije koje je blokirao servis StopForumSpam. Možete pregledati detalje svake registracije i, ako želite, obrisati zapis iz baze podataka.
+      help: "Ova stranica prikazuje sve blokirane registracije, bilo da ih je blokirao StopForumSpam ili honeypot pri registraciji. Možete pregledati detalje svake registracije i, ako želite, obrisati zapis iz baze podataka."
       attempted-at: "Vrijeme pokušaja"
       ip: "IP adresa"
       email: "E-mail adresa"
@@ -170,6 +189,10 @@ fof-anti-spam:
           blacklisted: "Crna lista"
           torExit: "Izlazni čvor mreže Tor"
           deniedAsn: "Blokirana mreža"
+          honeypot: "Popunjeno skriveno polje"
+          tooFast: "Poslano brže nego što bi čovjek mogao"
+          formToken: "Izmijenjen ili ponovo korišten obrazac za registraciju"
+          noForm: "Nije poslano iz obrasca za registraciju"
         field:
           ip: "IP"
           email: "E-mail"
@@ -190,6 +213,12 @@ fof-anti-spam:
         copy: "Kopiraj"
         copied: "Kopirano u međuspremnik."
         copy_failed: "Kopiranje u međuspremnik nije uspjelo."
+    tabs:
+      sign_ups: "Registracije"
+      stopforumspam: "StopForumSpam"
+      content_filter: "Filter sadržaja"
+      spammer_actions: "Radnje protiv spamera"
+    unsaved_changes: "Na ovoj kartici imate nesačuvane promjene. Želite li izaći bez čuvanja?"
 
   forum:
     post:
@@ -201,6 +230,9 @@ fof-anti-spam:
 
       stopforumspam:
         blocked: "Podaci vaše registracije pronađeni su u bazi podataka za sprečavanje spama, pa je registracija blokirana."
+      honeypot:
+        refused: "Registraciju nije bilo moguće završiti."
+        reload: "Došlo je do greške u obrascu za registraciju. Osvježite stranicu i pokušajte ponovo."
 
     spammer_modal:
       hard_delete_discussions_label: "Obriši teme"
@@ -219,6 +251,8 @@ fof-anti-spam:
       report_to_sfs_help: "Osnovni podaci korisnika (korisničko ime, e-mail, IP adresa) prijavljuju se servisu StopForumSpam. To pomaže da se korisnik spriječi u registraciji na drugim forumima koji koriste StopForumSpam."
     user_controls:
       spammer_button: "Spamer"
+    sign_up:
+      trap_label: "Ostavite ovo polje prazno"
 
 # Audit log action labels, contributed to the flarum/audit namespace.
 # Rendered by flarum-audit at flarum-audit.lib.browser.<action>.

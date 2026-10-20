@@ -54,6 +54,8 @@ fof-drafts:
         draft_autosave_interval_button: "Promijeni interval"
         draft_autosave_interval_invalid: "Interval mora biti cijeli broj veći od 4."
         draft_autosave_interval_saved_message: "Interval automatskog čuvanja je promijenjen."
+  api:
+    empty_draft_message: "U ovom nacrtu još nema ničega za sačuvati."
 
 fof-default-user-preferences:
   admin:

@@ -14,6 +14,10 @@ ramon-guest-cta:
       position_3: "Nakon objave br. 3"
       position_4: "Nakon objave br. 4"
       position_5: "Nakon objave br. 5"
+      position_end: "Na kraju teme"
+      cta_text_label: "Tekst poziva"
+      cta_text_help: "Zamjenjuje podrazumijevanu poruku za sve jezike. Samo običan tekst; prelomi redova se čuvaju. Ostavite prazno da se koristi prevedena podrazumijevana poruka."
+      cta_text_placeholder: => ramon-guest-cta.forum.post_cta.text
 
   forum:
     post_cta:
