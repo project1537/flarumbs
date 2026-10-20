@@ -5,6 +5,7 @@ fof-top-posters-widget:
   forum:
     widget:
       title: Najaktivniji ovaj mjesec
+      load_error: "Najaktivnije korisnike nije bilo moguće učitati."
   lib:
     gambits:
       top_poster:

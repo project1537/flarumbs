@@ -85,3 +85,14 @@ fof-reactions:
             legend: "Sviđanja"
             Label: "Pretvaraj reakcije u sviđanja"
             Helptext: "Unesite identifikator reakcije koja se automatski pretvara u sviđanje"
+flarum-audit:
+  lib:
+    browser:
+      fof-reactions:
+        reaction_created: "Kreirana reakcija {reaction}"
+        reaction_updated: "Promijenjeno polje {key} reakcije {reaction} sa {old_value} na {new_value}"
+        reaction_enabled: "Uključena reakcija {reaction}"
+        reaction_disabled: "Isključena reakcija {reaction}"
+        reaction_deleted: "Obrisana reakcija {reaction}"
+        post_reaction_removed: "Uklonjena reakcija {reaction} korisnika {username} s objave {post} korisnika {postuser} u temi {discussion}"
+        post_reactions_removed: "Uklonjene reakcije {reaction} ({count, plural, one {# reakcija} few {# reakcije} other {# reakcija}}) s objave {post} korisnika {postuser} u temi {discussion}"

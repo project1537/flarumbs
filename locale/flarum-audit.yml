@@ -1,0 +1,128 @@
+flarum-audit:
+  admin:
+    permissions:
+      view: "Pregled dnevnika aktivnosti"
+      viewLimited: "Ograničen pregled dnevnika aktivnosti"
+    header:
+      title: "Dnevnik aktivnosti"
+    limitedSettings:
+      configure: "Podesi"
+      title: "Postavke ograničenog pristupa"
+      introduction: "Odredite šta vide korisnici s dozvolom za ograničen pregled"
+      requiresExtension: "Zahtijeva ekstenziju {extension}"
+    settings:
+      limitedIpAddress: "Pregled IP adrese"
+
+  forum:
+    link:
+      all-audit: "Dnevnik aktivnosti"
+      discussion-audit: "Dnevnik aktivnosti"
+      user-audit: "Dnevnik aktivnosti (izmjene računa)"
+      actor-audit: "Dnevnik aktivnosti (radnje korisnika)"
+    modal:
+      all-title: "Dnevnik aktivnosti"
+      discussion-title: "Dnevnik aktivnosti teme"
+      user-title: "Dnevnik aktivnosti korisnika"
+      actor-title: "Radnje korisnika"
+
+  lib:
+    browser:
+      filterPlaceholder: "Filtriraj zapise"
+      filterApply: "Primijeni"
+      filterClear: "Poništi filter"
+      refresh: "Osvježi"
+      filtersHint: "Filteri:"
+      filters:
+        actor: "Ko je izvršio radnju. Za sistemske radnje i radnje neprijavljenih korisnika koristite actor:guest."
+        user: "Korisnik na kojeg se radnja odnosi, po korisničkom imenu."
+        action: "Vrsta radnje, npr. action:post.created."
+        client: "Način na koji je zahtjev poslan."
+        ip: "IP adresa s koje je radnja došla."
+        discussion: "Radnje u određenoj temi, po ID-u."
+      help:
+        toggle: "Pomoć za pretragu"
+        multiple: "Više vrijednosti odvojite zarezom da se prikažu zapisi s bilo kojom od njih, npr. action:post.created,post.deleted"
+        negate: "Stavite minus ispred filtera da isključite rezultate, npr. -client:cli"
+      empty: "Nema rezultata"
+      loadMore: "Učitaj još"
+      withoutActor: => core.group.guest
+      deletedResource:
+        discussion: "Tema br. {id}"
+        group: "Grupa br. {id}"
+        post: "Objava br. {id}"
+        tag: "Oznaka br. {id}"
+        user: "Korisnik br. {id}"
+      genericResource:
+        comment: "Komentar"
+        post: "Objava"
+      permissionGroup:
+        everyone: => core.admin.permissions_controls.everyone_button
+        members: => core.admin.permissions_controls.members_button
+      noValue: "(bez vrijednosti)"
+      noReason: "(bez razloga)"
+      core: "jezgra"
+      client:
+        session: "Web sesija"
+        api_key: "API ključ"
+        access_token: "Pristupni token"
+        cli: "Komandna linija"
+        unknown: "Nepoznat klijent"
+      controls:
+        title: "Radnje"
+        hideRaw: "Sakrij izvorni zapis"
+        showRaw: "Prikaži izvorni zapis"
+        filterActor: "Prikaži zapise ovog korisnika"
+        filterIp: "Prikaži zapise s ove IP adrese"
+        filterClient: "Prikaži zapise ove vrste klijenta"
+        filterAction: "Prikaži zapise iste radnje"
+        filterUser: "Prikaži zapise o istom korisniku"
+        filterDiscussion: "Prikaži zapise iz iste teme"
+      audit_log_cleared: "Iz dnevnika aktivnosti obrisano je zapisa: {deleted_count}"
+      cache_cleared: "Ručno očišćen keš"
+      developer_token_created: "Kreiran razvojni pristupni token „{title}“ za korisnika {username}"
+      discussion:
+        created: "Pokrenuta tema {discussion}"
+        deleted: "Obrisana tema {discussion}"
+        hidden: "Sakrivena tema {discussion}"
+        renamed: "Promijenjen naslov teme iz {old_title} u {new_title}"
+        restored: "Vraćena tema {discussion}"
+      extension:
+        disabled: "Isključena ekstenzija {package}"
+        enabled: "Uključena ekstenzija {package}"
+        uninstalled: "Deinstalirana ekstenzija {package}"
+      queue:
+        paused: "Pauzirana obrada reda {queue} ({connection})"
+        resumed: "Nastavljena obrada reda {queue} ({connection})"
+      group:
+        created: "Kreirana grupa {name}"
+        deleted: "Obrisana grupa {name}"
+        renamed: "Promijenjen naziv grupe iz {old_name} u {new_name}"
+      permission_changed: "Izmijenjena dozvola {permission} sa {old_groups} na {new_groups}"
+      post:
+        created: "Kreirana objava {post} u temi {discussion}"
+        deleted: "Obrisana objava {post} korisnika {postuser} u temi {discussion}"
+        hidden: "Sakrivena objava {post} korisnika {postuser} u temi {discussion}"
+        restored: "Vraćena objava {post} korisnika {postuser} u temi {discussion}"
+        revised: "Izmijenjena objava {post} korisnika {postuser} u temi {discussion}"
+      setting_changed: "Izmijenjena postavka {key}"
+      setting_changed_with_values: "Izmijenjena postavka {key} sa {old_value} na {new_value}"
+      settings_reset: "Vraćene podrazumijevane postavke {keys} za {extension}"
+      user:
+        activated: "Ručno aktiviran račun korisnika {username}"
+        activated_with_email: "Aktiviran račun korisnika {username} putem linka za potvrdu"
+        avatar_changed: "Promijenjena profilna slika korisnika {username}"
+        avatar_removed: "Uklonjena profilna slika korisnika {username}"
+        created: "Kreiran račun korisnika {username}"
+        deleted: "Obrisan korisnik {username}"
+        email_changed: "Promijenjena e-mail adresa korisnika {username} iz {old_email} u {new_email}"
+        email_change_requested: "Zatražena promjena e-mail adrese korisnika {username} u {new_email}"
+        groups_changed: "Promijenjene grupe korisnika {username} sa {old_groups} na {new_groups}"
+        logged_in: "Prijava na račun {username}"
+        logged_in_with_provider: "Prijava na račun {username} putem servisa {provider}"
+        logged_out: "Odjava s računa {username}"
+        password_changed: "Promijenjena lozinka korisnika {username}"
+        password_change_requested: "Zatražena promjena lozinke korisnika {username}"
+        password_reset_attempted: "Zatražen link za promjenu lozinke korisnika {username}"
+        password_reset_attempted_unmatched: "Zatražen link za promjenu lozinke za {email} (račun ne postoji)"
+        provider_connected: "Servis {provider} povezan s računom {username}"
+        username_changed: "Promijenjeno korisničko ime korisnika {username} iz {old_username} u {new_username}"

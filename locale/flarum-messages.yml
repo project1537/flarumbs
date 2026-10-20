@@ -1,0 +1,147 @@
+flarum-messages:
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      send_messages_label: "Slanje privatnih poruka"
+      message_users_without_permission_label: "Slanje poruka korisnicima bez dozvole za poruke"
+      delete_own_messages_label: "Brisanje vlastitih poruka"
+      send_without_throttle_label: "Uzastopno slanje poruka bez čekanja"
+      view_ips_label: "Pregled IP adresa poruka"
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    composer:
+      discard_confirmation: "Poruka nije poslana. Jeste li sigurni da je želite odbaciti?"
+      placeholder: "Napišite poruku..."
+      recipients: "Primaoci"
+      submit_button: "Pošalji poruku"
+      to: "Za:"
+
+    dialog_list:
+      load_more_button: => core.ref.load_more
+      mark_as_read_tooltip: "Označi kao pročitano"
+      own_last_message_preview: "Vi: {content}"
+      title: "Poruke"
+      unread_count_text: "Nepročitano: {count}"
+      view_all: "Sve poruke"
+
+    dialog_section:
+      back_label: "Nazad"
+      cannot_reply_text: "Ovaj korisnik ne može odgovoriti"
+      controls:
+        details_button: "Detalji"
+      controls_toggle_label: "Radnje za razgovor"
+      details_modal:
+        created_at: "Datum pokretanja"
+        recipients: "Učesnici"
+        title: "Detalji razgovora"
+
+    header:
+      dropdown_tooltip: "Poruke"
+
+    index:
+      messages_link: "Poruke"
+
+    index_sort:
+      latest_button: "Posljednje"
+      newest_button: "Najnovije"
+      oldest_button: "Najstarije"
+
+    message_controls:
+      delete_button: "Obriši"
+      delete_confirmation: "Jeste li sigurni da želite obrisati ovu poruku? Ova radnja se ne može poništiti."
+
+    messages_page:
+      cannot_send_message_button: "Ne možete slati poruke"
+      empty_text: "Nema novih poruka"
+      hero:
+        title: "Poruke"
+        subtitle: "Vaši privatni razgovori s drugim korisnicima"
+      mark_all_as_read_tooltip: "Označi sve kao pročitano"
+      refresh_tooltip: "Osvježi"
+      send_message_button: "Pošalji poruku"
+      stream:
+        load_previous_button: "Učitaj prethodne poruke"
+        load_next_button: "Učitaj sljedeće poruke"
+        start_of_the_conversation: "Početak razgovora"
+        time_lapsed_text: => core.forum.post_stream.time_lapsed_text
+      title: "Poruke"
+
+    recipient_selection_modal:
+      cannot_reply_text: "Ne može odgovarati na poruke"
+      title: "Odaberite primaoce ove poruke"
+
+    search_source:
+      conversation_with: "Razgovor s korisnikom {username}"
+      heading: "Poruke"
+
+    settings:
+      notify_message_received_label: "Neko mi pošalje poruku"
+
+    user_controls:
+      send_message_button: "Pošalji poruku"
+      cannot_reply_text: "Ovaj korisnik ne može odgovoriti"
+
+    notifications:
+      message_received_text: "Obavještenje o novoj poruci od korisnika {user}"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a member is sent a message
+    message_received:
+      subject: "Nova poruka od korisnika {user_display_name}"
+      plain:
+        body: |
+          Imate novu poruku od korisnika {user_display_name}.
+
+          {url}
+
+          ---
+
+          {content}
+
+          ---
+
+          Dok ne pročitate ovaj razgovor, nećete primati nove e-mailove o njemu.
+      html:
+        body: |
+          Imate [novu poruku]({url}) od korisnika {user_display_name}.
+
+          Dok ne pročitate ovaj razgovor, nećete primati nove e-mailove o njemu.
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    dialog:
+      title: "Razgovor s korisnikom {username}"
+    no_other_members_message: "U ovom razgovoru nema drugih učesnika."
+    recipient_cannot_reply_message: "{username} ne može odgovarati na poruke."
+    recipient_unavailable_message: "{username} ne može primati poruke."
+
+# Shown by flarum/gdpr when describing what it does with a member's messages.
+flarum-gdpr:
+  lib:
+    data:
+      messages:
+        export_description: "Privatne poruke korisnika, s vremenom slanja i adresom s koje su poslane."
+        anonymize_description: "Uklanjaju se adrese s kojih su privatne poruke poslane. Same poruke ostaju."
+        delete_description: "Brišu se privatne poruke korisnika."
+
+# Labels for the audit log entries this extension produces, shown by the
+# (optional) flarum/audit browser. Under its namespace, so it resolves them.
+flarum-audit:
+  lib:
+    browser:
+      dialog:
+        started: "Pokrenut privatni razgovor s korisnikom {username}"
+        posted: "Poslana privatna poruka korisniku {username}"
+
+# Labels for the statistics this extension adds, shown by the (optional)
+# flarum/statistics widgets. Under its namespace, so it resolves them.
+flarum-statistics:
+  admin:
+    statistics:
+      dialogs_heading: "Pokrenuti razgovori"
+      dialog_replies_heading: "Odgovori u razgovorima"

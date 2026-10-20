@@ -202,9 +202,10 @@ fof-upload:
       upload_label: "Učitavanje datoteka (osnovna dozvola, potrebna za svako učitavanje)"
       upload_mime_label: "Učitavanje: {label}"
       view_user_uploads_label: "Pregled datoteka koje su učitali korisnici"
-      delete_uploads_of_others_label: "Brisanje datoteka koje su učitali korisnici"
-      upload_shared_label: "Učitavanje zajedničkih datoteka"
+      delete_uploads_of_others_label: "Sakrivanje i brisanje datoteka drugih korisnika"
+      upload_shared_label: "Učitavanje, sakrivanje i brisanje zajedničkih datoteka"
       access_shared_label: "Pristup zajedničkim datotekama u upravitelju medija"
+      delete_own_uploads_label: "Brisanje vlastitih datoteka"
     templates:
       file: "Podrazumijevani predložak za preuzimanje datoteka"
       file_description: |
