@@ -1,4 +1,4 @@
 fof-discussion-thumbnail:
   admin:
     settings:
-      link_to_discussion_label: Make discussion thumbnails link to discussion and not user
+      link_to_discussion_label: "Minijatura teme vodi na temu, a ne na profil korisnika"
