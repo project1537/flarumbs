@@ -3,7 +3,7 @@
 
 ![Bosnia and Herzegovina](https://user-images.githubusercontent.com/79749042/120553747-27fb8480-c3f9-11eb-98b0-ddaa6b26cfac.png)
 
-<b>LATEST VERSION:</b> 3.2.9
+<b>LATEST VERSION:</b> 3.3.0
 
 <b>RELEASE DATE:</b> 20-10-2026
 
