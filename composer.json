@@ -10,7 +10,7 @@
         "forum": "https://discuss.flarum.org/",
         "docs": "https://flarum.org/docs/"
     },
-    "homepage": "https://medresa.net.com",
+    "homepage": "https://medresa.net",
     "funding": [
         {
             "type": "website",
@@ -29,10 +29,6 @@
     },
     "suggest": {
 		"https://github.com/project1537/flarumbs": "Bosnian Language Pack for Flarum Core and Multiple Extensions"
-	},
-	"support": {
-    "issues": "https://github.com/project1537/flarumbs/issues",
-    "source": "https://github.com/project1537/flarumbs"
 	},
     "extra": {
         "branch-alias": {
