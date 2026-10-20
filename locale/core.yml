@@ -56,7 +56,7 @@ core:
         forced_style_help: "Nameće određeni FontAwesome stil svim ikonama, npr. „fa-duotone fa-light“ ili „fa-regular“. Zamjenjuje stil koji su odredili jezgro sistema i ekstenzije (ikone brendova se nikad ne mijenjaju). Odabrani izvor ikona mora podržavati taj stil: ugrađene ikone su FontAwesome Free, koji izvan stila solid pokriva svega nekoliko stotina ikona, pa nametanje bilo kojeg drugog stila ostavlja većinu ikona praznim. Svi stilovi dostupni su uz FontAwesome Pro CDN ili Kit. Ostavite prazno da biste isključili ovu opciju."
         config_override:
           label: "Nadjačano konfiguracijom"
-          help: "FontAwesome postavke trenutno su definisane u datoteci config.php i ovdje se ne mogu mijenjati."
+          help: "FontAwesome postavke trenutno su definirane u datoteci config.php i ovdje se ne mogu mijenjati."
         preview:
           button: "Pregled ikona"
           label: "Pregled ikona"
@@ -182,7 +182,7 @@ core:
       submit_and_create_another_button: "Dodaj i nastavi s novim"
       submit_button: "Dodaj korisnika"
       title: "Dodavanje novog korisnika"
-      use_random_password: "Generiši nasumičnu lozinku"
+      use_random_password: "Generiraj nasumičnu lozinku"
       username_placeholder: => core.ref.username
 
     # These translations are used in the Announcements page.
@@ -223,15 +223,15 @@ core:
       clear_cache_button: "Očisti keš memoriju"
       clear_cache_modal:
         title: "Čišćenje keš memorije"
-        working: "Ponovo se generišu sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
+        working: "Ponovo se generiraju sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
         cleared: "Očišćeno: {name}"
         cleared_files: "Očišćeno: {name} (broj datoteka: {count})"
-        rebuilt: "Ponovo generisano: {bundle}"
+        rebuilt: "Ponovo generirano: {bundle}"
         unchanged: "{bundle}: već ažurno"
         rewritten: "Ponovo zapisano: {bundle}"
-        empty: "{bundle}: nema sadržaja za generisanje"
-        chunks: "Ponovo generisani dijelovi za {frontend} (izmijenjenih: {count})"
-        failed: "Generisanje nije uspjelo ({step}): {message}"
+        empty: "{bundle}: nema sadržaja za generiranje"
+        chunks: "Ponovo generirani dijelovi za {frontend} (izmijenjenih: {count})"
+        failed: "Generiranje nije uspjelo ({step}): {message}"
         took: "{time} ms"
         reload_button: "Ponovo učitaj"
       description: "Pregled stanja platforme."
@@ -289,7 +289,7 @@ core:
     # These translations are used in the debug warning widget.
     debug-warning:
       detail: |
-        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generiše <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
+        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generira <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
 
         Izričito se preporučuje da u produkcijskom okruženju isključite <code>debug</code> u datoteci <code>config.php</code>. Više informacija potražite u <link>Flarum dokumentaciji</link>.
       label: "Uključen režim za otklanjanje grešaka (debug)"
@@ -339,10 +339,10 @@ core:
       format_heading: "Format odlaznih e-mailova"
       format_help: "Odaberite format u kojem se šalju odlazni e-mailovi. Preporučena opcija je <code>multipart</code>, jer omogućava da e-mail klijent korisnika prikaže najprikladniji format."
       from_label: "Pošiljalac"
-      mail_encryption_label: "Šifrovanje"
-      mail_encryption_tls_help: "Veza počinje nešifrovana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
-      mail_encryption_ssl_help: "Veza je šifrovana od samog početka (implicitni TLS). Obično se koristi s portom 465."
-      mail_encryption_none_help: "Bez šifrovanja. Ne preporučuje se u produkcijskom okruženju."
+      mail_encryption_label: "Šifriranje"
+      mail_encryption_tls_help: "Veza počinje nešifrirana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
+      mail_encryption_ssl_help: "Veza je šifrirana od samog početka (implicitni TLS). Obično se koristi s portom 465."
+      mail_encryption_none_help: "Bez šifriranja. Ne preporučuje se u produkcijskom okruženju."
       mail_host_label: "Server (host)"
       mail_mailgun_domain_label: "Domena"
       mail_mailgun_region_label: "Regija"
@@ -352,7 +352,7 @@ core:
       mail_postmark_message_stream_label: "Tok poruka (message stream)"
       mail_postmark_token_label: "Token servera"
       mail_smtp_verify_peer_label: "Provjeri SSL certifikat"
-      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifrovanju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
+      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifriranju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
       mail_username_label: => core.ref.username
       mailgun_heading: "Postavke za Mailgun"
       postmark_heading: "Postavke za Postmark"
@@ -372,7 +372,7 @@ core:
       abandoned_with_replacement: "Ovu ekstenziju zamijenio je paket {replacement}. Preporučuje se prelazak na zamjenski paket."
       configure_scopes: "Podesi opsege dozvola"
       confirm_purge: "Brisanjem podataka uklanjaju se svi zapisi u bazi podataka i svi resursi povezani s ekstenzijom. Ekstenzija se time ne deinstalira; to se radi putem Composera. Želite li nastaviti?"
-      database_driver_mismatch: "Ova ekstenzija ne podržava konfigurisani drajver baze podataka."
+      database_driver_mismatch: "Ova ekstenzija ne podržava konfigurirani drajver baze podataka."
       deprecated: "Zastarjelo"
       disabled: "Isključeno"
       enable_to_see: "Uključite ekstenziju da biste vidjeli i mijenjali njene postavke."
@@ -634,8 +634,8 @@ core:
     forgot_password:
       dismiss_button: => core.ref.okay
       email_placeholder: => core.ref.email
-      email_sent_message: "Ako je unesena e-mail adresa registrovana na ovoj platformi, na nju ćemo poslati link za promjenu lozinke. Ako ga ne primite u naredne minut-dvije, provjerite folder neželjene pošte."
-      not_found_message: "Nijedan korisnik nije registrovan s tom e-mail adresom."
+      email_sent_message: "Ako je unesena e-mail adresa registrirana na ovoj platformi, na nju ćemo poslati link za promjenu lozinke. Ako ga ne primite u naredne minut-dvije, provjerite folder neželjene pošte."
+      not_found_message: "Nijedan korisnik nije registriran s tom e-mail adresom."
       submit_button: "Pošalji link"
       text: "Unesite svoju e-mail adresu i poslat ćemo vam link za promjenu lozinke."
       title: "Zaboravljena lozinka"
@@ -684,9 +684,10 @@ core:
       invalid_login_message: => core.ref.invalid_login_message
       password_placeholder: => core.ref.password
       remember_me_label: => core.ref.remember_me_label
-      sign_up_text: "Nemate korisnički račun? <a>Registrujte se</a>"
+      sign_up_text: "Nemate korisnički račun? <a>Registrirajte se</a>"
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
+      too_many_attempts_message: => core.ref.too_many_login_attempts_message
       username_or_email_placeholder: => core.ref.username_or_email_placeholder
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
@@ -1058,11 +1059,11 @@ core:
 
     # These are DayJS formats used in core.
     datetime_formats:
-      fullTime: LLLL
+      fullTime: "dddd, D. M. YYYY. [u] H:mm"
       humanTimeShort: D. MMM
       humanTimeLong: ll
       scrubber: MMMM YYYY
-      userListJoinDate: LLL
+      userListJoinDate: "D. M. YYYY. [u] H:mm"
 
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
@@ -1136,6 +1137,7 @@ core:
       remember_me_label: => core.ref.remember_me_label
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
+      too_many_attempts_message: => core.ref.too_many_login_attempts_message
 
     # Translations in this namespace are displayed by the Reset Password interface.
     reset_password:
@@ -1193,7 +1195,7 @@ core:
         Ako ste to bili Vi, kliknite na sljedeći link i Vaš korisnički račun bit će aktiviran:
         {url}
 
-        Ako se niste registrovali, zanemarite ovaj e-mail.
+        Ako se niste registrirali, zanemarite ovaj e-mail.
 
     # These translations are used in emails sent when users change their email address.
     confirm_email:
@@ -1300,6 +1302,7 @@ core:
     start_a_discussion: "Pokreni temu"
     title_az: "Naslov (A–Ž)"
     title_za: "Naslov (Ž–A)"
+    too_many_login_attempts_message: "Previše neuspješnih pokušaja prijave. Sačekajte nekoliko minuta, pa pokušajte ponovo."
     top: "Najpopularnije"
     username: "Korisničko ime"
     username_or_email_placeholder: "Korisničko ime ili e-mail"
