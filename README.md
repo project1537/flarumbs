@@ -1,10 +1,10 @@
-<img src="flag.svg" alt="Flag of Bosnia and Herzegovina" width="120">
+<img src="https://raw.githubusercontent.com/project1537/flarumbs/main/flag.svg" alt="Flag of Bosnia and Herzegovina" width="120">
 
 # Bosnian Language Pack for Flarum
 
 [![Latest version](https://img.shields.io/packagist/v/project1537/flarumbs)](https://packagist.org/packages/project1537/flarumbs)
 [![Total downloads](https://img.shields.io/packagist/dt/project1537/flarumbs)](https://packagist.org/packages/project1537/flarumbs)
-[![License](https://img.shields.io/packagist/l/project1537/flarumbs)](LICENSE)
+[![License](https://img.shields.io/packagist/l/project1537/flarumbs)](https://github.com/project1537/flarumbs/blob/main/LICENSE)
 
 > **Bosanski:** Prijevod Flaruma na bosanski jezik: jezgra platforme i više od 70 ekstenzija. Instalacija i aktivacija opisane su ispod; greške u prijevodu prijavite kroz [Issues](https://github.com/project1537/flarumbs/issues).
 
@@ -153,8 +153,8 @@ Translations for **80 extensions** are included:
 
 ## Reporting mistakes and contributing
 
-Found a wrong or missing translation? [Open an issue](https://github.com/project1537/flarumbs/issues) and include the English text or the translation key if you know it. Pull requests are welcome too: translations live in [`locale/`](locale), one file per extension.
+Found a wrong or missing translation? [Open an issue](https://github.com/project1537/flarumbs/issues) and include the English text or the translation key if you know it. Pull requests are welcome too: translations live in [`locale/`](https://github.com/project1537/flarumbs/tree/main/locale), one file per extension.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](https://github.com/project1537/flarumbs/blob/main/LICENSE).
