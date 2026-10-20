@@ -1,0 +1,41 @@
+flarum-nicknames:
+  admin:
+    basics:
+      display_name_driver_options:
+        nickname: "Prikazano ime"
+    permissions:
+      edit_own_nickname_label: "Promjena vlastitog prikazanog imena"
+    settings:
+      max_label: "Najveća dužina prikazanog imena"
+      min_label: "Najmanja dužina prikazanog imena"
+      random_username_label: "Nasumična korisnička imena"
+      random_username_help: "Sakriva polje za korisničko ime pri registraciji i umjesto njega dodjeljuje nasumičan broj. Polje za prikazano ime tada postaje obavezno. Radi samo ako je uključena opcija „Unos prikazanog imena pri registraciji“."
+      regex_label: "Regularni izraz za provjeru"
+      set_on_registration_label: "Unos prikazanog imena pri registraciji"
+      unique_label: "Prikazana imena moraju biti jedinstvena"
+    wrong_driver: "Da bi ova ekstenzija radila, na stranici <a><strong>Osnovno</strong></a> kao način prikaza imena odaberite „Prikazano ime“."
+  api:
+    invalid_nickname_message: "Ovo prikazano ime nije dozvoljeno. Za pravila o prikazanim imenima obratite se administratoru platforme."
+  forum:
+    change_nickname:
+      submit_button: => core.ref.save_changes
+      title: => flarum-nicknames.ref.change_nickname
+    edit_user:
+      nicknames_heading: => flarum-nicknames.ref.change_nickname
+      nicknames_text: => flarum-nicknames.ref.nickname
+    settings:
+      change_nickname_button: => flarum-nicknames.ref.change_nickname
+    sign_up:
+      nickname_placeholder: => flarum-nicknames.ref.nickname
+  ref:
+    change_nickname: "Promjena prikazanog imena"
+    nickname: "Prikazano ime"
+
+# Labels for the audit log entries this extension produces, rendered by the (optional)
+# flarum/audit browser. Defined under the flarum-audit namespace so the audit frontend
+# resolves them, but shipped here so they travel with the extension that owns the actions.
+flarum-audit:
+  lib:
+    browser:
+      user:
+        nickname_changed: "Promijenjeno prikazano ime korisnika {username} iz {old_nickname} u {new_nickname}"
