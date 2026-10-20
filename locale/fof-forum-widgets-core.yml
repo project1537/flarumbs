@@ -1,6 +1,8 @@
 fof-forum-widgets-core:
   admin:
-    cache_not_writable_warning: Keš trenutno nije moguće pisati, što će spriječiti rad određenih widgeta. Molimo ispravite dozvole na direktoriju za pohranu.
+    # Hover text on a layout editor tile whose widget gives its own label.
+    widget_tooltip: "{widget} — {extension}"
+    cache_not_writable_warning: "U keš memoriju trenutno nije moguće pisati, pa neki dodaci neće raditi. Ispravite dozvole za folder storage."
     settings:
-      prefer_data_with_initial_load: Preferiraj učitavanje podataka svih widgeta uz inicijalni odgovor stranice.
-      prefer_data_with_initial_load_help: Umjesto učitavanja podataka widgeta nakon početnog učitavanja stranice putem API zahtjeva, podaci će biti (kada je moguće) učitani zajedno s inicijalnim učitavanjem.
+      prefer_data_with_initial_load: "Učitavaj podatke svih dodataka zajedno sa stranicom"
+      prefer_data_with_initial_load_help: "Umjesto da se podaci dodataka učitavaju zasebnim API zahtjevima nakon učitavanja stranice, učitavaju se (kada je moguće) zajedno sa stranicom."
