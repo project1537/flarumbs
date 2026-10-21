@@ -6,6 +6,7 @@ on:
     paths:
       - "locale/**"
       - ".github/scripts/update-readme.py"
+      - ".github/scripts/locales.py"
   workflow_dispatch:
 
 permissions:
@@ -17,8 +18,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
       - name: Regenerate the extension list
-        run: python3 .github/scripts/update-readme.py
+        run: python .github/scripts/update-readme.py
 
       - name: Commit if it changed
         run: |

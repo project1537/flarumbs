@@ -2,30 +2,17 @@
 """Regenerate the list of translated extensions in README.md from locale/*.yml.
 
 Every locale/<vendor>-<name>.yml file is listed as the Composer package
-<vendor>/<name>, unless PACKAGE_NAMES says otherwise. Run it after adding or
+<vendor>/<name>, unless locales.PACKAGE_NAMES says otherwise. Run it after adding or
 removing a translation; CI runs it on every push to main.
 """
-from pathlib import Path
 import re
 import sys
 
-ROOT = Path(__file__).resolve().parents[2]
+from locales import CORE_FILES, ROOT, locale_files, package_name
+
 README = ROOT / "README.md"
 START = "<!-- extensions:start -->"
 END = "<!-- extensions:end -->"
-
-# Locale files that are not extensions.
-SKIP = {"core", "validation"}
-
-# Packages whose Composer name is not simply <vendor>/<name> of the file name.
-PACKAGE_NAMES = {
-    "datlechin-discussion-overview": "datlechin/flarum-discussion-overview",
-    "datlechin-link-preview": "datlechin/flarum-link-preview",
-    "datlechin-signup-button": "datlechin/flarum-signup-button",
-    "ekumanov-forum-widgets": "ekumanov/flarum-ext-forum-widgets",
-    "flectar-turnstile": "flectar/flarum-turnstile",
-    "michaelbelgium-ai-autoreply": "michaelbelgium/flarum-ai-autoreply",
-}
 
 GROUPS = [
     ("Flarum", lambda vendor: vendor == "flarum"),
@@ -34,18 +21,11 @@ GROUPS = [
 ]
 
 
-def package_name(stem):
-    if stem in PACKAGE_NAMES:
-        return PACKAGE_NAMES[stem]
-    vendor, _, name = stem.partition("-")
-    return f"{vendor}/{name}"
-
-
 def build_list():
     packages = sorted(
         package_name(path.stem)
-        for path in (ROOT / "locale").glob("*.yml")
-        if path.stem not in SKIP
+        for path in locale_files()
+        if path.stem not in CORE_FILES
     )
     lines = [f"Translations for **{len(packages)} extensions** are included:", ""]
     for title, belongs in GROUPS:
