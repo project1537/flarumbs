@@ -67,7 +67,7 @@ ianm-twofactor:
       continue_button: "Nastavi"
       cannot_disable: "Prema trenutnim postavkama ne možete isključiti dvofaktorsku autentifikaciju."
       cannot_disable_tooltip: "2FA se ne može isključiti"
-      cancel_button: "Otkaži"
+      cancel_button: "Odustani"
       qr_tab: "Skeniraj QR kod"
       manual_tab: "Ručno podešavanje"
       scan_qr_instruction: "Skenirajte QR kod iznad aplikacijom za autentifikaciju, a zatim unesite kod koji ona prikaže da uključite dvofaktorsku autentifikaciju."

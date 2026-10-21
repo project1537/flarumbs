@@ -153,7 +153,7 @@ core:
       forum_title_heading: "Naziv platforme"
       home_page_heading: "Početna stranica"
       home_page_text: "Odaberite stranicu koju korisnici prvu vide kada otvore platformu."
-      show_language_selector_label: "Prikaži izbornik jezika"
+      show_language_selector_label: "Prikaži meni za izbor jezika"
       slug_driver_options:
         discussions:
           default: "ID s nazivom u URL-u"

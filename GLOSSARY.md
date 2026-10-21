@@ -30,8 +30,11 @@ Termini iz kolone „Ne koristiti“, kao i pravila o „vi/vaš“ i tri tačke
 | delete | obrisati | izbrisati |
 | edit | urediti | |
 | save | sačuvati | spremiti |
-| cancel | odustati, otkazati | |
+| cancel (zatvara prozor bez radnje) | Odustani | |
+| cancel (prekida proces, pretplatu ili zahtjev) | Otkaži | |
 | settings | postavke | |
+| menu | meni | izbornik |
+| optional | neobavezno | opcionalno |
 | permission | dozvola | ovlaštenje (pridjev „ovlašten“ je u redu) |
 | notification | obavještenje | notifikacija |
 | email | e-mail | e-pošta, mejl |
