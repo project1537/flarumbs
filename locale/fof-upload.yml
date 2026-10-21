@@ -306,7 +306,7 @@ fof-upload:
       upload: "Učitaj"
 
     file_list:
-      loading: "Učitavanje datoteka..."
+      loading: "Učitavanje datoteka…"
       empty: "Nema datoteka za prikaz."
       load_error: "Datoteke nisu učitane. Pokušajte ponovo."
       release_to_upload: "Pustite da učitate"
@@ -327,7 +327,7 @@ fof-upload:
         show_success: "Datoteka je prikazana"
         hide_fail: "Sakrivanje datoteke „{fileName}“ nije uspjelo"
         show_fail: "Prikazivanje datoteke „{fileName}“ nije uspjelo"
-        loading: "Sakrivanje datoteke..."
+        loading: "Sakrivanje datoteke…"
       hide_shared_file:
         btn_a11y_label_hide: "Učini „{fileName}“ privatnom (bez javnog URL-a)"
         btn_a11y_label_show: "Učini „{fileName}“ javnom (s javnim URL-om)"
@@ -337,4 +337,4 @@ fof-upload:
         show_success: "Datoteka je sada javna"
         hide_fail: "Datoteka „{fileName}“ nije postala privatna"
         show_fail: "Datoteka „{fileName}“ nije postala javna"
-        loading: "Datoteka postaje privatna..."
+        loading: "Datoteka postaje privatna…"

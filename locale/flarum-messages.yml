@@ -13,7 +13,7 @@ flarum-messages:
   forum:
     composer:
       discard_confirmation: "Poruka nije poslana. Jeste li sigurni da je želite odbaciti?"
-      placeholder: "Napišite poruku..."
+      placeholder: "Napišite poruku…"
       recipients: "Primaoci"
       submit_button: "Pošalji poruku"
       to: "Za:"

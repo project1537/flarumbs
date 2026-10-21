@@ -182,7 +182,7 @@ core:
       submit_and_create_another_button: "Dodaj i nastavi s novim"
       submit_button: "Dodaj korisnika"
       title: "Dodavanje novog korisnika"
-      use_random_password: "Generiraj nasumičnu lozinku"
+      use_random_password: "Generiši nasumičnu lozinku"
       username_placeholder: => core.ref.username
 
     # These translations are used in the Announcements page.
@@ -223,15 +223,15 @@ core:
       clear_cache_button: "Očisti keš memoriju"
       clear_cache_modal:
         title: "Čišćenje keš memorije"
-        working: "Ponovo se generiraju sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
+        working: "Ponovo se generišu sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
         cleared: "Očišćeno: {name}"
         cleared_files: "Očišćeno: {name} (broj datoteka: {count})"
-        rebuilt: "Ponovo generirano: {bundle}"
+        rebuilt: "Ponovo generisano: {bundle}"
         unchanged: "{bundle}: već ažurno"
         rewritten: "Ponovo zapisano: {bundle}"
-        empty: "{bundle}: nema sadržaja za generiranje"
-        chunks: "Ponovo generirani dijelovi za {frontend} (izmijenjenih: {count})"
-        failed: "Generiranje nije uspjelo ({step}): {message}"
+        empty: "{bundle}: nema sadržaja za generisanje"
+        chunks: "Ponovo generisani dijelovi za {frontend} (izmijenjenih: {count})"
+        failed: "Generisanje nije uspjelo ({step}): {message}"
         took: "{time} ms"
         reload_button: "Ponovo učitaj"
       description: "Pregled stanja platforme."
@@ -289,7 +289,7 @@ core:
     # These translations are used in the debug warning widget.
     debug-warning:
       detail: |
-        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generira <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
+        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generiše <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
 
         Izričito se preporučuje da u produkcijskom okruženju isključite <code>debug</code> u datoteci <code>config.php</code>. Više informacija potražite u <link>Flarum dokumentaciji</link>.
       label: "Uključen režim za otklanjanje grešaka (debug)"
@@ -339,10 +339,10 @@ core:
       format_heading: "Format odlaznih e-mailova"
       format_help: "Odaberite format u kojem se šalju odlazni e-mailovi. Preporučena opcija je <code>multipart</code>, jer omogućava da e-mail klijent korisnika prikaže najprikladniji format."
       from_label: "Pošiljalac"
-      mail_encryption_label: "Šifriranje"
-      mail_encryption_tls_help: "Veza počinje nešifrirana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
-      mail_encryption_ssl_help: "Veza je šifrirana od samog početka (implicitni TLS). Obično se koristi s portom 465."
-      mail_encryption_none_help: "Bez šifriranja. Ne preporučuje se u produkcijskom okruženju."
+      mail_encryption_label: "Šifrovanje"
+      mail_encryption_tls_help: "Veza počinje nešifrovana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
+      mail_encryption_ssl_help: "Veza je šifrovana od samog početka (implicitni TLS). Obično se koristi s portom 465."
+      mail_encryption_none_help: "Bez šifrovanja. Ne preporučuje se u produkcijskom okruženju."
       mail_host_label: "Server (host)"
       mail_mailgun_domain_label: "Domena"
       mail_mailgun_region_label: "Regija"
@@ -352,7 +352,7 @@ core:
       mail_postmark_message_stream_label: "Tok poruka (message stream)"
       mail_postmark_token_label: "Token servera"
       mail_smtp_verify_peer_label: "Provjeri SSL certifikat"
-      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifriranju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
+      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifrovanju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
       mail_username_label: => core.ref.username
       mailgun_heading: "Postavke za Mailgun"
       postmark_heading: "Postavke za Postmark"
@@ -407,12 +407,12 @@ core:
     header:
       get_help: "Pomoć"
       log_out_button: => core.ref.log_out
-      search_placeholder: "Pretraži..."
+      search_placeholder: "Pretraži…"
       search_role_label: "Pretraga"
 
     # These translations are used in the modal dialog displayed when loading extensions.
     loading:
-      title: "Molimo sačekajte..."
+      title: "Molimo sačekajte…"
 
     # These translations are used anywhere to localize model names for drivers.
     models:
@@ -514,7 +514,7 @@ core:
     # These translations are used in image upload buttons.
     upload_image:
       remove_button: => core.ref.remove
-      upload_button: "Odaberite sliku..."
+      upload_button: "Odaberite sliku…"
 
     # These translations are used for the users list on the admin dashboard.
     users:
@@ -585,7 +585,7 @@ core:
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
-      body_placeholder: "Napišite objavu..."
+      body_placeholder: "Napišite objavu…"
       discard_confirmation: "Tema još nije objavljena. Želite li je odbaciti?"
       submit_button: "Objavi temu"
       title: => core.ref.start_a_discussion
@@ -1023,7 +1023,7 @@ core:
       no_results_text: "Nema rezultata."
       no_search_text: "Još niste ništa pretražili."
       options_heading: "Opcije pretrage"
-      placeholder: "Pretraži..."
+      placeholder: "Pretraži…"
       preview_heading: "Pregled rezultata"
       search_active_button_accessible_label: "Promijeni pretragu: {query}"
       search_clear_button_accessible_label: "Obriši upit pretrage"
@@ -1271,7 +1271,7 @@ core:
     light_mode_label: "Svijetli režim"
     load_more: "Učitaj još"
     latest: "Najnovija aktivnost"
-    loading: "Učitavanje..."
+    loading: "Učitavanje…"
     log_in: "Prijava"
     log_out: "Odjava"
     mark_all_as_read: "Označi sve kao pročitano"
@@ -1308,7 +1308,7 @@ core:
     username_or_email_placeholder: "Korisničko ime ili e-mail"
     users: "Korisnici" # Referenced by flarum-statistics.yml
     view: "Pogledaj"
-    write_a_reply: "Napišite odgovor..."
+    write_a_reply: "Napišite odgovor…"
     you: "Vi" # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##

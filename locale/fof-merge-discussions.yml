@@ -2,7 +2,7 @@ fof-merge-discussions:
   forum:
     modal:
       title: "Spajanje tema"
-      search_discussions_placeholder: "Pretraži teme..."
+      search_discussions_placeholder: "Pretraži teme…"
 
       ordering_heading: "Redoslijed nakon spajanja"
       ordering_date_label: "Poredaj objave po datumu nastanka"
