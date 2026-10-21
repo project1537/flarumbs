@@ -22,6 +22,7 @@ Termini iz kolone „Ne koristiti“, kao i pravila o „vi/vaš“ i tri tačke
 | sign up | registracija, registrirati se | registrovati |
 | log in | prijava, prijaviti se | login |
 | log out | odjava, odjaviti se | |
+| password | šifra | lozinka |
 | flag (a post) | prijava, prijaviti objavu | |
 | suspend | blokirati, blokada | suspendovati |
 | approve | odobriti | |

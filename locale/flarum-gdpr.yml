@@ -81,9 +81,9 @@ flarum-gdpr:
                 delete_description: "Briše sve tokene koje je korisnik kreirao."
                 export_description: "Izvozi sve tokene koje je korisnik kreirao. Podaci su ograničeni na datum kreiranja i vrstu tokena."
             user:
-                anonymize_description: "Postavlja sve kolone u tabeli korisnika na NULL. Kolone koje ne smiju biti prazne dobijaju podrazumijevane ili posebne vrijednosti. Lozinka se mijenja, postavke se vraćaju na podrazumijevane, a korisnik se uklanja iz svih grupa."
+                anonymize_description: "Postavlja sve kolone u tabeli korisnika na NULL. Kolone koje ne smiju biti prazne dobijaju podrazumijevane ili posebne vrijednosti. Šifra se mijenja, postavke se vraćaju na podrazumijevane, a korisnik se uklanja iz svih grupa."
                 delete_description: "Briše korisnika iz baze podataka."
-                export_description: "Izvozi podatke iz tabele korisnika: sve kolone osim ID-a i lozinke."
+                export_description: "Izvozi podatke iz tabele korisnika: sve kolone osim ID-a i šifre."
         request_data:
             title: "Zahtjev za izvoz podataka korisnika {username}"
             text: "Bit će pripremljena zip arhiva. Kada bude spremna, dobit ćete obavještenje s linkom za preuzimanje. Link je aktivan jedan dan."
@@ -174,7 +174,7 @@ flarum-gdpr:
                 user_confirmed: |
                     Potvrdili ste zahtjev za brisanje korisničkog računa. Zahtjev će biti obrađen u roku od 30 dana, u skladu s propisima o zaštiti ličnih podataka.
             text: "Nakon što zahtjev bude zaprimljen i potvrđen, administrator će ga razmotriti u roku od 30 dana, u skladu s propisima o zaštiti ličnih podataka."
-            password_label: "Potvrdite lozinku"
+            password_label: "Potvrdite šifru"
             reason_label: "Razlog (neobavezno)"
             cancel_button: "Otkaži zahtjev"
             request_button: "Zatraži brisanje"

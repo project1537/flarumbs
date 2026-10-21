@@ -33,6 +33,7 @@ AVOID = [
     (r"\blogin\b", "prijava"),
     (r"\bsuspendov\w*", "blokirati"),
     (r"\bovlaštenj\w*", "dozvola"),
+    (r"\blozin\w*", "šifra"),
     (r"\w*šifrir\w*", "šifrovati"),
     (r"\w*generir\w*", "generisati"),
     (r"\.\.\.", "…"),

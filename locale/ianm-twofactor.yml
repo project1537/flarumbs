@@ -32,7 +32,7 @@ ianm-twofactor:
     user_2fa.alert_message: "Za dalji pristup korisničkom računu morate uključiti 2FA."
     security:
       two_factor_heading: "Dvofaktorska autentifikacija (2FA)"
-      two_factor_help: "Dvofaktorska autentifikacija (2FA) dodatno štiti vaš korisnički račun. Kada je uključena, pri prijavi i nekim drugim radnjama, osim lozinke, unosite i kod iz aplikacije za autentifikaciju. Račun tako ostaje zaštićen čak i ako neko sazna vašu lozinku, jer je za pristup potreban i kod koji se mijenja svakih 30 sekundi."
+      two_factor_help: "Dvofaktorska autentifikacija (2FA) dodatno štiti vaš korisnički račun. Kada je uključena, pri prijavi i nekim drugim radnjama, osim šifre, unosite i kod iz aplikacije za autentifikaciju. Račun tako ostaje zaštićen čak i ako neko sazna vašu šifru, jer je za pristup potreban i kod koji se mijenja svakih 30 sekundi."
       two_factor_apps: "Besplatno su dostupne aplikacije kao što su {google}, {authy}, {microsoft} i druge."
       two_factor_enabled: "2FA je uključena na ovom korisničkom računu."
       two_factor_disabled: "2FA je isključena na ovom korisničkom računu."
