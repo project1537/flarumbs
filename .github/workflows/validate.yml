@@ -29,3 +29,12 @@ jobs:
 
       - name: Check locale files
         run: python .github/scripts/check-locale.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check dates and relative times
+        run: |
+          npm install --no-save --no-package-lock dayjs@1
+          node .github/scripts/test-dates.js
