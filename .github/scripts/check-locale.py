@@ -5,7 +5,8 @@ Errors (exit code 1): invalid YAML, duplicate keys, references to keys that
 do not exist, and ICU messages with unbalanced braces or a plural without an
 "other" branch.
 
-Warnings: wording that GLOSSARY.md says to avoid.
+Warnings: wording that GLOSSARY.md says to avoid, and the formal "you" written
+in the wrong case for an email or the interface.
 
 Runs without network access, on every pull request and push to main.
 """
@@ -32,7 +33,27 @@ AVOID = [
     (r"\blogin\b", "prijava"),
     (r"\bsuspendov\w*", "blokirati"),
     (r"\bovlaštenj\w*", "dozvola"),
+    (r"\w*šifrir\w*", "šifrovati"),
+    (r"\w*generir\w*", "generisati"),
+    (r"\.\.\.", "…"),
 ]
+
+# Formal "you": lower case in the interface, capitalised in emails, except at
+# the start of a sentence, where it is always capitalised.
+PRONOUN = re.compile(r"\b([Vv](?:i|as|ama|am|aš|aša|aše|ašeg|ašega|ašem|ašemu|ašoj|ašu|ašim|aših|ašima|ašom))\b")
+
+
+def pronoun_problems(key, message):
+    in_email = key.split(".")[1:2] == ["email"]
+    for match in PRONOUN.finditer(message):
+        word = match.group(1)
+        before = message[:match.start()].rstrip(" „\"(*")
+        if not before or before[-1] in ".!?:\n{>":
+            continue
+        wanted = (word[0].upper() if in_email else word[0].lower()) + word[1:]
+        if word != wanted:
+            where = "emails" if in_email else "the interface"
+            yield f"\"{word}\" - GLOSSARY.md writes \"{wanted}\" in {where}"
 
 GITHUB = os.environ.get("GITHUB_ACTIONS") == "true"
 
@@ -107,6 +128,9 @@ def main():
             if problem:
                 report("error", path, line, f"{key}: {problem}")
                 errors += 1
+            for problem in pronoun_problems(key, value):
+                report("warning", path, line, f"{key}: {problem}")
+                warnings += 1
             for pattern, instead in AVOID:
                 found = re.search(pattern, value, re.IGNORECASE)
                 if found:

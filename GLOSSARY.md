@@ -2,13 +2,13 @@
 
 Ovaj dokument opisuje kako paket prevodi Flarum, da novi prijevodi zvuče isto kao postojeći. Kad dodajete ili ispravljate prijevod, držite se termina ispod. Ako vam neki termin ne odgovara, otvorite [Issue](https://github.com/project1537/flarumbs/issues) i predložite izmjenu za cijeli paket. Ne mijenjajte ga samo u jednoj datoteci.
 
-Termini iz kolone „Ne koristiti“ provjeravaju se automatski: provjera na svakom pull requestu prikazuje upozorenje na liniji gdje se pojave. Izuzetak su „post“ i „tag“, jer se te riječi javljaju i u varijablama i tehničkim nazivima, pa ih treba paziti ručno.
+Termini iz kolone „Ne koristiti“, kao i pravila o „vi/vaš“ i tri tačke, provjeravaju se automatski: provjera na svakom pull requestu prikazuje upozorenje na liniji gdje se pojave. Izuzetak su „post“ i „tag“, jer se te riječi javljaju i u varijablama i tehničkim nazivima, pa ih treba paziti ručno.
 
 ## Osnovni termini
 
 | Engleski | Bosanski | Ne koristiti |
 | --- | --- | --- |
-| forum (naziv sajta) | platforma | — (vidi [Otvorena pitanja](#otvorena-pitanja)) |
+| forum (naziv sajta) | platforma, edukativna platforma | |
 | discussion | tema | diskusija |
 | post | objava | post |
 | reply | odgovor | |
@@ -36,6 +36,8 @@ Termini iz kolone „Ne koristiti“ provjeravaju se automatski: provjera na sva
 | email | e-mail | e-pošta, mejl |
 | file | datoteka | fajl |
 | upload | učitati, učitavanje | |
+| encrypt | šifrovati, šifrovanje | šifrirati |
+| generate | generisati, generisanje | generirati |
 | link | link | poveznica |
 | browser | preglednik | |
 | search | pretraga, pretražiti | |
@@ -45,6 +47,8 @@ Termini iz kolone „Ne koristiti“ provjeravaju se automatski: provjera na sva
 | private discussion (Byobu) | privatna tema | |
 | audit log | dnevnik aktivnosti | |
 
+Paket je pisan za obrazovne platforme, pa na nekim mjestima, uglavnom u e-mailovima i porukama jezgre, kaže „edukativna platforma“. To je namjerno i tako ostaje. Na ostalim mjestima stoji „platforma“.
+
 Kad engleski kaže „forum“ u smislu softvera ili kategorije sajtova (npr. „drugi forumi koji koriste StopForumSpam“), prevodi se kao „forum“.
 
 ## Stil
@@ -53,7 +57,10 @@ Kad engleski kaže „forum“ u smislu softvera ili kategorije sajtova (npr. �
 - **Navodnici**: „ovako“. Ravne navodnike `"` koristite samo u kodu i primjerima unosa.
 - **Crtica**: za umetnute dijelove rečenice koristite crticu s razmacima ( – ), ne minus.
 - **Obraćanje korisniku**: u drugom licu množine, bez glagola u rodu („Jeste li sigurni…“, „Prijavite se…“).
-- **Bez roda za osobu iz varijable**: Flarum ne zna spol korisnika, pa ne pišite „{username} je poslao“. Preformulirajte rečenicu, npr. „Nova poruka od korisnika {username}“. Opšti muški rod uz imenicu je ispravan („korisnik je učitao“, „administrator je potvrdio“).
+- **Vi, vaš**: u sučelju malim slovom („vaš korisnički račun“), u e-mailovima velikim („Vaš korisnički račun“), a na početku rečenice uvijek velikim. E-mailovi su poruke u imenskom prostoru `<ekstenzija>.email.*`.
+- **Tri tačke**: znak „…“, ne tri odvojene tačke („Učitavanje…“).
+- **Glagoli stranog porijekla**: oba oblika (*-irati* i *-ovati/-isati*) su u bosanskom standardu, ali paket za svaki glagol koristi samo jedan. Pogledajte tabelu iznad; za glagol kojeg nema u tabeli uzmite oblik koji se već koristi u paketu.
+- **Bez roda za osobu iz varijable**: Flarum ne zna spol korisnika, pa ne pišite „{username} je poslao“. Napišite rečenicu drugačije, npr. „Nova poruka od korisnika {username}“. Opšti muški rod uz imenicu je ispravan („korisnik je učitao“, „administrator je potvrdio“).
 - **Dugmad i naslovi**: kratko, glagol u imperativu za dugmad („Sačuvaj promjene“, „Obriši“), imenica za naslove i dozvole („Brisanje objava“).
 
 ## Tehnička pravila
@@ -66,17 +73,6 @@ Ova pravila provjerava automatska provjera. Kršenje je greška i pull request n
   Grana `other` je obavezna.
 - **Reference** oblika `=> core.ref.save_changes` moraju voditi na ključ koji postoji.
 - **Ključevi** se ne smiju ponavljati unutar iste datoteke.
-
-## Otvorena pitanja
-
-Ove nedosljednosti postoje u paketu danas. Dok se o njima ne odluči, provjera ih ne prijavljuje.
-
-1. **„Edukativna platforma“.** Nekoliko poruka u jezgri i ekstenziji `ramon-verified` kaže „edukativna platforma“ umjesto samo „platforma“, npr. potpis e-maila „Tim edukativne platforme {forumTitle}“. Paket koriste i forumi koji nisu obrazovni, pa je prijedlog da svuda stoji „platforma“.
-2. **Vaš ili vaš.** Obraćanje je pisano velikim slovom 39 puta, a malim 54 puta, ponekad u istoj datoteci. Prijedlog: malo slovo u sučelju, a veliko u e-mailovima.
-3. **Glagoli na -irati, -ovati i -isati.** Paket kaže „registrirati“ i „kreirati“, ali i „šifrovati“ (49 puta, prema 5 puta „šifrirati“) i „generisati“ (21 put, prema 7 puta „generirati“). Oba oblika su ispravna, ali jedan paket treba jedan oblik.
-4. **Tri tačke.** Znak „…“ javlja se 34 puta, a „...“ 22 puta. Prijedlog: „…“.
-
-Kad se odluči, odluka se upiše u tabelu iznad, ispravi se cijeli paket, a pravilo se doda u automatsku provjeru.
 
 ## Kada ekstenzija doda ili promijeni poruke
 
