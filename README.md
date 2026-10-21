@@ -36,6 +36,8 @@ Then turn it on:
 
 ## Updating
 
+What changed in each release is listed in the [changelog](https://github.com/project1537/flarumbs/blob/main/CHANGELOG.md).
+
 ```bash
 composer update project1537/flarumbs
 php flarum cache:clear
