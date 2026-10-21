@@ -35,7 +35,7 @@ huseyinfiliz-notificationhub:
         preview: "Pregled"
         preview_placeholder: "Naziv vrste obavještenja"
         permission_help: "Odaberite grupe članova ovlaštene da šalju ovo obavještenje. Ako ostavite prazno, mogu ga slati svi moderatori i administratori koji imaju dozvolu slanja."
-        permission_placeholder: "Upišite naziv grupe..."
+        permission_placeholder: "Upišite naziv grupe…"
       save: "Sačuvaj"
       edit_notification_type: "Uredi vrstu obavještenja"
       add_notification_type: "Dodaj vrstu obavještenja"
@@ -48,7 +48,7 @@ huseyinfiliz-notificationhub:
     modal_notification:
       title_text: "Slanje obavještenja"
       recipients_label: "Primaoci"
-      recipients_placeholder: "Upišite korisničko ime ili naziv grupe..."
+      recipients_placeholder: "Upišite korisničko ime ili naziv grupe…"
       message_label: "Poruka"
       url_label: "Ciljni link"
       url_placeholder: "https://www.example.com"
@@ -57,7 +57,7 @@ huseyinfiliz-notificationhub:
       notification_type_label: "Vrsta obavještenja"
       no_notification_types: "Nema aktivnih vrsta obavještenja."
       preview_title: "Pregled obavještenja"
-      preview_message_placeholder: "Tekst obavještenja..."
+      preview_message_placeholder: "Tekst obavještenja…"
       preview_all_members: "Svi članovi"
 
     recipient_kinds:

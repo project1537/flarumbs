@@ -26,7 +26,7 @@ flarum-statistics:
       mini_heading: "Statistika platforme"
       previous_28_days_label: "Prethodnih 28 dana"
       previous_7_days_label: "Prethodnih 7 dana"
-      custom_label: "Odaberi vlastiti raspon..."
+      custom_label: "Odaberi vlastiti raspon…"
       custom_label_specified: "{fromDate} – {toDate}"
       loading: => core.ref.loading
       posts_heading: => core.ref.posts

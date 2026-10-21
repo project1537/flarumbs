@@ -153,7 +153,7 @@ core:
       forum_title_heading: "Naziv platforme"
       home_page_heading: "Početna stranica"
       home_page_text: "Odaberite stranicu koju korisnici prvu vide kada otvore platformu."
-      show_language_selector_label: "Prikaži izbornik jezika"
+      show_language_selector_label: "Prikaži meni za izbor jezika"
       slug_driver_options:
         discussions:
           default: "ID s nazivom u URL-u"
@@ -182,7 +182,7 @@ core:
       submit_and_create_another_button: "Dodaj i nastavi s novim"
       submit_button: "Dodaj korisnika"
       title: "Dodavanje novog korisnika"
-      use_random_password: "Generiraj nasumičnu lozinku"
+      use_random_password: "Generiši nasumičnu šifru"
       username_placeholder: => core.ref.username
 
     # These translations are used in the Announcements page.
@@ -223,15 +223,15 @@ core:
       clear_cache_button: "Očisti keš memoriju"
       clear_cache_modal:
         title: "Čišćenje keš memorije"
-        working: "Ponovo se generiraju sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
+        working: "Ponovo se generišu sistemske datoteke (CSS i JavaScript). Na većim platformama to može potrajati."
         cleared: "Očišćeno: {name}"
         cleared_files: "Očišćeno: {name} (broj datoteka: {count})"
-        rebuilt: "Ponovo generirano: {bundle}"
+        rebuilt: "Ponovo generisano: {bundle}"
         unchanged: "{bundle}: već ažurno"
         rewritten: "Ponovo zapisano: {bundle}"
-        empty: "{bundle}: nema sadržaja za generiranje"
-        chunks: "Ponovo generirani dijelovi za {frontend} (izmijenjenih: {count})"
-        failed: "Generiranje nije uspjelo ({step}): {message}"
+        empty: "{bundle}: nema sadržaja za generisanje"
+        chunks: "Ponovo generisani dijelovi za {frontend} (izmijenjenih: {count})"
+        failed: "Generisanje nije uspjelo ({step}): {message}"
         took: "{time} ms"
         reload_button: "Ponovo učitaj"
       description: "Pregled stanja platforme."
@@ -289,7 +289,7 @@ core:
     # These translations are used in the debug warning widget.
     debug-warning:
       detail: |
-        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generira <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
+        Kada je uključen režim <code>debug</code>, Flarum pri svakom zahtjevu ponovo generiše <code>JavaScript</code> i <code>CSS</code> resurse, a mogu procuriti i druge informacije, poput tajnih podataka baze, varijabli okruženja i sl.
 
         Izričito se preporučuje da u produkcijskom okruženju isključite <code>debug</code> u datoteci <code>config.php</code>. Više informacija potražite u <link>Flarum dokumentaciji</link>.
       label: "Uključen režim za otklanjanje grešaka (debug)"
@@ -339,10 +339,10 @@ core:
       format_heading: "Format odlaznih e-mailova"
       format_help: "Odaberite format u kojem se šalju odlazni e-mailovi. Preporučena opcija je <code>multipart</code>, jer omogućava da e-mail klijent korisnika prikaže najprikladniji format."
       from_label: "Pošiljalac"
-      mail_encryption_label: "Šifriranje"
-      mail_encryption_tls_help: "Veza počinje nešifrirana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
-      mail_encryption_ssl_help: "Veza je šifrirana od samog početka (implicitni TLS). Obično se koristi s portom 465."
-      mail_encryption_none_help: "Bez šifriranja. Ne preporučuje se u produkcijskom okruženju."
+      mail_encryption_label: "Šifrovanje"
+      mail_encryption_tls_help: "Veza počinje nešifrovana, a zatim prelazi na TLS (STARTTLS). Obično se koristi s portom 587 ili 25."
+      mail_encryption_ssl_help: "Veza je šifrovana od samog početka (implicitni TLS). Obično se koristi s portom 465."
+      mail_encryption_none_help: "Bez šifrovanja. Ne preporučuje se u produkcijskom okruženju."
       mail_host_label: "Server (host)"
       mail_mailgun_domain_label: "Domena"
       mail_mailgun_region_label: "Regija"
@@ -352,7 +352,7 @@ core:
       mail_postmark_message_stream_label: "Tok poruka (message stream)"
       mail_postmark_token_label: "Token servera"
       mail_smtp_verify_peer_label: "Provjeri SSL certifikat"
-      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifriranju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
+      mail_smtp_verify_peer_help: "Provjerava SSL certifikat servera pri TLS ili SSL šifrovanju. Isključite ovu opciju samo ako mail server koristi samopotpisani certifikat."
       mail_username_label: => core.ref.username
       mailgun_heading: "Postavke za Mailgun"
       postmark_heading: "Postavke za Postmark"
@@ -407,12 +407,12 @@ core:
     header:
       get_help: "Pomoć"
       log_out_button: => core.ref.log_out
-      search_placeholder: "Pretraži..."
+      search_placeholder: "Pretraži…"
       search_role_label: "Pretraga"
 
     # These translations are used in the modal dialog displayed when loading extensions.
     loading:
-      title: "Molimo sačekajte..."
+      title: "Molimo sačekajte…"
 
     # These translations are used anywhere to localize model names for drivers.
     models:
@@ -514,7 +514,7 @@ core:
     # These translations are used in image upload buttons.
     upload_image:
       remove_button: => core.ref.remove
-      upload_button: "Odaberite sliku..."
+      upload_button: "Odaberite sliku…"
 
     # These translations are used for the users list on the admin dashboard.
     users:
@@ -565,14 +565,14 @@ core:
       confirm_password_placeholder: => core.ref.confirm_password
       confirmation_message: => core.ref.confirmation_email_sent
       dismiss_button: => core.ref.okay
-      incorrect_password_message: "Unesena lozinka nije tačna."
+      incorrect_password_message: "Unesena šifra nije tačna."
       submit_button: => core.ref.save_changes
       title: => core.ref.change_email
 
     # These translations are used in the Change Password modal dialog.
     change_password:
-      send_button: "Pošalji e-mail za promjenu lozinke"
-      text: "Kliknite dugme ispod, a zatim u e-mailu pronađite link za promjenu lozinke."
+      send_button: "Pošalji e-mail za promjenu šifre"
+      text: "Kliknite dugme ispod, a zatim u e-mailu pronađite link za promjenu šifre."
       title: => core.ref.change_password
 
     # These translations are used by the composer controls.
@@ -585,7 +585,7 @@ core:
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
-      body_placeholder: "Napišite objavu..."
+      body_placeholder: "Napišite objavu…"
       discard_confirmation: "Tema još nije objavljena. Želite li je odbaciti?"
       submit_button: "Objavi temu"
       title: => core.ref.start_a_discussion
@@ -634,11 +634,11 @@ core:
     forgot_password:
       dismiss_button: => core.ref.okay
       email_placeholder: => core.ref.email
-      email_sent_message: "Ako je unesena e-mail adresa registrirana na ovoj platformi, na nju ćemo poslati link za promjenu lozinke. Ako ga ne primite u naredne minut-dvije, provjerite folder neželjene pošte."
+      email_sent_message: "Ako je unesena e-mail adresa registrirana na ovoj platformi, na nju ćemo poslati link za promjenu šifre. Ako ga ne primite u naredne minut-dvije, provjerite folder neželjene pošte."
       not_found_message: "Nijedan korisnik nije registriran s tom e-mail adresom."
       submit_button: "Pošalji link"
-      text: "Unesite svoju e-mail adresu i poslat ćemo vam link za promjenu lozinke."
-      title: "Zaboravljena lozinka"
+      text: "Unesite svoju e-mail adresu i poslat ćemo vam link za promjenu šifre."
+      title: "Zaboravljena šifra"
 
     # These translations are used in the header and session dropdown menu.
     header:
@@ -680,7 +680,7 @@ core:
 
     # These translations are used in the Log In modal dialog.
     log_in:
-      forgot_password_link: "Zaboravili ste lozinku?"
+      forgot_password_link: "Zaboravili ste šifru?"
       invalid_login_message: => core.ref.invalid_login_message
       password_placeholder: => core.ref.password
       remember_me_label: => core.ref.remember_me_label
@@ -765,7 +765,7 @@ core:
       empty_text: "Ovdje trenutno nema ničega."
       global_logout:
         heading: "Odjava sa svih uređaja"
-        help_text: "Briše kolačić trenutne sesije, prekida sve sesije, opoziva tokene za programere i poništava sve poslane linkove za potvrdu e-maila i promjenu lozinke."
+        help_text: "Briše kolačić trenutne sesije, prekida sve sesije, opoziva tokene za programere i poništava sve poslane linkove za potvrdu e-maila i promjenu šifre."
         log_out_button: => core.ref.log_out
       hide_access_token: "Sakrij token"
       last_activity: "Posljednja aktivnost"
@@ -893,7 +893,7 @@ core:
       groups_heading: "Grupe"
       password_heading: => core.ref.password
       password_label: => core.ref.password
-      set_password_label: "Postavi novu lozinku"
+      set_password_label: "Postavi novu šifru"
       submit_button: => core.ref.save_changes
       title: => core.ref.edit_user
       username_heading: => core.ref.username
@@ -1023,7 +1023,7 @@ core:
       no_results_text: "Nema rezultata."
       no_search_text: "Još niste ništa pretražili."
       options_heading: "Opcije pretrage"
-      placeholder: "Pretraži..."
+      placeholder: "Pretraži…"
       preview_heading: "Pregled rezultata"
       search_active_button_accessible_label: "Promijeni pretragu: {query}"
       search_clear_button_accessible_label: "Obriši upit pretrage"
@@ -1141,8 +1141,8 @@ core:
 
     # Translations in this namespace are displayed by the Reset Password interface.
     reset_password:
-      confirm_password_label: "Potvrdite novu lozinku"
-      new_password_label: "Nova lozinka"
+      confirm_password_label: "Potvrdite novu šifru"
+      new_password_label: "Nova šifra"
       submit_button: => core.ref.save_changes
       title: => core.ref.reset_your_password
 
@@ -1212,12 +1212,12 @@ core:
     reset_password:
       subject: => core.ref.reset_your_password
       body: |
-        Zaprimljen je zahtjev za promjenu zaboravljene lozinke Vašeg korisničkog računa na edukativnoj platformi {forum}.
+        Zaprimljen je zahtjev za promjenu zaboravljene šifre Vašeg korisničkog računa na edukativnoj platformi {forum}.
 
-        Ako ste zahtjev poslali Vi, kliknite na sljedeći link da postavite novu lozinku:
+        Ako ste zahtjev poslali Vi, kliknite na sljedeći link da postavite novu šifru:
         {url}
 
-        Ako ne želite mijenjati lozinku, zanemarite ovaj e-mail i ništa se neće promijeniti.
+        Ako ne želite mijenjati šifru, zanemarite ovaj e-mail i ništa se neće promijeniti.
 
     # These translations are used when testing mailing configuration
     send_test:
@@ -1245,9 +1245,9 @@ core:
   ref:
     all_discussions: "Sve teme"
     change_email: "Promjena e-mail adrese"
-    change_password: "Promjena lozinke"
+    change_password: "Promjena šifre"
     color: "Boja" # Referenced by flarum-tags.yml
-    confirm_password: "Potvrdite lozinku"
+    confirm_password: "Potvrdite šifru"
     confirm_email: "Potvrdi e-mail adresu"
     confirmation_email_sent: "Poslali smo e-mail za potvrdu na adresu {email}. Ako uskoro ne stigne, provjerite folder neželjene pošte."
     custom_footer_text: "Dodajte HTML koji će se prikazati na samom dnu stranice."
@@ -1271,7 +1271,7 @@ core:
     light_mode_label: "Svijetli režim"
     load_more: "Učitaj još"
     latest: "Najnovija aktivnost"
-    loading: "Učitavanje..."
+    loading: "Učitavanje…"
     log_in: "Prijava"
     log_out: "Odjava"
     mark_all_as_read: "Označi sve kao pročitano"
@@ -1282,7 +1282,7 @@ core:
     notifications: "Obavještenja"
     okay: "U redu" # Referenced by flarum-tags.yml
     oldest: "Najstarije"
-    password: "Lozinka"
+    password: "Šifra"
     posts: "Objave" # Referenced by flarum-statistics.yml
     previous_page: "Prethodna stranica"
     relevance: "Relevantnost"
@@ -1291,7 +1291,7 @@ core:
     rename: "Promijeni naslov"
     reply: "Odgovori" # Referenced by flarum-mentions.yml
     refresh: "Osvježi"
-    reset_your_password: "Postavite novu lozinku"
+    reset_your_password: "Postavite novu šifru"
     restore: "Vrati"
     save_changes: "Sačuvaj promjene"
     search_users: "Pretraži korisnike" # Referenced by flarum-suspend.yml, flarum-tags.yml
@@ -1308,7 +1308,7 @@ core:
     username_or_email_placeholder: "Korisničko ime ili e-mail"
     users: "Korisnici" # Referenced by flarum-statistics.yml
     view: "Pogledaj"
-    write_a_reply: "Napišite odgovor..."
+    write_a_reply: "Napišite odgovor…"
     you: "Vi" # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##

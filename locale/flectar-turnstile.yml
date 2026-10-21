@@ -1,7 +1,7 @@
 flectar-turnstile:
   admin:
     settings:
-      help_text: "Turnstile ključeve generirajte u svom Cloudflare korisničkom računu <a>ovdje</a>."
+      help_text: "Turnstile ključeve generišite u svom Cloudflare korisničkom računu <a>ovdje</a>."
       site_key: "Ključ stranice (Site key)"
       secret_key: "Tajni ključ (Secret key)"
       signup: => core.forum.sign_up.title

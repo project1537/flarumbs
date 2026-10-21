@@ -36,6 +36,8 @@ Then turn it on:
 
 ## Updating
 
+What changed in each release is listed in the [changelog](https://github.com/project1537/flarumbs/blob/main/CHANGELOG.md).
+
 ```bash
 composer update project1537/flarumbs
 php flarum cache:clear
@@ -153,7 +155,7 @@ Translations for **80 extensions** are included:
 
 ## Reporting mistakes and contributing
 
-Found a wrong or missing translation? [Open an issue](https://github.com/project1537/flarumbs/issues) and include the English text or the translation key if you know it. Pull requests are welcome too: translations live in [`locale/`](https://github.com/project1537/flarumbs/tree/main/locale), one file per extension.
+Found a wrong or missing translation? [Open an issue](https://github.com/project1537/flarumbs/issues) and include the English text or the translation key if you know it. Pull requests are welcome too: translations live in [`locale/`](https://github.com/project1537/flarumbs/tree/main/locale), one file per extension. Please follow the terms and style in [GLOSSARY.md](https://github.com/project1537/flarumbs/blob/main/GLOSSARY.md); every pull request is checked automatically.
 
 ## License
 

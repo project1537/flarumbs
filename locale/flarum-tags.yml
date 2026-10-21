@@ -100,7 +100,7 @@ flarum-tags:
 
     # These translations are used on the index page, peripheral to the discussion list.
     index:
-      more_link: "Više..."
+      more_link: "Više…"
       tags_link: => flarum-tags.ref.tags
       untagged_link: "Bez oznake"
 

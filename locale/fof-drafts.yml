@@ -16,7 +16,7 @@ fof-drafts:
   forum:
     composer:
       title: "Sačuvaj nacrt"
-      saving: "Čuvanje..."
+      saving: "Čuvanje…"
       saved: "Sačuvano!"
       exit_alert: "Odbaciti izmjene nacrta?"
       discard_empty_draft_alert: "Odbaciti prazan nacrt?"

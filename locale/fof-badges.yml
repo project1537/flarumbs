@@ -168,7 +168,7 @@ fof-badges:
     is_visible: "Vidljiva u listi znački"
     is_visible_help: "Skrivene značke ne prikazuju se u javnoj listi znački, ali ih korisnici i dalje mogu osvojiti."
     save: "Sačuvaj"
-    cancel: "Otkaži"
+    cancel: "Odustani"
 
     # Validation
     validation:
@@ -250,7 +250,7 @@ fof-badges:
     search_user_placeholder: "Pretraga po korisničkom ili prikazanom imenu…"
     no_users_found: "Nijedan korisnik nije pronađen"
     clear_selection: "Poništi odabir"
-    assign_reason: "Razlog (opcionalno)"
+    assign_reason: "Razlog (neobavezno)"
     assign_reason_placeholder: "Zašto se dodjeljuje ova značka?"
     assign_reason_help: "Razlog će biti vidljiv na znački korisnika."
     badge_assigned: "Značka „{badge}“ dodijeljena je korisniku {username}!"
@@ -325,11 +325,11 @@ fof-badges:
       no_badges_available: "Nema dostupnih znački."
       select_badge: "Odaberite značku…"
       select_badge_label: "Odaberite značku"
-      assign_reason: "Razlog (opcionalno)"
+      assign_reason: "Razlog (neobavezno)"
       assign_reason_placeholder: "Zašto se dodjeljuje ova značka?"
       assign_reason_help: "Razlog će biti vidljiv na znački korisnika."
       assign_button: "Dodijeli značku"
-      cancel: "Otkaži"
+      cancel: "Odustani"
       badge_assigned: "Značka „{badge}“ dodijeljena je korisniku {username}!"
 
       # Recalculate Modal

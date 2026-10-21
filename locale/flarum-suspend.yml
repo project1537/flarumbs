@@ -31,7 +31,7 @@ flarum-suspend:
       display_message: "Poruka koja se prikazuje korisniku"
       indefinitely_label: "Blokiran na neodređeno vrijeme"
       limited_time_days_text: " dana"
-      limited_time_label: "Blokiran na određeno vrijeme..."
+      limited_time_label: "Blokiran na određeno vrijeme…"
       not_suspended_label: "Nije blokiran"
       placeholder_optional: "Neobavezno"
       reason: "Razlog blokade"

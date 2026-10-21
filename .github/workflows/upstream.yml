@@ -1,0 +1,62 @@
+name: Check upstream translations
+
+on:
+  schedule:
+    - cron: "17 5 * * 1" # Mondays, 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      accept:
+        description: "Accept the current English for these locale files (comma-separated names, or all). Leave empty to only check."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ACCEPT: ${{ inputs.accept }}
+      LABEL: upstream-sync
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Accept the current English
+        if: env.ACCEPT != ''
+        run: |
+          python .github/scripts/sync-upstream.py --accept "$ACCEPT"
+          if git diff --quiet .github/upstream.lock.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Accept current English sources: $ACCEPT" .github/upstream.lock.json
+          git push
+
+      - name: Compare with the English sources
+        id: report
+        run: python .github/scripts/sync-upstream.py --report report.md
+
+      - name: Open, update or close the tracking issue
+        run: |
+          gh label create "$LABEL" --color FBCA04 \
+            --description "Translations behind their extension's English source" --force
+          issue=$(gh issue list --label "$LABEL" --state open --json number --jq '.[0].number // empty')
+          if [ "${{ steps.report.outputs.has_findings }}" = "true" ]; then
+            if [ -n "$issue" ]; then
+              gh issue edit "$issue" --body-file report.md
+            else
+              gh issue create --title "Translations to update" --label "$LABEL" --body-file report.md
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "Every translation matches its extension's English source again."
+          fi

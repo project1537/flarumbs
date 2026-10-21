@@ -1,0 +1,40 @@
+name: Validate translations
+
+on:
+  pull_request:
+    paths:
+      - "locale/**"
+      - ".github/scripts/**"
+  push:
+    branches: [main]
+    paths:
+      - "locale/**"
+      - ".github/scripts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Check locale files
+        run: python .github/scripts/check-locale.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check dates and relative times
+        run: |
+          npm install --no-save --no-package-lock dayjs@1
+          node .github/scripts/test-dates.js

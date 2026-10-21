@@ -9,7 +9,7 @@ fof-byobu:
       submit: "U redu"
       edit_recipients: "Uredi primaoce"
       send_pd: "Pošalji poruku korisniku {username}"
-      cancel: "Otkaži"
+      cancel: "Odustani"
       make_public: "Učini ovu temu javnom"
       remove_from_discussion: "Napusti ovu privatnu temu"
 

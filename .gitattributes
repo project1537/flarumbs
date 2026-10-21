@@ -1,2 +1,4 @@
 /.github export-ignore
 /.gitattributes export-ignore
+/GLOSSARY.md export-ignore
+/.gitignore export-ignore

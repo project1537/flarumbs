@@ -19,7 +19,7 @@ validation:
   boolean: "Polje :attribute mora biti tačno ili netačno."
   can: "Polje :attribute sadrži neovlaštenu vrijednost."
   confirmed: "Potvrda polja :attribute se ne poklapa."
-  current_password: "Lozinka nije ispravna."
+  current_password: "Šifra nije ispravna."
   date: "Polje :attribute mora biti važeći datum."
   date_equals: "Polje :attribute mora biti datum jednak :date."
   date_format: "Polje :attribute mora odgovarati formatu :format."
@@ -137,7 +137,7 @@ validation:
 
   attributes:
     username: korisničko ime
-    password: lozinka
+    password: šifra
     email: e-mail
     title: naslov
     content: sadržaj
