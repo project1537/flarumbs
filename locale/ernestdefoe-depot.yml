@@ -1,0 +1,418 @@
+ernestdefoe-depot:
+
+  forum:
+    title: Biblioteka
+    rating_label: "Ocjena {rating} od 5"
+
+    nav:
+      link: Biblioteka
+      all: Svi materijali
+      watching: Praćeni
+      mine: Moji materijali
+      queue: Čeka odobrenje
+      upload: Otpremite materijal
+      toggle: Odaberite kategoriju
+      subcategories: Potkategorije
+      everything_in: "Sve iz kategorije {name}"
+
+    spotlight:
+      label: Izdvojeni materijali
+      featured: Izdvojeno
+      download: "Preuzmite v{version}"
+      details: Pogledajte detalje
+      install: Uputstvo za instalaciju
+      get_it: Nabavite
+      sites: stranice koje ga koriste
+      downloads: preuzimanja
+      installs: instalacije
+
+    hero:
+      count: "{count, plural, one {# materijal} few {# materijala} other {# materijala}}"
+      all_desc: Materijali koje izrađuje i dijeli ova zajednica.
+      watching_desc: Materijali za koje dobijate obavijest kada izađe nova verzija.
+      mine_desc: Sve što ste otpremili, uključujući materijale koji još čekaju odobrenje.
+      queue_desc: Otpremljeni materijali koje moderator mora odobriti prije nego što postanu vidljivi.
+
+    tiles:
+      count: "{count, plural, one {# materijal} few {# materijala} other {# materijala}}"
+      locked: "Za: {group}"
+
+    notice:
+      pending: "{count, plural, one {# materijal čeka} few {# materijala čekaju} other {# materijala čeka}} vaše odobrenje"
+      review: Pregledajte
+
+    toolbar:
+      sort: Poredaj materijale
+      sort_updated: Nedavno ažurirano
+      sort_downloads: Najviše preuzimano
+      sort_rating: Najbolje ocijenjeno
+      sort_newest: Najnovije
+      compat: Filtriraj po verziji
+      search: Pretraži materijale
+      view: Prikaz
+      view_grid: Prikaži kao kartice
+      view_list: Prikaži kao listu
+      showing: "{count, plural, one {# materijal} few {# materijala} other {# materijala}}"
+      clear_filter: "Radi s {version}"
+      load_more: Prikaži još
+
+    empty:
+      title: Ništa ne odgovara
+      body: Pokušajte s drugom verzijom ili kraćom pretragom.
+      reset: Očisti filtere
+      none_title: Još nema materijala
+      none_body: Otpremite prvi pomoću dugmeta na bočnoj traci.
+      watching: Zapratite materijal na njegovoj stranici i pojavit će se ovdje.
+      mine: Materijali koje otpremite pojavljuju se ovdje, uključujući one koji čekaju odobrenje.
+      queue: Ništa ne čeka. Sve je pregledano.
+
+    card:
+      updated_badge: Ažurirano
+      updated: "ažurirano {time}"
+      last_30_days: 30 dana
+      no_ratings: Još nema ocjena
+      pending: Čeka odobrenje
+      locked: "{count, plural, one {# materijal} few {# materijala} other {# materijala}} za: {group}"
+      see_category: Pogledajte šta je unutra
+
+    source:
+      github_tooltip: "Nova izdanja na github.com/{repo} ovdje se pojavljuju automatski"
+      link_tooltip: "Nalazi se na {host}. Biblioteka broji klikove."
+
+    file:
+      tab_overview: Pregled
+      tab_versions: Verzije
+      tab_reviews: Recenzije
+      tab_discussion: Tema
+      updated: "ažurirano {time}"
+      featured: Izdvojeno
+      pending: Ovaj materijal čeka moderatora. Vidite ga samo vi i moderatori.
+      approve: Odobrite
+      controls: Upravljanje materijalom
+      new_version: Dodajte verziju
+      edit: Uredite detalje
+      link_discussion: Povežite temu podrške
+      change_discussion: Promijenite temu podrške
+      feature: Izdvojite materijal
+      unfeature: Uklonite iz izdvojenih
+      sell: Prodajte putem ekstenzije Kiosk
+      make_free: Učinite ga besplatnim
+      sell_own: Prodajte ovaj materijal
+      manage_listing: Upravljajte svojom ponudom
+      paid: Plaćeno
+      paid_notice: "Ovaj materijal se prodaje putem prodavnice na platformi."
+      login_to_buy: Prijavite se za kupovinu i preuzimanje
+      buy_title: Kupite materijal da biste ga preuzeli
+      delete: Obrišite
+      delete_confirm: "Želite li obrisati {title} sa svim verzijama, snimcima ekrana i recenzijama? Tema podrške ostaje."
+      missing_title: Ovaj materijal više ne postoji
+      missing_back: Nazad na biblioteku
+      screenshot: "Snimak ekrana {n}"
+      at_a_glance: Ukratko
+      works_with: Radi s
+      licence: Licenca
+      requires: Potrebno je i
+      optional: Neobavezno
+      required: Obavezno
+      install: Instalacija
+      whats_new: "Šta je novo u v{version}"
+      all_versions: Sve verzije
+      more_like_this: Slični materijali
+      no_changelog: Nema popisa promjena za ovu verziju.
+      change_added: Dodano
+      change_changed: Promijenjeno
+      change_fixed: Ispravljeno
+      latest: Najnovije
+      external: vanjski link
+      version_downloads: "Preuzimanja: {count}"
+      download_version: "Preuzmite v{version}"
+      delete_version: Obrišite ovu verziju
+      delete_version_confirm: "Želite li obrisati verziju {version}? Ko god otvori link na nju, dobit će najnoviju verziju."
+      ratings: "{count, plural, one {# ocjena} few {# ocjene} other {# ocjena}}"
+      write_review: Napišite recenziju
+      edit_review: Izmijenite recenziju
+      login_to_review: Prijavite se za recenziju
+      reviewed_version: "recenzija za v{version}"
+      author: Autor
+      helpful: "Korisno ({count})"
+      reply: Odgovorite kao autor
+      edit_reply: Izmijenite odgovor
+      reply_save: Objavite odgovor
+      cancel: Otkažite
+      delete_review: Obrišite
+      delete_review_confirm: Želite li obrisati ovu recenziju?
+      no_reviews: Još nema recenzija.
+      no_reviews_filtered: Nema recenzija s tom ocjenom.
+      no_thread: Ovaj materijal nema temu podrške.
+      thread_after_approval: Tema podrške bit će pokrenuta kada materijal bude odobren.
+      thread_meta: "{count, plural, one {# odgovor} few {# odgovora} other {# odgovora}}"
+      thread_open: Otvorite na platformi
+      reply_placeholder: Napišite odgovor…
+      reply_in_thread: Odgovorite u temi
+      older_versions: Starije verzije
+      download: "Preuzmite v{version}"
+      download_old: "v{version} · {time}"
+      no_download_permission: Nemate dozvolu za preuzimanje
+      login_to_download: Prijavite se za preuzimanje
+      released: "objavljeno {time}"
+      watch: Pratite nove verzije
+      watching: Praćeno
+      verified: Kontrolni zbir objavljen
+      verified_tooltip: Uporedite ovaj SHA-256 s preuzetom datotekom kako biste provjerili da je to ona koju je autor objavio
+      watchers: "Prati: {count}"
+      total_downloads: preuzimanja
+      total_installs: instalacije
+      total_sites: stranice koje ga koriste
+      get_it: Nabavite
+      buy: Kupite
+      owned: Imate licencu za ovaj materijal
+      manage_licence: Upravljajte licencom
+      install_with_composer: Instalirajte pomoću Composera
+      view_on_github: Pogledajte na GitHubu
+      counted_by_packagist: Instalacije broji Packagist
+      release_notes: Napomene o izdanju
+      last_30: "U 30 dana: {count}"
+      this_version: Ova verzija
+      first_released: Prvi put objavljeno
+      versions: Verzije
+      github_sync: Nova izdanja se pojavljuju automatski
+      author_stats: "{files, plural, one {# materijal} few {# materijala} other {# materijala}} · preuzimanja: {downloads}"
+      view_profile: Profil
+      api: API za provjeru ažuriranja
+      api_help: Aplikacije i alati mogu zatražiti najnoviju verziju bez učitavanja stranice.
+
+    download:
+      started: Preuzimanje je počelo
+      leaving: "Preusmjeravamo vas na {host}"
+      link_note: Ovaj materijal se nalazi na drugoj lokaciji. Otvara se u novoj kartici.
+      retry: Ništa se ne dešava?
+      retry_link: Preuzmite ga direktno.
+      verify_title: Provjerite da li je ovo originalna datoteka
+      verify_body: Pokrenite ovo u terminalu. Rezultat se treba poklapati s kontrolnim zbirom koji je objavio autor.
+      os_mac: macOS
+      os_windows: Windows
+      os_linux: Linux
+      expect: "Očekivani rezultat:"
+      install_title: Instalacija
+      watch_title: Obavijest o sljedećoj verziji
+      watch_body: "{count, plural, one {# osoba dobija obavijest} few {# osobe dobijaju obavijest} other {# osoba dobija obavijest}} kada se ovaj materijal ažurira."
+      watch: Pratite
+      watching: Praćeno
+      copy: Kopirajte
+
+    price:
+      per_month: "{price} mjesečno"
+      per_year: "{price} godišnje"
+      per_week: "{price} sedmično"
+      per_day: "{price} dnevno"
+      from: "Od {price}"
+
+    lightbox:
+      previous: Prethodni snimak ekrana
+      next: Sljedeći snimak ekrana
+
+    review:
+      title: "Recenzija: {title}"
+      rating: Vaša ocjena
+      stars: "{count, plural, one {# zvjezdica} few {# zvjezdice} other {# zvjezdica}}"
+      pick: Odaberite ocjenu
+      label_1: Kod mene ne radi
+      label_2: Ima problema
+      label_3: U redu je
+      label_4: Dobro
+      label_5: Odlično
+      body_label: "Šta bi drugi trebali znati? (neobavezno)"
+      body_placeholder: Kakvo je bilo iskustvo korištenja i koju ste verziju isprobali.
+      submit: Objavite recenziju
+      update: Ažurirajte recenziju
+
+    version:
+      title: "Nova verzija: {title}"
+      number: Verzija
+      after: "Nakon {version}"
+      lines: Po jedna u svakom redu
+      save: Objavite ovu verziju
+      github: "Nova izdanja na github.com/{repo} dodaju se automatski, otprilike jednom na sat. Objavite izdanje tamo i ono će se pojaviti ovdje."
+
+    link:
+      title: Tema podrške
+      label: Tema
+      placeholder: Zalijepite link na temu ili njen broj
+      help: Ko otvori ovaj materijal vidi najnovije objave iz teme i može odmah otići na nju. Povezati se može samo tema koju i sami možete vidjeti.
+      save: Povežite ovu temu
+      unlink: Prekinite vezu s temom
+
+    edit:
+      title: Uređivanje detalja
+      fields_label: Dodatni detalji
+      fields_help: "Jedan po redu, u obliku Naziv: vrijednost. Na primjer, Predmet: Matematika."
+      save: Sačuvajte promjene
+
+    upload:
+      title: Otpremite materijal
+      step_source: Datoteka
+      step_details: Detalji
+      step_media: Snimci ekrana
+      step_support: Podrška
+      step_review: Pregled
+      back: Nazad
+      next: Nastavite
+      submit: Pošaljite
+      sending: "Slanje… {percent}%"
+      source_upload: Otpremanje
+      source_upload_help: S vašeg računara
+      source_link: Link
+      source_link_help: Nalazi se drugdje
+      source_github: GitHub
+      source_github_help: Sinhronizacija izdanja
+      drop: Prevucite datoteku ovdje ili kliknite da je odaberete
+      drop_help: "Do {mb} MB. Kontrolni zbir SHA-256 izračunava se čim datoteka stigne."
+      too_large: "Datoteka je veća od {mb} MB koliko ova platforma dopušta."
+      hashing: Izračunavanje kontrolnog zbira…
+      replace: Zamijenite
+      link_label: Link za preuzimanje
+      link_help: Biblioteka broji klikove i usmjerava posjetioce na ovu adresu.
+      repo_label: Repozitorij
+      repo_placeholder: owner/repository
+      repo_help: Svako novo GitHub izdanje postaje ovdje verzija, a njegove napomene o izdanju postaju popis promjena. Ako je repozitorij Composer paket na Packagistu, stranica prikazuje kako ga instalirati i broji njegove instalacije.
+      name_label: Naziv
+      category_label: Kategorija
+      version_label: Verzija
+      tagline_label: Sažetak u jednoj rečenici
+      tagline_placeholder: Šta je to, u jednoj rečenici
+      tagline_help: "Prikazuje se na karticama i u pretrazi. Preostalo znakova: {left}."
+      description_label: Opis
+      game_label: Namijenjeno za
+      game_placeholder: Word, Excel, PowerPoint…
+      compat_label: Radi s
+      compat_help: Verzije s kojima radi, odvojene zarezima. Najnovija prva.
+      licence_label: Licenca
+      install_label: Koraci instalacije
+      lines_help: Jedan korak po redu.
+      requires_label: Šta još treba
+      requires_placeholder: "LibreOffice — za otvaranje datoteke (optional)"
+      requires_help: "Po jedna u redu, u obliku Naziv — za šta služi. Dodajte (optional) ako nije obavezno."
+      cover: Naslovna slika
+      remove: Uklonite
+      add_shots: Dodajte snimke ekrana
+      shots_help: Prvi je naslovni. Najviše 8.
+      thread_toggle: Pokrenite temu podrške
+      thread_toggle_help: Ovdje se postavljaju pitanja i prijavljuju problemi, a svaki odgovor vam šalje obavijest.
+      thread_tag: Objavite u oznaci
+      thread_no_tags: Nema oznaka u kojima možete objavljivati, pa tema ide na glavni popis tema.
+      thread_opening: Uvodna objava
+      thread_opening_placeholder: Sve što treba znati prije postavljanja pitanja, npr. poznati problemi.
+      thread_opening_help: Link na materijal i koraci instalacije dodaju se automatski.
+      thread_preview: Kako će izgledati na popisu tema
+      thread_title: "{title}: podrška i komentari"
+      thread_linked: Povezano s materijalom
+      thread_off: Komentari će biti isključeni za ovaj materijal.
+      review_thread: "Tema podrške bit će pokrenuta u oznaci {tag} kada materijal postane javan."
+      review_thread_untagged: Tema podrške bit će pokrenuta kada materijal postane javan.
+      no_tagline: Još nema sažetka
+      approval: "Moderator provjerava materijale prije nego što se pojave u kategoriji {category}, osim ako imate dozvolu da to preskočite. Dobit ćete obavijest kada materijal bude odobren."
+      submitted: "Poslano na odobrenje: „{title}“."
+      published: "Sada je javno: „{title}“."
+
+    notifications:
+      new_version: "Nova verzija: {version}"
+      approved: Vaš materijal je odobren i sada je javan
+
+    settings:
+      notify_new_version: Materijal koji pratim ima novu verziju
+      notify_approved: Moj otpremljeni materijal je odobren
+
+  api:
+    not_an_image: "To nije slika koju Biblioteka može pročitati. Koristite JPEG, PNG, WebP ili GIF."
+    image_too_big: "Slika je prevelika. Snimci ekrana mogu imati najviše {max} megapiksela."
+    too_large_server: Datoteka je veća od onoga što ovaj server prihvata.
+    too_large: "Datoteka je veća od {mb} MB koliko ova platforma dopušta."
+    upload_broken: Otpremanje nije stiglo u cjelini. Pokušajte ponovo.
+    bad_source: Odaberite odakle dolazi datoteka.
+    bad_repo: "To nije GitHub repozitorij. Koristite oblik owner/name, npr. flarum/framework."
+    no_file: Dodajte datoteku.
+    bad_link: Link mora biti puna https:// adresa.
+    bad_title: Dajte materijalu naziv do 120 znakova.
+    bad_category: Odaberite kategoriju u koju možete otpremati.
+    pick_subcategory: Ova kategorija ima potkategorije. Odaberite jednu od njih.
+    bad_tag: Ne možete pokrenuti temu u toj oznaci. Odaberite drugu.
+    bad_discussion: To nije tema koju ovdje možete vidjeti. Zalijepite njen link ili broj.
+    no_version: Unesite broj verzije.
+    duplicate_version: "Verzija {version} već postoji."
+    last_version: Ovo je jedina verzija. Umjesto toga obrišite materijal.
+    cannot_review: Ne možete recenzirati ovaj materijal.
+    bad_rating: Odaberite ocjenu od jedne do pet zvjezdica.
+    bad_category_name: Dajte kategoriji naziv do 80 znakova.
+    duplicate_slug: "Druga kategorija već koristi adresu {slug}."
+    bad_parent: Potkategorija može biti samo unutar kategorije najvišeg nivoa.
+    thread_title: "{title}: podrška i komentari"
+    thread_body: "Ovo je tema podrške za {title}. Ovdje postavljajte pitanja i prijavljujte probleme.\n\nMaterijal: {url}"
+    thread_install: "Instalacija:"
+
+  email:
+    new_version:
+      subject: "Nova verzija materijala {title}: {version}"
+      body: |
+        Objavljena je nova verzija materijala {title}: {version}.
+
+        Pogledajte šta je promijenjeno i preuzmite je: {url}
+    approved:
+      subject: "Materijal {title} je sada javan"
+      body: |
+        Moderator je odobrio materijal {title} i on je sada javan.
+
+        Pogledajte ga ovdje: {url}
+
+  admin:
+    permissions:
+      view: Pregled biblioteke
+      download: Preuzimanje datoteka iz biblioteke
+      upload: Otpremanje datoteka u biblioteku
+      skipApproval: Otpremanje u biblioteku bez odobrenja
+      review: Ocjenjivanje i recenziranje materijala
+      moderate: Odobravanje, uređivanje i brisanje materijala
+    settings:
+      count_window: Broji preuzimanje jednom u periodu od
+      count_window_help: Ponovljena preuzimanja istog člana ili s iste adrese unutar ovog perioda ne računaju se.
+      window_1: 1 sat
+      window_24: 24 sata
+      window_168: 7 dana
+      max_upload: Najveća veličina otpremanja (MB)
+      max_upload_help: Vrijednosti upload_max_filesize i post_max_size na vašem serveru također moraju biti barem ovoliko velike.
+      uploads_per_hour: Otpremanja po članu na sat
+      uploads_per_hour_help: Novi materijali i nove verzije svakog od njih. Moderatori nisu ograničeni.
+      support_thread: Pokretanje teme podrške za nove materijale
+      support_thread_help: Oznaku biraju oni koji otpremaju. Za svoj materijal tu temu mogu isključiti.
+      github_sync: Dozvoli sinhronizaciju izdanja s GitHuba
+      github_sync_help: Svakog sata provjerava ima li novih izdanja u svakom povezanom repozitoriju. Potrebno je da radi Flarumov planer zadataka (scheduler).
+      github_token: GitHub token (neobavezno)
+      github_token_help: Bez tokena GitHub dopušta 60 provjera na sat s ovog servera. Token bez ikakvih ovlaštenja podiže to ograničenje na 5.000.
+      accel_prefix: nginx interna lokacija (neobavezno)
+      accel_prefix_help: "Postavite ovo na nginx lokaciju označenu kao internal koja pokazuje na storage/depot, pa će datoteke slati nginx umjesto PHP-a. Ako ostavite prazno, datoteke šalje PHP."
+    categories:
+      title: Kategorije
+      help: Prevucite za promjenu redoslijeda. Spustite kategoriju na kategoriju najvišeg nivoa da je smjestite unutar nje.
+      add: Dodajte kategoriju
+      edit: Uredite
+      edit_title: "Uređivanje: {name}"
+      delete: Obrišite
+      delete_confirm: "Želite li obrisati kategoriju {name}? Njeni materijali prelaze u nadređenu kategoriju ili ostaju bez kategorije."
+      empty: Još nema kategorija. Materijali moraju imati kategoriju da bi se mogli otpremiti.
+      files: "{count, plural, one {# materijal} few {# materijala} other {# materijala}}"
+      locked_to: "samo: {groups}"
+      name: Naziv
+      slug: Adresa
+      slug_auto: Nastaje iz naziva
+      description: Opis
+      color: Boja
+      icon: Ikona
+      icon_help: "Font Awesome klasa, npr. fas fa-cube."
+      parent: Unutar
+      no_parent: Ništa (kategorija najvišeg nivoa)
+      lock: Samo ove grupe mogu je otvoriti
+      lock_help: Ostavite sva polja prazna za kategoriju koju svi vide. Ostali vide da postoji, s brojem materijala, ali ne i same materijale.
+      save: Sačuvajte
+
+  lib:
+    kiosk:
+      file: Materijal iz biblioteke
