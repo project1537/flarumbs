@@ -1,0 +1,233 @@
+ernestdefoe-glimpse:
+  admin:
+    lifetime: Priče nestaju nakon
+    lifetime_help: Priče sačuvane u zbirci ostaju dok ih ne ukloni osoba koja ih je objavila.
+    hours:
+      "6": 6 sati
+      "12": 12 sati
+      "24": 24 sata
+      "48": 48 sati
+      "168": 7 dana
+    kind_photo: Fotografije
+    kind_photo_help: JPEG, PNG, WebP ili GIF. Svaka fotografija se ponovo snima na serveru, čime se uklanjaju podaci o lokaciji i fotoaparatu.
+    kind_video: Video snimci
+    kind_video_help: MP4, WebM ili iPhone video. Podaci o lokaciji i uređaju se uklanjaju; sam video se ne konvertuje.
+    kind_text: Tekst na pozadini u boji
+    image_max_mb: Najveća fotografija (MB)
+    video_max_mb: Najveći video (MB)
+    video_max_seconds: Najduži video (sekunde)
+    slide_seconds: Broj sekundi prikaza svake fotografije ili tekstualne priče
+    slide_seconds_help: Video se reprodukuje onoliko dugo koliko traje.
+    bar_placement: Prikaži traku s pričama
+    placement:
+      index: Na glavnom popisu tema
+      index_tags: Na popisu tema i na stranicama oznaka
+      page: Samo na stranici Priče
+      none: Nigdje (samo u vidžetima)
+    bar_order: Redoslijed u traci s pričama
+    bar_order_help: Članovi uvijek prvo vide vlastitu priču.
+    order:
+      smart: Prvo nove priče, zatim osobe koje pratite, pa najnovije
+      newest: Najnovije prvo
+    default_audience: Ko može vidjeti novu priču, osim ako član odabere drugačije
+    audience:
+      everyone: Svi koji mogu vidjeti priče
+      members: Prijavljeni članovi
+      followers: Samo pratioci
+    ignore_hides: Sakrij priče člana od osoba koje taj član ignoriše
+    ignore_hides_help: "Iz ekstenzije FoF Ignore Users. Osobe koje vi ignorišete ionako se nikad ne prikazuju u vašoj traci."
+    reactions: Brze reakcije
+    reactions_help: Do 8 emojija, odvojenih razmacima. Ako unesete samo jedan emoji, prikazuje se samo dugme za sviđanje.
+    reply_via: Odgovori na priču šalju se kao
+    reply_via_help: Odgovor ide privatno osobi koja je objavila priču. Navedene su samo instalirane opcije.
+    reply:
+      auto: Privatna poruka (prva instalirana)
+      parley: Parley poruka
+      messages: Privatna poruka u Flarumu
+      "off": "Isključeno: bez polja za odgovor"
+    approval_posts: Zadrži priče na odobrenje za članove s manje objava od
+    approval_help: "0 isključuje ovu opciju. Članovi s dozvolom „Objavljivanje priča bez odobrenja“ nikad se ne zadržavaju."
+    approval_days: "… ili čije je članstvo kraće od (dana)"
+    approval_trust_level: "… ili ispod ovog nivoa povjerenja"
+    notify_followers: Obavijesti pratioce kada neko objavi priču
+    notify_followers_help: Najviše jedna obavijest po osobi dnevno, šalje se u pozadini.
+    notify_cap: Najveći broj pratilaca koji se obavještavaju o jednoj priči
+    daily_limit: Najviše priča koje član može objaviti dnevno
+    highlights_max: Najviše zbirki po članu
+    highlight_stories_max: Najviše priča u jednoj zbirci
+    permissions:
+      view: Pregled priča
+      create: Objavljivanje priča
+      react: Reagovanje na priče
+      skip_approval: Objavljivanje priča bez odobrenja
+      moderate: Odobravanje, skrivanje i brisanje priča
+
+  api:
+    upload_failed: Datoteka nije otpremljena. Pokušajte ponovo.
+    too_large: Datoteka je prevelika.
+    bad_type: Taj tip datoteke nije podržan. Koristite fotografiju u formatu JPEG, PNG, WebP ili GIF, ili video u formatu MP4 ili WebM.
+    too_long: "Najduže trajanje videa je {max} s."
+    kind_off: Ova vrsta priče je isključena.
+    media_missing: Prvo dodajte fotografiju ili video.
+    text_missing: Napišite nešto za svoju priču.
+    followers_off: Priče samo za pratioce nisu dostupne na ovoj platformi.
+    daily_limit: "Možete objaviti najviše {count} priča dnevno."
+    bad_reaction: Ta reakcija nije dostupna.
+    story_gone: Ta priča više nije dostupna.
+    already_reported: Već ste prijavili ovu priču.
+    cannot_mute: Ne možete utišati ovu osobu.
+    highlights_full: "Možete imati najviše {count} zbirki."
+    highlight_full: "Zbirka može sadržavati najviše {count} priča."
+
+  email:
+    mentioned:
+      subject: "Spomenuti ste u priči osobe {actor}"
+      body: |
+        Spomenuti ste u priči osobe {actor}. Pogledajte je prije nego što nestane:
+
+        {url}
+
+  forum:
+    load_failed: Priče se nisu mogle učitati. Pokušajte ponovo.
+    nav:
+      stories: Priče
+      queue: Priče za pregled
+    widget:
+      title: Priče
+    bar:
+      label: Priče
+      title: Priče
+      see_all: Prikaži sve
+      your_story: Vaša priča
+      add: Dodajte u svoju priču
+      ring_new: "Priča: {name}, nova"
+      ring_seen: "Priča: {name}, pogledana"
+    audience:
+      everyone: Svi
+      members: Članovi
+      followers: Pratioci
+    viewer:
+      label: "Priča: {name}"
+      close: Zatvori
+      previous: Prethodna
+      next: Sljedeća
+      more: Više opcija
+      pause: Pauziraj
+      play: Pokreni
+      mute: Isključi zvuk
+      unmute: Uključi zvuk
+      paused: Pauzirano
+      your_story: Vaša priča
+      photo_alt: "Fotografija: {name}"
+      seen_by: "{count, plural, one {Pogledala # osoba} few {Pogledale # osobe} other {Pogledalo # osoba}}"
+      reactions: "{count, plural, one {# reakcija} few {# reakcije} other {# reakcija}}"
+      react: Reagujte
+      reacted: "Reagovali ste: {reaction}"
+      unreacted: Reakcija je uklonjena
+      reply_label: Odgovorite privatno
+      reply_placeholder: "Odgovor za {name}…"
+      reply_prefix: "Odgovor na vašu priču:"
+      reply_sent: "Poslano privatno: {name}"
+      reply_failed: "Vaš odgovor nije poslan. Pokušajte ponovo."
+      send: Pošaljite
+      reported: Hvala. Moderator će to pregledati.
+      muted: "Nećete vidjeti priče osobe {name} u svojoj traci. Poništite utišavanje na njenom profilu."
+      copied: Link je kopiran
+      copy_failed: Link se nije mogao kopirati.
+      highlighted: "Dodano u: {title}"
+      hidden: Skriveno od svih osim osoblja i osobe koja je objavila priču
+      deleted: Priča je obrisana
+      delete_confirm: Želite li obrisati ovu priču? Ovo se ne može poništiti.
+      menu:
+        highlight: Dodajte u zbirku
+        report: Prijavite priču
+        mute: "Utišajte priče: {name}"
+        copy: Kopirajte link
+        hide: Sakrijte priču
+        delete: Obrišite priču
+    create:
+      title: Nova priča
+      kind_label: Vrsta priče
+      kinds:
+        photo: Fotografija
+        video: Video
+        text: Tekst
+      pick_photo: Odaberite fotografiju
+      pick_video: Odaberite video
+      photo_help: "JPEG, PNG, WebP ili GIF, do {mb} MB. Podaci o lokaciji se uklanjaju."
+      video_help: "MP4 ili WebM, do {seconds} s i {mb} MB. Podaci o lokaciji se uklanjaju."
+      too_large: "Datoteka je veća od {mb} MB."
+      upload_failed: Datoteka nije otpremljena. Pokušajte ponovo.
+      text: Vaš tekst
+      text_placeholder: Napišite nešto…
+      background: Boja pozadine
+      background_n: "Pozadina {number}"
+      caption: Opis
+      caption_help: "Spomenite osobe pomoću znaka @ i korisničkog imena. Preostalo znakova: {count}."
+      link: Link (neobavezno)
+      audience: Ko je može vidjeti
+      also_moments: Objavite i u Moments
+      moments_failed: Vaša priča je objavljena, ali nije mogla biti objavljena u Moments.
+      lifetime: "{count, plural, one {Nestaje nakon # sata} few {Nestaje nakon # sata} other {Nestaje nakon # sati}}"
+      share: Podijelite
+      shared: Vaša priča je objavljena.
+      pending: Vaša priča će se pojaviti kada je moderator odobri.
+    seen_by:
+      title: Ko je pogledao
+      private: Ovo možete vidjeti samo vi
+      empty: Ovu priču još niko nije pogledao.
+      more: Prikaži još
+      reacted: "Reagovanje: {reaction}"
+    report:
+      title: Prijavite priču
+      reason: Zašto je prijavljujete?
+      reasons:
+        spam: Spam
+        inappropriate: Neprimjereno
+        harassment: Uznemiravanje ili maltretiranje
+        other: Nešto drugo
+      detail: Ima li nešto što moderatori trebaju znati? (neobavezno)
+      submit: Prijavite
+    highlights:
+      title: Zbirke
+      hint: Zadržite priče i nakon 24 sata tako što ćete ih dodati u zbirku iz menija priče.
+      add_title: Dodajte u zbirku
+      new_label: Ili započnite novu zbirku
+      new_placeholder: Izleti, projekti, takmičenja…
+      create: Napravite zbirku
+      play: "Pokrenite zbirku {title}"
+      delete: "Obrišite zbirku {title}"
+      delete_confirm: "Želite li obrisati zbirku {title}? Priče u njoj nestat će kada im istekne vrijeme."
+    page:
+      title: Priče
+      intro: "{count, plural, one {Šta članovi dijele. Priče nestaju nakon # sata.} few {Šta članovi dijele. Priče nestaju nakon # sata.} other {Šta članovi dijele. Priče nestaju nakon # sati.}}"
+      add: Dodajte priču
+      all: Sve
+      following: Praćeni
+      empty: Trenutno nema priča.
+      load_more: Učitaj još
+      open: "Otvorite priču: {name}"
+      gone: Ta priča više nije dostupna.
+    profile:
+      live: Priče sada
+      empty: "{name} trenutno nema priča."
+      empty_own: Trenutno nemate priča.
+      pending: Čeka odobrenje
+      hidden: Sakriveno od strane moderatora
+      kept: Sačuvano u zbirci
+    queue:
+      title: Priče za pregled
+      pending: Čeka odobrenje
+      reported: Prijavljeno
+      approve: Odobrite
+      decline: Odbijte
+      dismiss: Odbacite
+      hide: Sakrijte priču
+      delete: Obrišite priču
+      pending_empty: Nijedna priča ne čeka odobrenje.
+      reported_empty: Nijedna priča nije prijavljena.
+    notifications:
+      glimpseMentioned: "Spomenuti ste u priči osobe {user}"
+      glimpseMentioned_preference: Neko me spomene u priči
+      glimpseNewStory: "Nova priča: {user}"
+      glimpseNewStory_preference: Neko koga pratim objavi priču
