@@ -1,0 +1,356 @@
+ernestdefoe-syllabus:
+  lib:
+    kiosk:
+      course: Kurs
+  admin:
+    settings:
+      show_nav: Prikaži „Kursevi“ na bočnoj traci platforme
+      discussion_tag: Oznaka za teme o lekcijama
+      discussion_tag_help: Gdje se pokreću teme „Postavite pitanje o ovoj lekciji“ kada kurs ne odabere vlastitu oznaku. Nastavnici moraju imati dozvolu za pokretanje tema u njoj.
+      no_tag: Bez oznake
+      certificate_text: Tekst certifikata
+      certificate_text_help: "Ispisuje se ispod naziva kursa. Koristite {name}, {course}, {date} i {forum}. Ostavite prazno za zadani tekst."
+      certificate_signature: Red za potpis na certifikatu
+      certificate_signature_help: Ime ili titula koja se ispisuje iznad „Izdaje“. Ostavite prazno da se koristi naziv platforme.
+      certificate_logo: Adresa logotipa certifikata
+      certificate_logo_help: Https:// adresa slike. Ostavite prazno da se koristi logotip platforme.
+      max_file_mb: Najveća datoteka zadaće (MB)
+      file_types: Tipovi datoteka koje polaznici smiju predati
+      file_types_help: Ekstenzije, odvojene zarezima. Web stranice, SVG, skripte i programi uvijek se odbijaju, bez obzira na ono što je ovdje navedeno.
+      max_video_mb: Najveći otpremljeni video lekcije (MB)
+      max_video_mb_help: MP4, WebM ili Ogg. Postavite 0 da biste dozvolili samo YouTube i Vimeo adrese. Primjenjuje se i ograničenje otpremanja vašeg servera.
+      submissions_per_hour: Broj predaja zadaća po članu na sat
+    permissions:
+      view: Pregled kurseva
+      enrol: Upis na kurseve
+      create: Kreiranje i vođenje kurseva (nastavnici)
+      manage: Upravljanje svim kursevima
+    categories:
+      title: Kategorije kurseva
+      help: Prevucite kategorije u redoslijed u kojem ih katalog prikazuje. Tastaturom fokusirajte ručku i koristite strelice gore i dolje.
+      new: Naziv nove kategorije
+      add: Dodajte
+      name: Naziv kategorije
+      move: "Pomjerite: {name}"
+      sortable: kategorija koja se može pomjerati
+      courses: "{count, plural, one {# kurs} few {# kursa} other {# kurseva}}"
+      delete: Obrišite kategoriju
+      delete_confirm: "Želite li obrisati „{name}“? Njeni kursevi ostaju, bez kategorije."
+    widgets:
+      courses: Kursevi
+
+  forum:
+    nav: Kursevi
+    errors:
+      generic: Nešto je pošlo po zlu. Pokušajte ponovo.
+    units:
+      hours: "{count} h"
+      minutes: "{count} min"
+    types:
+      text: Tekst
+      video: Video
+      assignment: Zadaća
+      quiz: Kviz
+    difficulty:
+      beginner: Početni
+      intermediate: Srednji
+      advanced: Napredni
+    progress:
+      label: "{percent}%"
+      lessons: "{done} od {total} lekcija"
+
+    catalogue:
+      title: Kursevi
+      new: Novi kurs
+      tabs:
+        all: Svi kursevi
+        mine: Moji kursevi
+      all_categories: Sve kategorije
+      all_levels: Svi nivoi
+      category: Kategorija
+      level: Nivo
+      search: Pretraži kurseve
+      empty: Još nema kurseva.
+      empty_mine: Još niste upisali nijedan kurs.
+      no_results: Nijedan kurs ne odgovara pretrazi.
+      more: Učitaj još
+      back: Svi kursevi
+
+    course:
+      draft: Nacrt
+      draft_notice: Ovaj kurs je nacrt. Vide ga samo njegovi nastavnici.
+      featured: Izdvojeno
+      restricted: Samo za članove
+      lessons: "{count, plural, one {# lekcija} few {# lekcije} other {# lekcija}}"
+      students: "{count, plural, one {# polaznik} few {# polaznika} other {# polaznika}}"
+      by: "Autor: {name}"
+      completed: Završeno
+      continue: Nastavite
+      start: Započnite kurs
+      enrol: Upišite se
+      leave: Napustite ovaj kurs
+      leave_confirm: Napustiti ovaj kurs? Završene lekcije ostaju sačuvane ako se ponovo upišete.
+      login_to_enrol: Prijavite se za upis
+      groups_only: "Ovaj kurs je otvoren za: {groups}."
+      no_access: Nemate pristup ovom kursu.
+      paid_only: Ovaj kurs je za osobe koje ga kupe.
+      preview_note: "{count, plural, one {Prva lekcija je besplatna za pregled.} few {Prve # lekcije su besplatne za pregled.} other {Prvih # lekcija je besplatno za pregled.}}"
+      sequential: Lekcije se otključavaju redom
+      instructors: Nastavnici
+      outline: Lekcije
+      no_lessons: Još nije objavljena nijedna lekcija.
+      edit: Uredite kurs
+      view_certificate: Pogledajte certifikat
+      missing: Ovaj kurs ne postoji ili ga ne možete vidjeti.
+
+    outline:
+      preview: Pregled
+      state_done: završeno
+      state_open: otvoreno
+      state_locked: zaključano
+
+    lesson:
+      missing: Ova lekcija ne postoji ili je ne možete vidjeti.
+      edit: Uredite lekciju
+      nav: Navigacija kroz lekcije
+      locked_login: Prijavite se i upišite kurs da biste pročitali ovu lekciju.
+      locked_enrol: Upišite kurs da biste pročitali ovu lekciju.
+      locked_access: Nemate pristup ovoj lekciji.
+      locked_order: Završite lekcije prije ove da biste je otključali.
+      see_course: Nazad na kurs
+      mark_complete: Označite kao završeno
+      completed: Završeno
+      undo: Označite kao nezavršeno
+      course_done: Završili ste kurs. Vaš certifikat je spreman.
+      ask: Postavite pitanje o ovoj lekciji
+      ask_text: "{count, plural, =0 {Još nema pitanja — budite prvi.} one {Za sada # odgovor.} few {Za sada # odgovora.} other {Za sada # odgovora.}}"
+      open_discussion: Otvorite temu
+      quiz_missing: Kviz ove lekcije više nije dostupan.
+      quiz_hint: Položite kviz da biste završili ovu lekciju. Završili ste ga? Provjerite rezultat.
+      quiz_check: Provjerite moj rezultat
+
+    assignment:
+      title: Vaš rad
+      enrol_first: Upišite kurs da biste predali ovu zadaću.
+      text_label: Vaš odgovor
+      text_placeholder: Napišite odgovor ovdje, priložite datoteke ili oboje.
+      attach: Priložite datoteke
+      limits: "Do 5 datoteka, svaka do {mb} MB: {types}."
+      submit: Predajte
+      sent: Predato. Nastavnik je obaviješten.
+      feedback_from: "Povratna informacija od: {name}"
+      status:
+        pending: Čeka pregled
+        passed: Položeno
+        needs_work: Potreban je dodatni rad
+
+    editor:
+      new_title: Novi kurs
+      edit_title: Uređivanje kursa
+      view: Pogledajte
+      title: Naslov
+      summary: Sažetak
+      summary_help: Jedna ili dvije rečenice za karticu kursa.
+      description: Opis
+      cover: Naslovna slika
+      cover_upload: Otpremite sliku
+      cover_url: Adresa slike
+      cover_remove: Uklonite naslovnu sliku
+      cover_help: Otpremite JPEG, PNG, GIF ili WebP do 5 MB ili zalijepite https:// adresu slike.
+      cover_help_new: Zalijepite https:// adresu slike ili prvo sačuvajte kurs da biste mogli otpremiti sliku.
+      category: Kategorija
+      no_category: Bez kategorije
+      difficulty: Nivo
+      no_level: Bilo koji nivo
+      minutes: Procijenjeno trajanje (minute)
+      preview: Besplatne lekcije za pregled
+      preview_help: Koliko prvih lekcija svako može pročitati bez upisa.
+      access: Ko se može upisati
+      access_everyone: Svi koji imaju dozvolu za upis
+      access_groups: Samo članovi ovih grupa
+      access_paid: Osobe koje ga kupe (prodaja putem ekstenzije Kiosk)
+      access_help: Plaćeni kursevi rade preko grupa — sve što dodaje člana u grupu nakon uplate (na primjer ekstenzija za pretplate) otključava kurs za tog člana.
+      sequential: Lekcije se otključavaju redom
+      notify_new_lessons: Obavijesti polaznike kada se objavi nova lekcija
+      featured: Izdvojite ovaj kurs
+      tag: Oznaka za teme o lekcijama
+      default_tag: Zadana oznaka platforme
+      tag_help: Gdje se pokreću teme „Postavite pitanje o ovoj lekciji“ za ovaj kurs.
+      badge: Značka za završetak kursa
+      no_badge: Bez značke
+      badge_help: Dodjeljuje se preko FoF Badges kada polaznik završi kurs.
+      co_instructors: Dodatni nastavnici
+      co_instructors_help: Članovi koji smiju kreirati kurseve mogu ga voditi zajedno s vama.
+      find_member: Pronađite člana
+      remove: Uklonite
+      published: Objavljeno
+      save: Sačuvajte
+      saved: Sačuvano.
+      outline: Struktura
+      outline_help: Prevucite odjeljke i lekcije u željeni redoslijed. Tastaturom fokusirajte ručku i koristite strelice gore i dolje.
+      outline_after_save: Sačuvajte kurs da biste počeli dodavati lekcije.
+      sortable: stavka koja se može pomjerati
+      move: "Pomjerite: {title}"
+      section_title: Naslov odjeljka
+      new_section: Novi odjeljak
+      add_section: Dodajte odjeljak
+      remove_section: Uklonite ovaj odjeljak
+      add_text: Tekstualna lekcija
+      add_video: Video lekcija
+      add_assignment: Zadaća
+      add_quiz: Kviz
+      delete: Obrišite kurs
+      delete_confirm: "Želite li obrisati kurs „{title}“ sa svim lekcijama, upisima i predatim zadaćama? Već dodijeljeni certifikati ostaju važeći."
+
+    lesson_editor:
+      new_title: Nova lekcija
+      edit_title: Uređivanje lekcije
+      type: Vrsta lekcije
+      body_text: Lekcija
+      body_video: Bilješke ispod videa
+      body_assignment: Uputstvo
+      body_quiz: Uvod
+      duration: Vrijeme potrebno za završetak (minute)
+      video: Video
+      video_url: Adresa videa
+      video_url_help: YouTube ili Vimeo adresa. YouTube videi se reprodukuju s youtube-nocookie.com.
+      video_upload: Otpremite video datoteku
+      video_remove: Uklonite datoteku
+      video_limits: "MP4, WebM ili Ogg, do {mb} MB. Otpremljena datoteka se reprodukuje umjesto adrese."
+      video_after_save: Prvo sačuvajte lekciju da biste mogli otpremiti video datoteku.
+      uploading: Otpremanje…
+      quiz: Kviz
+      pick_quiz: Odaberite kviz
+      quiz_help: Kvizovi koje možete uređivati u ekstenziji Brainstorm. Polaganjem kviza lekcija se završava.
+      no_quizzes: Još nemate nijedan kviz. Prvo ga napišite na stranici Kvizovi.
+      discussion: Tema
+      discussion_keep: Zadržite povezanu temu
+      discussion_none: Bez teme
+      discussion_auto: Pokrenite temu kada se lekcija objavi
+      discussion_link: Povežite postojeću temu
+      discussion_link_placeholder: Adresa ili broj teme
+      discussion_help: Polaznici vide okvir „Postavite pitanje o ovoj lekciji“ koji je otvara.
+      discussion_failed: "Lekcija je sačuvana, ali tema nije mogla biti pokrenuta: {reason}"
+      delete: Obrišite lekciju
+      delete_confirm: Želite li obrisati ovu lekciju? Brišu se i napredak polaznika i njihove predate zadaće. Već završeni kursevi ostaju završeni.
+
+    teach:
+      title: Panel za nastavnike
+      tabs:
+        courses: Moji kursevi
+        review: Zadaće
+        students: Polaznici
+      course: Kurs
+      lessons: Lekcije
+      students: Polaznici
+      completed: Završeno
+      waiting: Za pregled
+      actions: Radnje
+      no_courses: Još ne vodite nijedan kurs.
+      not_allowed: Panel za nastavnike namijenjen je članovima koji smiju kreirati kurseve.
+      filter: Prikaži
+      filter_pending: Čeka pregled
+      filter_needs_work: Potreban je dodatni rad
+      filter_passed: Položeno
+      filter_all: Sve
+      nothing_to_review: Nema ničega za pregled.
+      feedback: Povratna informacija za polaznika (neobavezno)
+      pass: Položeno
+      needs_work: Potreban je dodatni rad
+      reviewed: Pregled je sačuvan. Polaznik je obaviješten.
+      student: Polaznik
+      progress: Napredak
+      last_seen: Posljednje učenje
+      no_students: Još se niko nije upisao.
+      quiz_results: Rezultati kviza
+      quiz_passed: "{count, plural, one {# polaznik je položio} few {# polaznika su položila} other {# polaznika je položilo}}"
+      quiz_details: Pogledajte sve rezultate
+
+    certificate:
+      title: Certifikat o završetku kursa
+      heading: Certifikat o završetku kursa
+      presented_to: Ovim se potvrđuje da
+      for_completing: ima uspješno završen kurs
+      default_text: "Certifikat dodjeljuje {forum}, {date}."
+      date: Datum
+      issued_by: Izdaje
+      verify_at: "Autentičnost certifikata provjerite na"
+      print: Ispišite ili sačuvajte kao PDF
+      copy_link: Kopirajte link za provjeru
+      copied: Link je kopiran.
+      back: Nazad na kurs
+      verified: Provjereni certifikat
+      verified_text: "{name}: završen kurs {course}, {date}."
+      issued_by_forum: "Izdaje {forum}."
+      invalid: Ovaj certifikat nije pronađen.
+      see_course: Pogledajte kurs
+
+    profile:
+      nav: Kursevi
+      in_progress: U toku
+      completed: Završeno
+      empty: Još nema kurseva.
+      hidden: Ovaj član drži svoje kurseve privatnim.
+
+    settings:
+      show_courses: Prikaži moje kurseve na mom profilu
+      notify_reviewed: Neko pregleda moju zadaću
+      notify_completed: Završim kurs
+      notify_new_lesson: Objavljena je nova lekcija u kursu koji pohađam
+      notify_submission: Polaznik preda zadaću u kursu koji vodim
+
+    notifications:
+      reviewed_passed: "Zadaća „{lesson}“ je položena (pregled: {username})"
+      reviewed_needs_work: "Zadaća „{lesson}“ je pregledana, potreban je dodatni rad (pregled: {username})"
+      submission: "Predata zadaća „{lesson}“: {username}"
+      new_lesson: "Nova lekcija u kursu {course}"
+      completed: "Završili ste kurs {course} — certifikat je spreman"
+
+    widget:
+      name: Syllabus kursevi
+      title_member: Nastavite učiti
+      title_guest: Izdvojeni kursevi
+      heading: Naslov
+      limit: Broj kurseva
+      empty: Još nema kurseva.
+      all: Svi kursevi
+
+  api:
+    title_required: Unesite naslov.
+    invalid: Taj izbor nije dostupan.
+    cover_url: Naslovna slika mora biti https:// adresa slike.
+    groups_required: Odaberite barem jednu grupu ili otvorite kurs za sve.
+    not_an_instructor: "{name} ne može kreirati kurseve, pa ne može ni voditi nijedan."
+    slow_down: Previše zahtjeva. Sačekajte nekoliko minuta i pokušajte ponovo.
+    quiz_needs_brainstorm: Lekcije s kvizom zahtijevaju ekstenziju Brainstorm.
+    quiz_required: Odaberite kviz.
+    quiz_not_yours: Možete koristiti samo kvizove koje možete uređivati.
+    video_url: Koristite YouTube ili Vimeo adresu.
+    discussion_not_found: Ta tema ne postoji ili je ne možete vidjeti.
+    upload_failed: Datoteka nije stigla. Pokušajte ponovo.
+    too_big: "Datoteka je prevelika. Ograničenje je {mb} MB."
+    not_an_image: To nije JPEG, PNG, GIF ni WebP slika.
+    video_off: Otpremanje videa je isključeno na ovoj platformi.
+    video_type: Video mora biti u formatu MP4, WebM ili Ogg.
+    file_type: "Ovaj tip datoteke se ne može predati. Dozvoljeno: {types}."
+    too_many_files: "Priložite najviše {max} datoteka."
+    submission_empty: Napišite odgovor ili priložite datoteku.
+    already_waiting: Vaša posljednja predaja još čeka pregled.
+    already_passed: Ovu zadaću ste već položili.
+    discussion_title: "{course}: {lesson}"
+    discussion_body: "Pitanja o lekciji **{lesson}** u kursu {course} idu ovdje.\n\n{url}"
+
+  email:
+    completed:
+      subject: "Završili ste kurs {course}"
+      body: "Čestitamo — završili ste kurs **{course}**. Vaš certifikat je spreman: {url}"
+    reviewed:
+      subject: "Vaša zadaća „{lesson}“ je pregledana"
+      passed: "Zadaću **{lesson}** u kursu {course} pregledala je osoba {reviewer}, a ocjena je: položeno. {url}"
+      needs_work: "Zadaću **{lesson}** u kursu {course} pregledala je osoba {reviewer} i traži se dodatni rad. {url}"
+    submission:
+      subject: "Predata zadaća „{lesson}“: {student}"
+      body: "Predata je zadaća **{lesson}** u kursu {course} (osoba: {student}). Pregledajte je u panelu za nastavnike: {url}"
+    new_lesson:
+      subject: "Nova lekcija u kursu {course}"
+      body: "Nova lekcija, **{lesson}**, spremna je u kursu {course}: {url}"
