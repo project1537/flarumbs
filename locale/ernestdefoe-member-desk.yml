@@ -1,0 +1,449 @@
+ernestdefoe-member-desk:
+  admin:
+    page:
+      title: Korisnici
+      description: "Centar za članove: pronađite, filtrirajte i upravljajte članovima."
+      member_title: Član
+      member_description: Sve o jednom članu i šta možete poduzeti prema tom članu.
+      log_title: Dnevnik Centra za članove
+      log_description: Svaka radnja u Centru za članove, ko ju je izvršio i stanje člana u tom trenutku.
+    settings:
+      retention: Čuvaj imena izbrisanih članova u dnevniku (dana)
+      retention_help: "Nakon toga, zapisi anonimiziranog ili izbrisanog člana u dnevniku zadržavaju samo ID i brojače. Do tada se e-mail i IP adrese tog člana čuvaju samo kao hash vrijednosti sa solju: pseudonimno, ne anonimno (neko ko ima bazu podataka i tajni ključ ove platforme mogao bi testirati pretpostavke), pa se i one uklanjaju."
+      open: Otvorite Centar za članove
+    permissions:
+      view: Otvaranje Centra za članove (popis i stranice članova)
+      view_emails: Pregled punih e-mail adresa članova u Centru za članove
+      view_ips: Pregled IP adresa članova u Centru za članove
+      mark_spammer: Označavanje članova kao spamera u Centru za članove
+      export: Izvoz članova u CSV
+
+  forum:
+    title: Centar za članove
+    nav: Centar za članove
+    open_member: Otvorite u Centru za članove
+    no_access: Nemate dozvolu za otvaranje Centra za članove.
+
+  lib:
+    never: nikad
+    error:
+      generic: Nešto je pošlo po zlu. Pokušajte ponovo.
+
+    status:
+      active: Aktivno
+      admin: Administrator
+      anonymized: Anonimizirano
+      banned_ip: Blokirana IP adresa
+      unconfirmed: Nepotvrđeno
+      open_reports: "{count, plural, one {# otvorena prijava} few {# otvorene prijave} other {# otvorenih prijava}}"
+      suspended_forever: Pod suspenzijom
+      suspended_until: "Pod suspenzijom do {date}"
+
+    list:
+      views: Prikazi Centra za članove
+      tab_members: Članovi
+      tab_log: Dnevnik
+      export: Izvezite CSV
+      search_label: Pretraga članova
+      search_name: Pretraga po imenu ili korisničkom imenu
+      search_email: Pretraga po imenu, korisničkom imenu ili e-mailu
+      search_ip: Pretraga po imenu, korisničkom imenu ili IP adresi
+      search_all: Pretraga po imenu, korisničkom imenu, e-mailu ili IP adresi
+      filters: Filteri
+      filters_n: "Filteri ({count})"
+      sort: Poredak
+      count: "{count, plural, one {# član} few {# člana} other {# članova}}"
+      all_selected: "Odabrani su svi članovi koji odgovaraju ovim filterima ({count})."
+      clear_selection: Poništite odabir
+      page_selected: "Odabrani su svi ({count}) na ovoj stranici."
+      select_all: "Odaberite sve koji odgovaraju ({count})"
+      select_page: Odaberite ovu stranicu
+      select_one: "Odaberite: {name}"
+      hidden: Skriveno
+      members_only: Članovi
+      empty: Nijedan član ne odgovara ovim filterima.
+      pages: Stranice
+      page_of: "Stranica {page} od {pages}"
+      prev: Prethodna
+      next: Sljedeća
+      card_posts: "{count, plural, one {# objava} few {# objave} other {# objava}}"
+      card_joined: "Član od {date}"
+      card_seen: "Posljednja aktivnost: {ago}"
+      reports_open: "Otvoreno: {count}"
+      reports_title: "{total, plural, one {# prijava} few {# prijave} other {# prijava}} protiv ovog člana, otvoreno: {open}"
+
+    col:
+      member: Član
+      email: E-mail
+      groups: Grupe
+      joined: Datum pridruživanja
+      seen: Posljednja aktivnost
+      posts: Objave
+      discussions: Teme
+      ip: Posljednja IP adresa
+      reports: Prijave
+      status: Status
+
+    sort:
+      joinedAt_desc: Najnoviji članovi
+      joinedAt_asc: Najstariji članovi
+      lastSeenAt_desc: Najnovija posljednja aktivnost
+      lastSeenAt_asc: Najdavnija posljednja aktivnost
+      posts_desc: Najviše objava
+      posts_asc: Najmanje objava
+      discussions_desc: Najviše tema
+      discussions_asc: Najmanje tema
+      username_desc: "Korisničko ime, od Ž do A"
+      username_asc: "Korisničko ime, od A do Ž"
+
+    filters:
+      label: Filteri
+      saved: Sačuvani filteri
+      shared: zajednički
+      mine: vaši
+      save: Sačuvajte ove filtere
+      save_title: Sačuvajte filtere
+      save_button: Sačuvajte
+      name: Naziv
+      share: Podijelite sa svim osobljem koje može otvoriti Centar za članove
+      delete: "Obrišite sačuvani filter {name}"
+      delete_confirm: "Želite li obrisati sačuvani filter „{name}“?"
+      groups: Grupa
+      no_group: Bez dodatne grupe
+      status: Status
+      status_unconfirmed: E-mail nije potvrđen
+      status_suspended: Pod suspenzijom
+      status_anonymized: Anonimizirano
+      status_noposts: Bez objava
+      status_banned: Blokirana IP adresa
+      status_reported: Ima otvorenih prijava
+      status_silenced: Na čekanju (Trust Levels)
+      trust: Nivo povjerenja
+      reported: Prijavljeno
+      reported_min: Najmanje ovoliko puta
+      reported_within_P7D: u 7 dana
+      reported_within_P30D: u 30 dana
+      reported_within_P90D: u 90 dana
+      reported_within_ever: ikada
+      joined: Datum pridruživanja
+      seen: Posljednja aktivnost
+      posts: Objave
+      from: Od
+      to: Do
+      min: Najmanje
+      max: Najviše
+      within_P1D: Danas
+      within_P7D: 7 dana
+      within_P30D: 30 dana
+      within_P1Y: Godinu dana
+      away_P30D: Neaktivnost 30+ dana
+      away_P6M: Neaktivnost 6+ mjeseci
+      away_P1Y: Neaktivnost 1+ godinu
+      away_P2Y: Neaktivnost 2+ godine
+      show: "Prikaži: {count, plural, one {# član} few {# člana} other {# članova}}"
+
+    chips:
+      group: "Grupa: {name}"
+      joined_P1D: Pridruživanje danas
+      joined_P7D: Pridruživanje u posljednjih 7 dana
+      joined_P30D: Pridruživanje u posljednjih 30 dana
+      joined_P1Y: Pridruživanje u posljednjoj godini
+      away_P30D: Bez aktivnosti 30+ dana
+      away_P6M: Bez aktivnosti 6+ mjeseci
+      away_P1Y: Bez aktivnosti 1+ godinu
+      away_P2Y: Bez aktivnosti 2+ godine
+      joined_from: "Pridruživanje od {date}"
+      joined_to: "Pridruživanje do {date}"
+      seen_from: "Aktivnost od {date}"
+      seen_to: "Aktivnost do {date}"
+      min_posts: "Najmanje objava: {count}"
+      max_posts: "Najviše objava: {count}"
+      reported_P7D: "Prijavljeno {count}+ puta u 7 dana"
+      reported_P30D: "Prijavljeno {count}+ puta u 30 dana"
+      reported_P90D: "Prijavljeno {count}+ puta u 90 dana"
+      reported_ever: "Prijavljeno {count}+ puta"
+      remove: Uklonite ovaj filter
+      clear: Očistite sve
+
+    bulk:
+      label: Radnje za odabrane članove
+      selected: "Odabrano: {count}"
+      addGroup: Dodajte u grupu
+      removeGroup: Uklonite iz grupe
+      suspend: Suspendujte
+      confirm: Potvrdite e-mail
+      spammer: Označite kao spamera
+      anonymize: Anonimizirajte
+      delete: Obrišite
+      export: Izvezite
+      clear: Poništite odabir
+
+    confirm:
+      title:
+        addGroup: "Dodajte {count, plural, one {# člana} few {# člana} other {# članova}} u grupu"
+        removeGroup: "Uklonite {count, plural, one {# člana} few {# člana} other {# članova}} iz grupe"
+        suspend: "Suspendujte {count, plural, one {# člana} few {# člana} other {# članova}}"
+        confirm: "Potvrdite e-mail za {count, plural, one {# člana} few {# člana} other {# članova}}"
+        signOut: "Odjavite {count, plural, one {# člana} few {# člana} other {# članova}} sa svih uređaja"
+        spammer: "Označite {count, plural, one {# člana kao spamera} few {# člana kao spamere} other {# članova kao spamere}}"
+        unspam: "Vratite ono što je radnja označavanja spamera sakrila"
+        anonymize: "Anonimizirati {count, plural, one {# člana} few {# člana} other {# članova}}?"
+        delete: "Obrisati {count, plural, one {# člana} few {# člana} other {# članova}}?"
+      go:
+        addGroup: "Dodajte ({count})"
+        removeGroup: "Uklonite ({count})"
+        suspend: "Suspendujte ({count})"
+        confirm: "Potvrdite ({count})"
+        signOut: Odjavite sa svih uređaja
+        spammer: "Označite ({count})"
+        unspam: Vratite
+        anonymize: "Anonimizirajte ({count})"
+        delete: "Obrišite ({count})"
+      mode:
+        anonymize: Anonimizirajte
+        delete: Obrišite
+      no_gdpr: "Anonimizacija zahtijeva GDPR ekstenziju (flarum/gdpr). Bez nje, brisanje koristi Flarumovo vlastito brisanje korisnika."
+      deletion_off: "Brisanje je isključeno u postavkama GDPR ekstenzije, pa je ponuđena samo anonimizacija."
+      group: Grupa
+      admin_group_note: "Grupa Administrator može se dodijeliti samo na stranici samog člana, jedan po jedan."
+      until: Suspendujte na
+      until_days: "{count, plural, one {# dan} few {# dana} other {# dana}}"
+      until_forever: Dok je ne ukinem
+      until_date: Do datuma
+      reason: Razlog (vidi samo osoblje)
+      message: Poruka članu (neobavezno)
+      kept:
+        anonymize: "Ostaje sačuvano: objave ({posts}) i teme ({discussions}) pod anonimnim imenom, kao i brojači objava."
+        delete: "Ostaje sačuvano: zapis u dnevniku za svakog člana, s korisničkim imenom, grupama i brojačima. E-mail i IP adrese čuvaju se samo kao hash vrijednosti sa solju (pseudonimno, ne anonimno), a sve osim brojača uklanja se nakon perioda zadržavanja."
+        spammer: "Ništa se ne briše. Sve što ovo sakrije možete vratiti sa stranice člana."
+        suspend: "Ništa se ne briše. Članovi i dalje mogu čitati, ali ne mogu objavljivati dok suspenzija ne istekne."
+      gone:
+        anonymize: "Briše se: imena, e-mailovi, avatari, grupe, postavke i sesije. Svaki član dobija e-mail da su podaci izbrisani. Ovo se ne može poništiti."
+        delete_gdpr: "Brišu se: nalozi i njihove objave ({posts}), putem GDPR ekstenzije. Svaki član dobija e-mail da su podaci izbrisani. Ovo se ne može poništiti."
+        delete_core: "Brišu se: nalozi. Objave ({posts}) ostaju, prikazane kao objave izbrisanog člana. Ovo se ne može poništiti."
+        spammer: "Svaki nalog je pod suspenzijom dok je ne ukinete, a objave ({posts}) i teme ({discussions}) se skrivaju."
+        spammer_ban: "Svaki nalog je pod suspenzijom dok je ne ukinete, objave ({posts}) i teme ({discussions}) se skrivaju, a IP adrese se blokiraju (osim ako ih dijeli aktivan član)."
+      info:
+        confirm: "{count, plural, =0 {Svi e-mailovi su već potvrđeni; ništa se neće promijeniti.} one {E-mail još nije potvrđen za: #. Ostali ostaju nepromijenjeni.} few {E-mail još nije potvrđen za: #. Ostali ostaju nepromijenjeni.} other {E-mail još nije potvrđen za: #. Ostali ostaju nepromijenjeni.}}"
+        signOut: Bit će odjavljeni sa svih uređaja i morat će se ponovo prijaviti.
+        unspam: "Njihove skrivene objave i teme se vraćaju, IP adrese koje su ovim blokirane se deblokiraju, a suspenzija se ukida."
+      queued: "Riječ je o velikom broju članova, pa se ovo izvršava u pozadini. Možete nastaviti raditi; vidjet ćete kada bude gotovo."
+      names_label: Članovi na koje se ovo odnosi
+      and_more: "i još {count}"
+      skipped: "{count, plural, one {Preskočen je # član:} few {Preskočena su # člana:} other {Preskočeno je # članova:}}"
+      type: "Upišite {count} za potvrdu"
+      cancel: Otkažite
+
+    skip:
+      self: vaš vlastiti nalog
+      admin: administrator
+      anonymized: već anonimizirano
+      nothing: nema šta da se vrati
+      permission: nije dozvoljeno
+      invalid: nije moguće
+      error: došlo je do greške
+
+    result:
+      queued: "Obrađuje se u pozadini: {count, plural, one {# član} few {# člana} other {# članova}}…"
+      done: "Gotovo: ažurirano {count}, preskočeno {failed}."
+      done_ok: "Gotovo: ažurirano je {count}."
+      done_failed: "Ažurirano: {count}, preskočeno: {failed} ({names})"
+
+    done:
+      confirm: E-mail je potvrđen.
+      unsuspend: Suspenzija je ukinuta.
+
+    member:
+      back: Svi članovi
+      not_found: Taj član ne postoji (više).
+      sections: Odjeljci člana
+      id: "ID {id}"
+      online: Trenutno na mreži
+      online_now: Trenutno na mreži
+      verified: E-mail je potvrđen
+      not_verified: E-mail nije potvrđen
+      confirm_email: Potvrdite e-mail
+      copy_email: Kopirajte e-mail
+      copied: E-mail je kopiran.
+      view_profile: Profil
+      suspend: Suspendujte
+      unsuspend: Ukinite suspenziju
+      more: Više radnji
+      sign_out: Odjavite sa svih uređaja
+      spammer: Označite kao spamera
+      unspam: Vratite
+      anonymize: Anonimizirajte…
+      delete: Obrišite…
+      admin_protected: "Administratori se ovdje ne mogu suspendovati, anonimizirati ni brisati."
+      you_protected: "Ove radnje se nikad ne primjenjuju na vaš vlastiti nalog."
+      stat_posts: Objave
+      stat_discussions: Teme
+      stat_likes: Primljena sviđanja
+      stat_joined: Član od
+      stat_seen: Posljednja aktivnost
+      stat_year: "{count, plural, one {# objava} few {# objave} other {# objava}} ove godine"
+      spark_label: "Objave u posljednjih 12 mjeseci, po mjesecima (ukupno: {count})"
+      banner_suspended: "Pod suspenzijom do {date} ({ago})"
+      banner_suspended_forever: Pod suspenzijom dok je neko ne ukine
+      banner_reason: "Razlog: {reason}"
+      banner_spammer: "Označeno kao spamer {date}, od: {by}"
+      banner_spammer_sub: "Sakrivene objave: {posts}, sakrivene teme: {discussions}, blokirane IP adrese: {ips}. Vraćanjem se sve vraća."
+      banner_erasure_awaiting_user_confirmation: "Zahtjev za brisanje podataka podnesen je {date}, a još nije potvrđen e-mailom."
+      banner_erasure_user_confirmed: "Zahtjev za brisanje podataka podnesen je {date}. Čeka u redu GDPR ekstenzije."
+      banner_anonymized: "Ovaj nalog je anonimiziran. Objave ostaju, pripisane ovom anonimnom imenu."
+
+    tab:
+      profile: Profil
+      groups: Grupe
+      activity: Aktivnost
+      reports: Prijave
+      ips: IP adrese i drugi nalozi
+      notes: Bilješke
+      warnings: Upozorenja i suspenzije
+      log: Administratorski dnevnik
+
+    profile:
+      account: Nalog
+      display_name: Prikazano ime
+      username: Korisničko ime
+      email: E-mail
+      joined: Član od
+      seen: Posljednja aktivnost
+      online_status: Status na mreži
+      trust: Nivo povjerenja
+      online_shown: Vidljivo drugima
+      online_hidden: Skriveno od drugih
+      locale: Jezik
+      about: O članu
+      empty_field: Nije popunjeno
+      no_fields: Nijedno polje profila nije popunjeno.
+      no_masquerade: "Instalirajte FoF Masquerade da biste ovdje prikazali prilagođena polja profila."
+
+    groups:
+      title: Grupe
+      toggle: "U grupi {name}"
+      added: "dodano {date}, od: {by}"
+      help: "Promjene se čuvaju odmah i upisuju u administratorski dnevnik."
+
+    activity:
+      chart: Objave u posljednjih 12 mjeseci
+      chart_label: Objave po mjesecima u posljednjih 12 mjeseci
+      likes: "Data sviđanja: {given}, primljena: {received}."
+      posts: Posljednje objave
+      no_posts: Još nema objava.
+      discussions: Započete teme
+      no_discussions: Još nema tema.
+      replies: "{count, plural, one {# odgovor} few {# odgovora} other {# odgovora}}"
+      sessions: Uređaji i sesije
+      no_sessions: Nema aktivnih prijava.
+      unknown_device: Nepoznat uređaj
+      last_used: "posljednje korištenje {ago}"
+
+    trust:
+      pill: "Nivo {level} · {name}"
+      title: Nivo povjerenja (Trust Levels)
+      silenced: na čekanju
+      locked: Zaključano na ovom nivou
+      open: Otvorite u Trust Levels
+
+    reports:
+      against_title: "{count, plural, one {# prijava o ovom članu} few {# prijave o ovom članu} other {# prijava o ovom članu}}"
+      filed_title: Prijave koje je podnio ovaj član
+      flags_only: "Iz ekstenzije Flags. Instalirajte Docket da biste vidjeli status svake prijave, ko je rješava i ishod."
+      none_against: Niko nije prijavio ovog člana.
+      none_filed: Ovaj član nije podnio nijednu prijavu.
+      no_post: (objava više ne postoji)
+      reporters: "{count, plural, one {Prijavila je # osoba} few {Prijavile su # osobe} other {Prijavilo je # osoba}}"
+      reason: "Razlog: {reason}"
+      assignee: "Rješava: {name}"
+      about: "O članu: {name}"
+      outcome: "Ishod: {outcome}"
+      status_open: Otvoreno
+      status_in_progress: U toku
+      status_resolved: Riješeno
+      status_rejected: Odbijeno
+
+    ips:
+      title: IP adrese
+      none: Nema zabilježenih IP adresa.
+      seen: "{sources}, {count} puta, prvi put {first}, posljednji put {last}"
+      source_sessions: sesije
+      source_posts: objave
+      others: "{count, plural, one {# drugi nalog na ovoj IP adresi:} few {# druga naloga na ovoj IP adresi:} other {# drugih naloga na ovoj IP adresi:}}"
+      no_others: Nema drugih naloga na ovoj IP adresi.
+      ban: Blokirajte IP adresu
+      banned: Blokirano
+      ban_confirm: "Blokirati {ip}? Niko neće moći koristiti platformu s ove adrese."
+      banned_done: "IP adresa {ip} je blokirana."
+
+    notes:
+      title: Bilješke osoblja
+      none: Još nema bilješki.
+      add_label: Dodajte bilješku
+      placeholder: "Dodajte privatnu bilješku (vidi je samo osoblje)…"
+      add: Dodajte bilješku
+      no_permission: "Nemate dozvolu za čitanje bilješki osoblja."
+
+    warnings:
+      suspension: Trenutna suspenzija
+      not_suspended: Nije pod suspenzijom.
+      until: Do
+      forever: Dok je neko ne ukine
+      reason: Razlog (osoblje)
+      message: Poruka (vidi član)
+      title: Upozorenja
+      no_permission: "Nemate dozvolu za pregled upozorenja."
+      none: Nema upozorenja.
+      strikes: "{count, plural, one {# aktivna opomena} few {# aktivne opomene} other {# aktivnih opomena}}"
+      strike_n: "{count, plural, one {# opomena:} few {# opomene:} other {# opomena:}}"
+      history: Historija suspenzija
+      no_history: Nema suspenzija ni radnji označavanja spamera.
+
+    action:
+      addGroup: Dodano u grupu
+      removeGroup: Uklonjeno iz grupe
+      suspend: Suspendovano
+      unsuspend: Suspenzija ukinuta
+      confirm: E-mail potvrđen
+      signOut: Odjavljeno sa svih uređaja
+      spammer: Označeno kao spamer
+      unspam: Poništena radnja označavanja spamera
+      anonymize: Anonimizirano
+      delete: Obrisano
+      export: Izvezeno kao CSV
+      banIp: Blokirana IP adresa
+      hashCheck: Provjerena adresa
+
+    log:
+      member_title: Šta je osoblje uradilo ovdje
+      none: Još ništa nije zabilježeno.
+      by: "{actor}, {ago}"
+      system: Sam član
+      status_running: u toku
+      status_queued: u redu
+      status_failed: neuspjelo
+      when: Kada
+      who: Ko
+      action: Radnja
+      member: Član
+      detail: Šta se promijenilo
+      filter_action: Filtrirajte po radnji
+      all_actions: Sve radnje
+      retention: "Imena izbrisanih članova čuvaju se (dana): {days}."
+      mirrored: Upisuje se i u Flarumov revizijski dnevnik.
+      gone: izbrisano
+      hidden_group: grupa koju ne možete vidjeti
+      forever: do ukidanja
+      until: "do {date}"
+      spammer: "sakrivene objave: {posts}, sakrivene teme: {discussions}, blokirane IP adrese: {ips}"
+      restored: vraćeno
+      was: "ranije @{name}"
+      hashes: e-mail i IP adrese čuvaju se kao hash vrijednosti sa solju (pseudonimno)
+      pruned: imena uklonjena nakon perioda zadržavanja
+      rows: "{count, plural, one {# red} few {# reda} other {# redova}}"
+      sessions: "{count, plural, one {# sesija} few {# sesije} other {# sesija}}"
+      check_label: "Je li izbrisani član koristio ovaj e-mail ili IP adresu?"
+      check_placeholder: "email@example.com ili 203.0.113.7"
+      check: Provjerite
+      check_found: "{count, plural, one {Da, # podudaranje:} few {Da, # podudaranja:} other {Da, # podudaranja:}} {list}"
+      check_none: Nijedan izbrisani član nije to koristio.
