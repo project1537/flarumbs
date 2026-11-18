@@ -63,17 +63,19 @@ ernestdefoe-glimpse:
       moderate: Odobravanje, skrivanje i brisanje priča
 
   api:
+    busy: Istu radnju ste upravo uradili. Pokušajte ponovo.
     upload_failed: Datoteka nije otpremljena. Pokušajte ponovo.
     too_large: Datoteka je prevelika.
     bad_type: Taj tip datoteke nije podržan. Koristite fotografiju u formatu JPEG, PNG, WebP ili GIF, ili video u formatu MP4 ili WebM.
     too_long: "Najduže trajanje videa je {max} s."
+    too_many_pixels: "Fotografija je prevelika za obradu. Fotografije mogu imati najviše {max} megapiksela; pokušajte s manjom."
+    too_many_frames: Ovaj animirani GIF ima previše sličica. Pokušajte s kraćim.
     kind_off: Ova vrsta priče je isključena.
     media_missing: Prvo dodajte fotografiju ili video.
     text_missing: Napišite nešto za svoju priču.
     followers_off: Priče samo za pratioce nisu dostupne na ovoj platformi.
     daily_limit: "Možete objaviti najviše {count} priča dnevno."
     bad_reaction: Ta reakcija nije dostupna.
-    story_gone: Ta priča više nije dostupna.
     already_reported: Već ste prijavili ovu priču.
     cannot_mute: Ne možete utišati ovu osobu.
     highlights_full: "Možete imati najviše {count} zbirki."
