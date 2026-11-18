@@ -1,0 +1,276 @@
+ernestdefoe-brainstorm:
+  # Poruke koje server vraća.
+  api:
+    title: Unesite naslov kviza od najviše 200 znakova.
+    dates: Datum zatvaranja mora biti poslije datuma otvaranja.
+    publish_empty: Dodajte barem jedno pitanje prije objave.
+    too_many_questions: "Kviz može imati najviše {max} pitanja."
+    question_type: "Pitanje {number} ima vrstu koju ova platforma ne poznaje."
+    question_body: "Pitanje {number} treba tekst pitanja, do 5.000 znakova."
+    option_length: "Odgovor u pitanju {number} duži je od 300 znakova."
+    option_count: "Pitanje {number} treba od {min} do {max} odgovora."
+    accepted_count: "Pitanje {number} treba od {min} do {max} prihvaćenih odgovora."
+    no_correct: "Označite barem jedan tačan odgovor u pitanju {number}."
+    image_url: "Slika za pitanje {number} mora biti web adresa koja počinje s http:// ili https://, ili putanja na ovoj platformi."
+    reward_locked: Ovaj kviz nosi bodove ili značku, pa odgovore, bodove i prolazni rezultat mogu mijenjati samo članovi osoblja koji smiju dodjeljivati nagrade. Tekst i dalje možete uređivati.
+    no_attempts_left: Iskoristili ste sve pokušaje za ovaj kviz.
+    no_questions: Ovaj kviz još nema pitanja.
+    slow_down: Previše zahtjeva u kratkom roku. Sačekajte nekoliko minuta i pokušajte ponovo.
+
+  # Dijele ih forum i admin.
+  lib:
+    units:
+      hours: "{count, plural, one {# sat} few {# sata} other {# sati}}"
+      minutes: "{count, plural, one {# minuta} few {# minute} other {# minuta}}"
+      seconds: "{count, plural, one {# sekunda} few {# sekunde} other {# sekundi}}"
+
+  forum:
+    nav: Kvizovi
+    draft: Nacrt
+
+    settings:
+      private: Ne prikazuj me na rang-listama kvizova
+
+    composer:
+      add: Dodajte kviz
+      title: Dodajte kviz u svoju objavu
+      search: Pretraži kvizove
+      meta: "{count, plural, one {# pitanje} few {# pitanja} other {# pitanja}}"
+      none: Nijedan kviz nije pronađen.
+      create: Napišite novi kviz
+
+    facts:
+      questions: "{count, plural, one {# pitanje} few {# pitanja} other {# pitanja}}"
+      pass_mark: "Prolazni rezultat: {mark}%"
+      attempts: "{count, plural, one {# pokušaj} few {# pokušaja} other {# pokušaja}}"
+      attempts_left: "Preostalo pokušaja: {count} od {max}"
+      points: "{count, plural, one {# bod} few {# boda} other {# bodova}}"
+      badge: "Značka: {name}"
+
+    card:
+      best: "Vaš najbolji rezultat: {score}"
+      log_in: Prijavite se da biste igrali
+      cannot_take: Ovdje ne možete rješavati kvizove.
+      closed: Nije otvoreno za pokušaje
+      no_attempts: Nema preostalih pokušaja
+      start: Započnite kviz
+      resume: Nastavite
+      again: Pokušajte ponovo
+      preview: Isprobajte
+
+    index:
+      title: Kvizovi
+      new: Novi kviz
+      search: Pretraži kvizove
+      more: Učitaj još
+      empty: Još nema kvizova.
+      no_results: Nijedan kviz ne odgovara pretrazi.
+      tabs:
+        new: Najnoviji
+        popular: Najviše igrani
+        mine: Moji
+
+    quiz:
+      all: Svi kvizovi
+      missing: Ovaj kviz ne postoji ili ga ne možete vidjeti.
+      stats: "{taken, plural, one {# pokušaj} few {# pokušaja} other {# pokušaja}} · položeno: {passed}"
+      edit: Uredite
+      copy_link: Kopirajte link za objavu
+      link_copied: Link je kopiran. Zalijepite ga u zaseban red u objavi i kviz će se pojaviti tamo.
+      delete: Obrišite
+      delete_confirm: "Želite li obrisati „{title}“ sa svim rezultatima? Ovo se ne može poništiti."
+      opens: "Otvara se {time}"
+      closes: "Zatvara se {time}"
+      closed: Zatvoreno za nove pokušaje.
+      tabs:
+        board: Rang-lista
+        results: Rezultati
+
+    player:
+      question_of: "Pitanje {number} od {total}"
+      review_heading: Je li sve spremno za predaju?
+      answered: "Odgovoreno: {count} od {total}"
+      time_left: Preostalo vrijeme
+      practice: Vježba
+      choose_all: Odaberite svaki odgovor koji vrijedi.
+      type_answer: Upišite odgovor
+      "true": "Tačno"
+      "false": "Netačno"
+      points: "{count, plural, one {Vrijedi # bod} few {Vrijedi # boda} other {Vrijedi # bodova}}"
+      previous: Prethodno
+      next: Sljedeće
+      finish: Završite
+      unanswered: "{count, plural, one {# pitanje još nema odgovor.} few {# pitanja još nemaju odgovor.} other {# pitanja još nema odgovor.}} Predajte svejedno ili se vratite na njih."
+      all_answered: Na svako pitanje je odgovoreno.
+      back: Nazad na pitanja
+      submit: Predajte
+      jump: Pitanja
+      error: Ovaj kviz trenutno nije dostupan za rješavanje.
+      close: Zatvori
+
+    result:
+      passed: Položeno!
+      not_passed: Ovaj put niste položili
+      score: "{score} od {max} bodova ({percent}), prolazni rezultat {mark}%"
+      time: "Vrijeme: {time}"
+      expired: Vrijeme je isteklo. Odgovori sačuvani do tada su ocijenjeni.
+      practice: "Probni pokušaj: ne računa se na rang-listama niti donosi nagrade. Rezultati prikazuju ono što će vidjeti članovi."
+      attempts_left: "{count, plural, =0 {Nema preostalih pokušaja.} one {Preostao je # pokušaj.} few {Preostala su # pokušaja.} other {Preostalo je # pokušaja.}}"
+      again: Pokušajte ponovo
+      close: Zatvori
+      right: Tačno
+      partial: "Djelimično tačno ({earned} od {points})"
+      wrong: Netačno
+      you_typed: "Upisali ste:"
+      no_answer: (bez odgovora)
+      accepted: "Prihvaćeno:"
+      your_answer: Vaš odgovor
+      key_hidden: Tačni odgovori se prikazuju nakon što položite ili iskoristite sve pokušaje.
+
+    leaderboard:
+      title: Rang-lista
+      overall: Najbolji rezultati u kvizovima
+      overall_help: Poredak prema broju položenih kvizova, a zatim prema rezultatima iza njih. Članovi se mogu ukloniti s rang-lista u svojim postavkama.
+      see_all: Pogledajte cijelu rang-listu
+      back: Svi kvizovi
+      passed: "Položeno: {count}"
+      average: "prosjek {score}"
+      empty: Na listi još nema nikoga.
+      off: Ovaj kviz nema rang-listu.
+      you_quiz: "Vi: #{rank} s rezultatom {score}"
+      you_overall: "Vi: #{rank}, {count, plural, one {# položen kviz} few {# položena kviza} other {# položenih kvizova}}"
+
+    results:
+      questions: Kako je prošlo svako pitanje
+      asked: "{count, plural, one {Postavljeno jednom} few {Postavljeno # puta} other {Postavljeno # puta}}"
+      attempts: Pokušaji
+      none: Niko još nije završio ovaj kviz.
+      more: Učitaj još
+      practice: vježba
+      expired: isteklo vrijeme
+      deleted_user: Izbrisani član
+      reset: Poništite pokušaje ovog člana
+      reset_confirm: "Poništiti pokušaje člana {name} za ovaj kviz? Rezultati se brišu; već zarađeni bodovi i značke ostaju."
+
+    editor:
+      new_title: Novi kviz
+      edit_title: Uređivanje kviza
+      view: Pogledajte
+      title: Naslov
+      description: Uvod
+      formatting_help: Možete ga oblikovati na isti način kao objavu.
+      questions: "{count, plural, one {# pitanje} few {# pitanja} other {# pitanja}}"
+      question: Pitanje
+      question_placeholder: Postavite pitanje
+      untitled: Novo pitanje
+      type: Vrsta pitanja
+      types:
+        single: Jedan odgovor
+        multiple: Više odgovora
+        boolean: Tačno ili netačno
+        text: Upisani odgovor
+      drag: "Prevucite da biste pomjerili pitanje {number}"
+      sortable: pomično
+      duplicate: Duplicirajte
+      remove: Uklonite
+      remove_confirm: "Ukloniti pitanje {number}?"
+      image: Adresa slike
+      image_placeholder: Adresa slike (neobavezno)
+      pick_image: Odaberite
+      correct_answer: Tačan odgovor
+      single_help: Odaberite tačan odgovor. Dodajte do 10 odgovora.
+      multiple_help: Odaberite svaki tačan odgovor. Dodajte do 10 odgovora.
+      accepted_help: Svaki odgovor koji se računa kao tačan. Velika slova, dijakritički znakovi, razmaci i interpunkcija se zanemaruju.
+      mark_correct: Tačan odgovor
+      answer: "Odgovor {number}"
+      accepted: "Prihvaćeni odgovor {number}"
+      remove_answer: Uklonite
+      add_answer: Dodajte odgovor
+      add_accepted: Dodajte još jedan prihvaćeni odgovor
+      points: Bodovi
+      explanation: Objašnjenje
+      explanation_placeholder: Zašto je to odgovor (neobavezno, prikazuje se kada se odgovori otkriju)
+      settings: Postavke
+      time_limit: Vremensko ograničenje
+      time_limit_help: Ostavite oba polja prazna za neograničeno vrijeme. Odbrojavanje radi na serveru, pa ponovno učitavanje stranice ne vraća vrijeme.
+      minutes: min
+      seconds: sek
+      pass_mark: Prolazni rezultat (%)
+      pass_mark_help: Rezultat potreban za prolaz.
+      max_attempts: Pokušaji
+      max_attempts_help: Koliko pokušaja svaki član ima. Ostavite prazno za neograničeno.
+      question_pick: Pitanja po pokušaju
+      question_pick_help: Postavlja se ovoliko pitanja, nasumično odabranih s cijelog popisa. Ostavite prazno da se postave sva.
+      unlimited: Bez ograničenja
+      shuffle_questions: Pomiješaj pitanja
+      shuffle_options: Pomiješaj odgovore
+      partial_credit: Djelimični bodovi za pitanja s „Više odgovora“
+      partial_credit_help: "Isključeno: član dobija bodove samo ako odabere svaki tačan odgovor i nijedan pogrešan. Uključeno: svaki tačan izbor donosi dio bodova, a svaki pogrešan oduzima dio, pa odabir svega ne isplati se."
+      leaderboard: Rang-lista
+      reveal: Nakon pokušaja prikaži
+      reveals:
+        score: Samo rezultat
+        mistakes: Koja su pitanja bila tačna
+        answers: Odgovore, nakon prolaza ili iskorištenih pokušaja
+        answers_always: Odgovore, svaki put
+      reveal_help:
+        score: Članovi vide svoj rezultat i ništa više.
+        mistakes: Članovi vide na koja su pitanja tačno odgovorili, ali ne i tačne odgovore.
+        answers: Tačni odgovori i objašnjenja prikazuju se kada član položi ili iskoristi sve pokušaje, pa se ne mogu prepisati u sljedeći pokušaj.
+        answers_always: Tačni odgovori i objašnjenja prikazuju se nakon svakog pokušaja. Najbolje za vježbovne kvizove.
+      opens_at: Otvara se
+      closes_at: Zatvara se
+      rewards: Nagrade
+      rewards_help: Dodjeljuju se jednom, prvi put kada član položi. Ne dodjeljuju se za pokušaje osobe koja je napisala kviz.
+      reward_points: Bodovi
+      reward_points_help: FoF Gamification bodovi.
+      reward_badge: Značka
+      no_badge: Bez značke
+      save_draft: Sačuvajte nacrt
+      unpublish: Vratite u nacrt
+      publish: Objavite
+      save: Sačuvajte
+      saved: Sačuvano.
+      published: Objavljeno.
+      save_failed: Kviz nije mogao biti sačuvan.
+
+    widget:
+      name: Kvizovi
+      title: Najbolji rezultati u kvizovima
+      heading: Naslov
+      show: Prikaži
+      show_leaderboard: Najbolji rezultati u kvizovima
+      show_latest: Najnoviji kvizovi
+      limit: Koliko
+      all: Svi kvizovi
+
+  admin:
+    widgets:
+      quizzes: Kvizovi
+    permissions:
+      view: Pregled kvizova
+      take: Rješavanje kvizova
+      create: Pisanje kvizova
+      manage: Uređivanje i brisanje svakog kviza, pregled svih rezultata
+      reward: Dodjeljivanje bodova i znački kvizovima
+    settings:
+      show_nav: Prikaži „Kvizovi“ u navigaciji na bočnoj traci
+      editors_count: Računaj pokušaje osoba koje pišu kvizove
+      editors_count_help: "Isključeno: ko god piše ili upravlja kvizom može vidjeti njegove odgovore, pa se njegovi pokušaji računaju samo kao vježba. Uključeno: čim je kviz objavljen i otvoren, ti pokušaji se računaju kao i svi drugi: rang-liste, ograničenja pokušaja i nagrade. Korisno kada su pitanja stigla od nekog drugog (ili od AI-ja), a osoba koja ih unosi ne zna odgovore. Nacrti i kvizovi koji još nisu otvoreni ostaju vježba."
+    badges:
+      quizzes_passed: Položeni kvizovi (Brainstorm)
+      perfect_scores: Kvizovi završeni sa 100% (Brainstorm)
+
+# Korak ekstenzije Brainstorm za Onramp, kontrolnu listu za uvođenje.
+ernestdefoe-onramp:
+  lib:
+    types:
+      brainstorm:
+        passed:
+          title: "{count, plural, one {Položite kviz} few {Položite # kviza} other {Položite # kvizova}}"
+          description: Provjerite šta znate u jednom od kvizova na platformi.
+          button: Pronađite kviz
+  admin:
+    types:
+      brainstorm:
+        passed: Polaganje kvizova (Brainstorm)
