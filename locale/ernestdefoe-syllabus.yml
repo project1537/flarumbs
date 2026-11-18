@@ -13,7 +13,7 @@ ernestdefoe-syllabus:
       certificate_signature: Red za potpis na certifikatu
       certificate_signature_help: Ime ili titula koja se ispisuje iznad „Izdaje“. Ostavite prazno da se koristi naziv platforme.
       certificate_logo: Adresa logotipa certifikata
-      certificate_logo_help: Https:// adresa slike. Ostavite prazno da se koristi logotip platforme.
+      certificate_logo_help: Adresa slike koja počinje s https://. Ostavite prazno da se koristi logotip platforme.
       max_file_mb: Najveća datoteka zadaće (MB)
       file_types: Tipovi datoteka koje polaznici smiju predati
       file_types_help: Ekstenzije, odvojene zarezima. Web stranice, SVG, skripte i programi uvijek se odbijaju, bez obzira na ono što je ovdje navedeno.
