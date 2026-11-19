@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **medresanet/flarum-gate** 1.1: the admin's "Wall texts" section (per-language texts of the login wall) and its length message.
+
 ## 3.6.0 - 2026-11-19
 
 ### Added
