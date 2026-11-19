@@ -2,6 +2,32 @@ ernestdefoe-syllabus:
   lib:
     kiosk:
       course: Kurs
+    designer:
+      template: Šablon
+      forum_default: Zadana postavka platforme
+      templates:
+        classic: Klasični
+        modern: Moderni
+        minimal: Minimalistički
+        academic: Akademski
+      signer_name: Ime osobe koja potpisuje
+      signer_title: Titula osobe koja potpisuje
+      logo: Logotip
+      background: Pozadina
+      signature: Potpis
+      uploaded: Otpremljeno
+      using_default: Koristi zadanu postavku platforme
+      logo_none: Koristi se logotip platforme.
+      background_none: Vlastiti papir i okvir šablona.
+      signature_none: Bez potpisa, samo ime osobe koja potpisuje.
+      upload: Otpremite
+      replace: Zamijenite
+      remove: Uklonite
+      help_course: "Ostavite bilo koji dio praznim da se koristi zadani dizajn platforme. Slike se čuvaju čim ih otpremite; šablon i osoba koja potpisuje čuvaju se zajedno s kursom. Pozadina zamjenjuje papir i okvir šablona, pa odaberite svijetlu sliku: tekst se ispisuje preko nje."
+      help_forum: "Svaki kurs koristi ovaj dizajn za dijelove koje sam ne postavi. Pozadina zamjenjuje papir i okvir šablona, pa odaberite svijetlu sliku: tekst se ispisuje preko nje. Potpisi najbolje izgledaju kao PNG s prozirnom pozadinom."
+      preview_alt: Pregled certifikata
+      preview_failed: Pregled nije mogao biti iscrtan. Pokušajte ponovo.
+      preview_caption: "Pregled s vašim imenom, današnjim datumom i probnim tekstom. Članovi vide svoje podatke."
   admin:
     settings:
       show_nav: Prikaži „Kursevi“ na bočnoj traci platforme
@@ -10,16 +36,17 @@ ernestdefoe-syllabus:
       no_tag: Bez oznake
       certificate_text: Tekst certifikata
       certificate_text_help: "Ispisuje se ispod naziva kursa. Koristite {name}, {course}, {date} i {forum}. Ostavite prazno za zadani tekst."
-      certificate_signature: Red za potpis na certifikatu
-      certificate_signature_help: Ime ili titula koja se ispisuje iznad „Izdaje“. Ostavite prazno da se koristi naziv platforme.
-      certificate_logo: Adresa logotipa certifikata
-      certificate_logo_help: Adresa slike koja počinje s https://. Ostavite prazno da se koristi logotip platforme.
       max_file_mb: Najveća datoteka zadaće (MB)
       file_types: Tipovi datoteka koje polaznici smiju predati
       file_types_help: Ekstenzije, odvojene zarezima. Web stranice, SVG, skripte i programi uvijek se odbijaju, bez obzira na ono što je ovdje navedeno.
       max_video_mb: Najveći otpremljeni video lekcije (MB)
       max_video_mb_help: MP4, WebM ili Ogg. Postavite 0 da biste dozvolili samo YouTube i Vimeo adrese. Primjenjuje se i ograničenje otpremanja vašeg servera.
       submissions_per_hour: Broj predaja zadaća po članu na sat
+    certificate:
+      heading: Dizajn certifikata
+      help: "Zadani certifikat platforme: šablon, logotip, pozadina i osoba koja potpisuje. Nastavnici mogu promijeniti svaki dio za vlastiti kurs u uređivaču kursa."
+      save: Sačuvajte dizajn
+      saved: Dizajn certifikata je sačuvan.
     permissions:
       view: Pregled kurseva
       enrol: Upis na kurseve
@@ -181,6 +208,8 @@ ernestdefoe-syllabus:
       badge_help: Dodjeljuje se preko FoF Badges kada polaznik završi kurs.
       co_instructors: Dodatni nastavnici
       co_instructors_help: Članovi koji smiju kreirati kurseve mogu ga voditi zajedno s vama.
+      certificate: Certifikat
+      certificate_after_save: Sačuvajte kurs da biste oblikovali njegov certifikat.
       find_member: Pronađite člana
       remove: Uklonite
       published: Objavljeno
@@ -284,6 +313,12 @@ ernestdefoe-syllabus:
       issued_by_forum: "Izdaje {forum}."
       invalid: Ovaj certifikat nije pronađen.
       see_course: Pogledajte kurs
+      download: Preuzmite sliku
+      share_title: "{name}: završen kurs {course}"
+      sample_course: Probni kurs
+      seal_line1: Kurs
+      seal_line2: Certifikat
+      unsupported_text: (prikazano na stranici za provjeru)
 
     profile:
       nav: Kursevi
@@ -330,6 +365,7 @@ ernestdefoe-syllabus:
     upload_failed: Datoteka nije stigla. Pokušajte ponovo.
     too_big: "Datoteka je prevelika. Ograničenje je {mb} MB."
     not_an_image: To nije JPEG, PNG, GIF ni WebP slika.
+    image_too_large: Slika je prevelika. Koristite sliku manju od 40 megapiksela.
     video_off: Otpremanje videa je isključeno na ovoj platformi.
     video_type: Video mora biti u formatu MP4, WebM ili Ogg.
     file_type: "Ovaj tip datoteke se ne može predati. Dozvoljeno: {types}."
