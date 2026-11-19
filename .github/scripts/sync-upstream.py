@@ -24,8 +24,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from locales import (ROOT, flatten, is_reference, load, load_lenient, locale_files,
-                     package_name)
+from locales import (PRIVATE, ROOT, flatten, is_reference, load, load_lenient,
+                     locale_files, package_name)
 
 LOCK = ROOT / ".github" / "upstream.lock.json"
 REPORT_LIMIT = 60000  # GitHub issue bodies are capped at 65536 characters
@@ -185,7 +185,7 @@ def main():
     args = parser.parse_args()
 
     lock = json.loads(LOCK.read_text(encoding="utf-8")) if LOCK.exists() else {}
-    stems = [p.stem for p in locale_files()]
+    stems = [p.stem for p in locale_files() if p.stem not in PRIVATE]
 
     if args.accept:
         wanted = stems if args.accept.strip() == "all" else [

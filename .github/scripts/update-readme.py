@@ -8,7 +8,7 @@ removing a translation; CI runs it on every push to main.
 import re
 import sys
 
-from locales import CORE_FILES, ROOT, locale_files, package_name
+from locales import CORE_FILES, PRIVATE, ROOT, locale_files, package_name
 
 README = ROOT / "README.md"
 START = "<!-- extensions:start -->"
@@ -27,13 +27,15 @@ def build_list():
         for path in locale_files()
         if path.stem not in CORE_FILES
     )
+    private = {package_name(stem) for stem in PRIVATE}
     lines = [f"Translations for **{len(packages)} extensions** are included:", ""]
     for title, belongs in GROUPS:
         group = [p for p in packages if belongs(p.split("/")[0])]
         if not group:
             continue
         lines += [f"#### {title} ({len(group)})", "", "| Package |", "| --- |"]
-        lines += [f"| [{p}](https://packagist.org/packages/{p}) |" for p in group]
+        lines += [f"| {p} (private) |" if p in private else f"| [{p}](https://packagist.org/packages/{p}) |"
+                  for p in group]
         lines.append("")
     return "\n".join(lines).rstrip()
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Translation for **medresanet/flarum-gate**, the login wall of medresa.net (a private extension, so it is listed without a Packagist link and skipped by the weekly upstream check). The extension ships English only; its Bosnian lives here.
+- `core.views.unsubscribe_email_error.title`: Flarum 2.0.2 shows this key on the page for an invalid unsubscribe link but does not ship it, so the page showed the raw key.
+
 ## 3.5.0 - 2026-10-21
 
 ### Changed

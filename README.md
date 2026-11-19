@@ -153,6 +153,7 @@ Translations for **86 extensions** are included:
 | [huseyinfiliz/notificationhub](https://packagist.org/packages/huseyinfiliz/notificationhub) |
 | [ianm/follow-users](https://packagist.org/packages/ianm/follow-users) |
 | [ianm/twofactor](https://packagist.org/packages/ianm/twofactor) |
+| medresanet/flarum-gate (private) |
 | [michaelbelgium/flarum-ai-autoreply](https://packagist.org/packages/michaelbelgium/flarum-ai-autoreply) |
 | [ramon/backup](https://packagist.org/packages/ramon/backup) |
 | [ramon/guest-cta](https://packagist.org/packages/ramon/guest-cta) |

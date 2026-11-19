@@ -17,7 +17,12 @@ PACKAGE_NAMES = {
     "ekumanov-forum-widgets": "ekumanov/flarum-ext-forum-widgets",
     "flectar-turnstile": "flectar/flarum-turnstile",
     "michaelbelgium-ai-autoreply": "michaelbelgium/flarum-ai-autoreply",
+    "medresanet-gate": "medresanet/flarum-gate",
 }
+
+# Private extensions (not on Packagist, so there is no English release to compare with):
+# the README lists them without a Packagist link and the weekly upstream check skips them.
+PRIVATE = {"medresanet-gate"}
 
 
 def package_name(stem):
