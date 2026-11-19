@@ -57,6 +57,7 @@ medresanet-gate:
     load_error_message: "Obrazac nije moguće učitati. Provjerite internet vezu i pokušajte ponovo."
     log_in_text: "Već imate korisnički račun? <a>Prijavite se</a>"
     log_out_button: "Odjava"
+    menu_button: "Meni"
     nav_label: "Linkovi"
     resend_button: "Ponovo pošalji e-mail za potvrdu"
     resend_failed_message: "E-mail nije poslan. Pokušajte ponovo za nekoliko minuta."

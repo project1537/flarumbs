@@ -4,7 +4,7 @@
 
 ### Added
 
-- **medresanet/flarum-gate** 1.1: the admin's "Wall texts" section (per-language texts of the login wall) and its length message.
+- **medresanet/flarum-gate** 1.1: the admin's "Wall texts" section (per-language texts of the login wall) and its length message; the label of the wall's menu button on phones.
 
 ## 3.6.0 - 2026-11-19
 
