@@ -55,7 +55,7 @@ php flarum cache:clear
 A translation only loads when its extension is enabled, so unused ones cost nothing.
 
 <!-- extensions:start -->
-Translations for **86 extensions** are included:
+Translations for **87 extensions** are included:
 
 #### Flarum (22)
 
@@ -132,7 +132,7 @@ Translations for **86 extensions** are included:
 | [fof/usercard-stats](https://packagist.org/packages/fof/usercard-stats) |
 | [fof/username-request](https://packagist.org/packages/fof/username-request) |
 
-#### Other extensions (21)
+#### Other extensions (22)
 
 | Package |
 | --- |
