@@ -1,0 +1,123 @@
+ernestdefoe-skylight:
+  # Dijele ih forum (Studio) i admin stranica (zadane postavke).
+  lib:
+    sections:
+      accent: Akcentna boja
+      view: Popis tema
+      background: Pozadina
+      glass: Površine
+      shape: Oblik
+      corners: Uglovi
+      density: Gustoća
+      text: Tekst
+      typeface: Font
+      motion: Animacije
+      readability: Čitljivost
+      share: Kodovi za dijeljenje
+    labels:
+      view: Prikaz
+      bg: Pozadina
+      glass: Površine
+      blur: Zamućenje
+      radius: Uglovi
+      density: Gustoća
+      scale: Veličina
+      font: Font
+      motion: Animacije
+      rt: Smanji prozirnost
+      hc: Veći kontrast
+      custom_accent: Bilo koja boja
+    help:
+      rt: Čvrste površine, bez zamućenja. Uključuje se i postavkom vašeg uređaja.
+      hc: Tamniji sivi tekst i čvršći rubovi.
+      nudged: Ova boja je malo potamnjena (u tamnom načinu posvijetljena) da tekst u njoj ostane čitljiv.
+    choices:
+      view:
+        list: Lista
+        cards: Kartice
+        compact: Kompaktno
+      bg:
+        daylight: Dnevno svjetlo
+        mist: Magla
+        dusk: Sumrak
+        plain: Obična
+        image: "Slika {number}"
+      glass:
+        glass: Staklo
+        solid: Čvrsto
+      radius:
+        sharp: Oštri
+        soft: Blagi
+        round: Zaobljeni
+      density:
+        comfortable: Udobna
+        compact: Kompaktna
+      font:
+        system: Sistemski
+        inter: Inter
+        serif: Serifni
+      motion:
+        full: Potpune
+        reduced: Smanjene
+        "off": "Isključeno"
+    accents:
+      dawn: Zora
+      lagoon: Laguna
+      fern: Paprat
+      coral: Koral
+      iris: Perunika
+      slate: Škriljac
+
+  forum:
+    studio:
+      open: Prilagodite
+      title: Vaš izgled
+      lead: Ove promjene vidite samo vi. Svi ostali zadržavaju izgled platforme.
+      shuffle: Nasumično
+      reset: Poništite
+      done: Gotovo
+      mode:
+        label: Način
+        light: Svijetli
+        dark: Tamni
+        auto: Automatski
+      share:
+        label: Podijelite svoj izgled
+        copy: Kopirajte
+        copied: Kod vašeg izgleda je kopiran.
+        copy_failed: Preglednik nije dozvolio kopiranje. Označite kod i kopirajte ga sami.
+        paste_label: Zalijepite tuđi kod izgleda
+        apply: Koristite
+        invalid: To nije kod izgleda. Počinju s SKY- i izgledaju poput SKY-127C86000000E200.
+    views:
+      label: Prikaz popisa tema
+      list: Lista
+      cards: Kartice
+      compact: Kompaktno
+
+  admin:
+    bespoke_notice: Bespoke oblikuje ovu platformu, pa Skylight ostaje isključen. Da biste nudili oba, instalirajte Wardrobe i dopustite članovima da biraju vlastiti stil.
+    permissions:
+      use_studio: Prilagođavanje izgleda u Skylightu (akcentna boja, pozadina, prikaz popisa…)
+    defaults:
+      title: Zadane postavke platforme
+      help: Ono što vide gosti i novi članovi. Članovi to mogu promijeniti opcijom „Prilagodite“.
+      contrast_light: "Akcent na svijetloj podlozi: {ratio}"
+      contrast_dark: "Akcent na tamnoj podlozi: {ratio}"
+    studio:
+      title: Prilagođavanje za članove
+      help: Odjeljci koje članovi dobijaju kada otvore „Prilagodite“. Odjeljak koji isključite ostaje na vašoj zadanoj postavci.
+      readability_always: Opcije Smanji prozirnost i Veći kontrast uvijek su ponuđene.
+      permission: "Ko smije koristiti „Prilagodite“ određuje se na stranici Dozvole (zadano: Članovi)."
+    presets:
+      title: Vaše vlastite akcentne boje
+      help: Do 6 dodatnih boja za red akcenata, odvojenih zarezima.
+    backgrounds:
+      title: Slike pozadine
+      help: Do 4 vaše vlastite. Velike slike se pri otpremanju smanjuju na 2400 px.
+    more:
+      title: Više
+      tag_accent: Oznake mijenjaju boju stranice
+      tag_accent_help: Unutar oznake, dugmad, linkovi i okviri fokusa preuzimaju boju oznake. Boje presvijetle za čitanje se potamnjuju.
+      auto_solid: Čvrste površine na telefonima s malo memorije
+      auto_solid_help: Telefoni s manje od 4 GB memorije ili s uključenom štednjom podataka dobijaju čvrste površine. Članovi i dalje mogu odabrati Staklo.
