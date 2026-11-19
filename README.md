@@ -55,7 +55,7 @@ php flarum cache:clear
 A translation only loads when its extension is enabled, so unused ones cost nothing.
 
 <!-- extensions:start -->
-Translations for **85 extensions** are included:
+Translations for **86 extensions** are included:
 
 #### Flarum (22)
 
@@ -132,7 +132,7 @@ Translations for **85 extensions** are included:
 | [fof/usercard-stats](https://packagist.org/packages/fof/usercard-stats) |
 | [fof/username-request](https://packagist.org/packages/fof/username-request) |
 
-#### Other extensions (20)
+#### Other extensions (21)
 
 | Package |
 | --- |
@@ -146,6 +146,7 @@ Translations for **85 extensions** are included:
 | [ernestdefoe/glimpse](https://packagist.org/packages/ernestdefoe/glimpse) |
 | [ernestdefoe/google-fonts](https://packagist.org/packages/ernestdefoe/google-fonts) |
 | [ernestdefoe/member-desk](https://packagist.org/packages/ernestdefoe/member-desk) |
+| [ernestdefoe/skylight](https://packagist.org/packages/ernestdefoe/skylight) |
 | [ernestdefoe/syllabus](https://packagist.org/packages/ernestdefoe/syllabus) |
 | [flectar/flarum-turnstile](https://packagist.org/packages/flectar/flarum-turnstile) |
 | [forumaker/friendship](https://packagist.org/packages/forumaker/friendship) |
