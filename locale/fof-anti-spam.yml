@@ -1,265 +1,319 @@
 fof-anti-spam:
   admin:
     permissions:
-      spamblock_users_label: "Označavanje korisnika kao spamera"
+      spamblock_users_label: Označavanje članova kao spamera
+    tabs:
+      sign_ups: Registracije
+      stopforumspam: StopForumSpam
+      content_filter: Filter sadržaja
+      spammer_actions: Radnje nad spamerima
+    unsaved_changes: Na ovoj kartici imate nesačuvane promjene. Napustiti je bez čuvanja?
     settings:
+      sign_ups:
+        heading: Provjere pri registraciji
+        introduction: Provjere koje ova platforma sama obavlja pri svakoj registraciji, bez slanja ičega vanjskoj usluzi. Provjere kod StopForumSpam imaju vlastitu karticu.
+
+        honeypot_heading: Honeypot
+        honeypot_label: Zamka za botove koji popunjavaju obrasce
+        honeypot_help: Dodaje u obrazac za registraciju polje koje ljudi nikad ne vide i odbija registracije koje ga popune ili stignu brže nego što bi osoba mogla. Hvata botove koje StopForumSpam još nije vidio, ne šalje ništa izvan platforme i ne traži ništa od stvarnih ljudi.
+        honeypot_min_seconds_label: Najmanji broj sekundi prije registracije
+        honeypot_min_seconds_help: Računa se od trenutka kada je stranica poslužena. Osobi koja čita obrazac treba duže od toga; skripti ne.
+        honeypot_strict_label: Odbij registracije koje zaobilaze obrazac
+        honeypot_strict_help: Odbija i registracije gostiju poslane bez obrasca, kao što rade skripte koje šalju podatke direktno API-ju. Ostavite isključeno ako aplikacija, SSO most ili drugi alat kreira naloge preko API-ja.
+
+        throttle_heading: Ograničenje učestalosti
+        registration_throttle_label: Sekundi između registracija s jedne adrese
+        registration_throttle_help: Flarum ograničava koliko često neko može objavljivati, ali ne i koliko često može kreirati naloge. 0 isključuje ograničenje. Imajte na umu da uredi, škole i mobilne mreže dijele jednu adresu među mnogo ljudi.
+
       content-filter:
-        heading: "Filter sadržaja"
-        introduction: "Automatski prepoznaje i prijavljuje spam sadržaj novih korisnika. Sistem prati objave i teme nedavno registriranih korisnika i traži uobičajene znakove spama, poput brojeva telefona, e-mail adresa i sumnjivih URL-ova."
-        enabled_label: "Uključi filter sadržaja"
-        enabled_help: "Kada je uključeno, objave i teme novih korisnika analiziraju se na znakove spama."
+        heading: Filter sadržaja
+        introduction: Automatski otkriva i prijavljuje spam sadržaj novih članova. Sistem prati objave i teme novih naloga tražeći uobičajene pokazatelje spama, poput telefonskih brojeva, e-mail adresa i sumnjivih URL-ova.
+        enabled_label: Uključi filtriranje sadržaja
+        enabled_help: Kada je uključeno, objave i teme novih članova analiziraju se na pokazatelje spama.
 
-        user_targeting_heading: "Koji korisnici se prate"
-        monitor_all_users_label: "Prati sve korisnike"
-        monitor_all_users_help: "Provjerava svaku objavu, a ne samo objave novih korisničkih računa. Bez ove opcije, korisnički račun se više nikad ne provjerava nakon što prođe granice ispod – a upravo je to slučaj s članom čiji je račun kompromitiran ili s računom koji sačeka da granice isteknu prije nego što počne slati spam. Administratori i svi čija grupa može sakrivati teme ne prate se ni u jednom slučaju. Kod iskusnih članova očekujte više lažno pozitivnih rezultata, pa prije uključivanja provjerite pragove."
-        monitor_post_count_label: "Prati korisnike do broja objava"
-        monitor_post_count_help: "Analizira se samo sadržaj korisnika koji imaju manje objava od ovog broja. Vrijednost 0 isključuje provjeru broja objava."
-        monitor_hours_old_label: "Prati korisnike do starosti računa (sati)"
-        monitor_hours_old_help: "Analizira se samo sadržaj korisnika čiji su računi mlađi od ovog broja sati. Vrijednost 0 isključuje provjeru starosti računa."
+        user_targeting_heading: Ciljanje članova
+        monitor_all_users_label: Prati sve članove
+        monitor_all_users_help: >
+          Provjerava svaku objavu, a ne samo objave novih naloga. Bez ovoga nalog se nikad više
+          ne ispituje čim prijeđe dolje navedene granice, a to je upravo slučaj s članom čiji je
+          nalog preuzet ili s nalogom koji neko vrijeme objavljuje bezazleno prije nego što počne
+          objavljivati spam. Administratori i svi čija grupa može sakriti teme nikad se ne prate,
+          bez obzira na ovu postavku. Očekujte više lažnih pozitivnih rezultata kod etabliranih
+          članova, pa prije uključivanja pregledajte svoje pragove.
+        monitor_post_count_label: Prati članove do broja objava
+        monitor_post_count_help: >
+          Nalog se prati dok ne napravi više od ovoliko javnih objava i dok ne prijeđe i dolje
+          navedenu starosnu granicu. Objave koje čekaju odobrenje ne računaju se dok ne budu
+          odobrene.
+        monitor_hours_old_label: Prati članove do broja sati nakon prve objave
+        monitor_hours_old_help: >
+          Nalog se prati do ovoliko sati nakon što je napisao prvu objavu koja je sada javna, i dok
+          ne prijeđe i gore navedeni broj objava. Sati se računaju od te objave, a ne od
+          registracije, pa nalog ništa ne dobija time što miruje prije nego što počne objavljivati.
+          Kod 0 odlučuje samo broj objava.
 
-        detectors_heading: "Načini prepoznavanja"
-        detect_phones_label: "Prepoznaj brojeve telefona"
-        detect_phones_help: "Prijavljuje sadržaj koji sadrži brojeve telefona u međunarodnom formatu."
-        detect_emails_label: "Prepoznaj e-mail adrese"
-        detect_emails_help: "Prijavljuje sadržaj koji sadrži e-mail adrese."
-        detect_urls_label: "Prepoznaj URL-ove"
-        detect_urls_help: "Prijavljuje sadržaj koji sadrži URL-ove koji nisu na listi dozvoljenih domena."
+        held_email_domains_heading: Zadržavanje novih naloga prema e-mail domeni
+        held_email_domains_label: E-mail domene za zadržavanje
+        held_email_domains_help: >
+          Svaka objava novog naloga čija je e-mail adresa na jednoj od ovih domena zadržava se na
+          odobrenje, bez obzira na sadržaj. Unesite jednu domenu po redu; poddomene su uključene.
+          Nalog je nov dok je unutar gore navedenog broja objava ili starosti, čak i kada se prate
+          svi članovi, a zadržane objave računaju se u broj objava tek nakon odobrenja. Zadržavaju
+          se samo nove objave: izmjene se prepuštaju filteru sadržaja. Ovo vrijedi i kada je filter
+          sadržaja isključen. Administratori i svi čija grupa može sakriti teme nikad se ne
+          zadržavaju. Moderatori koji vide prijave vide i domenu koja se poklopila.
+        monitor_window_held_only: Kada se prate svi članovi, dvije dolje navedene granice samo određuju na koje se naloge primjenjuje zadržavanje po e-mail domeni.
 
-        thresholds_heading: "Pragovi spam ocjene"
-        flag_threshold_label: "Prag za prijavu (0–100)"
-        flag_threshold_help: "Sadržaj sa spam ocjenom jednakom ili većom od ove vrijednosti prijavljuje se moderatorima (zahtijeva ekstenziju flarum/flags)."
-        spam_threshold_label: "Prag za spam (0–100)"
-        spam_threshold_help: "Sadržaj sa spam ocjenom jednakom ili većom od ove vrijednosti automatski se vraća u red za odobrenje (zahtijeva ekstenziju flarum/approval)."
+        detectors_heading: Metode otkrivanja
+        detect_phones_label: Otkrij telefonske brojeve
+        detect_phones_help: Prijavi sadržaj koji sadrži telefonske brojeve u međunarodnom formatu.
+        detect_local_phones_label: Otkrij i telefonske brojeve u lokalnom formatu
+        detect_local_phones_help: >
+          Računa i brojeve napisane bez pozivnog broja države, koji počinju nulom, kao što su
+          061 234 567 ili 033 123 456. Uključite ako spam na vašoj platformi koristi lokalne
+          brojeve. Teže se razlikuju od datuma i referentnih brojeva nego međunarodni, pa
+          očekujte da će poneka obična objava biti prijavljena. Zahtijeva uključeno otkrivanje
+          telefonskih brojeva.
+        detect_emails_label: Otkrij e-mail adrese
+        detect_emails_help: Prijavi sadržaj koji sadrži e-mail adrese.
+        detect_urls_label: Otkrij URL-ove
+        detect_urls_help: Prijavi sadržaj koji sadrži URL-ove koji nisu na listi dozvoljenih.
+        detect_repeats_label: Otkrij ponovljene objave
+        detect_repeats_help: >
+          Prijavi objavu novog naloga koja govori isto što i jedna od njegovih nedavnih objava, ne
+          uzimajući u obzir velika i mala slova, razmake, interpunkciju i oblikovanje. Samo novi
+          nalozi, čak i kada se prate svi članovi. Objave kraće od 40 znakova smiju se ponavljati,
+          a objave koje je obrisala osoba koja ih je napisala ne računaju se.
 
-        actions_heading: "Automatske radnje"
-        auto_unapprove_label: "Automatski vraćaj spam sadržaj na odobrenje"
-        auto_unapprove_help: "Kada je uključeno, sadržaj koji dostigne prag za spam šalje se u red za odobrenje (zahtijeva flarum/approval). Moderatori ga moraju odobriti prije nego što postane vidljiv."
-        auto_flag_label: "Automatski prijavljuj spam sadržaj"
-        auto_flag_help: "Kada je uključeno, sadržaj koji dostigne prag za prijavu automatski se prijavljuje moderatorima na pregled (zahtijeva flarum/flags). Razlog prijave sadrži detalje o tome zašto je sadržaj prepoznat kao spam."
-        no_action_extensions: "Za automatske moderatorske radnje instalirajte ekstenzije flarum/approval i/ili flarum/flags. Prepoznati spam tada se obrađuje kroz ugrađeni red za odobrenje i sistem prijava."
+        posting_rate_heading: Učestalost objavljivanja
+        burst_post_count_label: Dozvoljeno objava u kratkom roku
+        burst_post_count_help: >
+          Kada novi nalog napravi ovoliko objava u drugim temama unutar dolje navedenih minuta,
+          svaka sljedeća objava ocjenjuje se kao spam dok se ne uspori. Vrijedi samo za nove
+          naloge, čak i kada se prate svi članovi. Objave u temi u kojoj se trenutno objavljuje ne
+          računaju se, pa razgovor u jednoj temi nije uhvaćen. Objave koje čekaju odobrenje
+          računaju se, a izmjene ne. Kod 0 nema ograničenja.
+        burst_minutes_label: U koliko minuta
 
-        allowlist_heading: "Dozvoljene domene"
-        allowed_domains_label: "Dozvoljene domene"
-        allowed_domains_help: "URL-ovi s ovih domena ne prijavljuju se. Unesite jednu domenu po redu. Domena platforme automatski je na listi dozvoljenih."
+        thresholds_heading: Pragovi ocjene spama
+        flag_threshold_label: Prag prijave (0–100)
+        flag_threshold_help: Sadržaj s ocjenom spama jednakom ili većom od ove vrijednosti bit će prijavljen moderatorima (zahtijeva ekstenziju flarum/flags).
+        spam_threshold_label: Prag spama (0–100)
+        spam_threshold_help: Sadržaj s ocjenom spama jednakom ili većom od ove vrijednosti automatski će biti vraćen na odobravanje (zahtijeva ekstenziju flarum/approval).
 
-        blocked_words_heading: "Blokirane riječi i izrazi"
-        blocked_words_label: "Blokirane riječi ili izrazi"
-        blocked_words_help: "Riječi ili izrazi koji se blokiraju kao spam. Unesite jedan po redu. Velika i mala slova se ne razlikuju, a prepoznaju se samo cijele riječi. Na primjer, „viagra“ prepoznaje „viagra“, ali ne i „niagara“."
+        actions_heading: Automatske radnje
+        auto_unapprove_label: Automatski vrati spam sadržaj na odobravanje
+        auto_unapprove_help: "Kada je uključeno, sadržaj koji dosegne prag spama šalje se u red za odobravanje (zahtijeva flarum/approval). Moderatori će morati odobriti sadržaj prije nego što postane vidljiv."
+        auto_flag_label: Automatski prijavi spam sadržaj
+        auto_flag_help: "Kada je uključeno, sadržaj koji dosegne prag prijave automatski se prijavljuje moderatorima na pregled (zahtijeva flarum/flags). Razlog prijave sadržavat će detalje o tome zašto je sadržaj prepoznat kao spam."
+        flag_account_label: Nalog koji podiže prijave spama
+        flag_account_help: Prikazuje se kao autor automatskih prijava spama u redu za moderaciju. Ako ostane zadano, prijave podiže prvi administrator.
+        flag_account_default: "Zadano: prvi administrator"
+        flag_account_choose_button: Odaberite…
+        flag_account_default_button: Koristite zadano
+        flag_account_modal_title: Odaberite nalog koji podiže prijave spama
+        flag_account_missing: Odabrani nalog više ne postoji, pa prijave spama podiže prvi administrator dok ne odaberete drugi.
+        flag_account_in_code: Odabrano u extend.php pomoću assignFlagsToModerator(), pa se ovdje ne može mijenjati.
+        no_action_extensions: "Instalirajte ekstenzije flarum/approval i/ili flarum/flags da biste omogućili automatske radnje moderacije. Otkriveni spam bit će obrađivan kroz Flarumov ugrađeni red za odobravanje i sistem prijava."
 
-        advanced_patterns_heading: "Napredni uzorci blokiranja"
-        advanced_block_patterns_label: "Napredni uzorci (regex)"
-        advanced_block_patterns_help: "Prilagođeni regex uzorci za napredne korisnike. Koristite s oprezom – neispravni uzorci se preskaču. Format je JSON niz objekata s ključem \"pattern\" i neobaveznim ključem \"description\"."
-        flag_account_label: "Račun koji prijavljuje spam"
-        flag_account_help: "Prikazuje se kao autor automatskih prijava spama u redu za moderaciju. Ako ostane podrazumijevana vrijednost, prijave podnosi prvi administrator."
-        flag_account_default: "Podrazumijevano: prvi administrator"
-        flag_account_choose_button: "Odaberi…"
-        flag_account_default_button: "Koristi podrazumijevano"
-        flag_account_modal_title: "Odaberite račun koji prijavljuje spam"
-        flag_account_missing: "Odabrani račun više ne postoji, pa spam prijavljuje prvi administrator dok ne odaberete drugi."
-        flag_account_in_code: "Odabrano u extend.php putem assignFlagsToModerator(), pa se ovdje ne može mijenjati."
+        allowlist_heading: Lista dozvoljenih domena
+        allowed_domains_label: Dozvoljene domene
+        allowed_domains_help: URL-ovi s ovih domena neće biti prijavljeni. Unesite jednu domenu po redu. Domena vaše platforme automatski je na listi dozvoljenih.
+
+        blocked_words_heading: Blokirane riječi i fraze
+        blocked_words_label: Blokirane riječi ili fraze
+        blocked_words_help: Riječi ili fraze koje treba blokirati kao spam. Unesite jednu po redu. Ne razlikuje velika i mala slova i podudara se samo s cijelim riječima. Na primjer, „viagra“ će se podudarati s „viagra“, ali ne s „niagara“.
+
+        advanced_patterns_heading: Napredni obrasci blokiranja
+        advanced_block_patterns_label: Napredni obrasci (regex)
+        advanced_block_patterns_help: "Prilagođeni regex obrasci za iskusne korisnike. Koristite s oprezom: neispravni obrasci bit će preskočeni. Format treba biti JSON niz objekata s ključem „pattern“ i neobaveznim ključem „description“."
 
       default-actions:
-        delete_user_label: "Obriši korisnika"
-        delete_user_help: "Korisnik se trajno briše. Kada je isključeno, korisnik se umjesto toga blokira."
-        delete_discussions_label: "Obriši teme"
-        delete_discussions_help: "Trajno se brišu sve teme koje je korisnik pokrenuo. Kada je isključeno, teme se umjesto toga sakrivaju."
-        delete_posts_label: "Obriši objave"
-        delete_posts_help: "Trajno se brišu sve objave korisnika. Kada je isključeno, objave se umjesto toga sakrivaju."
-        heading: "Podrazumijevane moderatorske radnje"
-        introduction: "Kada se korisnik označi kao spamer, moderatori mogu birati između više radnji, zavisno od konkretnog slučaja. Ovim postavkama unaprijed odabirete radnje koje obično primjenjujete, da biste ubrzali postupak, uz mogućnost odstupanja kada je potrebno."
-        move_discussions_to_tags_label: "Premjesti teme u oznaku/oznake"
-        move_discussions_to_tags_help: "Sve teme koje je korisnik pokrenuo premještaju se u oznake koje odaberete. Poništite odabir oznaka da teme ostanu u svojim izvornim oznakama. Nema efekta ako je uključena opcija „Obriši teme“."
+        delete_user_label: Obrišite člana
+        delete_user_help: Ovo će trajno obrisati člana. Kada je isključeno, član će umjesto toga biti suspendovan.
+        delete_discussions_label: Obrišite teme
+        delete_discussions_help: Ovo će trajno obrisati sve teme koje je pokrenuo ovaj član. Kada je isključeno, teme će umjesto toga biti sakrivene (meko brisanje).
+        delete_posts_label: Obrišite objave
+        delete_posts_help: Ovo će trajno obrisati sve objave ovog člana. Kada je isključeno, objave će umjesto toga biti sakrivene (meko brisanje).
+        heading: Zadane radnje moderacije
+        introduction: Kada je član označen kao spamer, moderatori mogu birati između različitih radnji za konkretan slučaj. Ove postavke omogućavaju da unaprijed odredite radnje koje obično poduzimate, kako biste ubrzali postupak, uz mogućnost odstupanja prema potrebi.
+        move_discussions_to_tags_label: Premjesti teme u oznake
+        move_discussions_to_tags_help: Ovo će premjestiti sve teme koje je pokrenuo ovaj član u oznake koje ste naveli. Očistite odabir oznaka da teme ostanu u izvornim oznakama. Nema efekta ako je uključena opcija „Obrišite teme“.
 
       stopforumspam:
         introduction: |
-          Nove registracije provjeravaju se u bazi podataka <a>StopForumSpam</a>. Ako se dostigne prag <code>confidence</code> (pouzdanost) ili <code>frequency</code> (broj prijava), korisnik ne može završiti registraciju na platformi.
+          Provjerava nove registracije u bazi <a>StopForumSpam</a>. Ako se dosegne prag <code>confidence</code> ili <code>frequency</code>, članu se onemogućava dovršavanje registracije na vašoj platformi.
 
-          Podržana je i registracija putem vanjske prijave (SSO) preko <code>fof/oauth</code> i <code>fof/passport</code>. Drugi SSO provajderi bi trebali raditi, ali nisu testirani.
+          SSO registracija preko <code>fof/oauth</code> i <code>fof/passport</code> također je podržana. Ostali SSO davatelji bi trebali raditi, ali nisu testirani.
 
-        username_label: "Provjera korisničkog imena"
-        ip_label: "Provjera IP adrese"
-        email_label: "Provjera e-mail adrese"
+        username_label: Provjera spama za korisničko ime
+        ip_label: Provjera spama za IP adresu
+        email_label: Provjera spama za e-mail
 
-        frequency_label: "Prag"
+        checks_heading: Šta provjeravati
+        thresholds_heading: Kada blokirati
+        also_block_heading: Blokiraj i
+        reporting_heading: Prijavljivanje
+
+        frequency_label: Prag učestalosti
         frequency_help: |
-          Ukupan broj prijava spama, iz svih uključenih provjera, nakon kojeg se aktivira spam filter.
-          Npr. ako e-mail adresa ima 1 prijavu, a IP adresa 2, ukupno su 3 prijave. Ako je prag 3 ili manje, registracija se sprečava.
-        api_key_label: "API ključ"
-        api_key_text: "Spamere možete prijavljivati servisu StopForumSpam i tako pomoći da šira zajednica foruma ostane bez spama."
-        api_key_instructions_text: "<register>Registrirajte se na StopForumSpam</register>. Zatim trebate <key>dobiti API ključ</key>."
+          Broj prijava spama među svim uključenim provjerama koji aktivira filter spama.
+          Npr.: ako e-mail ima 1 pogodak, a IP 2 pogotka, ukupno je 3 pogotka. Ako je prag postavljen na 3 ili manje, registracija će biti spriječena.
+        api_key_label: API ključ
+        api_key_text: Možete prijavljivati spamere StopForumSpam-u kako bi šira zajednica ostala bez spama.
+        api_key_instructions_text: <register>Registrujte se na StopForumSpam</register>. Zatim ćete morati <key>pribaviti API ključ</key>.
 
-        regional_endpoint_label: "Geografski pristup"
-        regional_endpoint_help: "Upit se podrazumijevano šalje najbližem regionalnom serveru, radi najbržeg odgovora. Ako želite ograničiti promet na određenu regiju, npr. radi usklađenosti s propisima ustanove ili države o zaštiti privatnosti, možete nametnuti povezivanje s određenom regijom."
+        regional_endpoint_label: Geografski pristup
+        regional_endpoint_help: Zadano se provjera usmjerava na najbliži regionalni server radi najbržeg odgovora. Ako želite ograničiti promet na određeni region, na primjer radi usklađenosti s propisima o privatnosti kompanije ili države, možete forsirati vezu s određenim regionom.
 
-        region_closest_label: "Najbliža"
-        region_europe_label: "Evropa"
-        region_us_label: "Sjedinjene Američke Države"
+        region_closest_label: Najbliži
+        region_europe_label: Evropa
+        region_us_label: Sjedinjene Države
 
-        confidence_label: "Pouzdanost"
-        confidence_help: "Ocjena pouzdanosti je prilično dobar pokazatelj da bi provjereni podatak doveo do neželjene aktivnosti. Unesite nivo pouzdanosti u postocima. Ako je vrijednost podatka jednaka ili veća od ovog broja, registracija se blokira, bez obzira na provjeru „Prag“ iznad."
+        confidence_label: Pouzdanost
+        confidence_help: Ocjena pouzdanosti prilično je dobar pokazatelj da bi provjeravano polje dovelo do neželjene aktivnosti. Postavite nivo pouzdanosti u postocima. Ako je polje jednako ovoj vrijednosti ili iznad nje, registracija će biti blokirana, bez obzira na gore navedeni test učestalosti.
 
-        blocked_asns_label: "Blokirani brojevi mreža (ASN)"
-        blocked_asns_help: "Jedan po redu ili odvojeni zarezom. Registracije s ovih mreža odbijaju se bez daljnjeg, bez obzira na to da li je adresa na listi. StopForumSpam pri svakom upitu vraća broj mreže, a gotovo niko ne posjećuje forum s mreže hosting provajdera. Prihvata 31272 ili AS31272. Ostavite prazno da se mreža samo bilježi, bez radnje."
-        max_listing_age_label: "Zanemari zapise starije od (dana)"
-        max_listing_age_help: "Zapis od prije nekoliko godina malo govori o onome ko se registrira danas. Vrijednost 0 zadržava sve zapise, bez obzira na starost. Domene i mreže s crne liste uvijek se poštuju, bez obzira na ovu postavku."
-        lookup_failed: "StopForumSpam trenutno nije dostupan (prvi neuspjeh: {when}). Dok se ne oporavi, registracije prolaze bez provjere."
-        email_hash_label: "Koristi hash e-mail adrese"
-        email_hash_help: "Umjesto same e-mail adrese šalje se njen MD5 hash. Tim načinom zaobilaze se sve crne liste, normalizacija i provjere prikrivenih adresa."
+        blocked_asns_label: Blokirani mrežni brojevi (ASN)
+        blocked_asns_help: Jedan po redu ili odvojeni zarezom. Registracije s ovih mreža odbijaju se odmah, bez obzira na to je li adresa na listi. StopForumSpam pri svakoj provjeri vraća mrežni broj, a gotovo niko ne pregleda forum s hosting provajdera. Prihvata 31272 ili AS31272. Ostavite prazno da se mreža samo bilježi, bez radnje.
+        max_listing_age_label: Ignoriši unose starije od (dana)
+        max_listing_age_help: Viđenje od prije više godina malo govori o osobi koja se registruje danas. 0 zadržava sve unose, koliko god stari bili. Domene i mreže na crnoj listi uvijek se poštuju, bez obzira na ovo.
+        lookup_failed: "StopForumSpam nije bio dostupan (prvi neuspjeh {when}). Registracije se propuštaju bez provjere dok se usluga ne oporavi."
+        email_hash_label: Koristi hashiranu e-mail adresu
+        email_hash_help: Šalje MD5 hash e-mail adrese ako ne želite slati samu adresu. Ova metoda zaobilazi sve crne liste, normalizaciju i provjere zaobilaženja prikrivanja.
 
-        block_tor_exit_nodes_label: "Blokiraj izlazne čvorove mreže Tor"
-        block_tor_exit_nodes_help: "Kada je uključeno, registracije s poznatih izlaznih čvorova mreže Tor automatski se blokiraju. To može spriječiti anonimne spam registracije, ali i onemogućiti legitimne korisnike koji koriste Tor radi privatnosti."
+        block_tor_exit_nodes_label: Blokiraj Tor izlazne čvorove
+        block_tor_exit_nodes_help: Kada je uključeno, registracije s poznatih Tor izlaznih čvorova automatski se blokiraju. Ovo može spriječiti anonimne spam registracije, ali i legitimne članove koji koriste Tor radi privatnosti.
 
-        sfs_lookup_label: "Provjeravaj registracije"
-        sfs_lookup_help: "Ako je uključeno, pri registraciji novog korisnika provjerava se baza podataka StopForumSpam. Ako se korisnik pronađe (korisničko ime, IP adresa, e-mail), a ta provjera je uključena i StopForumSpam pouzdanost dostigne podešeni nivo, korisnik ne može završiti registraciju."
+        sfs_lookup_label: Provjera registracija
+        sfs_lookup_help: Ako je uključeno, baza StopForumSpam provjerava se kada se novi član registruje na vašoj platformi. Ako je član pronađen (korisničko ime, IP adresa, e-mail), a taj podatak je uključen i SFS nivo pouzdanosti dosegne vaš zadani nivo, bit će spriječen u dovršavanju registracije.
 
-        report_blocked_registrations_label: "Prijavljuj blokirane registracije"
-        report_blocked_registrations_help: "Kada registraciju blokiraju podaci samog StopForumSpama, pokušaj se prijavljuje tom servisu, kako bi se aktivnost spamera potvrdila. Blokade zbog mreže Tor ili zabranjene mreže nikad se ne prijavljuju, jer su one pravilo ove platforme, a ne dokaz. Zahtijeva StopForumSpam API ključ (pogledajte iznad)."
-        checks_heading: "Šta se provjerava"
-        thresholds_heading: "Kada blokirati"
-        also_block_heading: "Dodatno blokiraj"
-        reporting_heading: "Prijavljivanje"
-      sign_ups:
-        heading: "Provjere pri registraciji"
-        introduction: "Provjere koje platforma sama obavlja pri svakoj registraciji, bez slanja podataka vanjskim servisima. Provjere preko StopForumSpama imaju posebnu karticu."
-        honeypot_heading: "Honeypot"
-        honeypot_label: "Hvataj botove koji popunjavaju obrasce"
-        honeypot_help: "U obrazac za registraciju dodaje polje koje ljudi nikad ne vide i odbija registracije koje ga popune ili stignu brže nego što bi to čovjek mogao. Hvata botove koje StopForumSpam još nije zabilježio, ništa ne šalje izvan platforme i ništa ne traži od stvarnih korisnika."
-        honeypot_min_seconds_label: "Najmanji broj sekundi do registracije"
-        honeypot_min_seconds_help: "Računa se od trenutka kada je stranica učitana. Čovjeku koji čita obrazac treba više vremena od ovoga, a skripti ne treba."
-        honeypot_strict_label: "Odbij registracije koje zaobiđu obrazac"
-        honeypot_strict_help: "Odbija i registracije gostiju poslane bez obrasca, kakve šalju skripte koje se obraćaju direktno API-ju. Ostavite isključeno ako korisničke račune preko API-ja pravi aplikacija, SSO veza ili neki drugi alat."
-        throttle_heading: "Ograničenje učestalosti"
-        registration_throttle_label: "Sekundi između registracija s iste adrese"
-        registration_throttle_help: "Flarum ograničava koliko često neko može objavljivati, ali ne i koliko često može praviti korisničke račune. Vrijednost 0 isključuje ovo ograničenje. Imajte na umu da uredi, škole i mobilne mreže dijele jednu adresu na mnogo ljudi."
+        report_blocked_registrations_label: Prijavi blokirane registracije
+        report_blocked_registrations_help: Kada vlastiti podaci StopForumSpam-a blokiraju registraciju, pokušaj se prijavljuje nazad da bi se aktivnost spamera mogla potvrditi. Blokade zbog Tora ili zabranjene mreže nikad se ne prijavljuju, jer su to politika ove platforme, a ne dokaz. Zahtijeva StopForumSpam API ključ (vidi gore).
 
     statistics:
-      heading: "Zaštita od spama"
-      total_label: "Ukupno"
-      registrations_blocked: "Blokirane registracije"
-      users_marked: "Korisnici označeni kao spameri"
-      posts_flagged: "Objave prijavljene kao spam"
-      awaiting_review: "Prijave koje čekaju pregled"
-      this_week: "{count, plural, one {# ove sedmice} few {# ove sedmice} other {# ove sedmice}}"
-      vs_last_week: "U poređenju s prethodnih sedam dana"
+      heading: Odbrana od spama
+      total_label: Ukupno
+      registrations_blocked: Blokirane registracije
+      users_marked: Članovi označeni kao spameri
+      posts_flagged: Objave prijavljene kao spam
+      awaiting_review: Prijave koje čekaju pregled
+      this_week: "Ove sedmice: {count}"
+      vs_last_week: U poređenju s prethodnih sedam dana
       top_reason: "Najčešće: {reason} ({count, plural, one {# blokada} few {# blokade} other {# blokada}})"
-      view_all: "Pogledaj blokirane registracije"
-      failed: "Statistika spama nije učitana."
+      view_all: Pogledajte blokirane registracije
+      failed: Statistika spama nije mogla biti učitana.
 
     blocked_registrations:
-      button: "Blokirane registracije"
-      title: "Blokirane registracije"
-      no-records: "Nema blokiranih registracija."
-      help: "Ova stranica prikazuje sve blokirane registracije, bilo da ih je blokirao StopForumSpam ili honeypot pri registraciji. Možete pregledati detalje svake registracije i, ako želite, obrisati zapis iz baze podataka."
-      attempted-at: "Vrijeme pokušaja"
-      ip: "IP adresa"
-      email: "E-mail adresa"
-      username: "Korisničko ime"
-      login-provider: "Provajder prijave"
-      login-provider-data: "Podaci provajdera prijave"
-      sfs-data: "StopForumSpam podaci"
-      reasons: "Zabilježeni razlozi blokade"
-      delete_entry: "Obriši zapis"
+      button: Blokirane registracije
+      title: Blokirane registracije
+      no-records: Nema blokiranih registracija.
+      help: |
+        Ova stranica prikazuje sve registracije koje su blokirane, bilo preko StopForumSpam ili honeypota na registraciji. Možete pogledati detalje svake registracije i, ako želite, obrisati zapis iz baze podataka.
+      attempted-at: Vrijeme pokušaja
+      ip: IP adresa
+      email: E-mail adresa
+      username: Korisničko ime
+      login-provider: Servis za prijavu
+      login-provider-data: Podaci servisa za prijavu
+      sfs-data: StopForumSpam podaci
+      reasons: Zabilježeni razlozi blokade
+      delete_entry: Obrišite zapis
       total: "{count, plural, one {# blokirana registracija} few {# blokirane registracije} other {# blokiranih registracija}}"
 
       filters:
-        placeholder: "Pretražite ili filtrirajte u obliku ključ:vrijednost"
-        apply: "Primijeni"
-        clear: "Obriši pretragu"
+        placeholder: "Pretraga ili filter pomoću ključ:vrijednost"
+        apply: Primijeni
+        clear: Očistite pretragu
         hint: "Filteri:"
-        no-matches: "Nijedna blokirana registracija ne odgovara pretrazi."
+        no-matches: Nijedna blokirana registracija ne odgovara ovoj pretrazi.
         help:
-          toggle: "Pomoć za pretragu"
-          multiple: "Filtere kombinirajte tako što ih odvojite razmakom."
-          negate: "Dodajte - ispred filtera da isključite pogotke, npr. -provider:github"
-          ip: "Pokušaji s tačno određene IP adrese."
-          email: "Pokušaji s tačno određenom e-mail adresom."
-          username: "Pokušaji s tačno određenim korisničkim imenom."
-          provider: "Provajder prijave preko kojeg je stigao pokušaj."
-          reason: "Pravilo koje je blokiralo pokušaj. Bilježi se samo za nedavne blokade."
-          attemptedAt: "Datum ili raspon, npr. 2026-01-01..2026-02-01. Bilo koja strana raspona može ostati otvorena."
+          toggle: Pomoć za pretragu
+          multiple: Filtere kombinujte razmakom.
+          negate: "Ispred filtera stavite - da isključite podudaranja, npr. -provider:github"
+          ip: Pokušaji s tačno određene IP adrese.
+          email: Pokušaji s tačno određenom e-mail adresom.
+          username: Pokušaji s tačno određenim korisničkim imenom.
+          provider: Servis za prijavu preko kojeg je pokušaj došao.
+          reason: Pravilo koje je blokiralo pokušaj. Bilježi se samo za nedavne blokade.
+          attemptedAt: "Datum ili raspon, npr. 2026-01-01..2026-02-01. Jedna strana može ostati otvorena."
 
       evidence:
-        label: "Zašto je blokirano"
-        none: "Za ovaj pokušaj nisu zabilježeni StopForumSpam podaci."
-        lookup_failed: "Upit prema StopForumSpam servisu nije uspio, pa za ovaj pokušaj nema podataka."
-        blocked_by: "Blokirano zbog"
+        label: Zašto je blokirano
+        none: Za ovaj pokušaj nisu zabilježeni StopForumSpam podaci.
+        lookup_failed: Provjera kod StopForumSpam nije uspjela, pa za ovaj pokušaj nisu vraćeni podaci.
+        blocked_by: Blokirano zbog
         rule:
-          confidence: "Prag pouzdanosti"
-          frequency: "Prag broja prijava"
-          blacklisted: "Crna lista"
-          torExit: "Izlazni čvor mreže Tor"
-          deniedAsn: "Blokirana mreža"
-          honeypot: "Popunjeno skriveno polje"
-          tooFast: "Poslano brže nego što bi čovjek mogao"
-          formToken: "Izmijenjen ili ponovo korišten obrazac za registraciju"
-          noForm: "Nije poslano iz obrasca za registraciju"
+          confidence: Prag pouzdanosti
+          frequency: Prag prijava
+          blacklisted: Na crnoj listi
+          torExit: Tor izlazni čvor
+          deniedAsn: Zabranjena mreža
+          honeypot: Popunjeno skriveno polje
+          tooFast: Poslano brže nego što bi osoba mogla
+          formToken: Izmijenjen ili ponovo upotrijebljen obrazac za registraciju
+          noForm: Nije poslano iz obrasca za registraciju
         field:
-          ip: "IP"
-          email: "E-mail"
-          username: "Korisničko ime"
+          ip: IP
+          email: E-mail
+          username: Korisničko ime
         badge:
-          blacklisted: "Na crnoj listi"
-          tor_exit: "Izlazni čvor mreže Tor"
-          not_listed: "Nije na listi"
-          confidence: "{value}% pouzdanosti"
+          blacklisted: Na crnoj listi
+          tor_exit: Tor izlazni čvor
+          not_listed: Nije na listi
+          confidence: "pouzdanost {value}%"
           frequency: "{count, plural, one {prijavljeno # put} few {prijavljeno # puta} other {prijavljeno # puta}}"
           last_seen: "posljednji put viđeno {when}"
           asn: "AS{asn}"
-          normalized: "svodi se na {value}"
+          normalized: "normalizira se u {value}"
 
       raw_data:
-        button: "Prikaži izvorne podatke"
-        title: "Izvorni zabilježeni podaci"
-        copy: "Kopiraj"
-        copied: "Kopirano u međuspremnik."
-        copy_failed: "Kopiranje u međuspremnik nije uspjelo."
-    tabs:
-      sign_ups: "Registracije"
-      stopforumspam: "StopForumSpam"
-      content_filter: "Filter sadržaja"
-      spammer_actions: "Radnje protiv spamera"
-    unsaved_changes: "Na ovoj kartici imate nesačuvane promjene. Želite li izaći bez čuvanja?"
+        button: Pogledajte neobrađene podatke
+        title: Neobrađeni zabilježeni podaci
+        copy: Kopirajte
+        copied: Kopirano u clipboard.
+        copy_failed: Kopiranje u clipboard nije uspjelo.
 
   forum:
+    sign_up:
+      trap_label: Ostavite ovo polje praznim
     post:
-      flagged_as_spam_text: "Automatsko prepoznavanje spama – ocjena {score}"
+      flagged_as_spam_text: "Automatsko otkrivanje spama – rezultat {score}"
+      held_email_domain_text: "Zadržano na odobrenje: novi nalog s e-mail adresom na domeni {domain}"
 
     message:
       profile:
-        blocked: "Ovo izgleda kao spam, pa nije sačuvano. Uklonite linkove i kontakt podatke i pokušajte ponovo."
+        blocked: Ovo liči na spam, pa nije sačuvano. Uklonite sve linkove i kontakt podatke i pokušajte ponovo.
 
-      stopforumspam:
-        blocked: "Podaci vaše registracije pronađeni su u bazi podataka za sprečavanje spama, pa je registracija blokirana."
       honeypot:
-        refused: "Registraciju nije bilo moguće završiti."
-        reload: "Došlo je do greške u obrascu za registraciju. Osvježite stranicu i pokušajte ponovo."
+        refused: "Nismo mogli dovršiti vašu registraciju."
+        reload: "Nešto je pošlo po zlu s obrascem za registraciju. Osvježite stranicu i pokušajte ponovo."
+      stopforumspam:
+        blocked: Podaci o vašoj registraciji pronađeni su u bazi za sprečavanje spama, pa je registracija blokirana.
 
     spammer_modal:
-      hard_delete_discussions_label: "Obriši teme"
-      hard_delete_discussions_help: "Trajno se brišu sve teme koje je korisnik pokrenuo. Kada je isključeno, teme se umjesto toga sakrivaju."
-      hard_delete_posts_label: "Obriši objave"
-      hard_delete_posts_help: "Trajno se brišu sve objave korisnika (odgovori i sl.). Kada je isključeno, objave se umjesto toga sakrivaju."
-      hard_delete_user_label: "Obriši korisnika"
-      hard_delete_user_help: "Korisnik se trajno briše. Kada je isključeno, korisnik se umjesto toga blokira."
-      intro: "Pri označavanju korisnika kao spamera poduzima se više radnji, zavisno od ekstenzija dostupnih na platformi."
-      move_discussions_tag_label: "Premjesti teme u oznaku za karantin"
-      move_discussions_tag_help: "Sve teme koje je korisnik pokrenuo premještaju se u oznaku navedenu u postavkama platforme. Kada je isključeno, teme ostaju u svojim trenutnim oznakama."
-      process_button: "Izvrši"
-      success: "Korisnik {username} označen je kao spamer."
-      title: "Označavanje korisnika {username} kao spamera"
-      report_to_sfs_label: "Prijavi servisu StopForumSpam"
-      report_to_sfs_help: "Osnovni podaci korisnika (korisničko ime, e-mail, IP adresa) prijavljuju se servisu StopForumSpam. To pomaže da se korisnik spriječi u registraciji na drugim forumima koji koriste StopForumSpam."
+      hard_delete_discussions_label: Obrišite teme
+      hard_delete_discussions_help: Ovo će trajno obrisati sve teme koje je pokrenuo ovaj član. Kada je isključeno, teme će umjesto toga biti sakrivene.
+      hard_delete_posts_label: Obrišite objave
+      hard_delete_posts_help: Ovo će trajno obrisati sve objave (komentare, odgovore itd.) ovog člana. Kada je isključeno, objave će umjesto toga biti sakrivene.
+      hard_delete_user_label: Obrišite člana
+      hard_delete_user_help: Ovo će trajno obrisati člana. Kada je isključeno, član će umjesto toga biti suspendovan.
+      intro: Kada član bude označen kao spamer, poduzima se nekoliko radnji, ovisno o ekstenzijama dostupnim na platformi.
+      move_discussions_tag_label: Premjesti teme u oznaku za karantin
+      move_discussions_tag_help: Ovo će premjestiti sve teme koje je pokrenuo ovaj član u oznaku koju ste naveli u postavkama platforme. Kada je isključeno, teme ostaju u svojim trenutnim oznakama.
+      process_button: Provedite
+      success: "Član {username} označen je kao spamer."
+      title: "Označite {username} kao spamera"
+      report_to_sfs_label: Prijavi StopForumSpam-u
+      report_to_sfs_help: Ovo će StopForumSpam-u prijaviti osnovne podatke člana (korisničko ime, e-mail, IP adresu). To pomaže da se član spriječi u registraciji na drugim forumima koji koriste uslugu StopForumSpam.
     user_controls:
-      spammer_button: "Spamer"
-    sign_up:
-      trap_label: "Ostavite ovo polje prazno"
+      spammer_button: Spamer
 
-# Audit log action labels, contributed to the flarum/audit namespace.
-# Rendered by flarum-audit at flarum-audit.lib.browser.<action>.
+# Oznake radnji u revizijskom dnevniku, dodaju se u prostor imena flarum/audit.
+# Prikazuje ih flarum-audit na putanji flarum-audit.lib.browser.<action>.
 flarum-audit:
   lib:
     browser:
       user:
-        marked_as_spammer: "Korisnik {username} označen kao spamer"
+        marked_as_spammer: Član {username} označen je kao spamer
       registration:
-        blocked: "Blokirana registracija korisnika {username} ({email}) s adrese {ip}"
+        blocked: Blokirana registracija za {username} ({email}) s adrese {ip}
