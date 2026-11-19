@@ -30,6 +30,13 @@ from locales import (PRIVATE, ROOT, flatten, is_reference, load, load_lenient,
 LOCK = ROOT / ".github" / "upstream.lock.json"
 REPORT_LIMIT = 60000  # GitHub issue bodies are capped at 65536 characters
 
+# Keys the pack adds although the English source lacks them, so they are not reported as obsolete.
+KNOWN_EXTRA = {
+    # flarum/core 2.0.2 uses this key (views/unsubscribe-error.blade.php) but does not ship it.
+    # Remove when flarum/core ships it.
+    "core": {"core.views.unsubscribe_email_error.title"},
+}
+
 
 def fetch(url):
     for attempt in range(4):
@@ -105,7 +112,7 @@ def compare(stem, source, locked):
     english = source["strings"]
     found = {
         "missing": [k for k in english if k not in ours],
-        "obsolete": [k for k in ours if k not in english],
+        "obsolete": [k for k in ours if k not in english and k not in KNOWN_EXTRA.get(stem, ())],
         "placeholders": [],
         "changed": [],
     }
