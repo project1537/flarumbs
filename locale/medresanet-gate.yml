@@ -8,12 +8,14 @@ medresanet-gate:
     guest_can_view_text: "Gosti mogu pregledati platformu, pa zid za prijavu ne štiti njen sadržaj. Na stranici Dozvole grupi Gosti uklonite dozvolu „{permission}“, i globalno i na svakoj oznaci pod „Ograniči po oznaci“."
     institutions_heading: "Ustanove"
     institutions_help_text: "Ustanove prikazane u mreži na zidu za prijavu. Promjene se odmah čuvaju."
+    limit_reached_text: "Zid za prijavu prikazuje najviše {max} ustanova, uključujući sakrivene. Obrišite jednu da biste dodali drugu."
     load_error_message: "Ustanove nije moguće učitati."
     logo_alt_text: "Logotip ustanove {name}"
     move_down_label: "Pomjeri ustanovu {name} dolje"
     move_up_label: "Pomjeri ustanovu {name} gore"
     name_label: "Naziv"
     no_logo_text: "Nema logotipa"
+    over_limit_text: "Ustanova ima {count}, više od dozvoljenih {max}: ovdje i na zidu za prijavu prikazuje se samo prvih {max} po ovom redoslijedu. Obrišite neke da bi se ostale vratile na spisak."
     remove_logo_button: "Ukloni logotip"
     replace_logo_button: "Zamijeni logotip"
     retry_button: "Pokušaj ponovo"
@@ -33,6 +35,7 @@ medresanet-gate:
     visible_label: "Vidljivo na zidu za prijavu"
 
   api:
+    institution_limit_message: "Može se dodati najviše {max} ustanova; sakrivene se također računaju."
     logo_dimensions_message: "Dimenzije logotipa su prevelike (najviše 16,7 megapiksela, širina puta visina, npr. 4096 x 4096 piksela)."
     logo_invalid_message: "Logotip mora biti PNG, JPEG ili WebP slika do 512 KB."
     logo_required_message: "Odaberite datoteku logotipa."

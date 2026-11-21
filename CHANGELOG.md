@@ -4,7 +4,7 @@
 
 ### Added
 
-- **medresanet/flarum-gate**: the name of the institution's sort order in validation messages („Polje redoslijed mora biti najmanje 0.“).
+- **medresanet/flarum-gate**: the name of the institution's sort order in validation messages („Polje redoslijed mora biti najmanje 1.“); the limit of 10 institutions (message of the API, notices on the extension page).
 
 ## 3.7.0 - 2026-11-20
 
