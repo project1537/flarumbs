@@ -40,6 +40,7 @@ medresanet-gate:
     logo_upload_failed_message: "Učitavanje logotipa nije uspjelo."
     name_label: "naziv"
     short_name_label: "kratki naziv"
+    sort_label: "redoslijed"
     text_too_long_message: "{field} ({locale}): tekst je predugačak, najviše {max} znakova."
     url_label: "web stranica"
 

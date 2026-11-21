@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **medresanet/flarum-gate**: the name of the institution's sort order in validation messages („Polje redoslijed mora biti najmanje 0.“).
+
 ## 3.7.0 - 2026-11-20
 
 ### Added
