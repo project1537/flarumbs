@@ -15,7 +15,7 @@ medresanet-gate:
     move_up_label: "Pomjeri ustanovu {name} gore"
     name_label: "Naziv"
     no_logo_text: "Nema logotipa"
-    over_limit_text: "Ustanova ima {count}, više od dozvoljenih {max}: ovdje i na zidu za prijavu prikazuje se samo prvih {max} po ovom redoslijedu. Obrišite neke da bi se ostale vratile na spisak."
+    over_limit_text: "Ustanova ima {count}, više od dozvoljenih {max}: ovdje je navedeno samo prvih {max} po ovom redoslijedu, a zid za prijavu prikazuje najviše {max} vidljivih. Obrišite neke da bi se ostale vratile na spisak."
     remove_logo_button: "Ukloni logotip"
     replace_logo_button: "Zamijeni logotip"
     retry_button: "Pokušaj ponovo"
